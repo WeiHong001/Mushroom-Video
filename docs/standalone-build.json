@@ -1,0 +1,66 @@
+{
+  "source_commit": "5d0148405823e12f1a25db10f9c196992975f0c8",
+  "method": "Local Git clone without APK, decoded output, private config or local build outputs; standard Gradle dependency cache available",
+  "command": "gradlew.bat -Dorg.gradle.internal.http.socketTimeout=30000 -Dorg.gradle.internal.http.connectionTimeout=30000 assembleDebug testDebugUnitTest assembleRelease",
+  "result": "BUILD SUCCESSFUL",
+  "jvm_tests_passed": 4,
+  "offline_builds": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "94b1b8bb6d22a2b2466325cbf6e3766974dfb43d1f8762c24d3a073000bf9e57",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes13.dex"
+      ],
+      "classes": 18951,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "c75447da4c26958ce6716619fafb8795462c9bd5eeb641d0867a98a0147e624d",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 18963,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "signatures_verified": true,
+  "zipalign_verified": true,
+  "release_note": "Debug signing, minifyEnabled false; built and statically checked, not production release or runtime validation",
+  "download_note": "First attempt stalled downloading a new Lint artifact; retried with bounded HTTP timeouts",
+  "lint_vital_errors_recorded": 16,
+  "live_config_compile": {
+    "result": "BUILD SUCCESSFUL",
+    "offline": false,
+    "installed": true,
+    "network_requests_executed": true
+  },
+  "live_validation_reports": [
+    "docs/live-device-validation.json",
+    "docs/live-media-validation.json"
+  ]
+}

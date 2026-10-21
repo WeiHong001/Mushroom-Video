@@ -19,6 +19,7 @@
 | 离线/真实数据隔离 | 原 APK 无研究模式 | 增加清晰标识与受控数据适配，分开偏好和缓存；真实失败不自动显示样例成功 |
 | APK 合入与签名 | 普通 Java 编译不能表达未恢复的原 Kotlin 控制流 | 从 smali 重新汇编，不从原 APK 复制 DEX；合入保持资源表 STORED，重新 zipalign、debug sign；重复合入会先移除旧恢复 DEX |
 | Windows Java 套接字 | 本机 AF_UNIX loopback 失败 | Wrapper 为自身及子进程配置不存在的 socket 临时目录，使 Java 回退 TCP；不修改全局 JDK/环境 |
+| 导入资源的 Lint | 合并/反编译 XML 使用原 `@id`，保留库主题与动态控件关系 | 记录 16 条 Lint vital 诊断及人工核对依据，不阻断研究构建、不捏造默认布局；详见 lint-findings.json；未宣称生产质量门禁通过 |
 
 研究包不做无关 Compose/架构重写、不重命名业务类来隐藏来源，也没有恢复原发布私钥。`release` 同样使用调试签名且不启用 R8；当前交付以 debug 研究构建为准，不把它当作生产发布验证。
 

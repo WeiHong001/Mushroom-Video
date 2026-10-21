@@ -1,0 +1,25 @@
+{
+  "mode": "real-read-only-media",
+  "calls": [
+    {
+      "path": "/api/vod/list",
+      "code": 200,
+      "items": 1
+    },
+    {
+      "path": "/api/vod/info",
+      "code": 200
+    }
+  ],
+  "phase": "hls-playlist",
+  "cover_decoded": true,
+  "manifest_plaintext_input": false,
+  "playlist_type": "HlsMediaPlaylist",
+  "company_envelope_path": true,
+  "segments": 462,
+  "passed": true,
+  "serial": "emulator-5580",
+  "apk_sha256": "8b97f3cbadf8cab3cd7de4ee1b055a22462810b5d64c6894643851588c27788c",
+  "real_account_used": false,
+  "raw_content_saved_to_repository": false
+}

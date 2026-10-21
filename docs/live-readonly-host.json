@@ -1,0 +1,50 @@
+{
+  "api_base": "https://47.97.188.179",
+  "checked_at": "2026-10-21",
+  "source": "host HTTPS public read-only probe, not Android runtime proof",
+  "raw_account_or_content_data_saved": false,
+  "passed": true,
+  "calls": [
+    {
+      "path": "/api/vod/type",
+      "method": "GET",
+      "status": 200,
+      "code": 200,
+      "schema_fields": [
+        "list"
+      ],
+      "items": 9
+    },
+    {
+      "path": "/api/vod/list",
+      "method": "GET",
+      "status": 200,
+      "code": 200,
+      "schema_fields": [
+        "total",
+        "list"
+      ],
+      "items": 2
+    },
+    {
+      "path": "/api/vod/info",
+      "method": "GET",
+      "status": 200,
+      "code": 200,
+      "schema_fields": [
+        "id",
+        "title",
+        "nubmer",
+        "play_url",
+        "views",
+        "favorites",
+        "comments",
+        "cover",
+        "labels",
+        "users",
+        "created_at"
+      ],
+      "play_url_present": true
+    }
+  ]
+}

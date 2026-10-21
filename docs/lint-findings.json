@@ -1,0 +1,110 @@
+{
+  "tool": "AGP 8.5.1 Lint vital release",
+  "errors_reported": 16,
+  "abort_on_error": false,
+  "scope": "Legacy imported resources; findings recorded, not a lint-clean or production-quality claim",
+  "review": {
+    "ResourceCycle": "Referenced Bridge styles have explicit Platform parents, and DrawerArrowToggle.Common has an explicitly empty parent. Lint also reasons about implied dot-separated parents. Active themes passed the listed page runs; not every resource qualifier was run.",
+    "UnknownId": "Both timepicker IDs are declared in the same XML with @id and exist in stable resource IDs. Recovered compiled XML does not use the normal source @+id declaration marker.",
+    "MissingDefaultResource": "material_clock_period_toggle_land is referenced only from layout-land/material_timepicker.xml in the imported resources. No unproven default UI was invented.",
+    "NotSibling": "UCropActivity.setupViews dynamically inflates ucrop_controls into ucrop_photobox; wrapper_controls becomes a sibling at runtime (recovered smali lines 2022-2033). Crop flow itself was not device tested."
+  },
+  "findings": [
+    {
+      "file": "app/src/main/res/values-hdpi/styles.xml",
+      "line": 3,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v24/styles.xml",
+      "line": 9,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v24/styles.xml",
+      "line": 59,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v24/styles.xml",
+      "line": 102,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v24/styles.xml",
+      "line": 151,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v21/styles.xml",
+      "line": 752,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values-v21/styles.xml",
+      "line": 801,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "line": 1130,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "line": 1238,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "line": 1341,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "line": 1494,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "line": 2121,
+      "id": "ResourceCycle",
+      "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+    },
+    {
+      "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+      "line": 5,
+      "id": "UnknownId",
+      "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+    },
+    {
+      "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+      "line": 5,
+      "id": "UnknownId",
+      "message": "The id \"material_timepicker_view\" is not defined anywhere."
+    },
+    {
+      "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+      "line": 2,
+      "id": "MissingDefaultResource",
+      "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+    },
+    {
+      "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+      "line": 7,
+      "id": "NotSibling",
+      "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "serial": "emulator-5580",
+  "package": "com.amogu6.tv.research",
+  "apk_sha256": "e736728939cc50fa79f9a43bfd80c099a4826c0931cbc9be9cc48b36312b00b2",
+  "cleared_only_research_app": true,
+  "temporary_live_test_cache_cleared": true,
+  "launch_activity": "com.mogu.tv.ui.LoadingActivity",
+  "resumed": "topResumedActivity=ActivityRecord{e78c1bf u0 com.amogu6.tv.research/com.mogu.tv.MainActivity t178}",
+  "research_label_visible": true,
+  "startup_permission_gate": false,
+  "fatal_crash": false,
+  "screenshot": "docs/screenshots/first-launch.png"
+}

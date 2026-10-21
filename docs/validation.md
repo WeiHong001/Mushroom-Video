@@ -16,6 +16,10 @@ python tools/run_device_validation.py --serial emulator-5580
 
 独立本地克隆的构建结果另见 [standalone-build.json](standalone-build.json)。构建不读取原 APK、apktool/jadx 输出或原分析目录。依赖制品仍需从声明的 Maven 仓库下载，未承诺完全断网的首次构建。
 
+该克隆的 Debug、研究用 Release 和 4 个 JVM 用例均构建通过；只读真实模式另作配置编译、安装及下述公共接口/媒体验证。Release 采用调试签名、未启用 R8，只做构建/运行类/资源 ID/签名/对齐检查，没有用它代替 Debug 的设备验证。
+
+Release Lint vital 报告了 16 条导入资源诊断，保留于 [lint-findings.json](lint-findings.json)，未声称 Lint 清零。包括显式父样式与点分隐式父级的判断、原 `@id` 声明、只从横屏布局引用的资源，以及 UCrop 在运行时加入的同级控件。研究构建保留原资源且不因这些诊断中止；这不是生产发布质量门禁。
+
 ## 测试层次
 
 | 检查 | 数量 | 实际断言 |
@@ -24,14 +28,21 @@ python tools/run_device_validation.py --serial emulator-5580
 | Android 媒体/API 契约 | 4 个用例 | 官方解析器解析普通及加密 HLS、错误密钥拒绝、真实 Glide 取图、ApiClient 鉴权与收藏持久化、错误请求拒绝、Exo reason/state 回归 |
 | 业务与交互 | 5 个用例 | 五个原 Fragment 导航、两种 HLS 播放进度与暂停恢复、加载绘制/爱心手势、真实短视频滑动、原 ARouter 到详情并记录历史 |
 | 独立业务页面 | 36 个用例 | 逐个启动剩余原 Activity，传入对应样本参数，完成显示并截图，检查 Activity 未销毁 |
+| 真实只读链路 | 2 个用例 | 分类/列表/详情经原 ApiClient 和原模型解析；真实封面经 Glide 解码；非明文 HLS 经原解析器解密并解析出 462 个分片；写操作以不接触网络的假 Chain 验证拦截 |
 
-设备脚本共 **42 次检查调用、45 个 AndroidJUnit 用例**；加上 4 个 JVM 用例，共 49 个测试用例。逐项结果见 [device-validation.json](device-validation.json)。两个播放样本均检查了播放器实际进度至少推进 750ms，并检查暂停/恢复；没有把“页面出现播放器”当作播放成功。
+离线设备脚本共 **42 次检查调用、45 个 AndroidJUnit 用例**；加上 4 个 JVM 用例和另外运行的 2 个真实只读用例，共 51 个测试用例通过。离线逐项结果及所测 APK 摘要见 [device-validation.json](device-validation.json)；真实结果见 [live-device-validation.json](live-device-validation.json)、[live-media-validation.json](live-media-validation.json)。两个合成播放样本均检查了播放器实际进度至少推进 750ms，并检查暂停/恢复；没有把“页面出现播放器”当作播放成功。
+
+真实测试只在显式 `mode=live` 构建中执行 `com.mogu.research.LiveReadOnlyTest`，默认离线构建会跳过它。测试使用当时 DNS 返回的 IP，未使用真实账号；报告只保存状态、结构、数量和摘要，不保存原响应、媒体 URL、封面或视频。真实媒体检查只取封面及清单，未播放/下载真实视频分片。检查后恢复默认离线包并清除本研究模拟器中的测试数据。
 
 上述页面检查覆盖原 38 个业务 Activity：36 个独立启动，`MainActivity` 由五栏导航及路由流程检查，`LoadingActivity` 另做清空本机研究数据后的首次启动检查。五栏中的 Fragment、子列表等不是额外虚构的 Activity 数量。
+
+首次启动记录见 [first-launch.json](first-launch.json)：清除的仅是研究模拟器中的本机样本数据，原 `LoadingActivity` 自动进入原 `MainActivity`，研究数据标识可见，没有初始存储权限门槛或崩溃。
 
 ## 代表性截图
 
 截图来自实际模拟器，内容均为明确标识的本机合成样本。原 APK 的本地图标、布局和字体继续使用；空广告区域表示离线样本没有广告，未伪造在线广告投放。
+
+列表中 8 秒样本显示为 `00:00`，源于原 `DateUtil.formatTime` 在分钟为 0、秒数小于 10 时的分支条件。保留该原始显示逻辑供对照；播放器自身显示 `00:08`，实际进度已验证。
 
 | 场景 | 截图 |
 |---|---|
@@ -51,6 +62,7 @@ python tools/run_device_validation.py --serial emulator-5580
 - **运行验证**：上述页面/导航、原路由、普通与加密 HLS、原 GSY/Exo 状态链、Glide 加密图片、本机收藏持久化与播放历史、短视频换页、DYLoadingView 和未接入业务的 LikeLayout 定向测试。
 - **离线样本**：分类、推荐、搜索、详情、短视频、社区、精品、用户信息等采用原响应模型；本机账号、收藏、历史、关注、评论、资料和样例解锁有本机状态。样例不是恢复的真实后台数据；并非每个页面上的每个按钮均经过自动交互测试。
 - **静态恢复**：原网络接口/参数/响应及错误处理、投屏、图片选择/裁剪、扫码、应用更新等客户端代码保留。部分外部集成只核对了运行类存在及页面入口，没有真实外设/服务验证。
-- **外部阻塞**：原后台 TLS 只读探测未成功，真实登录、短信、媒体资源、上传、邀请结算、在线更新和外部网页未验证。真实模式只读；没有执行线上发帖、上传、删除、付款等操作。探测见 [service-probes.json](service-probes.json)。
+- **真实只读**：原默认域名探测未成功，但原 DNS 返回的 IP 提供的分类、列表、详情、封面及加密清单通过上述检查。结果是一次实际访问证据，不保证外部服务持续可用。
+- **外部配置/未验证**：真实登录、短信、上传、邀请结算、在线更新、外部网页和真实媒体分片播放未验证；服务端源码和原账号资料不在 APK 内。真实模式只读，没有执行线上发帖、上传、删除、付款等操作。探测见 [service-probes.json](service-probes.json)。
 
 未测试其他 Android 版本、实体机音视频/相机/投屏表现，也没有执行生产发布、R8 混淆或原签名验证。此处的通过结论针对离线研究构建及列明的检查，不表示全部线上业务可用。

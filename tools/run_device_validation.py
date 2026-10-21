@@ -4,6 +4,7 @@ Build and install app + androidTest first. No physical-device or online mutation
 """
 from pathlib import Path
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -21,6 +22,12 @@ def main():
     assert subprocess.check_output(adb+['shell','getprop','ro.kernel.qemu']).strip()==b'1', 'Select an emulator for these controlled tests'
     config=ROOT/'app/build/generated/source/buildConfig/debug/com/amogu6/tv/BuildConfig.java'
     assert 'boolean OFFLINE = true' in config.read_text(encoding='utf-8'), 'Only validate the offline fixture build'
+    apk=ROOT/'app/build/outputs/apk/debug/app-debug.apk'
+    apk_hash=hashlib.sha256(apk.read_bytes()).hexdigest()
+    installed=subprocess.check_output(adb+['shell','pm','path',PKG]).decode().strip().removeprefix('package:')
+    assert re.fullmatch(r'/data/app/[A-Za-z0-9_./=+~-]+/base\.apk',installed), 'Expected a single installed debug APK'
+    installed_hash=subprocess.check_output(adb+['shell','sha256sum',installed]).decode().split()[0]
+    assert installed_hash==apk_hash, 'Install the current debug APK before running validation'
     output=ROOT/'.local/validation-logs';output.mkdir(parents=True,exist_ok=True)
     results=[]
 
@@ -39,7 +46,7 @@ def main():
         ok=re.search(r'OK \((\d+) tests?\)',text)
         item=dict(name=name,passed=ok is not None,tests=int(ok.group(1)) if ok else 0,seconds=round(time.monotonic()-start,2))
         results.append(item)
-        (ROOT/'docs/device-validation.json').write_text(json.dumps(dict(serial=args.serial,mode='synthetic-offline',cases=results),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        (ROOT/'docs/device-validation.json').write_text(json.dumps(dict(serial=args.serial,mode='synthetic-offline',apk_sha256=apk_hash,cases=results),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print(('PASS ' if item['passed'] else 'FAIL ')+name+' '+str(item['seconds'])+'s',flush=True)
 
     if not args.pages_only:

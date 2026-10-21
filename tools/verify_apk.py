@@ -48,8 +48,10 @@ def verify(path):
     assert not missing, 'Missing activity implementations: '+str(missing)
     for name in ['com.mogu.tv.main.App','com.mogu.tv.MainActivity','com.mogu.tv.utils.exo.HlsMyPlaylistParser','com.kotlin.basiclib.utils.HttpMyUrlFetcher','com.alibaba.android.arouter.routes.ARouter$$Group$$module']:
         assert name in counts, 'Missing required integration: '+name
-    symbols=list((ROOT/'app/build/intermediates/runtime_symbol_list/debug').rglob('R.txt'))
-    assert symbols, 'No generated resource symbols'
+    variant=path.parent.name
+    assert variant in ('debug','release'), 'Select an APK in its debug/release output directory'
+    symbols=list((ROOT/'app/build/intermediates/runtime_symbol_list'/variant).rglob('R.txt'))
+    assert symbols, 'No generated resource symbols for '+variant
     actual={}
     for line in symbols[0].read_text(encoding='utf-8').splitlines():
         parts=line.split()

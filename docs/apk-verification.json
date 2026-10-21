@@ -1,6 +1,6 @@
 {
   "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
-  "sha256": "35c028a0410f289a995413e31c754c9a7a70046b7100612222e788dd0cef7463",
+  "sha256": "e736728939cc50fa79f9a43bfd80c099a4826c0931cbc9be9cc48b36312b00b2",
   "dex_files": [
     "classes.dex",
     "classes10.dex",

@@ -12,5 +12,13 @@
     "status": 200,
     "content_type": "application/json",
     "preview": "[\"\\\"https://47.97.188.179\\\"\"]"
+  },
+  {
+    "url": "https://47.97.188.179/api/vod/type",
+    "checked_at": "2026-10-21",
+    "read_only": true,
+    "source": "IP returned by original DNS TXT discovery; normal TLS validation retained",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8"
   }
 ]

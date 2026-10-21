@@ -25,6 +25,8 @@ flowchart TD
 
 超时仍为连接/读/写各 30 秒。TLS 改为系统证书链和主机名校验；原 `App` 全局信任所有证书和 `SSLOkhttp` 的宽松校验已移除。失效证书不再被静默接受。
 
+2026-10-21 原 DNS TXT 返回的 IP 在模拟器中通过了真实分类、列表、详情的只读调用。真实封面由原 Glide 模块解码成功；真实非明文清单由 `HlsMyPlaylistParser` 解密并解析出 462 个分片。测试没有读取视频分片或使用真实账号，报告不包含原始内容或媒体 URL；证据见 `live-device-validation.json` 与 `live-media-validation.json`。
+
 ## HLS 清单加密
 
 调用入口：`DetailsActivity` / `ArouterUtils` / `ShortVideoMainFragment` 将 `(内容 id, play_url)` 保存到 `PlayIdSaveUtils`。播放器使用 `ExoMyPlayerManager → IjkExoMyMediaPlayer → ExoMySourceManager → HlsMyMediaSource.Factory → MyHlsPlaylistParserFactory → HlsMyPlaylistParser`。

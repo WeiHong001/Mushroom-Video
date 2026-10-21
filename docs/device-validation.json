@@ -1,0 +1,259 @@
+{
+  "serial": "emulator-5580",
+  "mode": "synthetic-offline",
+  "apk_sha256": "e736728939cc50fa79f9a43bfd80c099a4826c0931cbc9be9cc48b36312b00b2",
+  "cases": [
+    {
+      "name": "media-and-api",
+      "passed": true,
+      "tests": 4,
+      "seconds": 2.63
+    },
+    {
+      "name": "five-tabs",
+      "passed": true,
+      "tests": 1,
+      "seconds": 37.41
+    },
+    {
+      "name": "playback",
+      "passed": true,
+      "tests": 1,
+      "seconds": 25.31
+    },
+    {
+      "name": "drawing-and-gestures",
+      "passed": true,
+      "tests": 1,
+      "seconds": 2.95
+    },
+    {
+      "name": "short-swipe",
+      "passed": true,
+      "tests": 1,
+      "seconds": 10.69
+    },
+    {
+      "name": "router-and-history",
+      "passed": true,
+      "tests": 1,
+      "seconds": 11.33
+    },
+    {
+      "name": "RegistActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 4.8
+    },
+    {
+      "name": "SettingActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 4.49
+    },
+    {
+      "name": "ShangwuActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 5.28
+    },
+    {
+      "name": "SheQuUserActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.87
+    },
+    {
+      "name": "ForgetPassWordActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.34
+    },
+    {
+      "name": "SqNoticeActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 10.47
+    },
+    {
+      "name": "TouGaoActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.08
+    },
+    {
+      "name": "CommentNewsActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 4.45
+    },
+    {
+      "name": "DetailsActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 11.42
+    },
+    {
+      "name": "DetailVipVideoActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.51
+    },
+    {
+      "name": "ImglookActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.34
+    },
+    {
+      "name": "ShequDetailsActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 10.13
+    },
+    {
+      "name": "ShortDetailsActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 12.27
+    },
+    {
+      "name": "CollectActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.62
+    },
+    {
+      "name": "AppLockActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 6.58
+    },
+    {
+      "name": "PiankuActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.69
+    },
+    {
+      "name": "PraviteActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.61
+    },
+    {
+      "name": "UserContractActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.54
+    },
+    {
+      "name": "BiaoQianListActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.6
+    },
+    {
+      "name": "AdviceSuggestActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.3
+    },
+    {
+      "name": "ActivityPageActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.55
+    },
+    {
+      "name": "AdCenterAppActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.68
+    },
+    {
+      "name": "FocusUserListActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.47
+    },
+    {
+      "name": "MessageCenterActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.96
+    },
+    {
+      "name": "MessageDetailsActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.44
+    },
+    {
+      "name": "NvYouActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 10.43
+    },
+    {
+      "name": "ContactActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.55
+    },
+    {
+      "name": "EditUserInfoActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 9.03
+    },
+    {
+      "name": "UserInfoActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 13.58
+    },
+    {
+      "name": "HistoryActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 11.84
+    },
+    {
+      "name": "LabelsSelectActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.46
+    },
+    {
+      "name": "InviteListActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 4.9
+    },
+    {
+      "name": "QiuPianActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 4.6
+    },
+    {
+      "name": "RankActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 5.56
+    },
+    {
+      "name": "SearchActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 5.18
+    },
+    {
+      "name": "WebViewActivity",
+      "passed": true,
+      "tests": 1,
+      "seconds": 8.44
+    }
+  ]
+}

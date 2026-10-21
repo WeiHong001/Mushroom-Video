@@ -1,0 +1,26 @@
+{
+  "mode": "real-read-only",
+  "api_base": "https://47.97.188.179",
+  "calls": [
+    {
+      "path": "/api/vod/type",
+      "code": 200,
+      "items": 9
+    },
+    {
+      "path": "/api/vod/list",
+      "code": 200,
+      "items": 2
+    },
+    {
+      "path": "/api/vod/info",
+      "code": 200
+    }
+  ],
+  "mutation_guard_verified_without_network": true,
+  "passed": true,
+  "serial": "emulator-5580",
+  "apk_sha256": "8b97f3cbadf8cab3cd7de4ee1b055a22462810b5d64c6894643851588c27788c",
+  "real_account_used": false,
+  "raw_content_saved_to_repository": false
+}
