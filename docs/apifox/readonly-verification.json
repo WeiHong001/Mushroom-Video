@@ -1,0 +1,637 @@
+{
+  "checked_at": "2026-10-21T16:06:43+08:00",
+  "source_commit": "98ca0848925ac385e8fc85c432a45e88bc18c98d",
+  "base_url": "https://47.97.188.179",
+  "discovered_hosts": [
+    "\"https://47.97.188.179\""
+  ],
+  "real_account_used": false,
+  "mutation_requests_executed": false,
+  "raw_responses_or_media_saved": false,
+  "curl_check": {
+    "url": "https://47.97.188.179/api/vod/type",
+    "exit_code": 0,
+    "business_code": 200,
+    "passed": true,
+    "tls_verification_disabled": false
+  },
+  "sample_public_ids": {
+    "vod_id": "226452",
+    "vlog_id": "128772",
+    "blog_id": "80623"
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "https://dns.alidns.com/resolve?name=apihost.mgsp.me&short=true&type=16",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:38+08:00",
+      "http_status": 200,
+      "content_type": "application/json",
+      "json_type": "list",
+      "passed": true,
+      "elapsed_ms": 232
+    },
+    {
+      "method": "GET",
+      "path": "https://api.mgsp.ltd/api/vod/type",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:38+08:00",
+      "passed": false,
+      "error_type": "URLError",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "elapsed_ms": 96
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/type",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:38+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list"
+      ],
+      "items": 9,
+      "first_item_fields": [
+        "id",
+        "name",
+        "child"
+      ],
+      "passed": true,
+      "elapsed_ms": 142
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/index",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:38+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list"
+      ],
+      "items": 16,
+      "first_item_fields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "elapsed_ms": 162
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/list",
+      "query": {
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:38+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total",
+        "list"
+      ],
+      "items": 2,
+      "first_item_fields": [
+        "id",
+        "title",
+        "cover",
+        "views",
+        "duration",
+        "users",
+        "favorites"
+      ],
+      "passed": true,
+      "elapsed_ms": 168
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/info",
+      "query": {
+        "id": "226452"
+      },
+      "checked_at": "2026-10-21T16:06:39+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "id",
+        "title",
+        "nubmer",
+        "play_url",
+        "views",
+        "favorites",
+        "comments",
+        "cover",
+        "labels",
+        "users",
+        "created_at"
+      ],
+      "passed": true,
+      "elapsed_ms": 197
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/recommend",
+      "query": {
+        "id": "226452"
+      },
+      "checked_at": "2026-10-21T16:06:39+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list",
+        "total"
+      ],
+      "items": 10,
+      "first_item_fields": [
+        "id",
+        "title",
+        "cover",
+        "views",
+        "duration",
+        "users",
+        "favorites"
+      ],
+      "passed": true,
+      "elapsed_ms": 226
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/comment/list",
+      "query": {
+        "vod_id": "226452",
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:39+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list",
+        "total"
+      ],
+      "items": 0,
+      "passed": true,
+      "elapsed_ms": 206
+    },
+    {
+      "method": "GET",
+      "path": "/api/vodlabel/all",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:39+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total",
+        "list"
+      ],
+      "items": 90,
+      "first_item_fields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "elapsed_ms": 204
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/hotspot",
+      "query": {
+        "type": "day"
+      },
+      "checked_at": "2026-10-21T16:06:39+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "list",
+      "items": 82,
+      "passed": true,
+      "elapsed_ms": 368
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/clever",
+      "query": {
+        "wd": "test",
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:40+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list",
+        "total"
+      ],
+      "items": 6,
+      "first_item_fields": [
+        "id",
+        "title",
+        "cover",
+        "views",
+        "duration",
+        "users",
+        "favorites"
+      ],
+      "passed": true,
+      "elapsed_ms": 230
+    },
+    {
+      "method": "GET",
+      "path": "/api/vlog/list",
+      "query": {
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:40+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total",
+        "list"
+      ],
+      "items": 2,
+      "first_item_fields": [
+        "id",
+        "title",
+        "cover",
+        "favorites",
+        "views",
+        "comments",
+        "play_url",
+        "user"
+      ],
+      "passed": true,
+      "elapsed_ms": 458
+    },
+    {
+      "method": "GET",
+      "path": "/api/vlog/comment/list",
+      "query": {
+        "vlog_id": "128772",
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:41+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list",
+        "total"
+      ],
+      "items": 0,
+      "passed": true,
+      "elapsed_ms": 188
+    },
+    {
+      "method": "GET",
+      "path": "/api/blog/list",
+      "query": {
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:41+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total",
+        "list"
+      ],
+      "items": 2,
+      "first_item_fields": [
+        "id",
+        "user",
+        "detail",
+        "images",
+        "favorites",
+        "type",
+        "star",
+        "comments",
+        "created_at",
+        "haveessay",
+        "havecontact",
+        "unlock",
+        "topic",
+        "match",
+        "Video",
+        "status",
+        "Reson",
+        "top"
+      ],
+      "passed": true,
+      "elapsed_ms": 519
+    },
+    {
+      "method": "GET",
+      "path": "/api/blog/info",
+      "query": {
+        "id": "80623"
+      },
+      "checked_at": "2026-10-21T16:06:41+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "id",
+        "user",
+        "detail",
+        "images",
+        "favorites",
+        "type",
+        "star",
+        "comments",
+        "created_at",
+        "haveessay",
+        "havecontact",
+        "unlock",
+        "topic",
+        "match",
+        "Video",
+        "status",
+        "Reson",
+        "top"
+      ],
+      "passed": true,
+      "elapsed_ms": 190
+    },
+    {
+      "method": "GET",
+      "path": "/api/blog/comment/list",
+      "query": {
+        "blog_id": "80623",
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:41+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "list",
+        "total"
+      ],
+      "items": 2,
+      "first_item_fields": [
+        "id",
+        "c_id",
+        "c_type",
+        "comment",
+        "user",
+        "created_at",
+        "count",
+        "pid",
+        "reusername",
+        "reuserid",
+        "rid"
+      ],
+      "passed": true,
+      "elapsed_ms": 206
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/vip/list",
+      "query": {
+        "limit": 2,
+        "page": 1
+      },
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total",
+        "list"
+      ],
+      "items": 2,
+      "first_item_fields": [
+        "ID",
+        "tj_index",
+        "dz_index",
+        "jq_index",
+        "yz_index",
+        "introduce",
+        "title",
+        "cover",
+        "play_url",
+        "unlock",
+        "views",
+        "duration"
+      ],
+      "passed": true,
+      "elapsed_ms": 159
+    },
+    {
+      "method": "GET",
+      "path": "/api/vod/24upload",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "total"
+      ],
+      "passed": true,
+      "elapsed_ms": 147
+    },
+    {
+      "method": "GET",
+      "path": "/api/config",
+      "query": {
+        "name": "notice"
+      },
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 200,
+      "data_type": "dict",
+      "data_fields": [
+        "Image",
+        "Name",
+        "Value"
+      ],
+      "passed": true,
+      "elapsed_ms": 185
+    },
+    {
+      "method": "GET",
+      "path": "/api/cdnhost",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 404,
+      "passed": false,
+      "error_type": "HTTPError",
+      "elapsed_ms": 136
+    },
+    {
+      "method": "GET",
+      "path": "/api/captcha",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "CaptchaId",
+        "CaptchaUrl"
+      ],
+      "business_code": null,
+      "data_type": "dict",
+      "data_fields": [
+        "CaptchaId",
+        "CaptchaUrl"
+      ],
+      "passed": true,
+      "elapsed_ms": 138
+    },
+    {
+      "method": "GET",
+      "path": "/api/user/info",
+      "query": {},
+      "checked_at": "2026-10-21T16:06:42+08:00",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "json_type": "dict",
+      "top_fields": [
+        "code",
+        "data",
+        "message"
+      ],
+      "business_code": 403,
+      "data_type": "NoneType",
+      "business_message": "需要进行身份验证",
+      "passed": false,
+      "elapsed_ms": 156
+    }
+  ]
+}

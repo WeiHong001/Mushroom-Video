@@ -63,6 +63,8 @@ apiBase=https://47.97.188.179
 
 完整页面、原布局和参数清单见 [业务入口清单](docs/business-inventory.md)，原 60 个接口声明见 [api-inventory.json](docs/api-inventory.json)。
 
+面向领导汇报及直接联调的 Markdown 文档见 [项目接口报告](docs/蘑菇视频1.1.4接口报告.md)，内含已实测的 cURL、全部接口的参数与鉴权说明，以及可一次导入 Apifox 的 OpenAPI 文件。
+
 | 入口 | 主要代码 | 原资源/职责 |
 |---|---|---|
 | 启动、首页 | `ui/LoadingActivity`、`MainActivity`、`ui/HomeFragment`、`ui/frag/ListMainFragment` | `act_loadpage`、`activity_main`、分类标题、菜单、推荐列表 |

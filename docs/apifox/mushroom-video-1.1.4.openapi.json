@@ -1,0 +1,3147 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "蘑菇视频 1.1.4 客户端接口文档",
+    "version": "1.1.4",
+    "description": "尊敬的领导，您好！本接口清单依据 ApiService、ApiClient、ApiManager 及业务调用方整理，敬请您审阅。60 个客户端方法合并为 57 项 HTTP 操作。实测地址为 https://47.97.188.179，非永久地址。写操作仅提供待填模板，Apifox 直连不受研究 App 的只读拦截器保护。参数 required 表示原调用约束或本地调试要求，不替代尚未取得的服务端规则。"
+  },
+  "servers": [
+    {
+      "url": "https://47.97.188.179",
+      "description": "2026-10-21 DNS 发现并实测的服务地址"
+    },
+    {
+      "url": "https://api.mgsp.ltd",
+      "description": "原默认域名；本次 TLS 访问失败"
+    }
+  ],
+  "paths": {
+    "/api/user/vod/history/add": {
+      "put": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "增加观看历史",
+        "operationId": "addHistory",
+        "description": "对应客户端方法：addHistory。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：原客户端 noCallBack 订阅，不向页面返回实体。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "addHistory"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:25",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vod_id": {
+                    "type": "integer",
+                    "description": "视频内容 ID；待替换测试值。",
+                    "example": 0
+                  }
+                },
+                "required": [
+                  "vod_id"
+                ]
+              },
+              "example": {
+                "vod_id": 0
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vod/star/add": {
+      "put": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "收藏视频",
+        "operationId": "addStar",
+        "description": "对应客户端方法：addStar。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "addStar"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:28",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vod_id": {
+                    "type": "integer",
+                    "description": "视频内容 ID；待替换测试值。",
+                    "example": 0
+                  }
+                },
+                "required": [
+                  "vod_id"
+                ]
+              },
+              "example": {
+                "vod_id": 0
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/blog/star/delete": {
+      "delete": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "取消社区收藏",
+        "operationId": "blogDeleteStar",
+        "description": "对应客户端方法：blogDeleteStar, blogDeleteStarDetails。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n请勿把社区内容 ID 当作收藏记录 ID；两种写法择一发送。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "blogDeleteStar",
+          "blogDeleteStarDetails"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:31",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "收藏记录 ID，与 blog_id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{star_record_id}}"
+          },
+          {
+            "name": "blog_id",
+            "in": "query",
+            "description": "社区内容 ID，与 id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/blog/star/add": {
+      "put": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "收藏社区内容",
+        "operationId": "blogStar",
+        "description": "对应客户端方法：blogStar。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "blogStar"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:37",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "blog_id": {
+                    "type": "integer",
+                    "description": "社区内容 ID；待替换测试值。",
+                    "example": 0
+                  }
+                },
+                "required": [
+                  "blog_id"
+                ]
+              },
+              "example": {
+                "blog_id": 0
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/adclick": {
+      "get": {
+        "tags": [
+          "基础配置"
+        ],
+        "summary": "上报广告点击",
+        "operationId": "clickAd",
+        "description": "对应客户端方法：clickAd。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\nGET 也有上报副作用；本次未发送，请勿作为只读连通性测试。",
+        "security": [],
+        "x-client-methods": [
+          "clickAd"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:40",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "广告 ID，请从受控广告配置选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{ad_id}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/comment/list": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取视频评论",
+        "operationId": "commentLists",
+        "description": "对应客户端方法：commentLists。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：CommentLists。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\", \"total\"], \"items\": 0}",
+        "security": [],
+        "x-client-methods": [
+          "commentLists"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:43",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "vod_id",
+            "in": "query",
+            "description": "内容 ID，请从对应列表返回值中选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "226452"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vod/star/delete": {
+      "delete": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "取消视频收藏",
+        "operationId": "deleteDetailsStar",
+        "description": "对应客户端方法：deleteDetailsStar, deleteStar。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\ndeleteStar 传记录 id，deleteDetailsStar 传 vod_id；请只发送一种。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "deleteDetailsStar",
+          "deleteStar"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:46",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "收藏记录 ID，与 vod_id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{star_record_id}}"
+          },
+          {
+            "name": "vod_id",
+            "in": "query",
+            "description": "视频内容 ID，与 id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vod/history/delete": {
+      "delete": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "删除观看历史",
+        "operationId": "deleteHistory",
+        "description": "对应客户端方法：deleteHistory。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：HistoryLists。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "deleteHistory"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:49",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "观看历史记录 ID，并非视频内容 ID。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{history_record_id}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/follow/add": {
+      "put": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "关注用户",
+        "operationId": "focusUser",
+        "description": "对应客户端方法：focusUser。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "focusUser"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:55",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "follow_id": {
+                    "type": "integer",
+                    "description": "被关注用户 ID；原客户端将字符串转为整数。",
+                    "example": 0
+                  }
+                },
+                "required": [
+                  "follow_id"
+                ]
+              },
+              "example": {
+                "follow_id": 0
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api.php/gbook/save": {
+      "post": {
+        "tags": [
+          "反馈与分享"
+        ],
+        "summary": "提交求片留言",
+        "operationId": "gbookSave",
+        "description": "对应客户端方法：gbookSave。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n原 QiuPianActivity.save 调用；Content-Type 为 application/x-www-form-urlencoded，不是 JSON。该页把 getVerifyCodeImage 返回的原始字符串直接作为图片地址，而登录页解析 CaptchaId/CaptchaUrl 对象，存在旧协议兼容差异，需要受控联调确认；本次未提交留言。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [],
+        "x-client-methods": [
+          "gbookSave"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:59",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "gbook_content": {
+                    "type": "string",
+                    "description": "求片留言正文。",
+                    "example": "受控接口联调，请勿发送到线上。"
+                  },
+                  "verify": {
+                    "type": "string",
+                    "description": "原接口要求的验证码字段；不应与其他接口的 captcha 字段混用。",
+                    "example": "{{verify}}"
+                  }
+                },
+                "required": [
+                  "gbook_content",
+                  "verify"
+                ]
+              },
+              "example": {
+                "gbook_content": "受控接口联调，请勿发送到线上。",
+                "verify": "{{verify}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/24upload": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取最近更新统计",
+        "operationId": "get24upload",
+        "description": "对应客户端方法：get24upload。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n虽然路径含 upload，客户端对它执行 GET 读取更新数量，不能将其写成上传接口。\n\n客户端解析类型：Upload24。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\"]}",
+        "security": [],
+        "x-client-methods": [
+          "get24upload"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:62",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/ads": {
+      "get": {
+        "tags": [
+          "基础配置"
+        ],
+        "summary": "读取广告配置",
+        "operationId": "getAds",
+        "description": "对应客户端方法：getAds。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 本次未实测。\n\n读取配置与广告点击上报是两项接口，不能混为一谈。\n\n客户端解析类型：AllAdsModel。",
+        "security": [],
+        "x-client-methods": [
+          "getAds"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:65",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/config": {
+      "get": {
+        "tags": [
+          "基础配置"
+        ],
+        "summary": "读取业务配置",
+        "operationId": "getAppConfig",
+        "description": "对应客户端方法：getAppConfig。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：MoguConfig。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"Image\", \"Name\", \"Value\"]}",
+        "security": [],
+        "x-client-methods": [
+          "getAppConfig"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:68",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "配置键；示例 notice。另见正文配置键清单。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "notice"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/info": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取视频详情",
+        "operationId": "getAppDetials",
+        "description": "对应客户端方法：getAppDetials。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n返回字段 nubmer 保留服务端原拼写。play_url 可能指向加密清单，不能因没有 m3u8 后缀就当作普通 MP4。\n\n客户端解析类型：VideoPlayDetails。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"id\", \"title\", \"nubmer\", \"play_url\", \"views\", \"favorites\", \"comments\", \"cover\", \"labels\", \"users\", \"created_at\"]}",
+        "security": [],
+        "x-client-methods": [
+          "getAppDetials"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:71",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "内容 ID，请从对应列表返回值中选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "226452"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/blog/list": {
+      "get": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "获取社区列表",
+        "operationId": "getBlobList",
+        "description": "对应客户端方法：getBlobList。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：ShequListModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\", \"list\"], \"first_item_fields\": [\"id\", \"user\", \"detail\", \"images\", \"favorites\", \"type\", \"star\", \"comments\", \"created_at\", \"haveessay\", \"havecontact\", \"unlock\", \"topic\", \"match\", \"Video\", \"status\", \"Reson\", \"top\"], \"items\": 2}",
+        "security": [],
+        "x-client-methods": [
+          "getBlobList"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:74",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "作者用户 ID；原用户社区页可带此值。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/blog/star/list": {
+      "get": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "获取社区收藏",
+        "operationId": "getBlobLoveList",
+        "description": "对应客户端方法：getBlobLoveList。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：ShequListLoveModel。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getBlobLoveList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:77",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "原社区收藏页面可能带用户 ID；其权限范围待账号复核。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/cache": {
+      "get": {
+        "tags": [
+          "反馈与分享"
+        ],
+        "summary": "读取分享缓存信息",
+        "operationId": "getCacheShareCode",
+        "description": "对应客户端方法：getCacheShareCode。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 本次未实测。\n\n原 MainActivity.onStart 读取该接口；返回含 mogushare_用户ID 的文本时会进入邀请归因路径。客户端将其 data 解析为字符串，本次未探测此接口的后台行为。\n\n客户端解析类型：String。",
+        "security": [],
+        "x-client-methods": [
+          "getCacheShareCode"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:80",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/blog/comment/list": {
+      "get": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "获取社区评论",
+        "operationId": "getCommentListBlog",
+        "description": "对应客户端方法：getCommentListBlog。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：CommentLists。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\", \"total\"], \"first_item_fields\": [\"id\", \"c_id\", \"c_type\", \"comment\", \"user\", \"created_at\", \"count\", \"pid\", \"reusername\", \"reuserid\", \"rid\"], \"items\": 2}",
+        "security": [],
+        "x-client-methods": [
+          "getCommentListBlog"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:83",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "blog_id",
+            "in": "query",
+            "description": "内容 ID，请从对应列表返回值中选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "80623"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vlog/comment/list": {
+      "get": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "获取短视频评论",
+        "operationId": "getCommentListShort",
+        "description": "对应客户端方法：getCommentListShort。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：CommentLists。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\", \"total\"], \"items\": 0}",
+        "security": [],
+        "x-client-methods": [
+          "getCommentListShort"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:86",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "vlog_id",
+            "in": "query",
+            "description": "内容 ID，请从对应列表返回值中选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "128772"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/follow": {
+      "get": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "获取关注列表",
+        "operationId": "getFocusList",
+        "description": "对应客户端方法：getFocusList。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：UserList。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getFocusList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:89",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "原客户端发送整数用户 ID；请替换为测试用户。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 0
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/list/follow": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取关注作者视频",
+        "operationId": "getFocusVideoList",
+        "description": "对应客户端方法：getFocusVideoList。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：VideoListModel。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getFocusVideoList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:92",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vod/history/list": {
+      "get": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "获取观看历史",
+        "operationId": "getHistory",
+        "description": "对应客户端方法：getHistory。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：HistoryLists。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getHistory"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:95",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/resolve": {
+      "get": {
+        "tags": [
+          "基础配置"
+        ],
+        "summary": "发现当前 API 地址",
+        "operationId": "getHostTxt",
+        "description": "对应客户端方法：getHostTxt。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n此接口使用独立域名 dns.alidns.com，返回字符串数组，不使用业务 envelope。TXT 内还可能带双引号。旧 LoadingActivity 的域名提取条件含 api 和 com，对当前 IP 结果未必适用；Apifox 请直接填写本次实测 Base URL。\n\n客户端解析类型：原始响应字符串，由调用页面进一步处理。\n\n本次观测：{\"http_status\": 200}",
+        "security": [],
+        "x-client-methods": [
+          "getHostTxt"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:98",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "原客户端使用的 TXT 记录名。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "apihost.mgsp.me"
+          },
+          {
+            "name": "short",
+            "in": "query",
+            "description": "返回简短结果。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "DNS TXT 类型。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 16
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://dns.alidns.com",
+            "description": "DNS 发现独立服务"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "返回原始 JSON。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/index": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取首页推荐分组",
+        "operationId": "getIndexRecommendLables",
+        "description": "对应客户端方法：getIndexRecommendLables。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：IndexLables。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\"], \"first_item_fields\": [\"id\", \"name\"], \"items\": 16}",
+        "security": [],
+        "x-client-methods": [
+          "getIndexRecommendLables"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:101",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vodlabel/all": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取视频标签",
+        "operationId": "getLabels",
+        "description": "对应客户端方法：getLabels。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：LabelsModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\", \"list\"], \"first_item_fields\": [\"id\", \"name\"], \"items\": 90}",
+        "security": [],
+        "x-client-methods": [
+          "getLabels"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:104",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/actor": {
+      "get": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "获取作者索引",
+        "operationId": "getNvyou",
+        "description": "对应客户端方法：getNvyou。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 本次未实测。\n\n保留原 getNvyou 方法和 /api/user/actor 路径；无请求参数。\n\n客户端解析类型：NvyouList。",
+        "security": [],
+        "x-client-methods": [
+          "getNvyou"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:107",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/hotspot": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取排行榜",
+        "operationId": "getRankList",
+        "description": "对应客户端方法：getRankList。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：原始响应字符串，由调用页面进一步处理。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"items\": 82}",
+        "security": [],
+        "x-client-methods": [
+          "getRankList"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:110",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "客户端切换值 day、week、month、own；own 含义以原页面及后台为准。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "day"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/blog/info": {
+      "get": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "获取社区详情",
+        "operationId": "getShequDetails",
+        "description": "对应客户端方法：getShequDetails。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：ShequDetailsModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"id\", \"user\", \"detail\", \"images\", \"favorites\", \"type\", \"star\", \"comments\", \"created_at\", \"haveessay\", \"havecontact\", \"unlock\", \"topic\", \"match\", \"Video\", \"status\", \"Reson\", \"top\"]}",
+        "security": [],
+        "x-client-methods": [
+          "getShequDetails"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:113",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "社区内容 ID，请从社区列表选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "80623"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vlog/list": {
+      "get": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "获取短视频列表",
+        "operationId": "getShortLists",
+        "description": "对应客户端方法：getShortLists。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：ShortVideoList。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\", \"list\"], \"first_item_fields\": [\"id\", \"title\", \"cover\", \"favorites\", \"views\", \"comments\", \"play_url\", \"user\"], \"items\": 2}",
+        "security": [],
+        "x-client-methods": [
+          "getShortLists"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:116",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "按用户筛选；原用户短视频页发送。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vlog/star/list": {
+      "get": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "获取短视频收藏",
+        "operationId": "getShortStarLists",
+        "description": "对应客户端方法：getShortStarLists。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：ShortStarVideoLists。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getShortStarLists"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:119",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vod/star/list": {
+      "get": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "获取视频收藏",
+        "operationId": "getStarList",
+        "description": "对应客户端方法：getStarList。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：HistoryLists。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getStarList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:122",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/type": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取视频分类",
+        "operationId": "getTypeAll",
+        "description": "对应客户端方法：getTypeAll。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：VideoTypes。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\"], \"first_item_fields\": [\"id\", \"name\", \"child\"], \"items\": 9}",
+        "security": [],
+        "x-client-methods": [
+          "getTypeAll"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:125",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/info": {
+      "get": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "获取当前账号资料",
+        "operationId": "getUserInfo",
+        "description": "对应客户端方法：getUserInfo。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：匿名请求被拒 业务码 403。\n\n本次匿名请求 HTTP 200、业务 code 403；不能按 HTTP 200 认定已取到用户资料。\n\n客户端解析类型：UserModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 403}",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getUserInfo"
+        ],
+        "x-validation-status": "匿名请求被拒 业务码 403",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:128",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/list": {
+      "get": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "搜索或推荐用户",
+        "operationId": "getUserList",
+        "description": "对应客户端方法：getUserList。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：UserList。",
+        "security": [],
+        "x-client-methods": [
+          "getUserList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:131",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "用户搜索关键词；不填写时原页面用于用户推荐。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/other": {
+      "get": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "获取指定用户资料",
+        "operationId": "getUserOhterInfo",
+        "description": "对应客户端方法：getUserOhterInfo。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：UserOtherInfo。",
+        "security": [],
+        "x-client-methods": [
+          "getUserOhterInfo"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:134",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "指定用户 ID；请由列表或详情用户字段选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/share": {
+      "get": {
+        "tags": [
+          "反馈与分享"
+        ],
+        "summary": "获取邀请记录",
+        "operationId": "getUserShareList",
+        "description": "对应客户端方法：getUserShareList。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 本次未实测。\n\n客户端解析类型：UserShareList。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "getUserShareList"
+        ],
+        "x-validation-status": "源码确认 本次未实测",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:137",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "反馈与分享"
+        ],
+        "summary": "提交邀请归因",
+        "operationId": "postshare",
+        "description": "对应客户端方法：postshare。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n这是本接口的业务校验字段，不是全站通用签名，也不能用临时编造的 accessKey 认定服务端已恢复。未执行真实邀请归因。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [],
+        "x-client-methods": [
+          "postshare"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:167",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "shareUserID": {
+                    "type": "integer",
+                    "description": "邀请用户 ID。",
+                    "example": 0
+                  },
+                  "deviceId": {
+                    "type": "string",
+                    "description": "原 ApiManager 的 UUID 值；优先缓存或 Android ID，空值时才回退 User-Agent 的 MD5。",
+                    "example": "{{device_id}}"
+                  },
+                  "accessKey": {
+                    "type": "string",
+                    "description": "原客户端按邀请用户 ID、当天 yyyyMMdd、mogu 和 deviceId 拼接后 MD5，并取下标 [1,7) 的六位片段。",
+                    "example": "{{share_access_key}}"
+                  }
+                },
+                "required": [
+                  "shareUserID",
+                  "deviceId",
+                  "accessKey"
+                ]
+              },
+              "example": {
+                "shareUserID": 0,
+                "deviceId": "{{device_id}}",
+                "accessKey": "{{share_access_key}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/captcha": {
+      "get": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "获取图形验证码",
+        "operationId": "getVerifyCode",
+        "description": "对应客户端方法：getVerifyCode。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n返回对象为 CaptchaId、CaptchaUrl，字段首字母大写；登录/SMS 请求字段则为 captchaId、captcha。验证码请您每次重新获取，不能复用离线研究码 0000。\n\n客户端解析类型：原始响应字符串，由调用页面进一步处理。\n\n本次观测：{\"http_status\": 200, \"business_code\": null, \"data_fields\": [\"CaptchaId\", \"CaptchaUrl\"]}",
+        "security": [],
+        "x-client-methods": [
+          "getVerifyCode"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:140",
+        "responses": {
+          "200": {
+            "description": "返回原始 JSON。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Captcha"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/list": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取视频列表",
+        "operationId": "getVideoList",
+        "description": "对应客户端方法：getVideoList。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：VideoListModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\", \"list\"], \"first_item_fields\": [\"id\", \"title\", \"cover\", \"views\", \"duration\", \"users\", \"favorites\"], \"items\": 2}",
+        "security": [],
+        "x-client-methods": [
+          "getVideoList"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:143",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "types",
+            "in": "query",
+            "description": "分类筛选值；来源为分类选择器。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "labels",
+            "in": "query",
+            "description": "标签筛选值；来源为首页分组或标签选择器。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "users",
+            "in": "query",
+            "description": "作品所属用户 ID；原用户页发送整数。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "description": "排序表达式；原片库默认 -id。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/recommend": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "获取相关视频",
+        "operationId": "getVideoRecommend",
+        "description": "对应客户端方法：getVideoRecommend。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：VideoListModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\", \"total\"], \"first_item_fields\": [\"id\", \"title\", \"cover\", \"views\", \"duration\", \"users\", \"favorites\"], \"items\": 10}",
+        "security": [],
+        "x-client-methods": [
+          "getVideoRecommend"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:146",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "内容 ID，请从对应列表返回值中选取。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "226452"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/vip/list": {
+      "get": {
+        "tags": [
+          "精品视频"
+        ],
+        "summary": "获取精品视频列表",
+        "operationId": "getVipVideoData",
+        "description": "对应客户端方法：getVipVideoData。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：VipVideoList。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"total\", \"list\"], \"first_item_fields\": [\"ID\", \"tj_index\", \"dz_index\", \"jq_index\", \"yz_index\", \"introduce\", \"title\", \"cover\", \"play_url\", \"unlock\", \"views\", \"duration\"], \"items\": 2}",
+        "security": [],
+        "x-client-methods": [
+          "getVipVideoData"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:149",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/clever": {
+      "get": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "搜索视频",
+        "operationId": "getVodClever",
+        "description": "对应客户端方法：getVodClever。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次实测成功。\n\n客户端解析类型：VideoListModel。\n\n本次观测：{\"http_status\": 200, \"business_code\": 200, \"data_fields\": [\"list\", \"total\"], \"first_item_fields\": [\"id\", \"title\", \"cover\", \"views\", \"duration\", \"users\", \"favorites\"], \"items\": 6}",
+        "security": [],
+        "x-client-methods": [
+          "getVodClever"
+        ],
+        "x-validation-status": "本次实测成功",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:152",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "每页条数；示例取 2 条，客户端列表也使用 4、6、20。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "页码；示例从 1 开始，个别原页面会随机取页。",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "wd",
+            "in": "query",
+            "description": "视频搜索关键词；示例 test 已实测。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "test"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/cdnhost": {
+      "get": {
+        "tags": [
+          "基础配置"
+        ],
+        "summary": "读取 CDN 地址",
+        "operationId": "getcdnHost",
+        "description": "对应客户端方法：getcdnHost。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：本次 HTTP 404。\n\nApiService 原路径为 /api/cdnhost；本次 HTTP 404。保留原协议供核查，不改写成未经证实的新路径。\n\n客户端解析类型：String。\n\n本次观测：{\"http_status\": 404}",
+        "security": [],
+        "x-client-methods": [
+          "getcdnHost"
+        ],
+        "x-validation-status": "本次 HTTP 404",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:155",
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/login": {
+      "post": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "账号登录",
+        "operationId": "loginUser",
+        "description": "对应客户端方法：loginUser。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n登录响应模型包含 access_token、token_type。原登录页面只取 access_token 传入 UserManager；后续 x-token 使用该原值，不自行添加 Bearer。未使用真实账号验证。\n\n客户端解析类型：LoginResult。",
+        "security": [],
+        "x-client-methods": [
+          "loginUser"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:158",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "phone": {
+                    "type": "string",
+                    "description": "您提供的受控测试手机号。",
+                    "example": "{{phone}}"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "原客户端直接提交密码文本，未发现登录前 MD5/AES 转换。",
+                    "example": "{{password}}"
+                  },
+                  "captchaId": {
+                    "type": "string",
+                    "description": "验证码接口返回的 CaptchaId。",
+                    "example": "{{captcha_id}}"
+                  },
+                  "captcha": {
+                    "type": "string",
+                    "description": "本次图形码内容。",
+                    "example": "{{captcha}}"
+                  }
+                },
+                "required": [
+                  "phone",
+                  "password",
+                  "captchaId",
+                  "captcha"
+                ]
+              },
+              "example": {
+                "phone": "{{phone}}",
+                "password": "{{password}}",
+                "captchaId": "{{captcha_id}}",
+                "captcha": "{{captcha}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/sms": {
+      "post": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "申请短信验证码",
+        "operationId": "postSms",
+        "description": "对应客户端方法：postSms。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n发送会触发真实短信；本次未发送。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [],
+        "x-client-methods": [
+          "postSms"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:161",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "phone": {
+                    "type": "string",
+                    "description": "接收短信的受控测试手机号。",
+                    "example": "{{phone}}"
+                  },
+                  "captchaId": {
+                    "type": "string",
+                    "description": "本次图形验证码 ID。",
+                    "example": "{{captcha_id}}"
+                  },
+                  "captcha": {
+                    "type": "string",
+                    "description": "本次图形验证码。",
+                    "example": "{{captcha}}"
+                  }
+                },
+                "required": [
+                  "phone",
+                  "captchaId",
+                  "captcha"
+                ]
+              },
+              "example": {
+                "phone": "{{phone}}",
+                "captchaId": "{{captcha_id}}",
+                "captcha": "{{captcha}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/suggest/add": {
+      "post": {
+        "tags": [
+          "反馈与分享"
+        ],
+        "summary": "提交意见反馈",
+        "operationId": "postSuggest",
+        "description": "对应客户端方法：postSuggest。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n是否强制鉴权尚未以真实账号验证；若服务端要求登录，请补充 x-token。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [],
+        "x-client-methods": [
+          "postSuggest"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:164",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "suggest": {
+                    "type": "string",
+                    "description": "意见正文。",
+                    "example": "受控接口联调，请勿发送到线上。"
+                  }
+                },
+                "required": [
+                  "suggest"
+                ]
+              },
+              "example": {
+                "suggest": "受控接口联调，请勿发送到线上。"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/register": {
+      "post": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "账号注册",
+        "operationId": "registUser",
+        "description": "对应客户端方法：registUser。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n原注册调用只提交 phone、password；没有因其他业务存在短信字段就给本接口自行添加 verification。后台新增要求待受控账号复核。\n\n客户端解析类型：LoginResult。",
+        "security": [],
+        "x-client-methods": [
+          "registUser"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:170",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "phone": {
+                    "type": "string",
+                    "description": "受控测试手机号。",
+                    "example": "{{phone}}"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "注册密码。",
+                    "example": "{{password}}"
+                  }
+                },
+                "required": [
+                  "phone",
+                  "password"
+                ]
+              },
+              "example": {
+                "phone": "{{phone}}",
+                "password": "{{password}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/resetpasswd": {
+      "post": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "重置账号密码",
+        "operationId": "resetPasswd",
+        "description": "对应客户端方法：resetPasswd。\n\n客户端未针对本接口硬编码鉴权开关；未登录时不附加 x-token，登录后统一附加。是否允许匿名以实测状态为准。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [],
+        "x-client-methods": [
+          "resetPasswd"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:173",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "phone": {
+                    "type": "string",
+                    "description": "受控测试手机号。",
+                    "example": "{{phone}}"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "新密码。",
+                    "example": "{{new_password}}"
+                  },
+                  "verification": {
+                    "type": "string",
+                    "description": "短信验证码。",
+                    "example": "{{sms_code}}"
+                  }
+                },
+                "required": [
+                  "phone",
+                  "password",
+                  "verification"
+                ]
+              },
+              "example": {
+                "phone": "{{phone}}",
+                "password": "{{new_password}}",
+                "verification": "{{sms_code}}"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/comment/add": {
+      "post": {
+        "tags": [
+          "分类与视频"
+        ],
+        "summary": "提交视频评论",
+        "operationId": "saveComment",
+        "description": "对应客户端方法：saveComment。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "saveComment"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:176",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vod_id": {
+                    "type": "integer",
+                    "description": "视频 ID；0 是待替换的测试占位值。",
+                    "example": 0
+                  },
+                  "comment": {
+                    "type": "string",
+                    "description": "待发表的评论。",
+                    "example": "接口联调测试，请勿发送到线上。"
+                  }
+                },
+                "required": [
+                  "vod_id",
+                  "comment"
+                ]
+              },
+              "example": {
+                "vod_id": 0,
+                "comment": "接口联调测试，请勿发送到线上。"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vlog/comment/add": {
+      "post": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "提交短视频评论",
+        "operationId": "saveShortComment",
+        "description": "对应客户端方法：saveShortComment。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "saveShortComment"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:179",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vlog_id": {
+                    "type": "integer",
+                    "description": "短视频 ID；待替换测试值。",
+                    "example": 0
+                  },
+                  "comment": {
+                    "type": "string",
+                    "description": "评论正文。",
+                    "example": "接口联调测试，请勿发送到线上。"
+                  }
+                },
+                "required": [
+                  "vlog_id",
+                  "comment"
+                ]
+              },
+              "example": {
+                "vlog_id": 0,
+                "comment": "接口联调测试，请勿发送到线上。"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/blog/comment/add": {
+      "post": {
+        "tags": [
+          "社区"
+        ],
+        "summary": "提交社区评论",
+        "operationId": "saveblogComment",
+        "description": "对应客户端方法：saveblogComment。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "saveblogComment"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:182",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "blog_id": {
+                    "type": "integer",
+                    "description": "社区内容 ID；待替换测试值。",
+                    "example": 0
+                  },
+                  "comment": {
+                    "type": "string",
+                    "description": "评论正文。",
+                    "example": "接口联调测试，请勿发送到线上。"
+                  }
+                },
+                "required": [
+                  "blog_id",
+                  "comment"
+                ]
+              },
+              "example": {
+                "blog_id": 0,
+                "comment": "接口联调测试，请勿发送到线上。"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vlog/star/add": {
+      "put": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "收藏短视频",
+        "operationId": "shortVideoStar",
+        "description": "对应客户端方法：shortVideoStar。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "shortVideoStar"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:185",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vlog_id": {
+                    "type": "integer",
+                    "description": "短视频 ID；待替换测试值。",
+                    "example": 0
+                  }
+                },
+                "required": [
+                  "vlog_id"
+                ]
+              },
+              "example": {
+                "vlog_id": 0
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/vlog/star/delete": {
+      "delete": {
+        "tags": [
+          "短视频"
+        ],
+        "summary": "取消短视频收藏",
+        "operationId": "shortVideoStarDelete",
+        "description": "对应客户端方法：shortVideoStarDelete, shortVideoStarDeleteDetails。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n两种原方法合并为同一 HTTP 操作；请勿同时填写 id 和 vlog_id。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "shortVideoStarDelete",
+          "shortVideoStarDeleteDetails"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:188",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "收藏记录 ID，与 vlog_id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{star_record_id}}"
+          },
+          {
+            "name": "vlog_id",
+            "in": "query",
+            "description": "短视频内容 ID，与 id 二选一。",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/follow/delete": {
+      "delete": {
+        "tags": [
+          "收藏历史与关注"
+        ],
+        "summary": "取消关注",
+        "operationId": "unFocusUser",
+        "description": "对应客户端方法：unFocusUser。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "unFocusUser"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:194",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "取消关注的目标 ID；原用户详情页传用户 mIds，关注列表传条目 id，请沿原调用传值。",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{user_id}}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/vod/vip/unlock": {
+      "get": {
+        "tags": [
+          "精品视频"
+        ],
+        "summary": "解锁精品视频",
+        "operationId": "unlockvipVIdeo",
+        "description": "对应客户端方法：unlockvipVIdeo。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n该接口虽然是 GET，仍可能变更解锁状态或积分；应按写操作管理。本次未请求，也没有证据将其描述为支付接口。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "unlockvipVIdeo"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:197",
+        "x-has-side-effects": true,
+        "parameters": [
+          {
+            "name": "vipid",
+            "in": "query",
+            "description": "精品列表中的 ID；待替换测试值。",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/index.php/user/portrait": {
+      "post": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "上传头像",
+        "operationId": "updateUserHead",
+        "description": "对应客户端方法：updateUserHead。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\nApiService 接收 MultipartBody.Part，ApiManager 直接透传；未找到构造该 Part 的业务调用方，因此 multipart 字段名尚不能确认。导入文件保留动态文件字段，示例中的 upload_part_name 与 upload_file 必须由受控服务约定补齐，不冒充已验证可用。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "updateUserHead"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:200",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "description": "文件 Part 名未知；请与受控服务约定，不能直接用推测字段名。",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    },
+    "/api/user/update": {
+      "put": {
+        "tags": [
+          "账号与用户"
+        ],
+        "summary": "修改昵称",
+        "operationId": "updateUserName",
+        "description": "对应客户端方法：updateUserName。\n\n个人/关联数据接口，请您准备受控账号 x-token；具体后台权限范围未以真实账号验证。\n\n验证状态：源码确认 未执行线上写操作。\n\n客户端解析类型：JustReturnMsg。",
+        "security": [
+          {
+            "XToken": []
+          }
+        ],
+        "x-client-methods": [
+          "updateUserName"
+        ],
+        "x-validation-status": "源码确认 未执行线上写操作",
+        "x-client-source": "app/src/main/java/com/mogu/tv/api/ApiService.java:204",
+        "x-has-side-effects": true,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "目标昵称；原 ApiManager 仅传 name。",
+                    "example": "接口测试账号"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              "example": {
+                "name": "接口测试账号"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功的 HTTP 响应仍须检查业务 code；示例结构不代表每个接口均实测成功。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessEnvelope"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "可能出现 HTTP 错误、TLS/网络故障或非 JSON 响应；详见验证状态。"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "XToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-token",
+        "description": "原登录返回的 access_token 原值；不自动拼接 Bearer。请使用您提供的受控测试账号。"
+      }
+    },
+    "schemas": {
+      "BusinessEnvelope": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务状态码，与 HTTP 状态分开判断。"
+          },
+          "message": {
+            "type": "string",
+            "description": "业务提示。"
+          },
+          "data": {
+            "nullable": true,
+            "description": "业务数据；可能为对象、数组、标量或 null。"
+          }
+        }
+      },
+      "Captcha": {
+        "type": "object",
+        "properties": {
+          "CaptchaId": {
+            "type": "string"
+          },
+          "CaptchaUrl": {
+            "type": "string"
+          }
+        },
+        "description": "裸 JSON 对象，无统一 code/data 外层。"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "基础配置"
+    },
+    {
+      "name": "分类与视频"
+    },
+    {
+      "name": "短视频"
+    },
+    {
+      "name": "社区"
+    },
+    {
+      "name": "账号与用户"
+    },
+    {
+      "name": "收藏历史与关注"
+    },
+    {
+      "name": "精品视频"
+    },
+    {
+      "name": "反馈与分享"
+    }
+  ],
+  "x-client-method-count": 60,
+  "x-http-operation-count": 57,
+  "x-evidence-date": "2026-10-21T16:06:43+08:00"
+}

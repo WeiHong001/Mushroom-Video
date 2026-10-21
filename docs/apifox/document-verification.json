@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-21T16:16:19+08:00",
+  "markdown_file": "docs/蘑菇视频1.1.4接口报告.md",
+  "markdown_sha256": "1a5a5a36f960f8692f7267a563c36bea2dfc84f2c919580c34e8864e1c950e2e",
+  "openapi_file": "docs/apifox/mushroom-video-1.1.4.openapi.json",
+  "openapi_sha256": "507f168a5d42f084f68c7d3e3a68c1e9a4460869f05144cbef4bac47f5f43341",
+  "openapi_version": "3.0.3",
+  "spec_validation_passed": true,
+  "client_methods_covered": 60,
+  "http_operations": 57,
+  "curl_templates_parsed": 66,
+  "source_literal_query_parameters_covered": true,
+  "duplicate_operation_or_parameter": false,
+  "first_six_copyable_requests_verified": [
+    {
+      "path": "/api/vod/type",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    },
+    {
+      "path": "/api/vod/list",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    },
+    {
+      "path": "/api/vod/info",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    },
+    {
+      "path": "/api/vod/clever",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    },
+    {
+      "path": "/api/vlog/list",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    },
+    {
+      "path": "/api/blog/list",
+      "http_tool": "curl.exe",
+      "exit_code": 0,
+      "business_code": 200,
+      "tls_verification_disabled": false
+    }
+  ],
+  "apifox_ui_import_performed": false,
+  "client_runtime_files_changed": false
+}
