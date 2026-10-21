@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ScrollView android:id="@id/scroll_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_item" android:padding="@dimen/dim20" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_1dp_horizontal" android:showDividers="middle|end" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.core.widget.ContentLoadingProgressBar android:id="@id/progressBar" android:layout_width="20.0dp" android:layout_height="20.0dp" style="?android:progressBarStyleSmall" />
+                    <TextView android:textSize="17.0sp" android:textColor="@color/windowbgcolor" android:id="@id/tv_search_hint" android:padding="@dimen/dim20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在搜索设备" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:id="@id/rl_video" android:background="@mipmap/icon_screen_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="220.0dp">
+            <TextView android:textSize="17.0sp" android:textColor="@color/white" android:id="@id/tv_devicename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_centerHorizontal="true" />
+            <TextView android:textColor="@color/white" android:id="@id/iv_end" android:background="@drawable/background_line" android:paddingLeft="12.0dp" android:paddingTop="9.0dp" android:paddingRight="12.0dp" android:paddingBottom="9.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:text="退出" android:drawableLeft="@mipmap/icon_endvideo" android:drawablePadding="5.0dp" android:layout_below="@id/tv_devicename" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

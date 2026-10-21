@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/ll_Head" layout="@layout/header_layout" />
+    <com.kotlin.basiclib.widget.ProgressWebView android:id="@id/webview" android:padding="@dimen/dim24" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <me.yokeyword.indexablerv.IndexableLayout android:id="@id/indexbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:indexBar_background="#08000000" app:indexBar_layout_width="40.0dp" app:indexBar_selectedTextColor="#f33737" app:indexBar_textSize="15.0sp" app:indexBar_textSpace="6.0dp" />
+</LinearLayout>

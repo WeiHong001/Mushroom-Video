@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/card_login" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="18.0dp" android:layout_marginRight="10.0dp" android:layout_marginBottom="18.0dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_user" android:layout_width="60.0dp" android:layout_height="60.0dp" android:src="@mipmap/default_user" app:riv_oval="true" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dim24">
+                        <TextView android:id="@id/tv_username" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="登錄/註冊" android:maxLength="10" style="@style/setting_textstyle" />
+                        <LinearLayout android:orientation="horizontal" android:id="@id/llJifen" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+                            <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@mipmap/ic_jifen" />
+                            <TextView android:id="@id/tvJifen" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="积分:0" android:maxLength="10" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@id/ivMsgCenter" android:padding="8.0dp" android:layout_width="35.0dp" android:layout_height="35.0dp" android:src="@mipmap/ic_message" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp">
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center" android:id="@id/tv_uploadNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/setting_textstyle" />
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="投稿" android:maxLength="10" style="@style/setting_textstyle" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/llFocus" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center" android:id="@id/tvFocus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/setting_textstyle" />
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="關註" android:maxLength="10" style="@style/setting_textstyle" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/setting_textstyle" />
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="粉絲" android:maxLength="10" style="@style/setting_textstyle" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/llInvite" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center" android:id="@id/tvInviteNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/setting_textstyle" />
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="我的邀请" android:maxLength="10" style="@style/setting_textstyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/divider_horizontal" />
+            <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:layout_width="380.0dp" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp">
+                <ImageView android:id="@id/iv_main_ad" android:layout_width="380.0dp" android:layout_height="126.0dp" android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="3.0dp">
+                <LinearLayout android:orientation="horizontal" android:background="@color/second_theme_bg_color" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llHistory" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@mipmap/ic_mine_history" android:scaleType="centerCrop" />
+                        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="观看历史" android:maxLength="10" style="@style/setting_textstyle" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llCollect" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@mipmap/ic_mine_collect" android:scaleType="centerCrop" />
+                        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="我的喜爱" style="@style/setting_textstyle" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llData" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:id="@id/IvMessage" android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@mipmap/ic_mine_information" android:scaleType="centerCrop" />
+                        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="個人資料" android:maxLength="10" style="@style/setting_textstyle" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llMsg" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@mipmap/ic_mine_message" android:scaleType="centerCrop" />
+                        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="消息中心" style="@style/setting_textstyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="3.0dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="@color/second_theme_bg_color" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llTougao" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine_1" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="投稿認證" android:maxLength="10" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llLock" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine2" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="應用鎖" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llShangwu" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/mene_bus" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="商务合作" android:maxLength="10" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llContact" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine4" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="交流群" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:background="@color/second_theme_bg_color" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llSuggest" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine5" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="意見反饋" android:maxLength="10" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/rlClearCache" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine6" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="清理緩存" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llShare" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine7" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="邀請好友" android:maxLength="10" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llSetting" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_mine8" android:scaleType="centerCrop" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="設置" style="@style/setting_textstyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

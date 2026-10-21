@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_margin="10.0dp">
+        <ImageView android:layout_width="120.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_jptop" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivProduct" android:layout_width="90.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_jptopright" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ivGetQ" android:layout_width="90.0dp" android:layout_height="30.0dp" android:layout_marginRight="10.0dp" android:src="@mipmap/ic_getq" android:scaleType="fitCenter" android:layout_toLeftOf="@id/ivProduct" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="蘑菇视频资深编辑集一生心血！精选推荐！经典必看！" />
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/rvList" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+</LinearLayout>

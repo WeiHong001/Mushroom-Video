@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/shape_bg_white_corner_top_lr_dp12" android:layout_width="match_parent" android:layout_height="530.0dp" android:layout_alignParentBottom="true" android:transformPivotY="-5.0dp" android:translationY="3.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/llTop" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/dialog_bottomsheet_rl_title" android:layout_width="match_parent" android:layout_height="50.0dp">
+            <ImageView android:id="@id/dialog_bottomsheet_iv_close" android:padding="7.0dp" android:layout_width="26.0dp" android:layout_height="26.0dp" android:layout_marginRight="10.0dp" android:src="@mipmap/ic_close_black" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="评论" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/dialog_bottomsheet_rv_lists" android:layout_width="match_parent" android:layout_height="430.0dp" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_comment" android:background="@color/white" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_below="@id/llTop">
+        <TextView android:textSize="15.0sp" android:textColor="@color/textgray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="1.0dp" android:text="留下你的精彩评论吧~~" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/black59" android:id="@id/tv_confirm" android:padding="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" android:text="发送" android:layout_alignParentRight="true" />
+        <View android:background="@color/textgray" android:layout_width="match_parent" android:layout_height="0.30000007dp" />
+    </RelativeLayout>
+</RelativeLayout>

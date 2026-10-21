@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottombar_color">#0d0d0d</color>
+    <color name="bottombar_line_color">#474747</color>
+    <color name="lablesbar_color">#828080</color>
+    <color name="main_text_color_theme">#eeeeee</color>
+    <color name="mian_bg_color">#0d0d0d</color>
+    <color name="second_theme_bg_color">#474747</color>
+    <color name="theme_tab_menu_sellect">#f4153a</color>
+    <color name="theme_text_color_tab">#d3d3d3</color>
+    <color name="white_black_text_color">#ffffff</color>
+</resources>

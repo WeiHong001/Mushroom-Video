@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <androidx.cardview.widget.CardView android:id="@id/cardVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+        <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:text="當前版本" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+            <TextView android:id="@id/tvVerison" android:padding="@dimen/dim5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.0.0" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@id/carUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+        <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:text="用戶協議" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+            <ImageView android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/icon_rightmore" android:layout_alignParentRight="true" app:riv_oval="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@id/carPrivate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+        <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:text="用戶隱私" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+            <ImageView android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/icon_rightmore" android:layout_alignParentRight="true" app:riv_oval="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@id/card_ext" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+        <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:text="退出账号" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+            <ImageView android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/icon_rightmore" android:layout_alignParentRight="true" app:riv_oval="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

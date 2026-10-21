@@ -1,0 +1,362 @@
+[
+  {
+    "method": "addHistory",
+    "verb": "PUT",
+    "path": "/api/user/vod/history/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "addStar",
+    "verb": "PUT",
+    "path": "/api/user/vod/star/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "blogDeleteStar",
+    "verb": "DELETE",
+    "path": "/api/user/blog/star/delete",
+    "parameters": "@Query(\"id\") int id"
+  },
+  {
+    "method": "blogDeleteStarDetails",
+    "verb": "DELETE",
+    "path": "/api/user/blog/star/delete",
+    "parameters": "@Query(\"blog_id\") int id"
+  },
+  {
+    "method": "blogStar",
+    "verb": "PUT",
+    "path": "/api/user/blog/star/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "clickAd",
+    "verb": "GET",
+    "path": "/api/adclick",
+    "parameters": "@Query(\"id\") String ids"
+  },
+  {
+    "method": "commentLists",
+    "verb": "GET",
+    "path": "/api/vod/comment/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "deleteDetailsStar",
+    "verb": "DELETE",
+    "path": "/api/user/vod/star/delete",
+    "parameters": "@Query(\"vod_id\") String id"
+  },
+  {
+    "method": "deleteHistory",
+    "verb": "DELETE",
+    "path": "/api/user/vod/history/delete",
+    "parameters": "@Query(\"id\") String id"
+  },
+  {
+    "method": "deleteStar",
+    "verb": "DELETE",
+    "path": "/api/user/vod/star/delete",
+    "parameters": "@Query(\"id\") String id"
+  },
+  {
+    "method": "focusUser",
+    "verb": "PUT",
+    "path": "/api/user/follow/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "gbookSave",
+    "verb": "POST",
+    "path": "/api.php/gbook/save",
+    "parameters": "@Field(\"gbook_content\") String gbook_content, @Field(\"verify\") String verify"
+  },
+  {
+    "method": "get24upload",
+    "verb": "GET",
+    "path": "/api/vod/24upload",
+    "parameters": ""
+  },
+  {
+    "method": "getAds",
+    "verb": "GET",
+    "path": "/api/ads",
+    "parameters": ""
+  },
+  {
+    "method": "getAppConfig",
+    "verb": "GET",
+    "path": "/api/config",
+    "parameters": "@Query(\"name\") String name"
+  },
+  {
+    "method": "getAppDetials",
+    "verb": "GET",
+    "path": "/api/vod/info",
+    "parameters": "@Query(\"id\") String ids"
+  },
+  {
+    "method": "getBlobList",
+    "verb": "GET",
+    "path": "/api/blog/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getBlobLoveList",
+    "verb": "GET",
+    "path": "/api/user/blog/star/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getCacheShareCode",
+    "verb": "GET",
+    "path": "/api/cache",
+    "parameters": ""
+  },
+  {
+    "method": "getCommentListBlog",
+    "verb": "GET",
+    "path": "/api/blog/comment/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getCommentListShort",
+    "verb": "GET",
+    "path": "/api/vlog/comment/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getFocusList",
+    "verb": "GET",
+    "path": "/api/user/follow",
+    "parameters": "@Query(\"user_id\") int user_id, @Query(\"page\") int page"
+  },
+  {
+    "method": "getFocusVideoList",
+    "verb": "GET",
+    "path": "/api/vod/list/follow",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getHistory",
+    "verb": "GET",
+    "path": "/api/user/vod/history/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getHostTxt",
+    "verb": "GET",
+    "path": "https://dns.alidns.com/resolve?name=apihost.mgsp.me&short=true&type=16",
+    "parameters": ""
+  },
+  {
+    "method": "getIndexRecommendLables",
+    "verb": "GET",
+    "path": "/api/vod/index",
+    "parameters": ""
+  },
+  {
+    "method": "getLabels",
+    "verb": "GET",
+    "path": "/api/vodlabel/all",
+    "parameters": ""
+  },
+  {
+    "method": "getNvyou",
+    "verb": "GET",
+    "path": "/api/user/actor",
+    "parameters": ""
+  },
+  {
+    "method": "getRankList",
+    "verb": "GET",
+    "path": "/api/vod/hotspot",
+    "parameters": "@Query(\"type\") String type"
+  },
+  {
+    "method": "getShequDetails",
+    "verb": "GET",
+    "path": "/api/blog/info",
+    "parameters": "@Query(\"id\") int id"
+  },
+  {
+    "method": "getShortLists",
+    "verb": "GET",
+    "path": "/api/vlog/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getShortStarLists",
+    "verb": "GET",
+    "path": "/api/user/vlog/star/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getStarList",
+    "verb": "GET",
+    "path": "/api/user/vod/star/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getTypeAll",
+    "verb": "GET",
+    "path": "/api/vod/type",
+    "parameters": ""
+  },
+  {
+    "method": "getUserInfo",
+    "verb": "GET",
+    "path": "/api/user/info",
+    "parameters": ""
+  },
+  {
+    "method": "getUserList",
+    "verb": "GET",
+    "path": "/api/user/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getUserOhterInfo",
+    "verb": "GET",
+    "path": "/api/user/other",
+    "parameters": "@Query(\"id\") int userId"
+  },
+  {
+    "method": "getUserShareList",
+    "verb": "GET",
+    "path": "/api/user/share",
+    "parameters": "@Query(\"limit\") int limit, @Query(\"page\") int page"
+  },
+  {
+    "method": "getVerifyCode",
+    "verb": "GET",
+    "path": "/api/captcha",
+    "parameters": ""
+  },
+  {
+    "method": "getVideoList",
+    "verb": "GET",
+    "path": "/api/vod/list",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getVideoRecommend",
+    "verb": "GET",
+    "path": "/api/vod/recommend",
+    "parameters": "@Query(\"id\") String vodid"
+  },
+  {
+    "method": "getVipVideoData",
+    "verb": "GET",
+    "path": "/api/vod/vip/list",
+    "parameters": "@Query(\"limit\") int limit, @Query(\"page\") int page"
+  },
+  {
+    "method": "getVodClever",
+    "verb": "GET",
+    "path": "/api/vod/clever",
+    "parameters": "@QueryMap HashMap<String, Object> map"
+  },
+  {
+    "method": "getcdnHost",
+    "verb": "GET",
+    "path": "/api/cdnhost",
+    "parameters": ""
+  },
+  {
+    "method": "loginUser",
+    "verb": "POST",
+    "path": "/api/user/login",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "postSms",
+    "verb": "POST",
+    "path": "/api/user/sms",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "postSuggest",
+    "verb": "POST",
+    "path": "/api/suggest/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "postshare",
+    "verb": "POST",
+    "path": "/api/user/share",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "registUser",
+    "verb": "POST",
+    "path": "/api/user/register",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "resetPasswd",
+    "verb": "POST",
+    "path": "/api/user/resetpasswd",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "saveComment",
+    "verb": "POST",
+    "path": "/api/vod/comment/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "saveShortComment",
+    "verb": "POST",
+    "path": "/api/vlog/comment/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "saveblogComment",
+    "verb": "POST",
+    "path": "/api/blog/comment/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "shortVideoStar",
+    "verb": "PUT",
+    "path": "/api/user/vlog/star/add",
+    "parameters": "@Body RequestBody body"
+  },
+  {
+    "method": "shortVideoStarDelete",
+    "verb": "DELETE",
+    "path": "/api/user/vlog/star/delete",
+    "parameters": "@Query(\"id\") int id"
+  },
+  {
+    "method": "shortVideoStarDeleteDetails",
+    "verb": "DELETE",
+    "path": "/api/user/vlog/star/delete",
+    "parameters": "@Query(\"vlog_id\") int id"
+  },
+  {
+    "method": "unFocusUser",
+    "verb": "DELETE",
+    "path": "/api/user/follow/delete",
+    "parameters": "@Query(\"id\") String id"
+  },
+  {
+    "method": "unlockvipVIdeo",
+    "verb": "GET",
+    "path": "/api/vod/vip/unlock",
+    "parameters": "@Query(\"vipid\") int vipid"
+  },
+  {
+    "method": "updateUserHead",
+    "verb": "POST",
+    "path": "/index.php/user/portrait",
+    "parameters": "@Part MultipartBody.Part file"
+  },
+  {
+    "method": "updateUserName",
+    "verb": "PUT",
+    "path": "/api/user/update",
+    "parameters": "@Body RequestBody body"
+  }
+]

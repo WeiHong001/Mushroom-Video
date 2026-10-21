@@ -1,0 +1,3 @@
+# Copy to research.local.properties (ignored). Default: offline, synthetic local data.
+mode=offline
+apiBase=https://api.mgsp.ltd

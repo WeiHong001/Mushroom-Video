@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <LinearLayout android:id="@id/magicIndicator" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_marginBottom="5.0dp">
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_rankmenu" android:gravity="center" android:layout_gravity="center" android:id="@id/tvMenu0" android:layout_width="@dimen/dim0" android:layout_height="match_parent" android:text="日榜" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_rankmenu" android:gravity="center" android:layout_gravity="center" android:id="@id/tvMenu1" android:layout_width="@dimen/dim0" android:layout_height="match_parent" android:text="周榜" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_rankmenu" android:gravity="center" android:layout_gravity="center" android:id="@id/tvMenu2" android:layout_width="@dimen/dim0" android:layout_height="match_parent" android:text="月榜" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/color_rankmenu" android:gravity="center" android:layout_gravity="center" android:id="@id/tvMenu3" android:layout_width="@dimen/dim0" android:layout_height="match_parent" android:text="总榜" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+</LinearLayout>

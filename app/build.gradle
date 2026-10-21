@@ -1,0 +1,175 @@
+plugins { id 'com.android.application' }
+apply from: rootProject.file('tools/business-abi.gradle')
+
+def researchConfig = new Properties()
+def configFile = rootProject.file('research.local.properties')
+if (configFile.exists()) configFile.withInputStream { researchConfig.load(it) }
+def researchMode = researchConfig.getProperty('mode', 'offline')
+if (!(researchMode in ['offline', 'live'])) throw new GradleException('mode must be offline or live')
+
+android {
+    namespace 'com.amogu6.tv'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.amogu6.tv.research'
+        minSdk 21
+        targetSdk 32
+        versionCode 14
+        versionName '1.1.4-research'
+        resValue 'string', 'research_app_name', researchMode == 'offline' ? '蘑菇视频 · 离线研究' : '蘑菇视频 · 只读研究'
+        buildConfigField 'boolean', 'OFFLINE', (researchMode == 'offline').toString()
+        buildConfigField 'String', 'API_BASE', '"' + researchConfig.getProperty('apiBase', 'https://api.mgsp.ltd').replace('"', '') + '"'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        manifestPlaceholders = [researchAuthorities: 'com.amogu6.tv.research']
+    }
+    buildFeatures { buildConfig true }
+    buildTypes {
+        debug { debuggable true }
+        release { minifyEnabled false; signingConfig signingConfigs.debug }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets { test.resources.srcDir('src/main/assets/research') }
+    androidResources {
+        additionalParameters += ['--stable-ids', file('resource-ids.txt').absolutePath]
+    }
+    packaging {
+        resources.excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE*', 'META-INF/NOTICE*', 'META-INF/*.kotlin_module']
+    }
+    lint { abortOnError false }
+}
+
+configurations {
+    smaliTool
+    configureEach { exclude group: 'org.eclipse.jetty.orbit', module: 'javax.servlet' }
+}
+tasks.configureEach { task ->
+    if(task.name.startsWith('process') && task.name.endsWith('Resources')) task.inputs.file(file('resource-ids.txt'))
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.fragment:fragment:1.3.6'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.4.0'
+    implementation 'androidx.databinding:viewbinding:7.2.1'
+    implementation 'androidx.databinding:databinding-runtime:7.2.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.10'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+    implementation 'org.jetbrains.anko:anko-sdk27:0.10.8'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-rtsp:2.18.1'
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'pub.devrel:easypermissions:2.0.1'
+    implementation 'com.alibaba:arouter-api:1.5.2'
+    implementation 'com.alibaba:fastjson:1.2.83'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation('me.jessyan:autosize:1.2.1') { exclude group: 'com.android.support' }
+    implementation('com.github.ihsg:PatternLocker:2.5.7') { exclude group: 'com.android.support' }
+    implementation('com.gongwen:marqueelibrary:1.1.3') { exclude group: 'com.android.support' }
+    implementation 'dnsjava:dnsjava:2.1.9'
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+    implementation 'org.slf4j:slf4j-android:1.7.25'
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.4-release-jitpack'
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.4-release-jitpack'
+    implementation 'com.github.CarGuo.DanmakuFlameMaster:DanmakuFlameMaster:0.9.25'
+    implementation 'org.eclipse.jetty:jetty-server:8.1.22.v20160922'
+    implementation 'org.eclipse.jetty:jetty-servlet:8.1.22.v20160922'
+    implementation 'org.eclipse.jetty:jetty-client:8.1.22.v20160922'
+    implementation 'javax.servlet:javax.servlet-api:3.0.1'
+    smaliTool 'org.smali:smali:2.5.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+}
+
+// Preserve unrecoverable Kotlin control flow as editable, assembled company code.
+def assembleBusinessDex = tasks.register('assembleBusinessDex', JavaExec) {
+    classpath = configurations.smaliTool
+    mainClass = 'org.jf.smali.Main'
+    inputs.dir('src/main/smali')
+    inputs.dir('src/main/recovered-libraries')
+    outputs.file(layout.buildDirectory.file('recovered/classes.dex'))
+    doFirst {
+        layout.buildDirectory.dir('recovered').get().asFile.mkdirs()
+        args = ['assemble', '--api', '32', 'src/main/smali', 'src/main/recovered-libraries', '-o', layout.buildDirectory.file('recovered/classes.dex').get().asFile.absolutePath]
+        workingDir = projectDir
+    }
+}
+
+['Debug', 'Release'].each { variant ->
+    def mode = variant.toLowerCase()
+    def integrate = tasks.register("integrate${variant}BusinessDex") {
+        dependsOn assembleBusinessDex
+        doLast {
+            def dir = layout.buildDirectory.dir("outputs/apk/${mode}").get().asFile
+            def apk = new File(dir, "app-${mode}.apk")
+            def staged = new File(dir, "business-unsigned.zip")
+            def aligned = new File(dir, "business-aligned.zip")
+            def dex = layout.buildDirectory.file('recovered/classes.dex').get().asFile
+            int dexNumber = 2
+            new java.util.zip.ZipFile(apk).withCloseable { original ->
+                def marker='META-INF/mushroom-recovered-dex.txt'
+                def previous=original.getEntry(marker)
+                def oldDex=previous ? original.getInputStream(previous).withCloseable { it.getText('UTF-8').trim() } : null
+                def entries = Collections.list(original.entries()).findAll { it.name!=marker && it.name!=oldDex }
+                while (entries.any { it.name == "classes${dexNumber}.dex" }) dexNumber++
+                new java.util.zip.ZipOutputStream(new FileOutputStream(staged)).withCloseable { output ->
+                    entries.findAll { !(it.name ==~ /META-INF\/.*\.(SF|RSA|DSA|EC)/) }.each { entry ->
+                        def copy=new java.util.zip.ZipEntry(entry.name)
+                        copy.method=entry.method
+                        if(entry.method==java.util.zip.ZipEntry.STORED) {
+                            copy.size=entry.size
+                            copy.compressedSize=entry.size
+                            copy.crc=entry.crc
+                        }
+                        output.putNextEntry(copy)
+                        if (!entry.directory) original.getInputStream(entry).withCloseable { output << it }
+                        output.closeEntry()
+                    }
+                    output.putNextEntry(new java.util.zip.ZipEntry("classes${dexNumber}.dex"))
+                    dex.withInputStream { output << it }
+                    output.closeEntry()
+                    output.putNextEntry(new java.util.zip.ZipEntry(marker))
+                    output.write("classes${dexNumber}.dex".getBytes('UTF-8'))
+                    output.closeEntry()
+                }
+            }
+            def windows = System.getProperty('os.name').toLowerCase().contains('windows')
+            def buildTools = new File(android.sdkDirectory, "build-tools/${android.buildToolsVersion}")
+            exec { commandLine new File(buildTools, windows ? 'zipalign.exe' : 'zipalign'), '-p', '-f', '4', staged, aligned }
+            def signing = android.signingConfigs.debug
+            exec { commandLine new File(buildTools, windows ? 'apksigner.bat' : 'apksigner'), 'sign', '--ks', signing.storeFile, '--ks-key-alias', signing.keyAlias, '--ks-pass', "pass:${signing.storePassword}", '--key-pass', "pass:${signing.keyPassword}", '--out', apk, aligned }
+            staged.delete()
+            aligned.delete()
+        }
+    }
+    tasks.configureEach { task ->
+        if (task.name == "package${variant}") task.finalizedBy(integrate)
+        if (task.name in ["assemble${variant}", "install${variant}"]) task.dependsOn(integrate)
+    }
+    integrate.configure { mustRunAfter "package${variant}" }
+}

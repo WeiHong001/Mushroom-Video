@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://api.mgsp.ltd/api/vod/type",
+    "checked_at": "2026-10-21",
+    "read_only": true,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+  },
+  {
+    "url": "https://dns.alidns.com/resolve?name=apihost.mgsp.me&short=true&type=16",
+    "checked_at": "2026-10-21",
+    "read_only": true,
+    "status": 200,
+    "content_type": "application/json",
+    "preview": "[\"\\\"https://47.97.188.179\\\"\"]"
+  }
+]

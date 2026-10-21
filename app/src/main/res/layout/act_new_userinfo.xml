@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <RelativeLayout android:paddingTop="12.0dp" android:paddingBottom="12.0dp" android:layout_width="match_parent" android:layout_height="160.0dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/iv_userIcon" android:layout_width="90.0dp" android:layout_height="90.0dp" android:src="@mipmap/default_user" android:scaleType="centerCrop" android:layout_centerInParent="true" app:riv_border_color="@color/white" app:riv_border_width="4.0dp" app:riv_oval="true" />
+        <ImageView android:id="@id/iv_todophoto" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@mipmap/ic_userinfo_photo" android:layout_centerInParent="true" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/text666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击更换头像" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/second_theme_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:divider="@drawable/divider_1dp_horizontal" android:showDividers="middle">
+        <RelativeLayout android:id="@id/rl_name" android:paddingLeft="@dimen/dim30" android:paddingTop="@dimen/dim30" android:paddingRight="@dimen/dim24" android:paddingBottom="@dimen/dim30" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white_black_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="昵称" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tv_right_1" />
+            <ImageView android:id="@id/tv_right_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_gray_right" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

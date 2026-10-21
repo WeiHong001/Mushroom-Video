@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rootLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/llBottom" android:background="@color/white" android:paddingTop="@dimen/dim13" android:paddingBottom="@dimen/dim13" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="15.0sp" android:textColor="@color/text333333" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dim20" android:text="蘑菇视频含有成人内容,若手机风险病毒警告属于正常,请放心体验,蘑菇视频的宗旨是给您一个安全性福环境" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Copyright© 2023 www.mogu.tv" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llLock" android:background="@color/white" android:paddingBottom="100.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/llBottom">
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="手势解锁" />
+        <com.github.ihsg.patternlocker.PatternLockerView android:id="@id/patternLockerView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="50.0dp" android:layout_marginTop="20.0dp" android:layout_marginRight="50.0dp" app:plv_color="@color/grgray" app:plv_enableAutoClean="true" app:plv_enableSkip="true" app:plv_errorColor="@color/red" app:plv_fillColor="@color/white" app:plv_freezeDuration="2000" app:plv_hitColor="@color/colorPrimary" app:plv_lineWidth="3.0dp" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rlPhoto" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/llBottom">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+        <ImageView android:id="@id/iv_loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="200.0dp" android:src="@mipmap/icon_loading" />
+        <ImageView android:id="@id/adImg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_countdown" android:background="@drawable/background_solid_black_alph_15corner" android:paddingLeft="@dimen/dim24" android:paddingTop="@dimen/dim10" android:paddingRight="@dimen/dim24" android:paddingBottom="@dimen/dim10" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dp" android:layout_marginRight="15.0dp" android:text="跳过" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/rlLoading" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/llBottom">
+        <androidx.core.widget.ContentLoadingProgressBar android:id="@id/progressBar" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_centerInParent="true" style="?android:progressBarStyleSmall" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dim20" android:text="线路加载中..." />
+        <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dim20" android:text="若长时间未加载成功，可关闭应用飞行模式重置网络再次尝试。长时间尝试不行可前往下载最新版本。" />
+    </LinearLayout>
+</RelativeLayout>

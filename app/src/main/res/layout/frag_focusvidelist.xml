@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llLogin" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="50.0dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/empty_logo" />
+        <TextView android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="您還未登錄" />
+        <TextView android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="請登錄查看關註視頻" />
+        <ImageView android:id="@id/ivLogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:src="@mipmap/empty_login" />
+    </LinearLayout>
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dim20" android:layout_marginTop="5.0dp" android:layout_marginRight="@dimen/dim20" android:overScrollMode="never" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+    <ImageView android:id="@id/iv_returnTop" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginRight="@dimen/dim24" android:layout_marginBottom="@dimen/dim40" android:src="@mipmap/icon_returntop" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="0.0" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/flRoot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageView android:layout_width="360.0dp" android:layout_height="410.0dp" android:src="@mipmap/ic_jp_share_bg" android:scaleType="fitXY" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/ivItem" android:layout_width="330.0dp" android:layout_height="165.0dp" android:layout_marginTop="10.0dp" android:src="@mipmap/icon_default_photo" android:scaleType="centerCrop" app:riv_corner_radius="5.0dp" />
+            <TextView android:textSize="15.5dp" android:textColor="@color/text333333" android:ellipsize="end" android:id="@id/tvTitle" android:layout_width="330.0dp" android:layout_height="wrap_content" android:layout_marginTop="18.0dp" android:maxLines="2" />
+            <LinearLayout android:orientation="horizontal" android:padding="5.0dp" android:layout_width="340.0dp" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center" android:id="@id/ivQrCode" android:layout_width="135.0dp" android:layout_height="125.0dp" />
+                    <TextView android:textSize="14.0dp" android:textColor="@color/text333333" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请使用手机浏览器打开" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0dp" android:textColor="@color/text333333" android:ellipsize="end" android:id="@id/tvAddressTitle" android:layout_width="330.0dp" android:layout_height="wrap_content" android:text="分享地址" android:maxLines="2" />
+                    <TextView android:textSize="14.0dp" android:textColor="@color/text333333" android:id="@id/tvShareAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="http://www.mogu1.tv?share=1234123" />
+                    <TextView android:textSize="14.0dp" android:textColor="@color/text333333" android:id="@id/tvHint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="蘑菇视频下载APP所有大片免费无限制观看" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/transparent_white" android:gravity="center" android:id="@id/tvSavePhoto" android:background="@drawable/background_solid_red_15" android:paddingTop="7.0dp" android:paddingBottom="7.0dp" android:layout_width="150.0dp" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="分享邀请图片" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/transparent_white" android:gravity="center" android:id="@id/tvSaveLink" android:background="@drawable/background_solid_vipcopy_15" android:paddingTop="7.0dp" android:paddingBottom="7.0dp" android:layout_width="150.0dp" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="复制邀请链接" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+</LinearLayout>

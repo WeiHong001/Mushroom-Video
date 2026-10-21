@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="45.0dp">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_comment" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </com.kotlin.basiclib.widget.RefreshLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/rl_bottom_comment" android:background="@color/second_theme_bg_color" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center" android:id="@id/tv_tomain" android:background="@drawable/background_solid_homecolo_20cornor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dim55" android:layout_marginTop="@dimen/dim15" android:layout_marginRight="@dimen/dim55" android:layout_marginBottom="@dimen/dim15" android:text="点击发表评论" android:layout_centerInParent="true" />
+            <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_marginLeft="@dimen/dim105" android:src="@mipmap/ic_comment" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

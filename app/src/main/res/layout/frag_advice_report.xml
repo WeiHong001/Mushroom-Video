@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <com.google.android.flexbox.FlexboxLayout android:id="@id/flex_layout" android:padding="@dimen/dim24" android:layout_width="match_parent" android:layout_height="wrap_content" app:flexDirection="row" app:flexWrap="wrap" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.mogu.tv.view.TipsEditText android:id="@id/put_edit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp" app:EtMinHeight="160.0dp" app:contentLength="200" app:hintText="您的意见将帮助我们成长" app:tips="还可输入200" />
+            <RelativeLayout android:padding="@dimen/dim24" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="17.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_submit" android:background="@drawable/background_solid_red_15" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dp" android:layout_marginTop="15.0dp" android:layout_marginRight="50.0dp" android:text="提交" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

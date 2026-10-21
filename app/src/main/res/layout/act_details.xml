@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_head" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="220.0dp">
+        <com.mogu.tv.view.DetailsVideoView android:id="@id/video_view" android:layout_width="match_parent" android:layout_height="220.0dp" />
+        <ImageView android:id="@id/iv_image_ad" android:visibility="visible" android:layout_width="match_parent" android:layout_height="220.0dp" android:src="@mipmap/load" android:scaleType="centerCrop" />
+        <TextView android:textColor="#ffffff" android:id="@id/jump_ad" android:background="@drawable/background_solid_black_alph_15corner" android:paddingLeft="10.0dp" android:paddingTop="4.0dp" android:paddingRight="10.0dp" android:paddingBottom="4.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginRight="20.0dp" android:text="@string/jump_ad" android:layout_alignParentRight="true" />
+        <TextView android:textColor="#ffffff" android:id="@id/tv_toget" android:background="@drawable/background_solid_yellow_15" android:paddingLeft="10.0dp" android:paddingTop="5.0dp" android:paddingRight="10.0dp" android:paddingBottom="5.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:layout_marginTop="20.0dp" android:text="点击马上了解" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <net.lucode.hackware.magicindicator.MagicIndicator android:id="@id/magicIndicator" android:background="@color/mian_bg_color" android:paddingLeft="@dimen/dim24" android:paddingRight="@dimen/dim40" android:paddingBottom="@dimen/dim24" android:layout_width="match_parent" android:layout_height="45.0dp" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

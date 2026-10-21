@@ -1,0 +1,25 @@
+{
+  "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+  "sha256": "35c028a0410f289a995413e31c754c9a7a70046b7100612222e788dd0cef7463",
+  "dex_files": [
+    "classes.dex",
+    "classes10.dex",
+    "classes11.dex",
+    "classes12.dex",
+    "classes2.dex",
+    "classes3.dex",
+    "classes4.dex",
+    "classes5.dex",
+    "classes6.dex",
+    "classes7.dex",
+    "classes8.dex",
+    "classes9.dex",
+    "classes13.dex"
+  ],
+  "classes": 18951,
+  "manifest_activities_present": 50,
+  "original_company_activities_present": 38,
+  "duplicate_classes": 0,
+  "compile_only_stubs_packaged": false,
+  "original_resource_ids_verified": 7141
+}

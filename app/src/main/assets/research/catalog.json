@@ -1,0 +1,528 @@
+{
+  "_provenance": "Synthetic offline research fixtures, generated locally; not a restored backend.",
+  "types": {
+    "list": [
+      {
+        "id": "1",
+        "name": "推荐研究",
+        "child": [
+          {
+            "id": "10",
+            "name": "合成样本"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "分类研究",
+        "child": [
+          {
+            "id": "11",
+            "name": "合成样本"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "交互研究",
+        "child": [
+          {
+            "id": "12",
+            "name": "合成样本"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "list": [
+      {
+        "id": 1,
+        "name": "离线 · 推荐样本"
+      },
+      {
+        "id": 2,
+        "name": "离线 · 界面研究"
+      }
+    ]
+  },
+  "videos": {
+    "list": [
+      {
+        "id": "1001",
+        "title": "离线样例 1 · 播放与页面研究",
+        "cover": "@MEDIA@images/cover.png",
+        "duration": 8,
+        "views": 100,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1002",
+        "title": "离线样例 2 · 播放与页面研究",
+        "cover": "@MEDIA@images/normal-cover.bin",
+        "duration": 8,
+        "views": 101,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1003",
+        "title": "离线样例 3 · 播放与页面研究",
+        "cover": "@MEDIA@images/vlog-cover.bin",
+        "duration": 8,
+        "views": 102,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1004",
+        "title": "离线样例 4 · 播放与页面研究",
+        "cover": "@MEDIA@images/cover.png",
+        "duration": 8,
+        "views": 103,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1005",
+        "title": "离线样例 5 · 播放与页面研究",
+        "cover": "@MEDIA@images/normal-cover.bin",
+        "duration": 8,
+        "views": 104,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1006",
+        "title": "离线样例 6 · 播放与页面研究",
+        "cover": "@MEDIA@images/vlog-cover.bin",
+        "duration": 8,
+        "views": 105,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1007",
+        "title": "离线样例 7 · 播放与页面研究",
+        "cover": "@MEDIA@images/cover.png",
+        "duration": 8,
+        "views": 106,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      },
+      {
+        "id": "1008",
+        "title": "离线样例 8 · 播放与页面研究",
+        "cover": "@MEDIA@images/normal-cover.bin",
+        "duration": 8,
+        "views": 107,
+        "users": [
+          {
+            "id": 9001,
+            "name": "离线研究员",
+            "avatar": "@MEDIA@images/cover.png",
+            "gender": 0,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  },
+  "details": {
+    "id": "1001",
+    "title": "离线样例 1 · 播放与页面研究",
+    "comments": "1",
+    "favorites": "0",
+    "created_at": "1792555200",
+    "nubmer": "RESEARCH-001",
+    "views": "100",
+    "play_url": "@MEDIA@media/sample.m3u8",
+    "labels": [
+      {
+        "id": "1",
+        "name": "合成样本"
+      }
+    ],
+    "users": [
+      {
+        "id": "9001",
+        "name": "离线研究员",
+        "avatar": "@MEDIA@images/cover.png",
+        "gender": "0",
+        "type": "0"
+      }
+    ]
+  },
+  "shorts": {
+    "list": [
+      {
+        "id": "2001",
+        "title": "短视频合成样例 1",
+        "cover": "@MEDIA@images/cover.png",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "comments": "1",
+        "favorites": "0",
+        "views": "100",
+        "user": {
+          "id": "9001",
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": "0",
+          "type": "0"
+        }
+      },
+      {
+        "id": "2002",
+        "title": "短视频合成样例 2",
+        "cover": "@MEDIA@images/cover.png",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "comments": "1",
+        "favorites": "0",
+        "views": "100",
+        "user": {
+          "id": "9001",
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": "0",
+          "type": "0"
+        }
+      },
+      {
+        "id": "2003",
+        "title": "短视频合成样例 3",
+        "cover": "@MEDIA@images/cover.png",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "comments": "1",
+        "favorites": "0",
+        "views": "100",
+        "user": {
+          "id": "9001",
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": "0",
+          "type": "0"
+        }
+      }
+    ],
+    "total": 3
+  },
+  "vip": {
+    "list": [
+      {
+        "ID": 4001,
+        "title": "精品合成样例 1",
+        "cover": "@MEDIA@images/cover.png",
+        "introduce": "仅本机合成测试媒体，无购买或真实会员状态",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "dz_index": 3,
+        "jq_index": 3,
+        "tj_index": 3,
+        "yz_index": 3,
+        "unlock": false
+      },
+      {
+        "ID": 4002,
+        "title": "精品合成样例 2",
+        "cover": "@MEDIA@images/cover.png",
+        "introduce": "仅本机合成测试媒体，无购买或真实会员状态",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "dz_index": 3,
+        "jq_index": 3,
+        "tj_index": 3,
+        "yz_index": 3,
+        "unlock": false
+      },
+      {
+        "ID": 4003,
+        "title": "精品合成样例 3",
+        "cover": "@MEDIA@images/cover.png",
+        "introduce": "仅本机合成测试媒体，无购买或真实会员状态",
+        "play_url": "@MEDIA@media/sample.m3u8",
+        "dz_index": 3,
+        "jq_index": 3,
+        "tj_index": 3,
+        "yz_index": 3,
+        "unlock": false
+      }
+    ],
+    "total": 3
+  },
+  "blogs": {
+    "list": [
+      {
+        "id": "3001",
+        "detail": "离线社区样本 1：九宫格、评论、图片预览和点赞交互研究。",
+        "created_at": "1792555200",
+        "favorites": 0,
+        "comments": 1,
+        "isZan": 0,
+        "user": {
+          "id": 9001,
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": 0,
+          "type": 0
+        },
+        "images": [
+          {
+            "id": 1,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 2,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 3,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 4,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 5,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 6,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 7,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 8,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 9,
+            "path": "@MEDIA@images/cover.png"
+          }
+        ],
+        "video": "",
+        "dataType": 1
+      },
+      {
+        "id": "3002",
+        "detail": "离线社区样本 2：九宫格、评论、图片预览和点赞交互研究。",
+        "created_at": "1792555200",
+        "favorites": 0,
+        "comments": 1,
+        "isZan": 0,
+        "user": {
+          "id": 9001,
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": 0,
+          "type": 0
+        },
+        "images": [
+          {
+            "id": 1,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 2,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 3,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 4,
+            "path": "@MEDIA@images/cover.png"
+          }
+        ],
+        "video": "",
+        "dataType": 1
+      },
+      {
+        "id": "3003",
+        "detail": "离线社区样本 3：九宫格、评论、图片预览和点赞交互研究。",
+        "created_at": "1792555200",
+        "favorites": 0,
+        "comments": 1,
+        "isZan": 0,
+        "user": {
+          "id": 9001,
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": 0,
+          "type": 0
+        },
+        "images": [
+          {
+            "id": 1,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 2,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 3,
+            "path": "@MEDIA@images/cover.png"
+          },
+          {
+            "id": 4,
+            "path": "@MEDIA@images/cover.png"
+          }
+        ],
+        "video": "",
+        "dataType": 1
+      }
+    ]
+  },
+  "user": {
+    "id": "9001",
+    "name": "离线研究员",
+    "avatar": "@MEDIA@images/cover.png",
+    "follower": "0",
+    "integral": "100"
+  },
+  "other": {
+    "id": 9001,
+    "name": "离线研究员",
+    "avatar": "@MEDIA@images/cover.png",
+    "gender": 0,
+    "type": 0,
+    "birthday": "2000-01-01",
+    "follower": 0,
+    "height": 170,
+    "weight": 60,
+    "introduction": "本机合成研究账号",
+    "is_floowed": false
+  },
+  "users": {
+    "list": [
+      {
+        "id": 9001,
+        "name": "离线研究员",
+        "avatar": "@MEDIA@images/cover.png",
+        "gender": 0,
+        "type": 0,
+        "integral": 100
+      }
+    ],
+    "total": 1
+  },
+  "labels": {
+    "list": [
+      {
+        "id": 1,
+        "name": "合成样本"
+      },
+      {
+        "id": 2,
+        "name": "播放器"
+      },
+      {
+        "id": 3,
+        "name": "自定义 View"
+      },
+      {
+        "id": 4,
+        "name": "缓存"
+      }
+    ]
+  },
+  "actors": {
+    "list": [
+      {
+        "id": 9001,
+        "name": "合成演示者",
+        "avatar": "@MEDIA@images/cover.png",
+        "index": "Y"
+      }
+    ],
+    "total": 1
+  },
+  "comments": {
+    "list": [
+      {
+        "id": 1,
+        "comment": "离线研究评论，仅保存在本机。",
+        "created_at": "1792555200",
+        "user": {
+          "id": 9001,
+          "name": "离线研究员",
+          "avatar": "@MEDIA@images/cover.png",
+          "gender": 0,
+          "type": 0
+        },
+        "vod_id": 1001
+      }
+    ],
+    "total": 1
+  },
+  "ads": {
+    "activity": [],
+    "appcenter": [],
+    "banner": [],
+    "chatu": [],
+    "cover": [],
+    "detailssmall": [],
+    "homedialog": [],
+    "listchatu": [],
+    "listcover": [],
+    "mine": [],
+    "pianku": [],
+    "search": [],
+    "shequ": [],
+    "shortvideoimg": [],
+    "start": []
+  }
+}

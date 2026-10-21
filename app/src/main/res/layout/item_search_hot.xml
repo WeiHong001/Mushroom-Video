@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/dim20" android:paddingTop="@dimen/dim20" android:paddingBottom="@dimen/dim20" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@id/tv_rank" android:background="@drawable/background_solid_red" android:paddingLeft="@dimen/dim10" android:paddingRight="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:text="1" android:layout_centerVertical="true" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:ellipsize="end" android:id="@id/tv_item_history" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:text="搜索记录" android:singleLine="true" android:layout_toRightOf="@id/tv_rank" android:layout_centerVertical="true" />
+</RelativeLayout>

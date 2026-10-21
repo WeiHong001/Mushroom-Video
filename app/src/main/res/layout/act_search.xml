@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_head" android:layout_width="match_parent" android:layout_height="24.0dp" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="54.0dp">
+        <RelativeLayout android:background="@drawable/background_solid_labels_20cornor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_toLeftOf="@id/tv_tosearch" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="bottom" android:id="@id/iv_searchleft" android:layout_width="24.0dp" android:layout_height="24.0dp" android:layout_marginLeft="5.0dp" android:src="@mipmap/ic_search" android:layout_centerVertical="true" />
+            <EditText android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:textColorHint="#bdbdc0" android:id="@id/et_search" android:background="@color/trans" android:paddingLeft="10.0dp" android:paddingTop="10.0dp" android:paddingRight="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="@dimen/dim24" android:hint="请输入标题/番号/女优名称" android:singleLine="true" android:maxLength="10" android:layout_toRightOf="@id/iv_searchleft" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/iv_clear_content" android:paddingRight="14.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dp" android:src="@mipmap/ic_content_clear" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center" android:id="@id/tv_tosearch" android:paddingLeft="@dimen/dim24" android:paddingRight="@dimen/dim24" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="取消" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_searchfirst" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/main_text_color_theme" android:padding="@dimen/dim24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热搜" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_hot_search" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginRight="@dimen/dim24" />
+                <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:layout_width="380.0dp" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp">
+                    <ImageView android:id="@id/iv_main_ad" android:layout_width="380.0dp" android:layout_height="126.0dp" android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/main_text_color_theme" android:padding="@dimen/dim24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索历史" />
+                    <ImageView android:id="@id/iv_clear" android:padding="@dimen/dim18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_delete" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <com.google.android.flexbox.FlexboxLayout android:id="@id/flex_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim10" android:layout_marginRight="@dimen/dim10" app:flexDirection="row" app:flexWrap="wrap" />
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/main_text_color_theme" android:padding="@dimen/dim24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热门筛选" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center_vertical" android:id="@id/tv_more" android:paddingLeft="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:text="更多" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tvMoreIc" android:padding="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon_xiangyou" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <com.google.android.flexbox.FlexboxLayout android:id="@id/flexLables" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim10" android:layout_marginRight="@dimen/dim10" app:flexDirection="row" app:flexWrap="wrap" />
+                <LinearLayout android:gravity="center" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@mipmap/ic_recommend_love" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_typename" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="推荐用户" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rvUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5.0dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_searchresult" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <net.lucode.hackware.magicindicator.MagicIndicator android:id="@id/magicIndicator" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_marginBottom="5.0dp" />
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

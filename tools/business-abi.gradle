@@ -1,0 +1,100 @@
+import org.objectweb.asm.ClassWriter
+import org.objectweb.asm.Opcodes
+import java.util.jar.JarOutputStream
+import java.util.jar.JarEntry
+
+buildscript {
+    repositories { mavenCentral() }
+    dependencies { classpath 'org.ow2.asm:asm:9.6' }
+}
+
+// Like android.jar: compile-time signatures only. Runtime always uses the real
+// assembled business methods. This JAR must never be an implementation dependency.
+def makeAbi = tasks.register('generateBusinessAbi') {
+    def sources = files(fileTree('src/main/smali') { include '**/*.smali' }, fileTree('src/main/recovered-libraries') { include '**/*.smali' })
+    inputs.files(sources)
+    def destination = layout.buildDirectory.file('generated/business-abi.jar')
+    outputs.file(destination)
+    doLast {
+        def access = { String flags ->
+            int bits = 0
+            ['public': Opcodes.ACC_PUBLIC, 'private': Opcodes.ACC_PRIVATE, 'protected': Opcodes.ACC_PROTECTED,
+             'static': Opcodes.ACC_STATIC, 'final': Opcodes.ACC_FINAL, 'abstract': Opcodes.ACC_ABSTRACT,
+             'interface': Opcodes.ACC_INTERFACE, 'annotation': Opcodes.ACC_ANNOTATION, 'enum': Opcodes.ACC_ENUM,
+             'synthetic': Opcodes.ACC_SYNTHETIC, 'native': Opcodes.ACC_NATIVE].each { word, bit ->
+                if (flags.split(' ').contains(word)) bits |= bit
+            }
+            bits
+        }
+        destination.get().asFile.parentFile.mkdirs()
+        def classNames=sources.collect { source ->
+            def descriptor=source.readLines('UTF-8').find { it.startsWith('.class ') }.split(' ')[-1]
+            descriptor.substring(1,descriptor.length()-1)
+        }
+        new JarOutputStream(new FileOutputStream(destination.get().asFile)).withCloseable { output ->
+            sources.each { source ->
+                def lines = source.readLines('UTF-8')
+                def declaration = lines.find { it.startsWith('.class ') }
+                def classMatch = declaration =~ /^\.class (?:(.*) )?L(.+);$/
+                if (!classMatch.matches()) throw new GradleException("Invalid class: ${source}")
+                def className = classMatch[0][2]
+                int classFlags = access(classMatch[0][1] ?: '')
+                def parentLine = lines.find { it.startsWith('.super ') }
+                def parent = parentLine ? parentLine.substring(8, parentLine.length()-1) : 'java/lang/Object'
+                def interfaces = lines.findAll { it.startsWith('.implements ') }.collect { it.substring(13, it.length()-1) }
+                def signatureAt = { int start, int end ->
+                    def segment = lines.subList(start, end).join('\n')
+                    def sig = segment =~ /(?s)\.annotation system Ldalvik\/annotation\/Signature;.*?value = \{(.*?)\}.*?\.end annotation/
+                    sig.find() ? (sig.group(1) =~ /"([^"]*)"/).collect { it[1] }.join('') : null
+                }
+                int firstMember = lines.findIndexOf { it.startsWith('.field ') || it.startsWith('.method ') }
+                def writer = new ClassWriter(0)
+                writer.visit(Opcodes.V1_8, classFlags, className, signatureAt(0, firstMember < 0 ? lines.size() : firstMember), parent, interfaces as String[])
+                classNames.findAll { it.startsWith(className+'$') }.each { innerName ->
+                    def outerName=innerName.substring(0,innerName.lastIndexOf('$'))
+                    writer.visitInnerClass(innerName,outerName,innerName.substring(innerName.lastIndexOf('$')+1),Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC)
+                }
+                def nested = className
+                while (nested.contains('$')) {
+                    def outer = nested.substring(0, nested.lastIndexOf('$'))
+                    def inner = nested.substring(nested.lastIndexOf('$')+1)
+                    writer.visitInnerClass(nested, outer, inner, Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC)
+                    nested = outer
+                }
+                for (int i=0; i<lines.size(); i++) {
+                    def line = lines[i]
+                    if (line.startsWith('.field ')) {
+                        def match = line =~ /^\.field (.*?) ?([^ :]+):(\S+)(?: = (.*))?$/
+                        if (!match.matches()) continue
+                        int end = i+1
+                        while (end<lines.size() && !lines[end].startsWith('.field ') && !lines[end].startsWith('.method ')) end++
+                        writer.visitField(access(match[0][1]), match[0][2], match[0][3], signatureAt(i+1,end), null).visitEnd()
+                    } else if (line.startsWith('.method ')) {
+                        def match = line =~ /^\.method (.*?) ?([^ (]+)(\(.*)$/
+                        if (!match.matches() || match[0][2]=='<clinit>') continue
+                        int end = i+1
+                        while (end<lines.size() && !lines[end].startsWith('.end method')) end++
+                        int flags = access(match[0][1])
+                        def method = writer.visitMethod(flags, match[0][2], match[0][3], signatureAt(i+1,end), null)
+                        if (!(flags & (Opcodes.ACC_ABSTRACT | Opcodes.ACC_NATIVE))) {
+                            method.visitCode()
+                            method.visitTypeInsn(Opcodes.NEW, 'java/lang/AssertionError')
+                            method.visitInsn(Opcodes.DUP)
+                            method.visitLdcInsn('Compile-only business ABI must never be packaged')
+                            method.visitMethodInsn(Opcodes.INVOKESPECIAL, 'java/lang/AssertionError', '<init>', '(Ljava/lang/Object;)V', false)
+                            method.visitInsn(Opcodes.ATHROW)
+                            method.visitMaxs(3, 256)
+                        }
+                        method.visitEnd()
+                        i=end
+                    }
+                }
+                writer.visitEnd()
+                output.putNextEntry(new JarEntry(className+'.class'))
+                output.write(writer.toByteArray())
+                output.closeEntry()
+            }
+        }
+    }
+}
+dependencies { compileOnly files(makeAbi.map { it.outputs.files.singleFile }).builtBy(makeAbi) }

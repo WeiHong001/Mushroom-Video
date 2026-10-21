@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_photo" android:layout_width="42.0dp" android:layout_height="42.0dp" android:src="@mipmap/default_guanfang" android:scaleType="centerCrop" app:riv_oval="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white_black_text_color" android:layout_gravity="center_vertical" android:id="@id/tvUser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="蘑菇官方" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp" android:layout_alignParentRight="true" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/white_black_text_color" android:id="@id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tvContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8.0dp" />
+</LinearLayout>

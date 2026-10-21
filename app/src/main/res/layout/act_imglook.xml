@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mogu.tv.view.PhotoViewPager android:id="@id/photoviewpager_imglook" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <net.lucode.hackware.magicindicator.MagicIndicator android:layout_gravity="center|bottom" android:id="@id/magicIndicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="42.0dp" android:layout_marginBottom="30.0dp" />
+</FrameLayout>

@@ -1,0 +1,333 @@
+[
+  {
+    "activity": "com.mogu.tv.ui.LoadingActivity",
+    "binding": "ActLoadpageBinding",
+    "layouts": [
+      "act_loadpage"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.RegistActivity",
+    "binding": "FragmentRegistBinding",
+    "layouts": [
+      "fragment_regist"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.SettingActivity",
+    "binding": "ActSettingBinding",
+    "layouts": [
+      "act_setting"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ShangwuActivity",
+    "binding": "ActShangwuBinding",
+    "layouts": [
+      "act_shangwu"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.SheQuUserActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": [
+      "id"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.ForgetPassWordActivity",
+    "binding": "ActForgetpassBinding",
+    "layouts": [
+      "act_forgetpass"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.SqNoticeActivity",
+    "binding": "ActSqggBinding",
+    "layouts": [
+      "act_sqgg"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.TouGaoActivity",
+    "binding": "ActTougaoBinding",
+    "layouts": [
+      "act_tougao"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.CommentNewsActivity",
+    "binding": "DialogCommentBinding",
+    "layouts": [
+      "dialog_comment"
+    ],
+    "literal_intent_extras": [
+      "id",
+      "type"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.DetailsActivity",
+    "binding": "ActDetailsBinding",
+    "layouts": [
+      "act_details"
+    ],
+    "literal_intent_extras": [
+      "ids"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.DetailVipVideoActivity",
+    "binding": "ActVipdetailsBinding",
+    "layouts": [
+      "act_vipdetails"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ImglookActivity",
+    "binding": "ActImglookBinding",
+    "layouts": [
+      "act_imglook"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ShequDetailsActivity",
+    "binding": "ActShequinfoBinding",
+    "layouts": [
+      "act_shequinfo"
+    ],
+    "literal_intent_extras": [
+      "id"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ShortDetailsActivity",
+    "binding": "ActShortdetailsBinding",
+    "layouts": [
+      "act_shortdetails"
+    ],
+    "literal_intent_extras": [
+      "comments",
+      "content",
+      "favorites",
+      "id",
+      "isZan",
+      "name",
+      "photo",
+      "playUrl"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.CollectActivity",
+    "binding": "ActivityCollectBinding",
+    "layouts": [
+      "activity_collect"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.AppLockActivity",
+    "binding": "ActApplockBinding",
+    "layouts": [
+      "act_applock"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.PiankuActivity",
+    "binding": "FragPiankuBinding",
+    "layouts": [
+      "frag_pianku"
+    ],
+    "literal_intent_extras": [
+      "id"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.PraviteActivity",
+    "binding": "ActPraviteBinding",
+    "layouts": [
+      "act_pravite"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.UserContractActivity",
+    "binding": "ActContractBinding",
+    "layouts": [
+      "act_contract"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.BiaoQianListActivity",
+    "binding": "FragBqlistBinding",
+    "layouts": [
+      "frag_bqlist"
+    ],
+    "literal_intent_extras": [
+      "id",
+      "name"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.AdviceSuggestActivity",
+    "binding": "FragAdviceReportBinding",
+    "layouts": [
+      "frag_advice_report"
+    ],
+    "literal_intent_extras": [
+      "id"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ActivityPageActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.AdCenterAppActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.FocusUserListActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.MessageCenterActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.MessageDetailsActivity",
+    "binding": "ActivityMsgDetailsBinding",
+    "layouts": [
+      "activity_msg_details"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.NvYouActivity",
+    "binding": "ActNvyouBinding",
+    "layouts": [
+      "act_nvyou"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.ContactActivity",
+    "binding": "ActContactBinding",
+    "layouts": [
+      "act_contact"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.EditUserInfoActivity",
+    "binding": "ActNewUserinfoBinding",
+    "layouts": [
+      "act_new_userinfo"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.UserInfoActivity",
+    "binding": "ActivityTopicBinding",
+    "layouts": [
+      "activity_topic"
+    ],
+    "literal_intent_extras": [
+      "id"
+    ]
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.HistoryActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.LabelsSelectActivity",
+    "binding": "ActLabelsBinding",
+    "layouts": [
+      "act_labels"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.InviteListActivity",
+    "binding": "ActivityHistoryBinding",
+    "layouts": [
+      "activity_history"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.QiuPianActivity",
+    "binding": "ActQiupianBinding",
+    "layouts": [
+      "act_qiupian"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.RankActivity",
+    "binding": "ActRankBinding",
+    "layouts": [
+      "act_rank"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.SearchActivity",
+    "binding": "ActSearchBinding",
+    "layouts": [
+      "act_search"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.ui.activity.WebViewActivity",
+    "binding": "ActWebviewBinding",
+    "layouts": [
+      "act_webview"
+    ],
+    "literal_intent_extras": []
+  },
+  {
+    "activity": "com.mogu.tv.MainActivity",
+    "binding": "ActivityMainBinding",
+    "layouts": [
+      "activity_main"
+    ],
+    "literal_intent_extras": []
+  }
+]

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/main_text_color_theme" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="为什么要认证" />
+    <LinearLayout android:orientation="horizontal" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llHistory" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@mipmap/ic_verify1" android:scaleType="centerCrop" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="认证专属标识" android:maxLength="10" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="彰显身份" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llCollect" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@mipmap/ic_verify2" android:scaleType="centerCrop" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="搜索优先" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="曝光机会加大" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llData" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@mipmap/ic_verify3" android:scaleType="centerCrop" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="官方合作优先" android:maxLength="10" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="合作伙伴待遇" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llMsg" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@mipmap/ic_verify4" android:scaleType="centerCrop" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="更多福利" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="后续更多精彩" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/rl1" android:layout_width="280.0dp" android:layout_height="120.0dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/background_line_yellow_5_solid_home" android:layout_width="265.0dp" android:layout_height="110.0dp" android:layout_centerInParent="true">
+            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="上传UP认证 >" android:maxLength="10" style="@style/setting_textstyle" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="开启投稿之旅" />
+        </LinearLayout>
+        <ImageView android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="5.0dp" android:src="@mipmap/ic_verify_star" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/rl2" android:layout_width="280.0dp" android:layout_height="120.0dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/background_line_yellow_5_solid_home" android:layout_width="265.0dp" android:layout_height="110.0dp" android:layout_centerInParent="true">
+            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="女神认证 >" android:maxLength="10" style="@style/setting_textstyle" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="获得专属女神认证标签" />
+        </LinearLayout>
+        <ImageView android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="5.0dp" android:src="@mipmap/ic_verify_star" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/rl3" android:layout_width="280.0dp" android:layout_height="120.0dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/background_line_yellow_5_solid_home" android:layout_width="265.0dp" android:layout_height="110.0dp" android:layout_centerInParent="true">
+            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim20" android:text="官方认证 >" android:maxLength="10" style="@style/setting_textstyle" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="获得官方标签推荐" />
+        </LinearLayout>
+        <ImageView android:layout_width="35.0dp" android:layout_height="35.0dp" android:layout_marginTop="5.0dp" android:src="@mipmap/ic_verify_star" />
+    </RelativeLayout>
+    <TextView android:textSize="18.0sp" android:textColor="@color/transparent_white" android:gravity="center" android:layout_gravity="center" android:id="@id/tvSubmit" android:background="@drawable/background_solid_red_15" android:padding="@dimen/dim24" android:layout_width="300.0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/dim24" android:text="确认" />
+</LinearLayout>

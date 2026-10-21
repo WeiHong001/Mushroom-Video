@@ -1,0 +1,194 @@
+{
+  "AndroidX": {
+    "url": "https://raw.githubusercontent.com/androidx/androidx/androidx-main/LICENSE.txt",
+    "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/AndroidX.txt"
+  },
+  "Kotlin": {
+    "url": "https://raw.githubusercontent.com/JetBrains/kotlin/master/license/LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Kotlin.txt"
+  },
+  "ExoPlayer": {
+    "url": "https://raw.githubusercontent.com/google/ExoPlayer/r2.18.1/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/ExoPlayer.txt"
+  },
+  "GSYVideoPlayer": {
+    "url": "https://raw.githubusercontent.com/CarGuo/GSYVideoPlayer/v8.3.4-release-jitpack/LICENSE",
+    "sha256": "c1b9df1275e769f3dbab000d1e457a2d4b0f28eb5da6c77e48dc37eeba202ed7",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/GSYVideoPlayer.txt"
+  },
+  "Glide": {
+    "url": "https://raw.githubusercontent.com/bumptech/glide/v4.5.0/LICENSE",
+    "sha256": "52973598be02761fb153f9c237f6c6706841d666611bc1c5fd18edfdcb3d47fa",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Glide.txt"
+  },
+  "OkHttp": {
+    "url": "https://raw.githubusercontent.com/square/okhttp/parent-3.12.0/LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/OkHttp.txt"
+  },
+  "Retrofit": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Retrofit.txt",
+    "url": "https://raw.githubusercontent.com/square/retrofit/master/LICENSE.txt",
+    "sha256": "1b5bc0b9605ba9715a23e3ac5bf6e5cf75051aa14ee692294a0deeca77a3c997"
+  },
+  "Gson": {
+    "url": "https://raw.githubusercontent.com/google/gson/main/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Gson.txt"
+  },
+  "RxJava": {
+    "url": "https://raw.githubusercontent.com/ReactiveX/RxJava/2.x/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/RxJava.txt"
+  },
+  "ARouter": {
+    "url": "https://raw.githubusercontent.com/alibaba/ARouter/develop/LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/ARouter.txt"
+  },
+  "BaseRecyclerViewAdapterHelper": {
+    "url": "https://raw.githubusercontent.com/CymChad/BaseRecyclerViewAdapterHelper/master/LICENSE",
+    "sha256": "55c00a36f81ac9d2847dd02ef0ff0a098dc4be9b3aa2dfce98caefc9bafe6870",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/BaseRecyclerViewAdapterHelper.txt"
+  },
+  "PictureSelector": {
+    "url": "https://raw.githubusercontent.com/LuckSiege/PictureSelector/master/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/PictureSelector.txt"
+  },
+  "uCrop": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/uCrop.txt",
+    "url": "https://raw.githubusercontent.com/Yalantis/uCrop/develop/README.md",
+    "sha256": "bc2daaeed27b85ce02d6039ff08fac75a70fe4e3918a41a153e42b3f88b0521e"
+  },
+  "SmartRefreshLayout": {
+    "url": "https://raw.githubusercontent.com/scwang90/SmartRefreshLayout/master/LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/SmartRefreshLayout.txt"
+  },
+  "PatternLocker": {
+    "url": "https://raw.githubusercontent.com/ihsg/PatternLocker/master/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/PatternLocker.txt"
+  },
+  "LikeButton": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/LikeButton.txt",
+    "url": "https://raw.githubusercontent.com/jd-alexander/LikeButton/master/README.md",
+    "sha256": "2e133bfc32ba20391e79eda9da2b19d8a5e12858f524ba9f3909c643cfd019a6"
+  },
+  "JsBridge": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/JsBridge.txt",
+    "url": "https://raw.githubusercontent.com/lzyzsd/JsBridge/master/README.md",
+    "sha256": "4b337c7ecee26ad403351a4acd831ad17fea6e6653af7dd58c6a9b0c5dcabf20"
+  },
+  "MarqueeView": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/MarqueeView.txt",
+    "url": "https://raw.githubusercontent.com/gongwen/MarqueeViewLibrary/master/README.md",
+    "sha256": "72c2d9a457aaef532ab3ddf02015eecbc026d213aa03cdd3c02cf16f691f2327"
+  },
+  "HappyDNS": {
+    "url": "https://raw.githubusercontent.com/qiniu/happy-dns-android/master/LICENSE",
+    "sha256": "87565c0dbefd86b448e0a6b6c49b7df595c94671391201468cb935984c40c379",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/HappyDNS.txt"
+  },
+  "AndroidAutoSize": {
+    "url": "https://raw.githubusercontent.com/JessYanCoding/AndroidAutoSize/master/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/AndroidAutoSize.txt"
+  },
+  "Banner": {
+    "url": "https://raw.githubusercontent.com/youth5201314/banner/master/LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Banner.txt"
+  },
+  "AndroidWebSocket": {
+    "status": "lookup-unresolved",
+    "errors": [
+      "HTTP Error 404: Not Found"
+    ]
+  },
+  "AppUpdate": {
+    "url": "https://raw.githubusercontent.com/azhon/AppUpdate/master/LICENSE",
+    "sha256": "69bc79e0306c345bb3239071f17f228ab7d825211ff186ad14299527b825cfd5",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/AppUpdate.txt"
+  },
+  "ZxingLibrary": {
+    "status": "lookup-unresolved",
+    "errors": [
+      "HTTP Error 404: Not Found"
+    ]
+  },
+  "Luban": {
+    "url": "https://raw.githubusercontent.com/Curzibn/Luban/master/LICENSE",
+    "sha256": "3678f1cb064fdcdfdd57599d14ce6ea76687809c396c7f734ef8045f0b0e6e48",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Luban.txt"
+  },
+  "IndexableRecyclerView": {
+    "url": "https://raw.githubusercontent.com/YoKeyword/IndexableRecyclerView/master/LICENSE",
+    "sha256": "add86c21f2074d47a4e58b3552befb895027eeed2ceae7d70fb18d1ef18913c4",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/IndexableRecyclerView.txt"
+  },
+  "MagicIndicator": {
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/MagicIndicator.txt",
+    "url": "https://raw.githubusercontent.com/hackware1993/MagicIndicator/master/README.md",
+    "sha256": "dd04376509bc83cfd64493dbd202ba47185b456139d5a4661e4e25f4b4f895de"
+  },
+  "TinyPinyin": {
+    "url": "https://raw.githubusercontent.com/promeg/TinyPinyin/master/LICENSE",
+    "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/TinyPinyin.txt"
+  },
+  "AhoCorasick": {
+    "status": "notice-saved",
+    "url": "https://raw.githubusercontent.com/robert-bor/aho-corasick/master/LICENSE.md",
+    "sha256": "6c6ebc5454a777b258931b323a86fbd37c6cb39df192c90d3306b68dd6febd07",
+    "local_file": "third_party/licenses/AhoCorasick.txt"
+  },
+  "Seamless": {
+    "url": "https://raw.githubusercontent.com/4thline/seamless/master/LICENSE.txt",
+    "sha256": "63a7627e7c499db7297dd99d540dc46ab7f14645a0d88ebe82a8d669c6d639e1",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Seamless.txt"
+  },
+  "Cling": {
+    "url": "https://github.com/4thline/cling/archive/refs/tags/2.1.2.zip (LICENSE.txt)",
+    "sha256": "63a7627e7c499db7297dd99d540dc46ab7f14645a0d88ebe82a8d669c6d639e1",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/Cling.txt"
+  },
+  "OpeningStartAnimation": {
+    "url": "https://raw.githubusercontent.com/wongzy/FancyView/master/LICENSE",
+    "sha256": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a",
+    "status": "notice-saved",
+    "local_file": "third_party/licenses/OpeningStartAnimation.txt"
+  }
+}

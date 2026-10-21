@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.youth.banner.Banner android:id="@id/banner" android:layout_width="380.0dp" android:layout_height="185.0dp" android:layout_marginTop="@dimen/dim10" android:layout_marginBottom="4.0dp" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.kotlin.basiclib.widget.RefreshLayout>
+</LinearLayout>

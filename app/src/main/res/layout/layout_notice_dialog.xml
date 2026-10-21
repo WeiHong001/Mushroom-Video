@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_soild_white_coner" android:paddingBottom="25.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/loginBackground" android:background="@color/transparent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/ic_notice_dialog" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <WebView android:textSize="11.0sp" android:textColor="@color/black59" android:id="@id/tv_content" android:paddingLeft="50.0dp" android:paddingTop="8.0dp" android:paddingRight="50.0dp" android:paddingBottom="8.0dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="250.0dp" android:minHeight="150.0dp" />
+</LinearLayout>

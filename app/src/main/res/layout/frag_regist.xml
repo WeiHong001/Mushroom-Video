@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dim95">
+                <ImageView android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/ic_account" app:riv_oval="true" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim15" android:text="@string/accountname" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+                <EditText android:textColorHint="@color/grgray" android:id="@id/et_account" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="请输入手机号" android:singleLine="true" android:maxLength="15" android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" style="@style/setting_textstyle" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dim95">
+                <ImageView android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/ic_password" app:riv_oval="true" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim15" android:text="@string/passwordname" android:maxLength="10" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+                <EditText android:textColorHint="@color/grgray" android:id="@id/et_password" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="请输入密码" android:singleLine="true" android:maxLength="20" android:inputType="textPassword" style="@style/setting_textstyle" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim24" android:layout_marginTop="@dimen/dim24" android:layout_marginRight="@dimen/dim24" app:cardBackgroundColor="@color/second_theme_bg_color" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp" app:contentPadding="@dimen/dim24">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dim95">
+                <ImageView android:id="@id/iv_photo" android:padding="@dimen/dim5" android:layout_width="@dimen/dim55" android:layout_height="@dimen/dim55" android:src="@mipmap/ic_verifycode" android:layout_centerVertical="true" app:riv_oval="true" />
+                <TextView android:id="@id/tv_yzm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dim15" android:text="@string/yzmname" android:maxLength="10" android:layout_toRightOf="@id/iv_photo" android:layout_centerVertical="true" style="@style/setting_textstyle" />
+                <EditText android:textColorHint="@color/grgray" android:id="@id/et_imgverify" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="请输入" android:singleLine="true" android:maxLength="6" android:layout_toRightOf="@id/tv_yzm" android:layout_centerVertical="true" android:inputType="number" style="@style/setting_textstyle" />
+                <ImageView android:id="@id/iv_verify" android:layout_width="90.0dp" android:layout_height="@dimen/dim85" android:layout_marginLeft="@dimen/dim24" android:layout_marginRight="@dimen/dim24" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_gravity="right" android:id="@id/tv_click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/dim24" android:text="点击图片重置验证码" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/transparent_white" android:gravity="center" android:id="@id/tv_submit" android:background="@drawable/background_solid_red_15" android:padding="@dimen/dim24" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dim24" android:text="确认" />
+    </LinearLayout>
+</LinearLayout>

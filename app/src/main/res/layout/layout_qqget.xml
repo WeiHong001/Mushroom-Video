@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="290.0dp" android:layout_height="365.0dp" android:src="@mipmap/ic_lockqq_bg" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    <TextView android:textSize="13.5sp" android:textColor="@color/text333333" android:id="@id/content" android:paddingLeft="10.0dp" android:paddingRight="10.0dp" android:layout_width="235.0dp" android:layout_height="wrap_content" android:layout_marginTop="148.0dp" android:text="@string/qqproduct" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/ivUnlock" android:layout_width="210.0dp" android:layout_height="40.0dp" android:layout_marginTop="8.0dp" android:src="@mipmap/unlockdo" android:layout_below="@id/content" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/ivGoShare" android:layout_width="210.0dp" android:layout_height="40.0dp" android:layout_marginTop="5.0dp" android:src="@mipmap/go_share" android:layout_below="@id/ivUnlock" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/mian_bg_color" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_createtime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="190.0dp" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dp">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/red" android:id="@id/tv_views" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="次播放" android:layout_centerVertical="true" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/red" android:id="@id/tvCollect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_centerVertical="true" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="次收藏" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                    <TextView android:textSize="16.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_number" android:layout_width="210.0dp" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" />
+                    <LinearLayout android:layout_width="190.0dp" android:layout_height="wrap_content" android:weightSum="3.0">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_like" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:id="@id/iv_like" android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@mipmap/love_normal_video" android:layout_centerVertical="true" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tvLike" android:paddingTop="@dimen/dim10" android:paddingBottom="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收藏" android:layout_centerVertical="true" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llResponse" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:id="@id/iv_sugguest" android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@mipmap/ic_response" android:layout_centerVertical="true" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:paddingTop="@dimen/dim10" android:paddingBottom="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反馈" android:layout_centerVertical="true" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llShare" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:id="@id/iv_share" android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@mipmap/ic_video_share" android:layout_centerVertical="true" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:paddingTop="@dimen/dim10" android:paddingBottom="@dimen/dim10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分享" android:layout_centerVertical="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp">
+                    <ImageView android:id="@id/iv_details_ad_1" android:layout_width="180.0dp" android:layout_height="65.0dp" android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <com.google.android.flexbox.FlexboxLayout android:id="@id/flex_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:flexDirection="row" app:flexWrap="wrap" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rvUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp" />
+            <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:layout_width="380.0dp" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp">
+                <ImageView android:id="@id/iv_main_ad" android:layout_width="380.0dp" android:layout_height="126.0dp" android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+            <TextView android:textSize="18.0sp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim24" android:layout_marginBottom="@dimen/dim24" android:text="猜你喜欢" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_likelists" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

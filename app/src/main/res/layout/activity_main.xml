@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_head" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.kotlin.basiclib.widget.commontab.CommonTabLayout android:id="@id/tabLayout" android:background="@color/bottombar_color" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:tl_iconHeight="26.0dp" app:tl_iconWidth="26.0dp" app:tl_indicator_color="@android:color/transparent" app:tl_textSelectColor="@color/theme_tab_menu_sellect" app:tl_textUnselectColor="@color/theme_text_color_tab" app:tl_textsize="14.0sp" />
+    <FrameLayout android:id="@id/container" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/tabLayout" />
+    <View android:background="@color/bottombar_line_color" android:layout_width="match_parent" android:layout_height="@dimen/dim2" android:layout_above="@id/tabLayout" />
+</RelativeLayout>

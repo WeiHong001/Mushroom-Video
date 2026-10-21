@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="45.0dp">
+            <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/rl_personal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_photo" android:layout_width="@dimen/dim96" android:layout_height="@dimen/dim96" android:src="@mipmap/default_user" android:scaleType="centerCrop" app:riv_oval="true" />
+                        <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_name" android:paddingRight="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_marginTop="4.0dp" android:layout_toRightOf="@id/iv_photo" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/ll_text" android:paddingTop="@dimen/dim24" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_friend_title" android:paddingTop="@dimen/dim10" android:paddingRight="@dimen/dim20" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <FrameLayout android:id="@id/fl_img" android:paddingTop="@dimen/dim10" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/rl_img" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <com.mogu.tv.view.NineGridLayout android:id="@id/ngrid_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <ImageView android:id="@id/iv_single" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dp" android:src="@color/e6gray" android:adjustViewBounds="true" />
+                            <ImageView android:id="@id/iv_video_photo" android:visibility="gone" android:layout_width="180.0dp" android:layout_height="230.0dp" android:src="@mipmap/icon_default_photo" android:scaleType="centerCrop" />
+                            <ImageView android:id="@id/iv_play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/video_play_normal" android:layout_centerInParent="true" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text666666" android:id="@id/tv_time" android:paddingRight="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_toRightOf="@id/iv_photo" android:layout_below="@id/tv_name" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dim16">
+                        <LinearLayout android:gravity="center" android:id="@id/ll_praise" android:padding="5.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:id="@id/iv_praise" android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@drawable/selector_topic_praise" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text666666" android:id="@id/tv_praise" android:paddingLeft="@dimen/dim15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:id="@id/ll_share" android:padding="5.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@mipmap/ic_sq_share" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text666666" android:paddingLeft="@dimen/dim15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分享" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <net.lucode.hackware.magicindicator.MagicIndicator android:id="@id/magicIndicator" android:layout_width="match_parent" android:layout_height="45.0dp" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_comment" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.kotlin.basiclib.widget.RefreshLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/rl_bottom_comment" android:background="@color/second_theme_bg_color" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center" android:id="@id/tv_tomain" android:background="@drawable/background_solid_homecolo_20cornor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dim55" android:layout_marginTop="@dimen/dim15" android:layout_marginRight="@dimen/dim55" android:layout_marginBottom="@dimen/dim15" android:text="点击发表评论" android:layout_centerInParent="true" />
+            <ImageView android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_marginLeft="@dimen/dim105" android:src="@mipmap/ic_comment" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

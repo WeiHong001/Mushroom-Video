@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/head_layout" layout="@layout/header_layout" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llLock" android:background="@color/white" android:paddingBottom="100.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tvLockTitle" android:background="@drawable/shape_button_cornor_red" android:padding="5.0dp" android:layout_width="200.0dp" android:layout_height="wrap_content" android:text="已设置应用锁" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tvClear" android:background="@drawable/shape_button_cornor_red" android:padding="5.0dp" android:visibility="invisible" android:layout_width="200.0dp" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="清除密码" />
+        <com.github.ihsg.patternlocker.PatternLockerView android:id="@id/patternLockerView" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="50.0dp" android:layout_marginTop="20.0dp" android:layout_marginRight="50.0dp" app:plv_color="@color/grgray" app:plv_enableAutoClean="false" app:plv_enableSkip="true" app:plv_errorColor="@color/red" app:plv_fillColor="@color/white" app:plv_freezeDuration="1000" app:plv_hitColor="@color/colorPrimary" app:plv_lineWidth="3.0dp" />
+    </LinearLayout>
+</LinearLayout>

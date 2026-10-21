@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_soild_white_coner" android:paddingBottom="25.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/loginBackground" android:background="@color/transparent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/icon_dialog_top" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <TextView android:textSize="25.0dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="需要开启以下权限" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dim17">
+        <ImageView android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginRight="15.0dp" android:src="@mipmap/icon_permission1" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dim5" android:text="存储权限" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/c999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:text="数据缓存本地，速度更快！" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/dim17" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginRight="15.0dp" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dim5" android:text="位置权限" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/c999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:text="帮您找到附近的玩家　　　" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_submit" android:background="@drawable/shape_button_cornor_red" android:paddingLeft="50.0dp" android:paddingTop="8.0dp" android:paddingRight="50.0dp" android:paddingBottom="8.0dp" android:layout_width="240.0dp" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="一键开启" />
+</LinearLayout>

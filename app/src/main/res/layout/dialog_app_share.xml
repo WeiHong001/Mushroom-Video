@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="100.0dp" android:layout_marginBottom="@dimen/dim24">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_wechat" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_wechat" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="微信好友" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_wechat_circle" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_wecircle" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="朋友圈" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_qq" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_qq" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QQ" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_qqzone" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_qqzone" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QQ空间" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_share_more" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="42.0dp" android:layout_height="42.0dp" android:src="@mipmap/icon_share_more" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更多" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_qrCode" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="40.0dp" android:layout_height="40.0dp" android:src="@mipmap/icon_shareqrcode" android:scaleType="centerCrop" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="二维码" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_copy_link" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="42.0dp" android:layout_height="42.0dp" android:src="@mipmap/icon_share_copy" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="复制链接" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="100.0dp" android:layout_marginBottom="@dimen/dim24" android:weightSum="3.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_sina" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_sina" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="微博" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_report" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="举报" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_saveImage" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_share_save" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text333333" android:paddingTop="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存图片" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/divider_horizontal" />
+    <TextView android:textSize="17.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_cancel" android:paddingTop="@dimen/dim24" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dim30" android:text="取消" />
+</LinearLayout>

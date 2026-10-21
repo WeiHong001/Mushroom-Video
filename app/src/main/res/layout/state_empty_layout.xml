@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_layout" android:background="@color/mian_bg_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/iv_empty" android:layout_width="124.0dp" android:layout_height="124.0dp" android:layout_marginTop="@dimen/dim30" android:src="@mipmap/ic_empty_data" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/main_text_color_theme" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/empty_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="数据为空" />
+    </LinearLayout>
+    <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/content_loading" android:visibility="gone" android:layout_width="40.0dp" android:layout_height="40.0dp" style="?android:progressBarStyleSmall" />
+</FrameLayout>

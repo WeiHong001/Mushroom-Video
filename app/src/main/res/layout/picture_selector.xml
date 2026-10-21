@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/id_titleBar" android:layout_width="match_parent" android:layout_height="48.0dp">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_picture_title" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="48.0dp">
+            <ImageView android:id="@id/picture_left_back" android:padding="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?picture.leftBack.icon" android:layout_centerVertical="true" />
+            <TextView android:textSize="17.0sp" android:textColor="?picture.title.textColor" android:ellipsize="end" android:gravity="center" android:id="@id/picture_title" android:padding="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/picture_camera_roll" android:maxEms="11" android:drawableRight="?picture.arrow_down.icon" android:drawablePadding="2.0dp" android:layout_centerInParent="true" />
+            <TextView android:textSize="14.0sp" android:textColor="?picture.right.textColor" android:gravity="center" android:id="@id/picture_right" android:padding="10.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/picture_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <LinearLayout android:enabled="false" android:gravity="center" android:orientation="horizontal" android:id="@id/id_ll_ok" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textSize="14.0sp" android:textColor="?picture.complete.textColor" android:gravity="center" android:id="@id/picture_tv_ok" android:background="?picture.complete.bg" android:padding="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dp" android:text="@string/picture_please_select" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/picture_tv_img_num" android:background="?picture.num.style" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dp" android:text="0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_bottom" android:background="?picture.bottom.bg" android:layout_width="match_parent" android:layout_height="45.0dp" android:layout_alignParentBottom="true">
+        <TextView android:enabled="false" android:textSize="14.0sp" android:textColor="?picture.preview.textColor" android:id="@id/picture_id_preview" android:padding="12.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/picture_preview" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/picture_recycler" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="2.0dp" android:layout_marginRight="2.0dp" android:layout_above="@id/rl_bottom" android:layout_below="@id/id_titleBar" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/tab_color_false" android:gravity="center" android:id="@id/tv_empty" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginRight="15.0dp" android:text="@string/picture_empty" android:layout_centerInParent="true" android:lineSpacingExtra="3.0dp" />
+</RelativeLayout>

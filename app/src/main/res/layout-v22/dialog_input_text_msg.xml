@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rl_inputdlg_view" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:transformPivotY="-5.0dp" android:translationY="5.0dp" android:elevation="5.0dp" android:outlineSpotShadowColor="#595151" android:outlineAmbientShadowColor="#595151"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_comment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_bottomsheet_rv_lists">
+        <EditText android:textSize="16.0sp" android:textColor="@color/black59" android:textColorHint="@color/grgray" android:gravity="left|top" android:id="@id/et_input_message" android:background="@null" android:paddingLeft="15.0dp" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="65.0dp" android:maxHeight="120.0dp" android:minHeight="80.0dp" android:hint="留下你的精彩评论吧~~" android:cursorVisible="true" android:maxLines="3" android:maxLength="100" android:layout_centerVertical="true" android:lineSpacingMultiplier="1.1" android:imeOptions="actionDone" android:imeActionLabel="发送" android:textCursorDrawable="@drawable/shape_edit_cursor" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/black59" android:id="@id/tv_confirm" android:padding="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" android:text="发送" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/textgray" android:layout_width="match_parent" android:layout_height="0.30000007dp" />
+    <TextView android:textColor="@color/textgray" android:id="@id/tv_test" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/100" />
+</LinearLayout>

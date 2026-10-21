@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvList" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+    <ImageView android:id="@id/iv_returnTop" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginRight="@dimen/dim24" android:layout_marginBottom="@dimen/dim40" android:src="@mipmap/icon_returntop" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="0.0" />
+</RelativeLayout>

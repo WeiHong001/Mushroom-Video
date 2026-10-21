@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/theme_tab_menu_sellect" android:gravity="center_vertical" android:id="@id/tv_index" android:background="#414141" android:paddingLeft="10.0dp" android:layout_width="match_parent" android:layout_height="42.0dp" android:text="A" />
+</FrameLayout>

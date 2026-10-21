@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="220.0dp">
+        <com.mogu.tv.view.DetailsVideoView android:id="@id/video_view" android:layout_width="match_parent" android:layout_height="220.0dp" />
+        <ImageView android:id="@id/iv_image_ad" android:visibility="visible" android:layout_width="match_parent" android:layout_height="220.0dp" android:src="@mipmap/load" android:scaleType="centerCrop" />
+        <TextView android:textColor="#ffffff" android:id="@id/jump_ad" android:background="@drawable/background_solid_black_alph_15corner" android:paddingLeft="10.0dp" android:paddingTop="4.0dp" android:paddingRight="10.0dp" android:paddingBottom="4.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginRight="20.0dp" android:text="@string/jump_ad" android:layout_alignParentRight="true" />
+        <TextView android:textColor="#ffffff" android:id="@id/tv_toget" android:background="@drawable/background_solid_yellow_15" android:paddingLeft="10.0dp" android:paddingTop="5.0dp" android:paddingRight="10.0dp" android:paddingBottom="5.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dp" android:layout_marginTop="20.0dp" android:text="点击马上了解" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:layout_width="380.0dp" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="7.0dp" app:cardElevation="0.0dp">
+                <ImageView android:id="@id/iv_main_ad" android:layout_width="380.0dp" android:layout_height="126.0dp" android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+            <TextView android:textSize="17.0dp" android:textColor="@color/white" android:id="@id/tvTitle" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:padding="15.0dp" android:layout_width="360.0dp" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.5dp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="推荐指数" />
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/llRecommend" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dp">
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.5dp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="剧情指数" />
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/llJuqing" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dp">
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="360.0dp" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.5dp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="颜值指数" />
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/llYzLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dp">
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="14.5dp" android:textColor="@color/main_text_color_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="动作指数" />
+                    <LinearLayout android:gravity="center_vertical" android:id="@id/llDzlayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dp">
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                        <ImageView android:layout_width="15.0dp" android:layout_height="20.0dp" android:src="@mipmap/ic_jp_star" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="17.0dp" android:textColor="@color/main_text_color_theme" android:id="@id/tv_name" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="简介" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.5dp" android:textColor="@color/main_text_color_theme" android:id="@id/tvIntroduce" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/llJifen" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp">
+                <ImageView android:layout_width="24.0dp" android:layout_height="24.0dp" android:src="@mipmap/ic_jifen" />
+                <TextView android:id="@id/tvJifen" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="剩余积分:0" android:maxLength="10" style="@style/setting_textstyle" />
+            </LinearLayout>
+            <TextView android:textSize="17.0dp" android:textColor="@color/select_red" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="邀请好友下载APP一起观看,获取更多积分,后续福利满满" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/ivInvite" android:layout_width="218.0dp" android:layout_height="81.0dp" android:layout_marginTop="15.0dp" android:src="@mipmap/ic_vipinvite" android:scaleType="centerCrop" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

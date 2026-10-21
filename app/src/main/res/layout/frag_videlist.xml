@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ll_Head" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.kotlin.basiclib.widget.RefreshLayout android:id="@id/refresh_layout" android:background="@color/mian_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dim20" android:layout_marginTop="5.0dp" android:layout_marginRight="@dimen/dim20" android:overScrollMode="never" />
+    </com.kotlin.basiclib.widget.RefreshLayout>
+    <ImageView android:id="@id/iv_returnTop" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginRight="@dimen/dim24" android:layout_marginBottom="@dimen/dim40" android:src="@mipmap/icon_returntop" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="0.0" />
+</RelativeLayout>

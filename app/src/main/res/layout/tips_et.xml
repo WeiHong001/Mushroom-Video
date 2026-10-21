@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mogu.tv.view.TopScrollEditText android:textSize="15.0sp" android:textColor="@color/black59" android:textColorHint="#7b828b" android:gravity="top" android:id="@id/tv_content" android:background="@color/white" android:paddingLeft="@dimen/dim30" android:paddingTop="@dimen/dim30" android:paddingRight="@dimen/dim30" android:paddingBottom="@dimen/dim40" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/dim350" android:minHeight="@dimen/dim160" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/text666666" android:id="@id/tv_tips" android:paddingRight="13.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dim10" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

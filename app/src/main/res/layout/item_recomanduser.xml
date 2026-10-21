@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="80.0dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iv_details" android:layout_width="56.0dp" android:layout_height="56.0dp" android:src="@mipmap/icon_default_photo" android:scaleType="centerCrop" app:riv_oval="true" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/main_text_color_theme" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" />
+</LinearLayout>
