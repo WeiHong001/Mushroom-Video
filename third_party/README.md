@@ -10,6 +10,8 @@ APK 中可直接确认的版本汇总在 [original-dependency-versions.json](../
 
 构建工具使用 smali 2.5.2、ASM 9.6，均为构建期依赖。测试使用 JUnit 和 AndroidX Test。原码中自带的媒体解析修改保留在 `com.mogu.tv.utils.exo`；标准 HLS 解析委托给匹配的官方版本，具体公司修改点见 [network-and-media.md](../docs/network-and-media.md)。
 
+Debug 网络诊断另引入 Chucker 4.1.0（Apache-2.0）、Jetpack Compose/AndroidX 及构建期 ASM 9.8。Chucker AAR 的展示、导航和输出保护变换保留上游资源和许可，不复制完整上游源码或修改下载缓存；补丁和来源见 [网络诊断说明](../docs/network-inspector.md)。诊断图标来自 Flix2 已使用的 Google Material Symbols Outlined（Apache-2.0），仅在 Debug 打包。上述依赖不是从蘑菇原 APK 推断出的原始版本。
+
 ## 选择保留的旧集成
 
 `app/src/main/recovered-libraries` 只保留尚不能确认可替换制品或可能包含修改的旧集成。它不是整个 APK 的 smali 目录；AndroidX、Kotlin、Glide、Exo、GSY 等主体均被排除。

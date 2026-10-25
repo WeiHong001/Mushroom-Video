@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity android:name="com.mogu.inspector.InspectorSettingsActivity" android:exported="false" android:theme="@style/InspectorHostTheme" />
+    </application>
+</manifest>

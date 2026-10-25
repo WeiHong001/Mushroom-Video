@@ -17,6 +17,12 @@ public final class ApiClient {
     private static String txtFromHost="apihost.mgsp.me";
     private static String baseHost="https://api.mgsp.ltd";
     private static String defaltApi=baseHost;
+    private static java.util.List<okhttp3.Interceptor> diagnosticInterceptors=java.util.Collections.emptyList();
+
+    /** Application assembly supplies generic application interceptors, never a debug UI type. */
+    public static void setDiagnosticInterceptors(java.util.List<okhttp3.Interceptor> interceptors) {
+        diagnosticInterceptors=java.util.Collections.unmodifiableList(new java.util.ArrayList<>(interceptors));
+    }
 
     private ApiClient() { }
     public String getTxtFromHost(){return txtFromHost;}
@@ -30,15 +36,17 @@ public final class ApiClient {
 
     public void setRetrofit(String url) {
         baseHost=java.util.Objects.requireNonNull(url).trim();
-        OkHttpClient client=SSLOkhttp.getUnsafeOkHttpClient()
+        OkHttpClient.Builder builder=SSLOkhttp.getUnsafeOkHttpClient()
                 .addNetworkInterceptor(new LogInterceptor("api"))
+                .addInterceptor(new com.mogu.research.ResearchAccessInterceptor())
                 .addInterceptor(chain->{
                     Request.Builder request=chain.request().newBuilder().header("Accept","application/json");
                     if(UserManager.INSTANCE.isLogin())request.header("x-token",UserManager.INSTANCE.getUserToken());
                     return chain.proceed(request.build());
                 })
-                .addInterceptor(new UuidParamInterceptor())
-                .addInterceptor(new ResearchInterceptor())
+                .addInterceptor(new UuidParamInterceptor());
+        for(okhttp3.Interceptor interceptor:diagnosticInterceptors) builder.addInterceptor(interceptor);
+        OkHttpClient client=builder.addInterceptor(new ResearchInterceptor())
                 .connectTimeout(30,TimeUnit.SECONDS).writeTimeout(30,TimeUnit.SECONDS).readTimeout(30,TimeUnit.SECONDS).build();
         service=new Retrofit.Builder().baseUrl(baseHost).client(client)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
