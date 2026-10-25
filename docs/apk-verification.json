@@ -1,6 +1,6 @@
 {
   "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
-  "sha256": "a530cc4b3420b9ac927c51786d9e5a81d2cf6fdeb69df4270eee95a0795c948a",
+  "sha256": "2309532f71d465fd647d57ba32e70687f5a7c1a3c62437d2d317890ada118872",
   "dex_files": [
     "classes.dex",
     "classes10.dex",
@@ -21,7 +21,7 @@
     "classes9.dex",
     "classes18.dex"
   ],
-  "classes": 32320,
+  "classes": 32319,
   "manifest_activities_present": 50,
   "original_company_activities_present": 38,
   "duplicate_classes": 0,

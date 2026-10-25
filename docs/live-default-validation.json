@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-26",
+  "default_mode": "live",
+  "data_access": "read-only",
+  "dns_discovery": {
+    "name": "apihost.mgsp.me",
+    "type": "TXT",
+    "service": "https://47.97.188.179",
+    "checked": true
+  },
+  "generated_build_config": {
+    "debug": {
+      "offline": false,
+      "api_base": "https://47.97.188.179"
+    },
+    "release": {
+      "offline": false,
+      "api_base": "https://47.97.188.179"
+    }
+  },
+  "device_api_verification": {
+    "mode": "real-read-only",
+    "api_base": "https://47.97.188.179",
+    "calls": [
+      {
+        "path": "/api/vod/type",
+        "code": 200,
+        "items": 9
+      },
+      {
+        "path": "/api/vod/list",
+        "code": 200,
+        "items": 20
+      },
+      {
+        "path": "/api/vod/info",
+        "code": 200
+      }
+    ],
+    "mutation_guard_verified_without_network": true,
+    "passed": true
+  },
+  "app_unit_tests": 6,
+  "app_unit_failures": 0,
+  "debug_apk": {
+    "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "sha256": "2309532f71d465fd647d57ba32e70687f5a7c1a3c62437d2d317890ada118872",
+    "dex_files": [
+      "classes.dex",
+      "classes10.dex",
+      "classes11.dex",
+      "classes12.dex",
+      "classes13.dex",
+      "classes14.dex",
+      "classes15.dex",
+      "classes16.dex",
+      "classes17.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex",
+      "classes6.dex",
+      "classes7.dex",
+      "classes8.dex",
+      "classes9.dex",
+      "classes18.dex"
+    ],
+    "classes": 32319,
+    "manifest_activities_present": 50,
+    "original_company_activities_present": 38,
+    "duplicate_classes": 0,
+    "missing_desugared_companions": 0,
+    "compile_only_stubs_packaged": false,
+    "original_resource_ids_verified": 7141
+  },
+  "release_apk": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "sha256": "dca488b9e3e0130dc2d8a294ede43d4889cfb384dcfe77b099fb97b0b2a1c5a2",
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex"
+    ],
+    "classes": 19209,
+    "manifest_activities_present": 50,
+    "original_company_activities_present": 38,
+    "duplicate_classes": 0,
+    "missing_desugared_companions": 0,
+    "compile_only_stubs_packaged": false,
+    "original_resource_ids_verified": 7141
+  },
+  "release_isolation": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "runtime_graph_clean": true,
+    "merged_manifest_clean": true,
+    "dex_clean": true,
+    "resources_clean": true,
+    "release_facade_present": true,
+    "classes_checked": 19209
+  },
+  "real_account_used": false,
+  "raw_response_saved_to_repository": false,
+  "limitations": [
+    "Startup DNS discovery is retained; the checked IP is not a permanent service address.",
+    "Account writes, uploads and full playback were not validated in this run.",
+    "Existing legacy resource lint findings remain; the repository keeps abortOnError=false."
+  ]
+}
