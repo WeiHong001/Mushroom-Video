@@ -13,3 +13,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = 'Mushroom-Video'
 include ':app'
+include ':core:network-inspector'

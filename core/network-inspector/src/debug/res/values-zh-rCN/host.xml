@@ -1,0 +1,10 @@
+<resources>
+    <string name="ui_hidden_diagnostics">诊断内容受保护</string>
+    <string name="ui_hidden_value">—</string>
+    <string name="inspector_settings_entry">网络诊断</string>
+    <string name="inspector_privacy">保护诊断内容</string>
+    <string name="inspector_privacy_description">停止采集并禁止查看、复制和导出；保留已有历史。</string>
+    <string name="inspector_privacy_failure">隐私偏好读取或保存失败，内容继续受保护。</string>
+    <string name="inspector_retry">重试</string>
+    <string name="inspector_scope">开启网络捕获并关闭内容保护后，可查看 API 请求。账号认证、带凭据的查询、上传、图片和播放流量不采集。面板清空只影响当前会话，Chucker 历史独立保留。</string>
+</resources>

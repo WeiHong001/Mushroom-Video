@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-26",
+  "branch": "codex/network-inspector",
+  "base_commit": "e93ab2d1bb61adf2ec3d137e432498bd096611a7",
+  "core_unit_tests": 88,
+  "core_unit_failures": 0,
+  "ui_followup_tests": 25,
+  "ui_followup_failures": 0,
+  "app_unit_tests": 6,
+  "app_unit_failures": 0,
+  "device": {
+    "model": "M2012K11AC",
+    "android_api": 33,
+    "tests": 4,
+    "failures": 0,
+    "isolated_package": "com.amogu6.tv.research.inspector"
+  },
+  "builds": [
+    "app:assembleDebug",
+    "app:assembleDebugAndroidTest",
+    "app:assembleRelease",
+    "core:network-inspector:compileReleaseKotlin"
+  ],
+  "release_isolation": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "runtime_graph_clean": true,
+    "merged_manifest_clean": true,
+    "dex_clean": true,
+    "resources_clean": true,
+    "release_facade_present": true,
+    "classes_checked": 19210
+  },
+  "debug_apk_verification": {
+    "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "sha256": "a530cc4b3420b9ac927c51786d9e5a81d2cf6fdeb69df4270eee95a0795c948a",
+    "dex_files": [
+      "classes.dex",
+      "classes10.dex",
+      "classes11.dex",
+      "classes12.dex",
+      "classes13.dex",
+      "classes14.dex",
+      "classes15.dex",
+      "classes16.dex",
+      "classes17.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex",
+      "classes6.dex",
+      "classes7.dex",
+      "classes8.dex",
+      "classes9.dex",
+      "classes18.dex"
+    ],
+    "classes": 32320,
+    "manifest_activities_present": 50,
+    "original_company_activities_present": 38,
+    "duplicate_classes": 0,
+    "missing_desugared_companions": 0,
+    "compile_only_stubs_packaged": false,
+    "original_resource_ids_verified": 7141
+  },
+  "release_apk_verification": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "sha256": "f03d13fa840af1607e12fcc5e65811cc086e5ad905cafef29ee68135e1785f3d",
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex",
+      "classes3.dex",
+      "classes4.dex",
+      "classes5.dex"
+    ],
+    "classes": 19210,
+    "manifest_activities_present": 50,
+    "original_company_activities_present": 38,
+    "duplicate_classes": 0,
+    "missing_desugared_companions": 0,
+    "compile_only_stubs_packaged": false,
+    "original_resource_ids_verified": 7141
+  },
+  "legacy_release_lint_errors": 16,
+  "limitations": [
+    "No live-account/backend capture validation",
+    "System share/document-picker destinations and selection-handle gestures were not all exercised manually on hardware; transformed-class/Compose tests cover their contracts"
+  ]
+}

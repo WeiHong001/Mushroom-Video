@@ -27,6 +27,7 @@ import moe.codeest.enviews.ENPlayView;
 
 /** Original initialization chain, without obsolete analytics or global trust-all TLS. */
 public final class App extends BaseApplicaiton {
+    private com.mogu.research.DiagnosticsRuntime diagnostics;
     @Override public SharedPreferences getSharedPreferences(String name,int mode) {
         return super.getSharedPreferences((BuildConfig.OFFLINE?"offline-":"live-")+name,mode);
     }
@@ -43,6 +44,9 @@ public final class App extends BaseApplicaiton {
 
     @Override public void onCreate() {
         super.onCreate();
+        // Bind privacy/export guards before a restored Chucker activity can create its window.
+        diagnostics = new com.mogu.research.DiagnosticsRuntime(this);
+        ApiClient.setDiagnosticInterceptors(diagnostics.interceptors());
         RecoveryRuntime.install(this);
         setNightMode();
         ApiClient.INSTANCE.setRetrofit(ApiClient.INSTANCE.getBaseHost());
@@ -64,6 +68,8 @@ public final class App extends BaseApplicaiton {
             @Override public void onActivitySaveInstanceState(Activity a,Bundle b){ }
         });
     }
+
+    public com.mogu.research.DiagnosticsRuntime getDiagnostics() { return diagnostics; }
 
     public void setNightMode() {
         int value=SpUtil.INSTANCE.getInt(CacheKey.INSTANCE.getNightMode(),1);

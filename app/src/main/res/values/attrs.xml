@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <!-- Retained APK test styles reference this legacy Material attr; newer Debug dependencies omit it. -->
+    <attr name="themeLineHeight" format="dimension" />
     <attr name="EtHeight" format="dimension" />
     <attr name="EtMinHeight" format="dimension" />
     <attr name="alignOnlyOneLine" format="boolean" />

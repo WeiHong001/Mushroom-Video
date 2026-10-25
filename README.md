@@ -6,11 +6,11 @@
 
 ## 打开、构建、运行
 
-实测组合：JDK 17、Gradle Wrapper 8.7、AGP 8.5.1、Android SDK 34 / Build Tools 34.0.0。研究包 `applicationId` 为 `com.amogu6.tv.research`，版本 `1.1.4-research`，最低 Android 5.0，targetSdk 32，使用 Android 默认调试签名。
+当前构建组合：JDK 17、Gradle Wrapper 8.11.1、AGP 8.10.1、Android SDK 36 / Build Tools 35.0.0。研究包 `applicationId` 为 `com.amogu6.tv.research`，版本 `1.1.4-research`；Release 最低 Android 5.0，含 Compose 网络诊断的 Debug 最低 Android 8.0，targetSdk 仍为 32，使用 Android 默认调试签名。
 
 1. 用 Android Studio 的 **Open** 打开本目录，等待 Gradle 同步。
-2. 将 Gradle JDK 设为 **JDK 17**，不要直接使用本机新 Android Studio 附带的 JBR 25 运行 Gradle 8.7。
-3. 安装 Android SDK Platform 34 与 Build Tools 34.0.0。SDK 路径放在不提交的 `local.properties` 中，例如：
+2. 将 Gradle JDK 设为 **JDK 17**，不要直接使用本机新 Android Studio 附带的 JBR 25 运行 Gradle 8.11.1。
+3. 安装 Android SDK Platform 36 与 Build Tools 35.0.0。SDK 路径放在不提交的 `local.properties` 中，例如：
 
    ```properties
    sdk.dir=E:/Android/SDK
@@ -91,6 +91,8 @@ apiBase=https://47.97.188.179
 | `MNestedScrollView`、`RefreshSlideLayout`、`PhotoViewPager` | 保留原触摸协调与图片缩放冲突处理；入口和布局见源码及页面清单 |
 
 调用关系、密钥输入输出和缓存位置见 [网络与媒体说明](docs/network-and-media.md)。
+
+Debug 的设置页新增默认关闭的“Chucker 网络捕获”。开启捕获并关闭“保护诊断内容”后，可通过浮标查看 API 请求、详情与原生 Chucker 历史；图片、播放、上传和认证等流量排除。Release 不包含诊断依赖或界面。使用方式、采集范围、隐私及原文/导出边界见 [网络诊断说明](docs/network-inspector.md)。
 
 ## 构建机制与修改源码
 

@@ -58,7 +58,7 @@ public final class RecoveryRuntime implements Application.ActivityLifecycleCallb
     }
 
     @Override public void onActivityCreated(Activity activity, Bundle state) {
-        if (activity instanceof ResearchConsoleActivity) return;
+        if (activity instanceof ResearchConsoleActivity || !activity.getClass().getName().startsWith("com.mogu.tv.")) return;
         activity.getWindow().getDecorView().post(() -> {
             ViewGroup content = activity.findViewById(android.R.id.content);
             if (!(content instanceof FrameLayout)) return;
