@@ -1,5 +1,5 @@
-# Copy to research.local.properties (ignored). Default: offline, synthetic local data.
-mode=offline
-apiBase=https://api.mgsp.ltd
-# Original DNS discovery is retained. The returned IP was checked on 2026-10-21;
-# see docs/live-device-validation.json. It is not a permanent replacement address.
+# Optional local overrides. The project defaults to live, read-only API data.
+mode=live
+apiBase=https://47.97.188.179
+# Original DNS discovery is retained. This service was rechecked on 2026-10-26;
+# it is not a permanent replacement address. Use -PresearchMode=offline for synthetic tests.

@@ -4,7 +4,7 @@ apply from: rootProject.file('tools/business-abi.gradle')
 def researchConfig = new Properties()
 def configFile = rootProject.file('research.local.properties')
 if (configFile.exists()) configFile.withInputStream { researchConfig.load(it) }
-def researchMode = providers.gradleProperty('researchMode').getOrElse(researchConfig.getProperty('mode', 'offline'))
+def researchMode = providers.gradleProperty('researchMode').getOrElse(researchConfig.getProperty('mode', 'live'))
 if (!(researchMode in ['offline', 'live'])) throw new GradleException('mode must be offline or live')
 def inspectorDeviceTest = providers.gradleProperty('inspectorDeviceTest').getOrElse('false').toBoolean()
 def researchApplicationId = 'com.amogu6.tv.research' + (inspectorDeviceTest ? '.inspector' : '')
@@ -30,7 +30,8 @@ android {
         versionName '1.1.4-research'
         resValue 'string', 'research_app_name', researchMode == 'offline' ? '蘑菇视频 · 离线研究' : '蘑菇视频 · 只读研究'
         buildConfigField 'boolean', 'OFFLINE', (researchMode == 'offline').toString()
-        buildConfigField 'String', 'API_BASE', '"' + researchConfig.getProperty('apiBase', 'https://api.mgsp.ltd').replace('"', '') + '"'
+        // Current DNS-discovered public service, rechecked 2026-10-26. Startup discovery remains active.
+        buildConfigField 'String', 'API_BASE', '"' + researchConfig.getProperty('apiBase', 'https://47.97.188.179').replace('"', '') + '"'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         manifestPlaceholders = [researchAuthorities: researchApplicationId]
     }

@@ -101,7 +101,7 @@ public class LiveReadOnlyTest {
             ApiClient.INSTANCE.setRetrofit(BuildConfig.API_BASE);
             JsonObject types=read("/api/vod/type",ApiClient.INSTANCE.getService().getTypeAll(),calls);
             assertTrue(types.getAsJsonArray("list").size()>0);
-            HashMap<String,Object> query=new HashMap<>();query.put("limit",2);query.put("page",1);
+            HashMap<String,Object> query=new HashMap<>();query.put("limit",20);query.put("page",1);
             JsonObject list=read("/api/vod/list",ApiClient.INSTANCE.getService().getVideoList(query),calls);
             Class<?> modelClass=context.getClassLoader().loadClass("com.mogu.tv.model.VideoListModel");
             Object model=new Gson().fromJson(list,modelClass);
@@ -119,7 +119,7 @@ public class LiveReadOnlyTest {
                         if(method.getName().equals("proceed"))throw new AssertionError("Mutation forwarded");
                         return null;
                     });
-            try(Response blocked=new ResearchInterceptor().intercept(fake)) {
+            try(Response blocked=new ResearchAccessInterceptor().intercept(fake)) {
                 assertEquals("blocked-local",blocked.header("X-Mushroom-Data-Source"));
                 assertEquals(403,JsonParser.parseString(blocked.body().string()).getAsJsonObject().get("code").getAsInt());
             }
