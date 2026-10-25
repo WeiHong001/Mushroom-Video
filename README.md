@@ -99,7 +99,7 @@ apiBase=https://47.97.188.179
 1. 为尚未迁移的 smali 生成**仅编译期**签名 JAR，使 Java 能引用原业务类型；这个 JAR 不进入运行包。
 2. 重新汇编真实业务及少数旧集成 smali，合入正常 Gradle APK，保留 STORED 资源/原资源 ID，重新对齐并使用调试密钥签名。重复构建会替换上次合入的 DEX，避免累加重复类。
 
-`tools/verify_apk.py` 检查实际 APK 的 Activity 覆盖、重复类、编译期占位泄漏、反编译失败文本及原资源 ID。`reference/java` 中仍可看到原反编译失败标记；它们不在运行包中。相应运行方法来自原 DEX 的真实 smali，不是空方法。
+`tools/verify_apk.py` 检查实际 APK 的 Activity 覆盖、重复类、缺失的接口默认方法兼容类、编译期占位泄漏、反编译失败文本及原资源 ID。`reference/java` 中仍可看到原反编译失败标记；它们不在运行包中。相应运行方法来自原 DEX 的真实 smali，不是空方法。
 
 新增 Java 恢复时，需要移除同名 smali 及已被 Java 重建的内部类，保持二进制类名/方法签名兼容，运行构建和核验脚本，再做对应设备回归。不要直接把整个 `reference/java` 加入编译。
 

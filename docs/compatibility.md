@@ -17,7 +17,8 @@
 | 初始存储权限 | Loading/Main 要求共享存储权限才能/在首页继续使用，描述为缓存权限 | 缓存使用应用目录，移除启动时无关的共享存储权限门槛；图片选择等功能仍保留原按功能请求路径 |
 | 统计 SDK | 原 App 初始化 Umeng，基础 Activity 上报 resume/pause | 研究包去除统计初始化和这些上报；没有复制其原生追踪库；其他业务入口保留 |
 | 离线/真实数据隔离 | 原 APK 无研究模式 | 增加清晰标识与受控数据适配，分开偏好和缓存；真实失败不自动显示样例成功 |
-| APK 合入与签名 | 普通 Java 编译不能表达未恢复的原 Kotlin 控制流 | 从 smali 重新汇编，不从原 APK 复制 DEX；合入保持资源表 STORED，重新 zipalign、debug sign；重复合入会先移除旧恢复 DEX |
+| APK 合入与签名 | 普通 Java 编译不能表达未恢复的原 Kotlin 控制流；Android Studio 设备构建会使用不同的 APK 输出目录 | 从 smali 重新汇编，不从原 APK 复制 DEX；读取当前 package 任务的实际输出目录，避免合入旧包；合入保持资源表 STORED，重新 zipalign、debug sign；重复合入会先移除旧恢复 DEX |
+| 接口默认方法 | 恢复的 Fragment 生命周期与 Exo 播放器 smali 直接调用旧编译器生成的 `$-CC` 类；Android Studio 按较新设备 API 构建时可能不生成这些类，导致启动或播放崩溃 | 通过 Java 基类继承官方接口默认实现，由 D8 根据构建 API 生成兼容方法；移除 smali 的旧合成转发方法，保留绑定释放及实际播放回调；APK 核验新增缺失兼容类检查 |
 | Windows Java 套接字 | 本机 AF_UNIX loopback 失败 | Wrapper 为自身及子进程配置不存在的 socket 临时目录，使 Java 回退 TCP；不修改全局 JDK/环境 |
 | 导入资源的 Lint | 合并/反编译 XML 使用原 `@id`，保留库主题与动态控件关系 | 记录 16 条 Lint vital 诊断及人工核对依据，不阻断研究构建、不捏造默认布局；详见 lint-findings.json；未宣称生产质量门禁通过 |
 

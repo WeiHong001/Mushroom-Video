@@ -50,6 +50,7 @@ def main():
         print(('PASS ' if item['passed'] else 'FAIL ')+name+' '+str(item['seconds'])+'s',flush=True)
 
     if not args.pages_only:
+        run('recovered-listener-defaults','RecoveredListenerDefaultsTest')
         run('media-and-api','MediaContractsTest')
         run('five-tabs','BusinessUiTest#allFiveOriginalTabsNavigateAndRender')
         run('playback','BusinessUiTest#normalAndEncryptedDetailsActuallyAdvancePlayback')

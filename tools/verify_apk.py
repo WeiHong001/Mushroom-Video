@@ -10,6 +10,20 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 
+def desugared_companions(data):
+    """Read actual DEX type references, including helpers used only by merged smali."""
+    u32=lambda offset:struct.unpack_from('<I',data,offset)[0]
+    strings_off,types_off=u32(60),u32(68)
+    found=set()
+    for i in range(u32(64)):
+        pos=u32(strings_off+4*u32(types_off+4*i))
+        while data[pos]&128:pos+=1
+        pos+=1
+        descriptor=data[pos:data.index(0,pos)].decode('utf-8')
+        if descriptor.startswith('L') and descriptor.endswith(('$-CC;', '$$CC;')):
+            found.add(descriptor[1:-1].replace('/','.'))
+    return found
+
 def classes(data):
     assert data.startswith(b'dex\n') and len(data)>=112, 'Not a DEX file'
     u32=lambda offset:struct.unpack_from('<I',data,offset)[0]
@@ -31,6 +45,7 @@ def classes(data):
 
 def verify(path):
     counts=Counter()
+    companions=set()
     dex_files=[]
     with ZipFile(path) as apk:
         for name in apk.namelist():
@@ -39,8 +54,11 @@ def verify(path):
                 assert b'Compile-only business ABI must never be packaged' not in data, 'ABI stubs leaked into APK'
                 assert b'Method not decompiled:' not in data, 'Decompiler failure leaked into runtime'
                 counts.update(classes(data));dex_files.append(name)
+                companions.update(desugared_companions(data))
     duplicates=[name for name,count in counts.items() if count!=1]
     assert not duplicates, 'Duplicate runtime classes: '+str(duplicates[:30])
+    missing_companions=sorted(companions-counts.keys())
+    assert not missing_companions, 'Missing desugared interface companions: '+str(missing_companions)
     android='{http://schemas.android.com/apk/res/android}'
     manifest=ET.parse(ROOT/'app/src/main/AndroidManifest.xml')
     activities=[item.get(android+'name') for item in manifest.iter('activity')]
@@ -66,7 +84,8 @@ def verify(path):
     result=dict(apk=str(path.relative_to(ROOT)),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                 dex_files=dex_files,classes=len(counts),manifest_activities_present=len(activities),
                 original_company_activities_present=sum(name.startswith('com.mogu.tv.') for name in activities),
-                duplicate_classes=0,compile_only_stubs_packaged=False,original_resource_ids_verified=len(expected))
+                duplicate_classes=0,missing_desugared_companions=0,
+                compile_only_stubs_packaged=False,original_resource_ids_verified=len(expected))
     (ROOT/'docs/apk-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=True))
 

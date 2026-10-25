@@ -1,6 +1,24 @@
 # 实际验证记录
 
-验证日期：2026-10-21。运行设备为新建的 Android 14 / API 34、Google APIs x86_64 模拟器 `Mushroom_Research_API34`，序列号 `emulator-5580`。未对连接的实体手机执行安装或数据操作。
+原恢复验证日期：2026-10-21。该轮运行设备为新建的 Android 14 / API 34、Google APIs x86_64 模拟器 `Mushroom_Research_API34`，序列号 `emulator-5580`。该轮未对连接的实体手机执行安装或数据操作。
+
+## 2026-10-25 启动崩溃回归
+
+用户设备（Android 16 / API 36）上的旧 APK 缺少 `DefaultLifecycleObserver$-CC`、`Player$Listener$-CC`、`AnalyticsListener$-CC`，恢复的 smali 仍直接调用它们。新增的 APK 核验可以拒绝该旧包。修复通过正常编译的 Java 基类继承官方默认回调，保留原 smali 业务方法。
+
+普通 Debug 构建和带 `-Pandroid.injected.build.api=36 -Pandroid.injected.testOnly=true` 的设备定向构建均通过。普通构建的 4 个 JVM 用例通过；普通 APK 已在该手机覆盖安装并通过 `RecoveredListenerDefaultsTest` 的 2 个用例：完整生命周期及延迟绑定释放、原播放器的两类监听器默认回调。`LoadingActivity` 冷启动后已进入并恢复 `MainActivity`。
+
+干净的设备定向构建还发现原合入脚本固定修改 `outputs/apk/debug`，但本轮 IDE 构建实际输出在 `intermediates/apk/debug`，已改为读取 package 任务的实际输出。该目录中的真实 APK 已通过类覆盖、重复类、缺失兼容类和全部 7,141 个资源 ID 核验；其中上述三个 `$-CC` 类均未生成，恢复代码也不再依赖它们。用户更换为红米 M2012K11AC（Android 13 / API 33）后，该真实设备定向 APK 已安装并通过两个 `RecoveredListenerDefaultsTest` 用例，确认原生接口默认方法路径可用。
+
+Android 16 手机上的五栏导航及播放 UI 自动化未通过：首次被系统 `SwipeUpClean` 清理进程中断，重试发生 `ActivityTestRule` 启动 Activity 的 45 秒超时，线程转储显示主线程在 `MessageQueue.nativePollOnce`。不将这些用例计作该设备上的通过结果，也不将下方历史模拟器结果当作本轮真机结果。
+
+红米上最终安装普通离线 Debug APK，两个定向回归用例通过；安装后核对 SHA-256 为 `30c9ae4b13c5cbeaaf711f4e96e49657e71da2b1b11075718aa264185e783f37`，已通过启动入口打开首页。红米完整 UI 自动化遇到 MIUI `Abort background activity starts`，随后另一次安装替换主包及测试包导致中断，未计为通过；重新安装本轮产物后完成上述定向回归和校验。
+
+## 2026-10-26 K70 真实接口验证
+
+按用户要求将本工作目录的不提交配置 `research.local.properties` 设置为 `mode=live`、`apiBase=https://47.97.188.179`。当日原 DNS TXT 发现仍返回该地址，分类接口返回 200 和 9 个分类；没有修改仓库默认的离线构建配置。
+
+重新构建并覆盖安装到 Redmi K70 Ultra（Android 16 / API 36），安装包摘要与当前 [APK 核验记录](apk-verification.json) 一致。`LiveReadOnlyTest` 的两个真机用例通过：分类、列表和详情返回 200，真实封面经 Glide 解码成功，加密播放清单经原解析器得到 449 个分片，写请求在本地拦截的断言通过。冷启动后记录到首页列表及详情的 `LIVE GET` 请求；本轮未将播放清单解析通过等同于完整视频播放验证。
 
 ## 构建与运行包
 
@@ -30,7 +48,7 @@ Release Lint vital 报告了 16 条导入资源诊断，保留于 [lint-findings
 | 独立业务页面 | 36 个用例 | 逐个启动剩余原 Activity，传入对应样本参数，完成显示并截图，检查 Activity 未销毁 |
 | 真实只读链路 | 2 个用例 | 分类/列表/详情经原 ApiClient 和原模型解析；真实封面经 Glide 解码；非明文 HLS 经原解析器解密并解析出 462 个分片；写操作以不接触网络的假 Chain 验证拦截 |
 
-离线设备脚本共 **42 次检查调用、45 个 AndroidJUnit 用例**；加上 4 个 JVM 用例和另外运行的 2 个真实只读用例，共 51 个测试用例通过。离线逐项结果及所测 APK 摘要见 [device-validation.json](device-validation.json)；真实结果见 [live-device-validation.json](live-device-validation.json)、[live-media-validation.json](live-media-validation.json)。两个合成播放样本均检查了播放器实际进度至少推进 750ms，并检查暂停/恢复；没有把“页面出现播放器”当作播放成功。
+2026-10-21 运行的离线设备脚本共 **42 次检查调用、45 个 AndroidJUnit 用例**；加上 4 个 JVM 用例和另外运行的 2 个真实只读用例，共 51 个测试用例通过。该轮离线逐项结果及所测 APK 摘要见 [device-validation.json](device-validation.json)；真实结果见 [live-device-validation.json](live-device-validation.json)、[live-media-validation.json](live-media-validation.json)。两个合成播放样本均检查了播放器实际进度至少推进 750ms，并检查暂停/恢复；没有把“页面出现播放器”当作播放成功。当前离线设备脚本另包含本次新增的两个默认回调回归用例，不将其计入该轮历史结果。
 
 真实测试只在显式 `mode=live` 构建中执行 `com.mogu.research.LiveReadOnlyTest`，默认离线构建会跳过它。测试使用当时 DNS 返回的 IP，未使用真实账号；报告只保存状态、结构、数量和摘要，不保存原响应、媒体 URL、封面或视频。真实媒体检查只取封面及清单，未播放/下载真实视频分片。检查后恢复默认离线包并清除本研究模拟器中的测试数据。
 

@@ -125,7 +125,9 @@ def assembleBusinessDex = tasks.register('assembleBusinessDex', JavaExec) {
     def integrate = tasks.register("integrate${variant}BusinessDex") {
         dependsOn assembleBusinessDex
         doLast {
-            def dir = layout.buildDirectory.dir("outputs/apk/${mode}").get().asFile
+            // IDE device builds write to intermediates/apk, while ordinary builds use outputs/apk.
+            // Always integrate the APK produced by this package task, never a stale output copy.
+            def dir = tasks.named("package${variant}").get().outputDirectory.get().asFile
             def apk = new File(dir, "app-${mode}.apk")
             def staged = new File(dir, "business-unsigned.zip")
             def aligned = new File(dir, "business-aligned.zip")
