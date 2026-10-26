@@ -1,6 +1,6 @@
 {
   "batch": "P2-play-data",
-  "status": "technical-gates-passed-awaiting-merge",
+  "status": "accepted-and-merged",
   "recorded_at": "2026-10-26T17:54:21.442252+08:00",
   "base_commit": "1f237233a2aafd55699e6ded451fddcd37d5e1e3",
   "replaced_types": [
@@ -791,5 +791,8 @@
     "Only the controlled offline preference key is mutated and restored; no app-data clear",
     "No independent human reviewer is claimed",
     "Raw logs/APKs remain local; hashes are an index"
-  ]
+  ],
+  "implementation_commit": "b6020c6b6e26b2e05ea0fa0eee0f80cd9b77ad1f",
+  "accepted_dev_merge_commit": "f472efc745d8e31770ad4784dec40199b4d17276",
+  "closeout_changes": "Only metadata after actual merge/push; runtime and test source inputs unchanged"
 }

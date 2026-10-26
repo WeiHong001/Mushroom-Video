@@ -2534,8 +2534,8 @@ com.mogu.tv.model.PianKuModel,app/src/main/smali/com/mogu/tv/model/PianKuModel.s
 com.mogu.tv.model.QQInfo,app/src/main/smali/com/mogu/tv/model/QQInfo.smali,business-implementation,F04-models,,待分析,,,
 com.mogu.tv.model.QuestionResultItem,app/src/main/smali/com/mogu/tv/model/QuestionResultItem.smali,business-implementation,F04-models,,待分析,,,
 com.mogu.tv.model.RankVideoModel,app/src/main/smali/com/mogu/tv/model/RankVideoModel.smali,business-implementation,F04-models,,待分析,,,
-com.mogu.tv.model.SavePlayVod$VodData,app/src/main/smali/com/mogu/tv/model/SavePlayVod$VodData.smali,business-implementation,F04-models,P2-play-data,执行中,app/src/main/java/com/mogu/tv/model/SavePlayVod.java,batches/P2-play-data.md,
-com.mogu.tv.model.SavePlayVod,app/src/main/smali/com/mogu/tv/model/SavePlayVod.smali,business-implementation,F04-models,P2-play-data,执行中,app/src/main/java/com/mogu/tv/model/SavePlayVod.java,batches/P2-play-data.md,
+com.mogu.tv.model.SavePlayVod$VodData,app/src/main/smali/com/mogu/tv/model/SavePlayVod$VodData.smali,business-implementation,F04-models,P2-play-data,已验收,app/src/main/java/com/mogu/tv/model/SavePlayVod.java,batches/P2-play-data-validation.json,f472efc745d8e31770ad4784dec40199b4d17276
+com.mogu.tv.model.SavePlayVod,app/src/main/smali/com/mogu/tv/model/SavePlayVod.smali,business-implementation,F04-models,P2-play-data,已验收,app/src/main/java/com/mogu/tv/model/SavePlayVod.java,batches/P2-play-data-validation.json,f472efc745d8e31770ad4784dec40199b4d17276
 com.mogu.tv.model.SearchHistoryBean,app/src/main/smali/com/mogu/tv/model/SearchHistoryBean.smali,business-implementation,F04-models,,待分析,,,
 com.mogu.tv.model.SearchHot,app/src/main/smali/com/mogu/tv/model/SearchHot.smali,business-implementation,F04-models,,待分析,,,
 com.mogu.tv.model.SearchResult$Item,app/src/main/smali/com/mogu/tv/model/SearchResult$Item.smali,business-implementation,F04-models,,待分析,,,
@@ -3091,7 +3091,7 @@ com.mogu.tv.utils.ImageUtilKt,app/src/main/smali/com/mogu/tv/utils/ImageUtilKt.s
 com.mogu.tv.utils.LogUtil,app/src/main/smali/com/mogu/tv/utils/LogUtil.smali,business-implementation,F07-app-utils,,待分析,,,
 com.mogu.tv.utils.OutputFileTaker,app/src/main/smali/com/mogu/tv/utils/OutputFileTaker.smali,business-implementation,F07-app-utils,,待分析,,,
 com.mogu.tv.utils.PhotoZipCallBack,app/src/main/smali/com/mogu/tv/utils/PhotoZipCallBack.smali,business-implementation,F07-app-utils,,待分析,,,
-com.mogu.tv.utils.PlayDataSaveUtils,app/src/main/smali/com/mogu/tv/utils/PlayDataSaveUtils.smali,business-implementation,F07-app-utils,P2-play-data,执行中,app/src/main/java/com/mogu/tv/utils/PlayDataSaveUtils.java,batches/P2-play-data.md,
+com.mogu.tv.utils.PlayDataSaveUtils,app/src/main/smali/com/mogu/tv/utils/PlayDataSaveUtils.smali,business-implementation,F07-app-utils,P2-play-data,已验收,app/src/main/java/com/mogu/tv/utils/PlayDataSaveUtils.java,batches/P2-play-data-validation.json,f472efc745d8e31770ad4784dec40199b4d17276
 com.mogu.tv.utils.RecyclerViewUtil$1,app/src/main/smali/com/mogu/tv/utils/RecyclerViewUtil$1.smali,business-implementation,F07-app-utils,,待分析,,,
 com.mogu.tv.utils.RecyclerViewUtil$2,app/src/main/smali/com/mogu/tv/utils/RecyclerViewUtil$2.smali,business-implementation,F07-app-utils,,待分析,,,
 com.mogu.tv.utils.RecyclerViewUtil,app/src/main/smali/com/mogu/tv/utils/RecyclerViewUtil.smali,business-implementation,F07-app-utils,,待分析,,,

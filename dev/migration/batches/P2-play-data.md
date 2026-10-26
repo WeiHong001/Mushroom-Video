@@ -1,6 +1,6 @@
 # P2-play-data：旧播放进度 JSON、模型和缓存闭包
 
-状态：**技术门禁已通过，待提交合入；这 3 个类型尚未标记处理完成。**
+状态：**已验收并合入推送 dev。实现 `b6020c6`，dev 合并 `f472efc`；实际合入后才关闭这 3 个类型的去向，本次只补交付元数据。**
 
 - 分支 `feature/restore-play-data-b02`，起点/回退目标 `1f237233a2aafd55699e6ded451fddcd37d5e1e3`，开始记录 2026-10-26 17:26:42 +08:00。
 - 完整闭包 3 类：`com.mogu.tv.utils.PlayDataSaveUtils`、`com.mogu.tv.model.SavePlayVod`、`com.mogu.tv.model.SavePlayVod$VodData`。依赖原 `SpUtil`、`CacheKey`、Gson，保持它们不变；未发现当前生产代码直接调用工具成员，仍完整承接而不删除功能。
