@@ -11,6 +11,6 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = 'Mushroom-Video'
+rootProject.name = 'Mushroom'
 include ':app'
 include ':core:network-inspector'

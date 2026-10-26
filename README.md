@@ -32,8 +32,8 @@ APK 输出：`app/build/outputs/apk/debug/app-debug.apk`。不需要 apktool、j
 本机 JDK 的 Windows AF_UNIX 临时套接字连接存在故障。`gradlew.bat` 已通过**当前进程环境**启用 Java 的 TCP 回退，不修改系统环境或其他工程。如果 Android Studio GUI 同步也报 `Unable to establish loopback connection`，从继承以下环境的新进程启动 IDE，再选择 JDK 17：
 
 ```powershell
-$env:JAVA_TOOL_OPTIONS='-Djdk.net.unixdomain.tmpdir=D:/Code/Mushroom-Video/.gradle/research-uds-disabled'
-& 'E:/Android/Android Studio/bin/studio64.exe' 'D:/Code/Mushroom-Video'
+$env:JAVA_TOOL_OPTIONS='-Djdk.net.unixdomain.tmpdir=D:/Code/Mushroom/.gradle/research-uds-disabled'
+& 'E:/Android/Android Studio/bin/studio64.exe' 'D:/Code/Mushroom'
 ```
 
 该指定路径保持不存在，以触发 Java 自身的 TCP 回退。若 Android Studio 已在运行，需要让新 IDE 进程继承此环境。Gradle 构建已实际执行；未使用 GUI 自动化操作 Android Studio。
