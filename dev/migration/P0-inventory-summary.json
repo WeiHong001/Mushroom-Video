@@ -1,0 +1,1031 @@
+{
+  "baseline_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+  "status": "static-confirmed",
+  "limitations": "Lexical type references include annotations; edges count unique source-class/target-class pairs per group, not invocation frequency or dynamic reachability. Source inventory counts files, not generated runtime classes. Compiler categories are evidence-based, not inferred from every dollar sign.",
+  "smali": {
+    "smali": {
+      "files": 1068,
+      "roles": {
+        "binding-generated": 117,
+        "business-implementation": 940,
+        "glide-generated": 6,
+        "resource-build-generated": 2,
+        "router-generated": 3
+      },
+      "shapes": {
+        "anonymous-inner": 141,
+        "compiler-generated": 476,
+        "named-inner": 74,
+        "top-level": 377
+      }
+    },
+    "recovered-libraries": {
+      "files": 2090,
+      "roles": {
+        "third-party-integration": 2090
+      },
+      "shapes": {
+        "anonymous-inner": 383,
+        "compiler-generated": 45,
+        "named-inner": 461,
+        "top-level": 1201
+      }
+    }
+  },
+  "groups": {
+    "F01-basic-framework": 86,
+    "F02-basic-utils": 38,
+    "F03-network": 65,
+    "F04-models": 88,
+    "F05-adapters": 66,
+    "F06-media": 20,
+    "F07-app-utils": 53,
+    "F08-widgets": 30,
+    "F09-entry-browse": 147,
+    "F10-detail-short": 87,
+    "F11-community": 66,
+    "F12-account-state": 181,
+    "F13-other-business": 13,
+    "G01-generated": 128,
+    "X-com.azhon.appupdate": 53,
+    "X-com.chad.library": 64,
+    "X-com.github.like": 20,
+    "X-com.github.lzyzsd": 14,
+    "X-com.github.promeg": 22,
+    "X-com.luck.picture": 266,
+    "X-com.qiniu.android": 40,
+    "X-com.scwang.smartrefresh": 151,
+    "X-com.uuzuche.lib_zxing": 51,
+    "X-com.yalantis.ucrop": 86,
+    "X-com.yanbo.lib_screen": 71,
+    "X-com.youth.banner": 52,
+    "X-com.zhangke.websocket": 56,
+    "X-me.yokeyword": 53,
+    "X-net.lucode": 48,
+    "X-org.ahocorasick": 19,
+    "X-org.fourthline": 842,
+    "X-org.seamless": 147,
+    "X-site.gemus": 19,
+    "X-top.zibin": 16
+  },
+  "source_sets": [
+    {
+      "module": "app",
+      "source_set": "androidTest",
+      "language": "Java",
+      "files": 5
+    },
+    {
+      "module": "app",
+      "source_set": "debug",
+      "language": "Java",
+      "files": 2
+    },
+    {
+      "module": "app",
+      "source_set": "main",
+      "language": "Java",
+      "files": 30
+    },
+    {
+      "module": "app",
+      "source_set": "release",
+      "language": "Java",
+      "files": 1
+    },
+    {
+      "module": "app",
+      "source_set": "test",
+      "language": "Java",
+      "files": 1
+    },
+    {
+      "module": "app",
+      "source_set": "testDebug",
+      "language": "Java",
+      "files": 1
+    },
+    {
+      "module": "core/network-inspector",
+      "source_set": "debug",
+      "language": "Kotlin",
+      "files": 21
+    },
+    {
+      "module": "core/network-inspector",
+      "source_set": "main",
+      "language": "Kotlin",
+      "files": 1
+    },
+    {
+      "module": "core/network-inspector",
+      "source_set": "release",
+      "language": "Kotlin",
+      "files": 1
+    },
+    {
+      "module": "core/network-inspector",
+      "source_set": "testDebug",
+      "language": "Kotlin",
+      "files": 15
+    }
+  ],
+  "app_main_java_roles": {
+    "business-implementation": 20,
+    "compatibility-bridge": 2,
+    "research-support": 6,
+    "resource-compatibility": 2
+  },
+  "group_edges": [
+    {
+      "source": "F01-basic-framework",
+      "target": "F01-basic-framework",
+      "class_pairs": 130
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "F02-basic-utils",
+      "class_pairs": 6
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "G01-generated",
+      "class_pairs": 2
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "X-com.chad.library",
+      "class_pairs": 1
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "X-com.github.lzyzsd",
+      "class_pairs": 1
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 8
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "X-com.uuzuche.lib_zxing",
+      "class_pairs": 1
+    },
+    {
+      "source": "F01-basic-framework",
+      "target": "X-net.lucode",
+      "class_pairs": 2
+    },
+    {
+      "source": "F02-basic-utils",
+      "target": "F01-basic-framework",
+      "class_pairs": 17
+    },
+    {
+      "source": "F02-basic-utils",
+      "target": "F02-basic-utils",
+      "class_pairs": 47
+    },
+    {
+      "source": "F02-basic-utils",
+      "target": "X-com.luck.picture",
+      "class_pairs": 1
+    },
+    {
+      "source": "F03-network",
+      "target": "F01-basic-framework",
+      "class_pairs": 4
+    },
+    {
+      "source": "F03-network",
+      "target": "F02-basic-utils",
+      "class_pairs": 3
+    },
+    {
+      "source": "F03-network",
+      "target": "F03-network",
+      "class_pairs": 179
+    },
+    {
+      "source": "F03-network",
+      "target": "F04-models",
+      "class_pairs": 74
+    },
+    {
+      "source": "F03-network",
+      "target": "X-com.luck.picture",
+      "class_pairs": 1
+    },
+    {
+      "source": "F04-models",
+      "target": "F03-network",
+      "class_pairs": 1
+    },
+    {
+      "source": "F04-models",
+      "target": "F04-models",
+      "class_pairs": 82
+    },
+    {
+      "source": "F04-models",
+      "target": "F12-account-state",
+      "class_pairs": 1
+    },
+    {
+      "source": "F04-models",
+      "target": "X-com.chad.library",
+      "class_pairs": 1
+    },
+    {
+      "source": "F04-models",
+      "target": "X-me.yokeyword",
+      "class_pairs": 1
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F01-basic-framework",
+      "class_pairs": 35
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F02-basic-utils",
+      "class_pairs": 9
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F03-network",
+      "class_pairs": 2
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F04-models",
+      "class_pairs": 99
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F05-adapters",
+      "class_pairs": 85
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F07-app-utils",
+      "class_pairs": 22
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F10-detail-short",
+      "class_pairs": 2
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F12-account-state",
+      "class_pairs": 4
+    },
+    {
+      "source": "F05-adapters",
+      "target": "F13-other-business",
+      "class_pairs": 12
+    },
+    {
+      "source": "F05-adapters",
+      "target": "G01-generated",
+      "class_pairs": 48
+    },
+    {
+      "source": "F05-adapters",
+      "target": "X-com.chad.library",
+      "class_pairs": 78
+    },
+    {
+      "source": "F05-adapters",
+      "target": "X-com.youth.banner",
+      "class_pairs": 1
+    },
+    {
+      "source": "F05-adapters",
+      "target": "X-me.yokeyword",
+      "class_pairs": 2
+    },
+    {
+      "source": "F06-media",
+      "target": "F01-basic-framework",
+      "class_pairs": 1
+    },
+    {
+      "source": "F06-media",
+      "target": "F02-basic-utils",
+      "class_pairs": 1
+    },
+    {
+      "source": "F06-media",
+      "target": "F03-network",
+      "class_pairs": 1
+    },
+    {
+      "source": "F06-media",
+      "target": "F04-models",
+      "class_pairs": 5
+    },
+    {
+      "source": "F06-media",
+      "target": "F06-media",
+      "class_pairs": 30
+    },
+    {
+      "source": "F06-media",
+      "target": "F12-account-state",
+      "class_pairs": 1
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F01-basic-framework",
+      "class_pairs": 13
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F02-basic-utils",
+      "class_pairs": 9
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F03-network",
+      "class_pairs": 1
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F04-models",
+      "class_pairs": 7
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F07-app-utils",
+      "class_pairs": 82
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F08-widgets",
+      "class_pairs": 2
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F12-account-state",
+      "class_pairs": 3
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "F13-other-business",
+      "class_pairs": 2
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "G01-generated",
+      "class_pairs": 9
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "X-com.luck.picture",
+      "class_pairs": 2
+    },
+    {
+      "source": "F07-app-utils",
+      "target": "X-top.zibin",
+      "class_pairs": 7
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F01-basic-framework",
+      "class_pairs": 5
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F02-basic-utils",
+      "class_pairs": 4
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F04-models",
+      "class_pairs": 10
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F07-app-utils",
+      "class_pairs": 5
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F08-widgets",
+      "class_pairs": 46
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F09-entry-browse",
+      "class_pairs": 1
+    },
+    {
+      "source": "F08-widgets",
+      "target": "F13-other-business",
+      "class_pairs": 4
+    },
+    {
+      "source": "F08-widgets",
+      "target": "X-com.luck.picture",
+      "class_pairs": 1
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F01-basic-framework",
+      "class_pairs": 78
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F02-basic-utils",
+      "class_pairs": 18
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F03-network",
+      "class_pairs": 14
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F04-models",
+      "class_pairs": 117
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F05-adapters",
+      "class_pairs": 32
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F06-media",
+      "class_pairs": 1
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F07-app-utils",
+      "class_pairs": 12
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F08-widgets",
+      "class_pairs": 4
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F09-entry-browse",
+      "class_pairs": 284
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F10-detail-short",
+      "class_pairs": 1
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F11-community",
+      "class_pairs": 1
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F12-account-state",
+      "class_pairs": 7
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "F13-other-business",
+      "class_pairs": 31
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "G01-generated",
+      "class_pairs": 50
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.azhon.appupdate",
+      "class_pairs": 2
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.chad.library",
+      "class_pairs": 56
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.qiniu.android",
+      "class_pairs": 5
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 58
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.uuzuche.lib_zxing",
+      "class_pairs": 1
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-com.youth.banner",
+      "class_pairs": 12
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-me.yokeyword",
+      "class_pairs": 4
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-net.lucode",
+      "class_pairs": 20
+    },
+    {
+      "source": "F09-entry-browse",
+      "target": "X-site.gemus",
+      "class_pairs": 2
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F01-basic-framework",
+      "class_pairs": 31
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F02-basic-utils",
+      "class_pairs": 18
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F03-network",
+      "class_pairs": 8
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F04-models",
+      "class_pairs": 74
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F05-adapters",
+      "class_pairs": 10
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F06-media",
+      "class_pairs": 13
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F07-app-utils",
+      "class_pairs": 10
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F08-widgets",
+      "class_pairs": 9
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F09-entry-browse",
+      "class_pairs": 2
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F10-detail-short",
+      "class_pairs": 171
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F12-account-state",
+      "class_pairs": 8
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "F13-other-business",
+      "class_pairs": 17
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "G01-generated",
+      "class_pairs": 32
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "X-com.chad.library",
+      "class_pairs": 10
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "X-com.github.like",
+      "class_pairs": 12
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "X-com.luck.picture",
+      "class_pairs": 3
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 8
+    },
+    {
+      "source": "F10-detail-short",
+      "target": "X-net.lucode",
+      "class_pairs": 21
+    },
+    {
+      "source": "F11-community",
+      "target": "F01-basic-framework",
+      "class_pairs": 32
+    },
+    {
+      "source": "F11-community",
+      "target": "F02-basic-utils",
+      "class_pairs": 6
+    },
+    {
+      "source": "F11-community",
+      "target": "F03-network",
+      "class_pairs": 8
+    },
+    {
+      "source": "F11-community",
+      "target": "F04-models",
+      "class_pairs": 36
+    },
+    {
+      "source": "F11-community",
+      "target": "F05-adapters",
+      "class_pairs": 11
+    },
+    {
+      "source": "F11-community",
+      "target": "F07-app-utils",
+      "class_pairs": 5
+    },
+    {
+      "source": "F11-community",
+      "target": "F08-widgets",
+      "class_pairs": 4
+    },
+    {
+      "source": "F11-community",
+      "target": "F10-detail-short",
+      "class_pairs": 2
+    },
+    {
+      "source": "F11-community",
+      "target": "F11-community",
+      "class_pairs": 120
+    },
+    {
+      "source": "F11-community",
+      "target": "F12-account-state",
+      "class_pairs": 2
+    },
+    {
+      "source": "F11-community",
+      "target": "F13-other-business",
+      "class_pairs": 7
+    },
+    {
+      "source": "F11-community",
+      "target": "G01-generated",
+      "class_pairs": 27
+    },
+    {
+      "source": "F11-community",
+      "target": "X-com.chad.library",
+      "class_pairs": 16
+    },
+    {
+      "source": "F11-community",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 32
+    },
+    {
+      "source": "F11-community",
+      "target": "X-net.lucode",
+      "class_pairs": 26
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F01-basic-framework",
+      "class_pairs": 112
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F02-basic-utils",
+      "class_pairs": 21
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F03-network",
+      "class_pairs": 27
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F04-models",
+      "class_pairs": 73
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F05-adapters",
+      "class_pairs": 25
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F07-app-utils",
+      "class_pairs": 12
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F08-widgets",
+      "class_pairs": 6
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F09-entry-browse",
+      "class_pairs": 4
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F11-community",
+      "class_pairs": 2
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F12-account-state",
+      "class_pairs": 355
+    },
+    {
+      "source": "F12-account-state",
+      "target": "F13-other-business",
+      "class_pairs": 21
+    },
+    {
+      "source": "F12-account-state",
+      "target": "G01-generated",
+      "class_pairs": 75
+    },
+    {
+      "source": "F12-account-state",
+      "target": "X-com.chad.library",
+      "class_pairs": 44
+    },
+    {
+      "source": "F12-account-state",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 80
+    },
+    {
+      "source": "F12-account-state",
+      "target": "X-net.lucode",
+      "class_pairs": 23
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F01-basic-framework",
+      "class_pairs": 6
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F02-basic-utils",
+      "class_pairs": 5
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F03-network",
+      "class_pairs": 1
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F04-models",
+      "class_pairs": 3
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F10-detail-short",
+      "class_pairs": 2
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F12-account-state",
+      "class_pairs": 1
+    },
+    {
+      "source": "F13-other-business",
+      "target": "F13-other-business",
+      "class_pairs": 8
+    },
+    {
+      "source": "F13-other-business",
+      "target": "X-com.luck.picture",
+      "class_pairs": 3
+    },
+    {
+      "source": "G01-generated",
+      "target": "F01-basic-framework",
+      "class_pairs": 23
+    },
+    {
+      "source": "G01-generated",
+      "target": "F06-media",
+      "class_pairs": 4
+    },
+    {
+      "source": "G01-generated",
+      "target": "F07-app-utils",
+      "class_pairs": 1
+    },
+    {
+      "source": "G01-generated",
+      "target": "F08-widgets",
+      "class_pairs": 4
+    },
+    {
+      "source": "G01-generated",
+      "target": "F09-entry-browse",
+      "class_pairs": 4
+    },
+    {
+      "source": "G01-generated",
+      "target": "F10-detail-short",
+      "class_pairs": 3
+    },
+    {
+      "source": "G01-generated",
+      "target": "F11-community",
+      "class_pairs": 3
+    },
+    {
+      "source": "G01-generated",
+      "target": "F12-account-state",
+      "class_pairs": 5
+    },
+    {
+      "source": "G01-generated",
+      "target": "G01-generated",
+      "class_pairs": 31
+    },
+    {
+      "source": "G01-generated",
+      "target": "X-com.github.like",
+      "class_pairs": 2
+    },
+    {
+      "source": "G01-generated",
+      "target": "X-com.luck.picture",
+      "class_pairs": 1
+    },
+    {
+      "source": "G01-generated",
+      "target": "X-com.youth.banner",
+      "class_pairs": 2
+    },
+    {
+      "source": "G01-generated",
+      "target": "X-me.yokeyword",
+      "class_pairs": 1
+    },
+    {
+      "source": "G01-generated",
+      "target": "X-net.lucode",
+      "class_pairs": 9
+    },
+    {
+      "source": "X-com.azhon.appupdate",
+      "target": "X-com.azhon.appupdate",
+      "class_pairs": 155
+    },
+    {
+      "source": "X-com.chad.library",
+      "target": "X-com.chad.library",
+      "class_pairs": 138
+    },
+    {
+      "source": "X-com.github.like",
+      "target": "X-com.github.like",
+      "class_pairs": 41
+    },
+    {
+      "source": "X-com.github.lzyzsd",
+      "target": "X-com.github.lzyzsd",
+      "class_pairs": 29
+    },
+    {
+      "source": "X-com.github.promeg",
+      "target": "X-com.github.promeg",
+      "class_pairs": 31
+    },
+    {
+      "source": "X-com.github.promeg",
+      "target": "X-org.ahocorasick",
+      "class_pairs": 8
+    },
+    {
+      "source": "X-com.luck.picture",
+      "target": "X-com.luck.picture",
+      "class_pairs": 811
+    },
+    {
+      "source": "X-com.luck.picture",
+      "target": "X-com.yalantis.ucrop",
+      "class_pairs": 8
+    },
+    {
+      "source": "X-com.qiniu.android",
+      "target": "X-com.qiniu.android",
+      "class_pairs": 90
+    },
+    {
+      "source": "X-com.scwang.smartrefresh",
+      "target": "X-com.scwang.smartrefresh",
+      "class_pairs": 549
+    },
+    {
+      "source": "X-com.uuzuche.lib_zxing",
+      "target": "X-com.uuzuche.lib_zxing",
+      "class_pairs": 103
+    },
+    {
+      "source": "X-com.yalantis.ucrop",
+      "target": "X-com.yalantis.ucrop",
+      "class_pairs": 243
+    },
+    {
+      "source": "X-com.yanbo.lib_screen",
+      "target": "X-com.yanbo.lib_screen",
+      "class_pairs": 179
+    },
+    {
+      "source": "X-com.yanbo.lib_screen",
+      "target": "X-org.fourthline",
+      "class_pairs": 207
+    },
+    {
+      "source": "X-com.yanbo.lib_screen",
+      "target": "X-org.seamless",
+      "class_pairs": 2
+    },
+    {
+      "source": "X-com.youth.banner",
+      "target": "X-com.youth.banner",
+      "class_pairs": 93
+    },
+    {
+      "source": "X-com.zhangke.websocket",
+      "target": "X-com.zhangke.websocket",
+      "class_pairs": 192
+    },
+    {
+      "source": "X-me.yokeyword",
+      "target": "X-com.github.promeg",
+      "class_pairs": 1
+    },
+    {
+      "source": "X-me.yokeyword",
+      "target": "X-me.yokeyword",
+      "class_pairs": 164
+    },
+    {
+      "source": "X-net.lucode",
+      "target": "X-net.lucode",
+      "class_pairs": 93
+    },
+    {
+      "source": "X-org.ahocorasick",
+      "target": "X-org.ahocorasick",
+      "class_pairs": 38
+    },
+    {
+      "source": "X-org.fourthline",
+      "target": "X-org.fourthline",
+      "class_pairs": 4526
+    },
+    {
+      "source": "X-org.fourthline",
+      "target": "X-org.seamless",
+      "class_pairs": 179
+    },
+    {
+      "source": "X-org.seamless",
+      "target": "X-org.seamless",
+      "class_pairs": 285
+    },
+    {
+      "source": "X-site.gemus",
+      "target": "X-site.gemus",
+      "class_pairs": 38
+    },
+    {
+      "source": "X-top.zibin",
+      "target": "X-top.zibin",
+      "class_pairs": 33
+    }
+  ]
+}

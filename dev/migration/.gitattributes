@@ -1,0 +1,3 @@
+# Keep inventory snapshot hashes stable across checkouts.
+*.csv text eol=lf
+*.json text eol=lf

@@ -1,0 +1,590 @@
+{
+  "baseline_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+  "status": "static-confirmed",
+  "candidates": {
+    "com.kotlin.basiclib.utils.ClickUtils": [
+      {
+        "class_name": "com.kotlin.basiclib.utils.ClickUtils",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/ClickUtils.smali",
+        "superclass": "java.lang.Object",
+        "fields": [
+          "public static final INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;",
+          "private static final SPACE_TIME:I",
+          "private static lastClickTime:J"
+        ],
+        "methods": [
+          "static constructor <clinit>()V",
+          "private constructor <init>()V",
+          "public final getLastClickTime()J",
+          "public final declared-synchronized isDoubleClick()Z",
+          "public final declared-synchronized isDoubleClick(I)Z",
+          "public final declared-synchronized matchTimeDouble(I)Z",
+          "public final setLastClickTime(J)V"
+        ],
+        "referenced_types": [
+          "android.content.Context",
+          "android.util.Log",
+          "android.widget.Toast",
+          "com.kotlin.basiclib.base.BaseApplicaiton",
+          "com.kotlin.basiclib.base.BaseApplicaitonKt",
+          "dalvik.annotation.SourceDebugExtension",
+          "java.lang.CharSequence",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.StringBuilder",
+          "java.lang.System",
+          "kotlin.Metadata",
+          "kotlin.jvm.internal.Intrinsics"
+        ],
+        "type_referenced_by": [
+          "com.mogu.tv.common.arouter.ArouterUtils",
+          "com.mogu.tv.ui.activity.QiuPianActivity$initData$1",
+          "com.mogu.tv.ui.frag.ListIndexTabFragment",
+          "com.mogu.tv.ui.frag.ListMainFragment"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.ClickUtils",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.ClickUtils",
+            "member": "INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.ClickUtils",
+            "member": "SPACE_TIME:I"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.ClickUtils",
+            "member": "lastClickTime:J"
+          },
+          {
+            "caller": "com.mogu.tv.common.arouter.ArouterUtils",
+            "member": "INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;"
+          },
+          {
+            "caller": "com.mogu.tv.common.arouter.ArouterUtils",
+            "member": "isDoubleClick()Z"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.QiuPianActivity$initData$1",
+            "member": "INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.QiuPianActivity$initData$1",
+            "member": "isDoubleClick()Z"
+          },
+          {
+            "caller": "com.mogu.tv.ui.frag.ListIndexTabFragment",
+            "member": "INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.frag.ListIndexTabFragment",
+            "member": "isDoubleClick()Z"
+          },
+          {
+            "caller": "com.mogu.tv.ui.frag.ListMainFragment",
+            "member": "INSTANCE:Lcom/kotlin/basiclib/utils/ClickUtils;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.frag.ListMainFragment",
+            "member": "isDoubleClick()Z"
+          }
+        ],
+        "source_resource_name_hits": []
+      }
+    ],
+    "com.kotlin.basiclib.utils.DateUtil": [
+      {
+        "class_name": "com.kotlin.basiclib.utils.DateUtil",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/DateUtil.smali",
+        "superclass": "java.lang.Object",
+        "fields": [
+          "private static final dateFormater2:Ljava/lang/ThreadLocal;",
+          "private static final dateFormater3:Ljava/lang/ThreadLocal;",
+          "private static final dateFormater4:Ljava/lang/ThreadLocal;",
+          "private static final dateFormater5:Ljava/lang/ThreadLocal;",
+          "private static lastClickTime:J",
+          "private static lastClickTime2:J"
+        ],
+        "methods": [
+          "static constructor <clinit>()V",
+          "public constructor <init>()V",
+          "public static IntToLong(I)J",
+          "public static dayToUppder(I)Ljava/lang/String;",
+          "public static formatTime(Ljava/lang/Long;)Ljava/lang/String;",
+          "public static getCarStrTime(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getCurrentDay()Ljava/lang/String;",
+          "public static getCurrentMonth()Ljava/lang/String;",
+          "public static getCurrentYear()Ljava/lang/String;",
+          "public static getDateToString(J)Ljava/lang/String;",
+          "public static getLongTime(Ljava/lang/Long;)Ljava/lang/String;",
+          "public static getLongTimeByDay(Ljava/lang/String;)J",
+          "public static getLongTimeByFullTime(Ljava/lang/String;)J",
+          "public static getMonthByLong(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getMonthTime(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getOnlyMonth(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getPlayTime(Ljava/lang/Long;)Ljava/lang/String;",
+          "public static getRecentChDay(J)Ljava/lang/String;",
+          "public static getShunfengTime(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getStrTime(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getTime(J)Ljava/lang/String;",
+          "public static getTimeShowMonthDay(Ljava/util/Date;)Ljava/lang/String;",
+          "public static getTimeShowYandM(Ljava/lang/Long;)Ljava/lang/String;",
+          "public static getTimeShowYearMonthDay(Ljava/util/Date;)Ljava/lang/String;",
+          "public static getTimestampByDateTime(Ljava/lang/String;)J",
+          "public static getTimestampByYearMDHM(Ljava/lang/String;)J",
+          "public static getTimestampByYearMonthDay(Ljava/lang/String;)J",
+          "public static getWeekOfDate(Ljava/lang/String;)Ljava/lang/String;",
+          "public static declared-synchronized isFastClick()Z",
+          "public static declared-synchronized isFastClick2()Z",
+          "public static monthToUppder(I)Ljava/lang/String;",
+          "public static numToUpper(I)Ljava/lang/String;",
+          "public static stampToDate(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+          "public static strToDate(Ljava/lang/String;)Ljava/util/Date;",
+          "public static transForDate(Ljava/lang/String;)Ljava/lang/String;"
+        ],
+        "referenced_types": [
+          "android.text.TextUtils",
+          "com.kotlin.basiclib.utils.DateUtil$1",
+          "com.kotlin.basiclib.utils.DateUtil$2",
+          "com.kotlin.basiclib.utils.DateUtil$3",
+          "com.kotlin.basiclib.utils.DateUtil$4",
+          "dalvik.annotation.Signature",
+          "java.lang.CharSequence",
+          "java.lang.Exception",
+          "java.lang.Integer",
+          "java.lang.Long",
+          "java.lang.Math",
+          "java.lang.NumberFormatException",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.StringBuffer",
+          "java.lang.StringBuilder",
+          "java.lang.System",
+          "java.lang.ThreadLocal",
+          "java.sql.Timestamp",
+          "java.text.ParseException",
+          "java.text.ParsePosition",
+          "java.text.SimpleDateFormat",
+          "java.util.Calendar",
+          "java.util.Date"
+        ],
+        "type_referenced_by": [
+          "com.kotlin.basiclib.utils.DateUtil$1",
+          "com.kotlin.basiclib.utils.DateUtil$2",
+          "com.kotlin.basiclib.utils.DateUtil$3",
+          "com.kotlin.basiclib.utils.DateUtil$4",
+          "com.mogu.tv.MainActivity$onStart$1",
+          "com.mogu.tv.adapter.HistoryAdapter",
+          "com.mogu.tv.adapter.InviteListAdapter",
+          "com.mogu.tv.adapter.MessageAdapter",
+          "com.mogu.tv.adapter.NewCommentAdapter",
+          "com.mogu.tv.adapter.ShequListAdapter",
+          "com.mogu.tv.adapter.ShequLoveListAdapter",
+          "com.mogu.tv.adapter.ShortCommentAdapter",
+          "com.mogu.tv.adapter.VideoListsAdapter",
+          "com.mogu.tv.ui.activity.MessageDetailsActivity$getServerData$1",
+          "com.mogu.tv.ui.activity.ShequDetailsActivity",
+          "com.mogu.tv.ui.frag.VideoDetailsFragment"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "dateFormater2:Ljava/lang/ThreadLocal;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "dateFormater3:Ljava/lang/ThreadLocal;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "dateFormater4:Ljava/lang/ThreadLocal;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "dateFormater5:Ljava/lang/ThreadLocal;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "lastClickTime2:J"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "lastClickTime:J"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "monthToUppder(I)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "numToUpper(I)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "stampToDate(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "strToDate(Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "caller": "com.mogu.tv.MainActivity$onStart$1",
+            "member": "getCurrentDay()Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.HistoryAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.InviteListAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.MessageAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.NewCommentAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.ShequListAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.ShequLoveListAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.ShortCommentAdapter",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.VideoListsAdapter",
+            "member": "formatTime(Ljava/lang/Long;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.MessageDetailsActivity$getServerData$1",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.ShequDetailsActivity",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.frag.VideoDetailsFragment",
+            "member": "getCarStrTime(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "source_resource_name_hits": []
+      },
+      {
+        "class_name": "com.kotlin.basiclib.utils.DateUtil$1",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/DateUtil$1.smali",
+        "superclass": "java.lang.ThreadLocal",
+        "fields": [],
+        "methods": [
+          "constructor <init>()V",
+          "protected bridge synthetic initialValue()Ljava/lang/Object;",
+          "protected initialValue()Ljava/text/SimpleDateFormat;"
+        ],
+        "referenced_types": [
+          "com.kotlin.basiclib.utils.DateUtil",
+          "dalvik.annotation.EnclosingClass",
+          "dalvik.annotation.InnerClass",
+          "dalvik.annotation.Signature",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.ThreadLocal",
+          "java.text.SimpleDateFormat"
+        ],
+        "type_referenced_by": [
+          "com.kotlin.basiclib.utils.DateUtil"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil$1",
+            "member": "initialValue()Ljava/text/SimpleDateFormat;"
+          }
+        ],
+        "source_resource_name_hits": []
+      },
+      {
+        "class_name": "com.kotlin.basiclib.utils.DateUtil$2",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/DateUtil$2.smali",
+        "superclass": "java.lang.ThreadLocal",
+        "fields": [],
+        "methods": [
+          "constructor <init>()V",
+          "protected bridge synthetic initialValue()Ljava/lang/Object;",
+          "protected initialValue()Ljava/text/SimpleDateFormat;"
+        ],
+        "referenced_types": [
+          "com.kotlin.basiclib.utils.DateUtil",
+          "dalvik.annotation.EnclosingClass",
+          "dalvik.annotation.InnerClass",
+          "dalvik.annotation.Signature",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.ThreadLocal",
+          "java.text.SimpleDateFormat"
+        ],
+        "type_referenced_by": [
+          "com.kotlin.basiclib.utils.DateUtil"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil$2",
+            "member": "initialValue()Ljava/text/SimpleDateFormat;"
+          }
+        ],
+        "source_resource_name_hits": []
+      },
+      {
+        "class_name": "com.kotlin.basiclib.utils.DateUtil$3",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/DateUtil$3.smali",
+        "superclass": "java.lang.ThreadLocal",
+        "fields": [],
+        "methods": [
+          "constructor <init>()V",
+          "protected bridge synthetic initialValue()Ljava/lang/Object;",
+          "protected initialValue()Ljava/text/SimpleDateFormat;"
+        ],
+        "referenced_types": [
+          "com.kotlin.basiclib.utils.DateUtil",
+          "dalvik.annotation.EnclosingClass",
+          "dalvik.annotation.InnerClass",
+          "dalvik.annotation.Signature",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.ThreadLocal",
+          "java.text.SimpleDateFormat"
+        ],
+        "type_referenced_by": [
+          "com.kotlin.basiclib.utils.DateUtil"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil$3",
+            "member": "initialValue()Ljava/text/SimpleDateFormat;"
+          }
+        ],
+        "source_resource_name_hits": []
+      },
+      {
+        "class_name": "com.kotlin.basiclib.utils.DateUtil$4",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/DateUtil$4.smali",
+        "superclass": "java.lang.ThreadLocal",
+        "fields": [],
+        "methods": [
+          "constructor <init>()V",
+          "protected bridge synthetic initialValue()Ljava/lang/Object;",
+          "protected initialValue()Ljava/text/SimpleDateFormat;"
+        ],
+        "referenced_types": [
+          "com.kotlin.basiclib.utils.DateUtil",
+          "dalvik.annotation.EnclosingClass",
+          "dalvik.annotation.InnerClass",
+          "dalvik.annotation.Signature",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.lang.ThreadLocal",
+          "java.text.SimpleDateFormat"
+        ],
+        "type_referenced_by": [
+          "com.kotlin.basiclib.utils.DateUtil"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.kotlin.basiclib.utils.DateUtil$4",
+            "member": "initialValue()Ljava/text/SimpleDateFormat;"
+          }
+        ],
+        "source_resource_name_hits": []
+      }
+    ],
+    "com.kotlin.basiclib.utils.UrlUtils": [
+      {
+        "class_name": "com.kotlin.basiclib.utils.UrlUtils",
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/UrlUtils.smali",
+        "superclass": "java.lang.Object",
+        "fields": [],
+        "methods": [
+          "public constructor <init>()V",
+          "private static TruncateUrlPage(Ljava/lang/String;)Ljava/lang/String;",
+          "public static getURLparams(Ljava/lang/String;)Ljava/util/Map;"
+        ],
+        "referenced_types": [
+          "dalvik.annotation.Signature",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.util.HashMap",
+          "java.util.Map"
+        ],
+        "type_referenced_by": [
+          "com.mogu.tv.common.arouter.ArouterUtils"
+        ],
+        "member_references": [
+          {
+            "caller": "com.kotlin.basiclib.utils.UrlUtils",
+            "member": "TruncateUrlPage(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.common.arouter.ArouterUtils",
+            "member": "getURLparams(Ljava/lang/String;)Ljava/util/Map;"
+          }
+        ],
+        "source_resource_name_hits": []
+      }
+    ],
+    "com.mogu.tv.utils.CommentFilter": [
+      {
+        "class_name": "com.mogu.tv.utils.CommentFilter",
+        "path": "app/src/main/smali/com/mogu/tv/utils/CommentFilter.smali",
+        "superclass": "java.lang.Object",
+        "fields": [
+          "public static final INSTANCE:Lcom/mogu/tv/utils/CommentFilter;",
+          "private static regular:Lkotlin/text/Regex;",
+          "private static replce1:Lkotlin/text/Regex;"
+        ],
+        "methods": [
+          "static constructor <clinit>()V",
+          "private constructor <init>()V",
+          "public final getRegular()Lkotlin/text/Regex;",
+          "public final getReplce1()Lkotlin/text/Regex;",
+          "public final getegularTxt(Ljava/lang/String;)Ljava/lang/String;",
+          "public final isRegularText(Ljava/lang/String;)Z",
+          "public final setRegular(Lkotlin/text/Regex;)V",
+          "public final setReplce1(Lkotlin/text/Regex;)V"
+        ],
+        "referenced_types": [
+          "java.lang.CharSequence",
+          "java.lang.Object",
+          "java.lang.String",
+          "kotlin.Metadata",
+          "kotlin.jvm.internal.Intrinsics",
+          "kotlin.text.Regex"
+        ],
+        "type_referenced_by": [
+          "com.mogu.tv.adapter.NewCommentAdapter",
+          "com.mogu.tv.adapter.ShortCommentAdapter",
+          "com.mogu.tv.ui.activity.EditUserInfoActivity$initData$3$1"
+        ],
+        "member_references": [
+          {
+            "caller": "com.mogu.tv.adapter.NewCommentAdapter",
+            "member": "INSTANCE:Lcom/mogu/tv/utils/CommentFilter;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.NewCommentAdapter",
+            "member": "getegularTxt(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.ShortCommentAdapter",
+            "member": "INSTANCE:Lcom/mogu/tv/utils/CommentFilter;"
+          },
+          {
+            "caller": "com.mogu.tv.adapter.ShortCommentAdapter",
+            "member": "getegularTxt(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.EditUserInfoActivity$initData$3$1",
+            "member": "INSTANCE:Lcom/mogu/tv/utils/CommentFilter;"
+          },
+          {
+            "caller": "com.mogu.tv.ui.activity.EditUserInfoActivity$initData$3$1",
+            "member": "isRegularText(Ljava/lang/String;)Z"
+          },
+          {
+            "caller": "com.mogu.tv.utils.CommentFilter",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.mogu.tv.utils.CommentFilter",
+            "member": "INSTANCE:Lcom/mogu/tv/utils/CommentFilter;"
+          },
+          {
+            "caller": "com.mogu.tv.utils.CommentFilter",
+            "member": "regular:Lkotlin/text/Regex;"
+          },
+          {
+            "caller": "com.mogu.tv.utils.CommentFilter",
+            "member": "replce1:Lkotlin/text/Regex;"
+          }
+        ],
+        "source_resource_name_hits": []
+      }
+    ],
+    "com.mogu.tv.utils.PlayDataSaveUtils": [
+      {
+        "class_name": "com.mogu.tv.utils.PlayDataSaveUtils",
+        "path": "app/src/main/smali/com/mogu/tv/utils/PlayDataSaveUtils.smali",
+        "superclass": "java.lang.Object",
+        "fields": [
+          "public static final INSTANCE:Lcom/mogu/tv/utils/PlayDataSaveUtils;",
+          "private static staticPlayData:Lcom/mogu/tv/model/SavePlayVod;"
+        ],
+        "methods": [
+          "static constructor <clinit>()V",
+          "private constructor <init>()V",
+          "public final getPlayData(Ljava/lang/String;)Lcom/mogu/tv/model/SavePlayVod$VodData;",
+          "public final savePlayData(Ljava/lang/String;J)V"
+        ],
+        "referenced_types": [
+          "com.google.gson.Gson",
+          "com.kotlin.basiclib.utils.SpUtil",
+          "com.mogu.tv.common.cache.CacheKey",
+          "com.mogu.tv.model.SavePlayVod",
+          "com.mogu.tv.model.SavePlayVod$VodData",
+          "dalvik.annotation.SourceDebugExtension",
+          "java.lang.Class",
+          "java.lang.Integer",
+          "java.lang.Iterable",
+          "java.lang.Long",
+          "java.lang.Object",
+          "java.lang.String",
+          "java.util.ArrayList",
+          "java.util.Collection",
+          "java.util.Iterator",
+          "kotlin.Metadata",
+          "kotlin.jvm.internal.Intrinsics"
+        ],
+        "type_referenced_by": [],
+        "member_references": [
+          {
+            "caller": "com.mogu.tv.utils.PlayDataSaveUtils",
+            "member": "<init>()V"
+          },
+          {
+            "caller": "com.mogu.tv.utils.PlayDataSaveUtils",
+            "member": "INSTANCE:Lcom/mogu/tv/utils/PlayDataSaveUtils;"
+          },
+          {
+            "caller": "com.mogu.tv.utils.PlayDataSaveUtils",
+            "member": "staticPlayData:Lcom/mogu/tv/model/SavePlayVod;"
+          }
+        ],
+        "source_resource_name_hits": []
+      }
+    ]
+  }
+}
