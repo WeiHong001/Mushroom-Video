@@ -28,6 +28,12 @@
 
 - 提交前用 `git var GIT_AUTHOR_IDENT` 和 `git var GIT_COMMITTER_IDENT` 确认身份，避免环境变量或命令参数覆盖配置。
 
+## smali 迁移启动约束
+
+- 迁移依据为 `dev/smali-migration-plan.md` 中经审批通过的版本及实际审批意见。
+- 实际 smali 迁移须同时满足“计划已获审批通过”和“已收到明确启动通知”；缺少任一条件时，仅可审阅、修订计划，不得实施迁移。
+- 拉取代码、合并计划书或一般审阅意见不构成启动通知。满足启动条件后，先执行计划的 P0，再逐批实施并记录验证结果。
+
 <!-- CODEGRAPH_START -->
 ## CodeGraph
 
