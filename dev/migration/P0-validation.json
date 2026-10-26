@@ -1,0 +1,917 @@
+{
+  "run_id": "p0-20261026-1528",
+  "source_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+  "recorded_at": "2026-10-26T15:43:19+08:00",
+  "timezone": "Asia/Shanghai",
+  "stage_status": "P0 evidence delivered; device behavior baseline blocked; P0 not marked complete; P1 not started",
+  "implementation_and_build_diff_from_baseline": false,
+  "research_mode": "offline",
+  "environment": {
+    "os": "Windows 11 amd64",
+    "java_home": "F:/Environment/jdk17",
+    "jdk": "Microsoft OpenJDK 17.0.19+10-LTS",
+    "gradle": "8.11.1",
+    "agp": "8.10.1",
+    "sdk": "F:/Environment/Android/SDK",
+    "compile_sdk": 36,
+    "build_tools": "35.0.0",
+    "target_sdk": 32,
+    "debug_min_sdk": 26,
+    "release_min_sdk": 21,
+    "app_java_target": "1.8",
+    "app_kotlin_plugin": false,
+    "diagnostics_kotlin_plugin": "2.2.10",
+    "diagnostics_jvm_target": "17",
+    "gradle_embedded_kotlin": "2.0.20",
+    "release_resolved_kotlin_stdlib": "1.9.10",
+    "release_resolved_coroutines": "1.6.0",
+    "python": "3.13.2",
+    "wrapper_tcp_fallback_preserved": true
+  },
+  "commands": [
+    {
+      "command": ".\\gradlew.bat --version",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/gradle-version.txt",
+      "log_sha256": "383bfba6dbb01cd37a80385b28f87e3e1705c6a35bbc88a9aae48d84ed67c838"
+    },
+    {
+      "command": ".\\gradlew.bat :app:clean :core:network-inspector:clean :app:assembleDebug :app:testDebugUnitTest :app:assembleDebugAndroidTest -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "duration_if_reported": "1m 18s",
+      "log": ".local/migration/p0-20261026-1528/build-debug.log",
+      "log_sha256": "028a5006b9a179bcc30ea54d42075102d16457b78ec41dfeb6ba47b13d0be3ca"
+    },
+    {
+      "command": ".\\gradlew.bat :core:network-inspector:testDebugUnitTest :app:assembleRelease -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "duration_if_reported": "2m 26s",
+      "log": ".local/migration/p0-20261026-1528/build-release-inspector-tests.log",
+      "log_sha256": "e48b9983ab204d807bde8dfda81f6efc70f8a8ed93633156b9d3281efcf94bd6"
+    },
+    {
+      "command": ".\\gradlew.bat :app:dependencies --configuration releaseRuntimeClasspath -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "duration_if_reported": "2s",
+      "log": ".local/migration/p0-20261026-1528/release-dependencies.txt",
+      "log_sha256": "5d570bc1ab86f90bdf413f780f67b579fa7ae87ed5d59cfa6f1f381dd8ce0d08"
+    },
+    {
+      "command": ".\\gradlew.bat :app:assembleDebug -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "duration_if_reported": "7s",
+      "log": ".local/migration/p0-20261026-1528/build-debug-repeat.log",
+      "log_sha256": "0a22ee361f3c74c25011851fc86cf8343a8e370ef230f4ace3fb80ba9d327816"
+    },
+    {
+      "command": "python tools/verify_apk.py app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/verify-debug.log",
+      "log_sha256": "781c56033c4dd334e9573c32a5a8312f5683f9e326f9b10ec27c93f8b0604255"
+    },
+    {
+      "command": "python tools/verify_apk.py app/build/outputs/apk/release/app-release.apk",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/verify-release.log",
+      "log_sha256": "67523d3fbebc934d2aceea9c7974d4d2478976e27f211a910198a123708cb4e8"
+    },
+    {
+      "command": "python tools/verify_inspector_release.py --dependencies .local/migration/p0-20261026-1528/release-dependencies.txt --output .local/migration/p0-20261026-1528/release-isolation.json",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/verify-release-isolation.log",
+      "log_sha256": "48d365991da510eefced7175ba7daab9b7caae2b2b79e3b8087863ea0702562c"
+    },
+    {
+      "command": "python tools/verify_apk.py app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/verify-debug-repeat.log",
+      "log_sha256": "91496bca4f6985090f002a30d6865c84d516cbed18e8fb1e07831af6a80ff4a4"
+    },
+    {
+      "command": "adb devices -l",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/adb-devices.txt",
+      "log_sha256": "bbfcc7239a6f1be3544814ebdc6bcc9b66bf5b1f0b03baa3340808f19265a630"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/emulator/emulator.exe -list-avds",
+      "exit_code": 0,
+      "duration_if_reported": null,
+      "log": ".local/migration/p0-20261026-1528/available-avds.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/aapt2.exe dump resources app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/resources-debug.txt",
+      "log_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/aapt2.exe dump badging app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/badging-debug.txt",
+      "log_sha256": "8037efec13ed72552f7636ae932dbda86be32cd884494db6ff6986906ed834a6"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/zipalign.exe -c -p 4 app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/zipalign-debug.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/apksigner.bat verify --verbose app/build/outputs/apk/debug/app-debug.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/signature-debug.log",
+      "log_sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/aapt2.exe dump resources app/build/outputs/apk/release/app-release.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/resources-release.txt",
+      "log_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/aapt2.exe dump badging app/build/outputs/apk/release/app-release.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/badging-release.txt",
+      "log_sha256": "814e27094855b2d02b9dc93951128aeb7b8f33870f71c16346d4f39b21deadfe"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/zipalign.exe -c -p 4 app/build/outputs/apk/release/app-release.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/zipalign-release.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "F:/Environment/Android/SDK/build-tools/35.0.0/apksigner.bat verify --verbose app/build/outputs/apk/release/app-release.apk",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/signature-release.log",
+      "log_sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "command": "python dev/migration/p0_inventory.py",
+      "exit_code": 0,
+      "log": ".local/migration/p0-20261026-1528/inventory.log",
+      "log_sha256": "d4acb6ed7299dfe8fc4dc4622928ad92212d36161ab4a7825340db9c5bc055b6"
+    }
+  ],
+  "tests": {
+    "app": {
+      "status": "verified-this-run",
+      "totals": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "suite": "com.mogu.research.CryptoContractTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.042",
+          "xml_sha256": "eb1f6ea53abae0f0cda674da9beae913da2c4b390d3e400531a8b4dd890ff73f"
+        },
+        {
+          "suite": "com.mogu.research.DiagnosticsCapturePolicyTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.081",
+          "xml_sha256": "d8041fcc2103187a19186315102d73bf58f251b4e3270fd528db5f329850f0df"
+        }
+      ]
+    },
+    "core:network-inspector": {
+      "status": "verified-this-run",
+      "totals": {
+        "tests": 88,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "suite": "com.mogu.inspector.CaptureBoundaryTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.297",
+          "xml_sha256": "4e3c75bab811a7605cedfdc5103bf4b9431b65fb971aaceed50017563c56768d"
+        },
+        {
+          "suite": "com.mogu.inspector.ChuckerInputDismissalTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "6.928",
+          "xml_sha256": "e428ea77ee30af6a5f8ef7b6031747fcbc0b061d21fee47d67659bbeb2364c9d"
+        },
+        {
+          "suite": "com.mogu.inspector.ChuckerInteractionTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "6.763",
+          "xml_sha256": "98338cb6de9439fa6fbcaaeae23560f3d1ef66e3555f288c11bcb89a76674774"
+        },
+        {
+          "suite": "com.mogu.inspector.ChuckerPresentationTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "3.358",
+          "xml_sha256": "9a518f08b9045d0748c9cc84cd8ebf7079ce5e3dc39c410ec8ea45bc35a63965"
+        },
+        {
+          "suite": "com.mogu.inspector.crypto.Base91CodecTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.122",
+          "xml_sha256": "8f5055312e45ff4bdd30ba4719b204c2507c78f1670193e083860f0de8569936"
+        },
+        {
+          "suite": "com.mogu.inspector.crypto.Base91JsonDecoderTest",
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.366",
+          "xml_sha256": "c1da4741a45a13e1f73d67ce89eda9c86954d6e9fc067cb410a871222ef30fbe"
+        },
+        {
+          "suite": "com.mogu.inspector.DesensitizationInspectorTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "8.44",
+          "xml_sha256": "4872d5d9b87a3794935ea12ff27f77c324321de085490ac02f118b14cee1f476"
+        },
+        {
+          "suite": "com.mogu.inspector.DualCollectorTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "6.668",
+          "xml_sha256": "180267473fb214ebc72aa4cbc17458e2f9df624c2d43354ef75f0a514fe4979e"
+        },
+        {
+          "suite": "com.mogu.inspector.InspectorInteractionTest",
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "16.959",
+          "xml_sha256": "bdb38bcbb0cad7b5486595dbd4682e1605c5c338d35d6a8a6cb19bbc304ed892"
+        },
+        {
+          "suite": "com.mogu.inspector.InspectorLogicTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.395",
+          "xml_sha256": "f0c53a3b6f9cba3343c284ab9d68a1bcffa324f0f34d0395d54e0631e86e693a"
+        },
+        {
+          "suite": "com.mogu.inspector.InspectorLongTextTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "11.922",
+          "xml_sha256": "b00bdb3478c1168df1df3930d0da32b0901245da05602a84ebbb10e8f75bda7d"
+        },
+        {
+          "suite": "com.mogu.inspector.InspectorSettingsTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "8.078",
+          "xml_sha256": "0ad44f274420ab89aeaa8b50263bfdeb77ab1bcd84f8e6c7bfac19a3aeac3eec"
+        },
+        {
+          "suite": "com.mogu.inspector.InspectorUiTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "16.979",
+          "xml_sha256": "5be44ee36db6bb4995c530ab8418af72bcea3cb8190432f30ae3a537c72c22ea"
+        },
+        {
+          "suite": "com.mogu.inspector.privacy.DesensitizationPersistenceTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "3.076",
+          "xml_sha256": "2022c957ec9e2a9151f7212536744cc5fef3d894d6b172d8df46a8c55392e481"
+        },
+        {
+          "suite": "com.mogu.inspector.privacy.DesensitizationSettingsTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "seconds": "0.224",
+          "xml_sha256": "0ea25ff343b08e62d51ae0a6763bdfa7169c599212ad25708da3b224b8122f11"
+        }
+      ]
+    }
+  },
+  "apk_checks": {
+    "debug": {
+      "status": "verified-this-run",
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "f5e994e794c6ef6294275cac3cb0056a166ec76173e66ebb95c183460739a69c",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes18.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141,
+      "actual_resource_table_entries": 8672,
+      "actual_apk_fixed_resource_ids_verified": 7141,
+      "actual_apk_fixed_id_mismatches": 0,
+      "merged_manifest_activities_present": 53,
+      "merged_manifest_missing_activities": 0,
+      "recovered_dex_entry": "classes18.dex",
+      "recovered_classes": 3158,
+      "recovered_classes_match_inventory": true,
+      "recovered_dex_sha256": "80b48ca8a335d3eccd8beb1428bef202c9639b24f5f8c113b25e41c35fb6a3c7",
+      "resources_arsc_stored": true,
+      "zipalign_passed": true,
+      "signature_passed": true,
+      "signature_schemes": [
+        "v2",
+        "v3"
+      ]
+    },
+    "release": {
+      "status": "verified-this-run",
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "5b3bab1e0ce872171b210e5477b48b6f2c7733d847055fb97d2a59f34b0f4759",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141,
+      "actual_resource_table_entries": 7281,
+      "actual_apk_fixed_resource_ids_verified": 7141,
+      "actual_apk_fixed_id_mismatches": 0,
+      "merged_manifest_activities_present": 50,
+      "merged_manifest_missing_activities": 0,
+      "recovered_dex_entry": "classes5.dex",
+      "recovered_classes": 3158,
+      "recovered_classes_match_inventory": true,
+      "recovered_dex_sha256": "80b48ca8a335d3eccd8beb1428bef202c9639b24f5f8c113b25e41c35fb6a3c7",
+      "resources_arsc_stored": true,
+      "zipalign_passed": true,
+      "signature_passed": true,
+      "signature_schemes": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    }
+  },
+  "test_apk": {
+    "path": "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+    "sha256": "79d52ff6e8e725b8ffe966a3ae252b8c88265b5bd84ba4a72c6500b0122d5845",
+    "status": "built-this-run; not installed or executed"
+  },
+  "compile_only_abi": {
+    "jar": "app/build/generated/business-abi.jar",
+    "classes": 3158,
+    "sha256": "a7e4819c86ee71030b47c3dc871221a012e879903103067b15283128a863152d",
+    "classes_match_smali_inventory": true
+  },
+  "repeatability": {
+    "status": "verified-this-run",
+    "first_debug_sha256": "09ddb30ca3bc1ea74f8b441d9288f10d1f06dfb638b517e4c9af1a931babd1cb",
+    "repeat_debug_sha256": "f5e994e794c6ef6294275cac3cb0056a166ec76173e66ebb95c183460739a69c",
+    "compared_components": 21,
+    "changed_dex_resource_manifest_or_marker_components": [],
+    "note": "Same DEX/resource table/manifest/marker bytes across clean and repeat builds. ZIP entry times and re-signing change whole APK hash; no claim of byte-identical APK builds."
+  },
+  "lint": {
+    "status": "existing-failures-reproduced; not lint-clean",
+    "errors": 16,
+    "by_id": {
+      "ResourceCycle": 12,
+      "UnknownId": 2,
+      "MissingDefaultResource": 1,
+      "NotSibling": 1
+    },
+    "same_file_line_id_multiset_as_historical": true,
+    "existing_abort_on_error": false,
+    "report": "app/build/intermediates/lint_vital_intermediate_text_report/release/lintVitalReportRelease/lint-results-release.txt",
+    "report_sha256": "48d4b258bf60e1d7d2fd2aa87003f43f1e56a62f3baf44f54ef1d72dd3b30553",
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "release_isolation": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "runtime_graph_clean": true,
+    "merged_manifest_clean": true,
+    "dex_clean": true,
+    "resources_clean": true,
+    "release_facade_present": true,
+    "classes_checked": 19210
+  },
+  "devices": {
+    "status": "blocked",
+    "adb_devices": "List of devices attached",
+    "available_avds": "",
+    "dedicated_research_emulator_available": false,
+    "device_test_invocations_executed": 0,
+    "device_tests_executed": 0,
+    "affected_scope": [
+      "current smali CommentFilter behavior oracle",
+      "43 offline validation invocations / 47 instrumented cases (static plan count)",
+      "cold launch, navigation, rendering, playback progress, gestures, lifecycle, persistence/restart"
+    ],
+    "not_executed": [
+      "run_device_validation.py",
+      "LiveReadOnlyTest",
+      "DiagnosticsIntegrationTest on a device",
+      "physical device and casting tests"
+    ],
+    "personal_devices_operated": false,
+    "online_business_writes": false
+  },
+  "historical_evidence": [
+    {
+      "path": "docs/apk-verification.json",
+      "source_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+      "git_blob": "ec9a0e2ac6505d09bbb4f09f7b48e5821291165d",
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e",
+      "snapshot": ".local/migration/p0-20261026-1528/historical/apk-verification.json",
+      "counted_as_current_pass": false
+    },
+    {
+      "path": "docs/device-validation.json",
+      "source_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+      "git_blob": "1eebd5f8918a811850f9b296ee08cfe12a23f03c",
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33",
+      "snapshot": ".local/migration/p0-20261026-1528/historical/device-validation.json",
+      "counted_as_current_pass": false
+    },
+    {
+      "path": "docs/lint-findings.json",
+      "source_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+      "git_blob": "ffc7d5d6fc95839b8fb8e29acfa3f48f10c7bcbb",
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a",
+      "snapshot": ".local/migration/p0-20261026-1528/historical/lint-findings.json",
+      "counted_as_current_pass": false
+    },
+    {
+      "path": "docs/network-inspector-validation.json",
+      "source_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+      "git_blob": "9093a1b30e880e21ce983fb88b418b5225f9381f",
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be",
+      "snapshot": ".local/migration/p0-20261026-1528/historical/network-inspector-validation.json",
+      "counted_as_current_pass": false
+    }
+  ],
+  "inventory_snapshots": [
+    {
+      "path": "dev/migration/P0-smali-inventory.csv",
+      "sha256": "da746d8fd392c202d81d2cd552b7eec66f0cb3bb7b68abd8f86a6ed625bfb400"
+    },
+    {
+      "path": "dev/migration/P0-source-inventory.csv",
+      "sha256": "9640c04108872ff12a167997fe7b83562495c296b329997c027ddd22ae972934"
+    },
+    {
+      "path": "dev/migration/P0-static-signals.csv",
+      "sha256": "c10e35528dba90a3c615cec91b5d2db87fd78521d30bf66abaac7e32d0aa36b0"
+    },
+    {
+      "path": "dev/migration/P0-inventory-summary.json",
+      "sha256": "cbc891c19d633f7afe89b8bf133a9fc5cc99910f96445fb71e3f7ba4a7d51f14"
+    },
+    {
+      "path": "dev/migration/P0-candidate-contracts.json",
+      "sha256": "138cd2c5dca2935d91ed35ff399bc4bfaaa709773aae4bc008e48b8b128dd661"
+    }
+  ],
+  "raw_evidence_manifest": [
+    {
+      "path": ".local/migration/p0-20261026-1528/adb-devices.txt",
+      "bytes": 28,
+      "sha256": "bbfcc7239a6f1be3544814ebdc6bcc9b66bf5b1f0b03baa3340808f19265a630"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/apk-debug-repeat.json",
+      "bytes": 809,
+      "sha256": "21c2304cb343ed35169d67d9db942d6962faa35de91ccf59881ad7b0081ec3a1"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/apk-debug.json",
+      "bytes": 809,
+      "sha256": "30c07fe13878f003d57e02d1a2af49708ee6a49b22d80c5ddc86e18d2205095e"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/apk-release.json",
+      "bytes": 531,
+      "sha256": "eea61c16c712fc00b08c99aa5b01ee71c37a1643c38a12a977694fcc41d9c3c3"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/artifacts/app-debug-androidTest.apk",
+      "bytes": 485598,
+      "sha256": "79d52ff6e8e725b8ffe966a3ae252b8c88265b5bd84ba4a72c6500b0122d5845"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/artifacts/app-debug-first.apk",
+      "bytes": 25548474,
+      "sha256": "09ddb30ca3bc1ea74f8b441d9288f10d1f06dfb638b517e4c9af1a931babd1cb"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/artifacts/app-debug.apk",
+      "bytes": 25548474,
+      "sha256": "f5e994e794c6ef6294275cac3cb0056a166ec76173e66ebb95c183460739a69c"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/artifacts/app-release.apk",
+      "bytes": 14262505,
+      "sha256": "5b3bab1e0ce872171b210e5477b48b6f2c7733d847055fb97d2a59f34b0f4759"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/available-avds.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/badging-debug.txt",
+      "bytes": 9313,
+      "sha256": "8037efec13ed72552f7636ae932dbda86be32cd884494db6ff6986906ed834a6"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/badging-release.txt",
+      "bytes": 8836,
+      "sha256": "814e27094855b2d02b9dc93951128aeb7b8f33870f71c16346d4f39b21deadfe"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/baseline-commit.txt",
+      "bytes": 42,
+      "sha256": "0ee76d91813a07ecbcf4963eff86123343ca6390456d58616e2f758d515d3021"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/build-debug-repeat.log",
+      "bytes": 4359,
+      "sha256": "0a22ee361f3c74c25011851fc86cf8343a8e370ef230f4ace3fb80ba9d327816"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/build-debug.log",
+      "bytes": 8345,
+      "sha256": "028a5006b9a179bcc30ea54d42075102d16457b78ec41dfeb6ba47b13d0be3ca"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/build-release-inspector-tests.log",
+      "bytes": 23850,
+      "sha256": "e48b9983ab204d807bde8dfda81f6efc70f8a8ed93633156b9d3281efcf94bd6"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/first-debug-components.json",
+      "bytes": 1872,
+      "sha256": "1f93fc8d1e8f43eac25ea5a1bb8a0b428f09a94b04b09a28caee6d0eaf652581"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/gradle-version.txt",
+      "bytes": 643,
+      "sha256": "383bfba6dbb01cd37a80385b28f87e3e1705c6a35bbc88a9aae48d84ed67c838"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/historical-sha256.txt",
+      "bytes": 648,
+      "sha256": "4ef200d191bb0d8592bbfeadd48bcebccc6b3ebc9e407be8ae6c22e10e93e772"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/inventory.log",
+      "bytes": 2397,
+      "sha256": "d4acb6ed7299dfe8fc4dc4622928ad92212d36161ab4a7825340db9c5bc055b6"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/lint-results-release.txt",
+      "bytes": 11090,
+      "sha256": "48d4b258bf60e1d7d2fd2aa87003f43f1e56a62f3baf44f54ef1d72dd3b30553"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/python-version.txt",
+      "bytes": 15,
+      "sha256": "a144567695a0f7c7e3759308c81bf49ccb4995718d20a9a6a32a72de3ee39f5b"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/release-dependencies.txt",
+      "bytes": 22718,
+      "sha256": "5d570bc1ab86f90bdf413f780f67b579fa7ae87ed5d59cfa6f1f381dd8ce0d08"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/release-isolation.json",
+      "bytes": 249,
+      "sha256": "9bd94da51d21f3379f37b29d5fb5f18c1a8cb2a4029e204b5284989b152957b5"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/resources-debug.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/resources-release.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 812,
+      "sha256": "eb1f6ea53abae0f0cda674da9beae913da2c4b390d3e400531a8b4dd890ff73f"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "d8041fcc2103187a19186315102d73bf58f251b4e3270fd528db5f329850f0df"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.CaptureBoundaryTest.xml",
+      "bytes": 757,
+      "sha256": "4e3c75bab811a7605cedfdc5103bf4b9431b65fb971aaceed50017563c56768d"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.ChuckerInputDismissalTest.xml",
+      "bytes": 659,
+      "sha256": "e428ea77ee30af6a5f8ef7b6031747fcbc0b061d21fee47d67659bbeb2364c9d"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.ChuckerInteractionTest.xml",
+      "bytes": 1387,
+      "sha256": "98338cb6de9439fa6fbcaaeae23560f3d1ef66e3555f288c11bcb89a76674774"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.ChuckerPresentationTest.xml",
+      "bytes": 1001,
+      "sha256": "9a518f08b9045d0748c9cc84cd8ebf7079ce5e3dc39c410ec8ea45bc35a63965"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.crypto.Base91CodecTest.xml",
+      "bytes": 927,
+      "sha256": "8f5055312e45ff4bdd30ba4719b204c2507c78f1670193e083860f0de8569936"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.crypto.Base91JsonDecoderTest.xml",
+      "bytes": 3226,
+      "sha256": "c1da4741a45a13e1f73d67ce89eda9c86954d6e9fc067cb410a871222ef30fbe"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.DesensitizationInspectorTest.xml",
+      "bytes": 852,
+      "sha256": "4872d5d9b87a3794935ea12ff27f77c324321de085490ac02f118b14cee1f476"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.DualCollectorTest.xml",
+      "bytes": 629,
+      "sha256": "180267473fb214ebc72aa4cbc17458e2f9df624c2d43354ef75f0a514fe4979e"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.InspectorInteractionTest.xml",
+      "bytes": 2093,
+      "sha256": "bdb38bcbb0cad7b5486595dbd4682e1605c5c338d35d6a8a6cb19bbc304ed892"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.InspectorLogicTest.xml",
+      "bytes": 1737,
+      "sha256": "f0c53a3b6f9cba3343c284ab9d68a1bcffa324f0f34d0395d54e0631e86e693a"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.InspectorLongTextTest.xml",
+      "bytes": 795,
+      "sha256": "b00bdb3478c1168df1df3930d0da32b0901245da05602a84ebbb10e8f75bda7d"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.InspectorSettingsTest.xml",
+      "bytes": 957,
+      "sha256": "0ad44f274420ab89aeaa8b50263bfdeb77ab1bcd84f8e6c7bfac19a3aeac3eec"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.InspectorUiTest.xml",
+      "bytes": 1698,
+      "sha256": "5be44ee36db6bb4995c530ab8418af72bcea3cb8190432f30ae3a537c72c22ea"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.privacy.DesensitizationPersistenceTest.xml",
+      "bytes": 532,
+      "sha256": "2022c957ec9e2a9151f7212536744cc5fef3d894d6b172d8df46a8c55392e481"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/test-results/core-network-inspector/TEST-com.mogu.inspector.privacy.DesensitizationSettingsTest.xml",
+      "bytes": 1300,
+      "sha256": "0ea25ff343b08e62d51ae0a6763bdfa7169c599212ad25708da3b224b8122f11"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/verify-debug-repeat.log",
+      "bytes": 681,
+      "sha256": "91496bca4f6985090f002a30d6865c84d516cbed18e8fb1e07831af6a80ff4a4"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/verify-debug.log",
+      "bytes": 681,
+      "sha256": "781c56033c4dd334e9573c32a5a8312f5683f9e326f9b10ec27c93f8b0604255"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/verify-release-isolation.log",
+      "bytes": 225,
+      "sha256": "48d365991da510eefced7175ba7daab9b7caae2b2b79e3b8087863ea0702562c"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/verify-release.log",
+      "bytes": 468,
+      "sha256": "67523d3fbebc934d2aceea9c7974d4d2478976e27f211a910198a123708cb4e8"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/p0-20261026-1528/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "inventory_hash_format": "CSV/JSON snapshot files use LF via dev/migration/.gitattributes. Source file SHA-256 is raw workspace bytes at collection; use the baseline Git commit for cross-platform source identity."
+}
