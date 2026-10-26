@@ -1,0 +1,724 @@
+{
+  "batch": "P2-url-utils",
+  "status": "technical-gates-passed-awaiting-merge",
+  "recorded_at": "2026-10-26T17:22:26.966871+08:00",
+  "base_commit": "0342617df948b4480aafa048c7658b1cfe92c070",
+  "replaced_types": [
+    "com.kotlin.basiclib.utils.UrlUtils"
+  ],
+  "removed_smali": [
+    "app/src/main/smali/com/kotlin/basiclib/utils/UrlUtils.smali"
+  ],
+  "source_files": [
+    {
+      "path": "app/src/main/java/com/kotlin/basiclib/utils/UrlUtils.java",
+      "sha256": "dae7fb660dcad6e45f438aa248d57c206a7aad888c06363fe6bd76e6eb2e8ae1"
+    },
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/UrlUtilsBaselineTest.java",
+      "sha256": "bac8fa1716458319029b93e1c2d85ed6ae10748934ba2b82b2703bf36b518d96"
+    },
+    {
+      "path": "app/src/main/smali/com/mogu/tv/common/arouter/ArouterUtils.smali",
+      "sha256": "5c3c8963827fa6ac91c783daee5ace23910230a2e388dee71eecd761e6c797b5"
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "1f0c30f97ae951de0cacb78002c41588f9b0a73d18f6a3f1047434bc17fc1d6b"
+    },
+    {
+      "path": "dev/migration/verify_delivery.py",
+      "sha256": "63b1044024c7cb0e132369c9d586ff449d2f25e1fe00376efa5ede5ab71db4e8"
+    }
+  ],
+  "original_source_identity": {
+    "base_commit": "0342617df948b4480aafa048c7658b1cfe92c070",
+    "source_files": [
+      {
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/UrlUtils.smali",
+        "sha256": "243593d9ff7baecaaa51f6c63ae578c774dc3c99ba2e521a75bf90a6e1647ede"
+      },
+      {
+        "path": "app/src/androidTest/java/com/mogu/research/UrlUtilsBaselineTest.java",
+        "sha256": "bac8fa1716458319029b93e1c2d85ed6ae10748934ba2b82b2703bf36b518d96"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/common/arouter/ArouterUtils.smali",
+        "sha256": "5c3c8963827fa6ac91c783daee5ace23910230a2e388dee71eecd761e6c797b5"
+      }
+    ],
+    "app_apk_sha256": "add055aa35f69907c038f2d3cbb65d80243682cf7d33aa3263da544035d825fe",
+    "test_apk_sha256": "1bbe546c1b68e7da9a8f0263e865be40a51acd1ced7f0a3e59d8b1a24da21546",
+    "original_runs_equal": true
+  },
+  "test_source_unchanged_after_original_baseline": true,
+  "consumer_source_unchanged": true,
+  "original_observations": "dev/migration/batches/P2-url-utils-original-observations.json",
+  "original_and_java_json_values_equal": true,
+  "new_observations": {
+    "binaryContract": true,
+    "routeConsumer": [
+      {
+        "url": "moguapp://vod?id=1001",
+        "ids": "1001"
+      },
+      {
+        "url": "moguapp://vod?id=1001&id=1002",
+        "ids": "1002"
+      },
+      {
+        "url": "moguapp://vod?other=1",
+        "ids": ""
+      }
+    ],
+    "emptyQueryDoesNotNavigate": true,
+    "queryCases": [
+      {
+        "input": null,
+        "exception": "java.lang.NullPointerException"
+      },
+      {
+        "input": "",
+        "result": {}
+      },
+      {
+        "input": "x",
+        "result": {}
+      },
+      {
+        "input": "?",
+        "result": {}
+      },
+      {
+        "input": "u?",
+        "result": {}
+      },
+      {
+        "input": "u?&",
+        "result": {}
+      },
+      {
+        "input": "u?=",
+        "exception": "java.lang.ArrayIndexOutOfBoundsException"
+      },
+      {
+        "input": "u?==",
+        "exception": "java.lang.ArrayIndexOutOfBoundsException"
+      },
+      {
+        "input": "u?=x",
+        "result": {
+          "": "x"
+        }
+      },
+      {
+        "input": "u?a=",
+        "result": {
+          "a": ""
+        }
+      },
+      {
+        "input": "u?a==b",
+        "result": {
+          "a": ""
+        }
+      },
+      {
+        "input": "u?a=b=c",
+        "result": {
+          "a": "b"
+        }
+      },
+      {
+        "input": "u?a=1&a=2",
+        "result": {
+          "a": "2"
+        }
+      },
+      {
+        "input": "u?a=1?b=2",
+        "result": {
+          "a": "1"
+        }
+      },
+      {
+        "input": "u??a=1",
+        "result": {
+          "": ""
+        }
+      },
+      {
+        "input": "?a=1",
+        "result": {
+          "a": "1"
+        }
+      },
+      {
+        "input": " u?a=1 ",
+        "result": {
+          "a": "1"
+        }
+      },
+      {
+        "input": "u?a=1&",
+        "result": {
+          "a": "1"
+        }
+      },
+      {
+        "input": "u?a=1&&b=2",
+        "result": {
+          "": "",
+          "a": "1",
+          "b": "2"
+        }
+      },
+      {
+        "input": "u?flag",
+        "result": {
+          "flag": ""
+        }
+      },
+      {
+        "input": "u?a=1#frag",
+        "result": {
+          "a": "1#frag"
+        }
+      },
+      {
+        "input": "u?a=%E4%B8%AD+文",
+        "result": {
+          "a": "%E4%B8%AD+文"
+        }
+      },
+      {
+        "input": "u? a = 1 & b =2",
+        "result": {
+          " a ": " 1 ",
+          " b ": "2"
+        }
+      },
+      {
+        "input": "u?　=1",
+        "result": {
+          "　": "1"
+        }
+      },
+      {
+        "input": "u?A=1&a=2",
+        "result": {
+          "A": "1",
+          "a": "2"
+        }
+      },
+      {
+        "input": "u?a=1&=x",
+        "result": {
+          "": "x",
+          "a": "1"
+        }
+      },
+      {
+        "input": "u?&&",
+        "result": {}
+      },
+      {
+        "input": "u?=x=tail",
+        "result": {
+          "": "x"
+        }
+      },
+      {
+        "input": "u?a=1?",
+        "result": {
+          "a": "1"
+        }
+      },
+      {
+        "input": "u?x=1\n2",
+        "result": {
+          "x": "1\n2"
+        }
+      }
+    ]
+  },
+  "original_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "new_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "router_history_test": {
+    "passed": 1,
+    "limitation": "Existing test checks known ID membership; not evidence of a new write count"
+  },
+  "host_suites": [
+    {
+      "name": "com.mogu.research.CryptoContractTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "contentIdDerivationAndKnownCbcVector",
+        "bothImageKeyPathsDecodeTheOriginalBytes",
+        "plainImageFallbackDoesNotReturnConsumedBytes",
+        "playbackIdsAreKeptPerUrl"
+      ]
+    },
+    {
+      "name": "com.mogu.research.DiagnosticsCapturePolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authenticationDiscoveryMediaAndUnknownPathsAreExcluded",
+        "apiReadsMatchCurrentOriginAndKnownQueriesOnly"
+      ]
+    }
+  ],
+  "class_coverage": [
+    {
+      "variant": "debug",
+      "recovered_types": 3156,
+      "recovered_dex": "classes18.dex",
+      "recovered_dex_sha256": "2098543b5055ac75490a64a224b59acd488f5c6f4086e073a55cc7cd8686389f",
+      "original_types_present_once": 3158,
+      "source_restored_locations": {
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes12.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes7.dex"
+        ]
+      }
+    },
+    {
+      "variant": "release",
+      "recovered_types": 3156,
+      "recovered_dex": "classes5.dex",
+      "recovered_dex_sha256": "2098543b5055ac75490a64a224b59acd488f5c6f4086e073a55cc7cd8686389f",
+      "original_types_present_once": 3158,
+      "source_restored_locations": {
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes3.dex"
+        ]
+      }
+    }
+  ],
+  "installed_apks": [
+    {
+      "package": "com.amogu6.tv.research",
+      "local_sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de",
+      "installed_sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de",
+      "matching": true
+    },
+    {
+      "package": "com.amogu6.tv.research.test",
+      "local_sha256": "1bbe546c1b68e7da9a8f0263e865be40a51acd1ced7f0a3e59d8b1a24da21546",
+      "installed_sha256": "1bbe546c1b68e7da9a8f0263e865be40a51acd1ced7f0a3e59d8b1a24da21546",
+      "matching": true
+    }
+  ],
+  "apk_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes12.dex",
+        "classes18.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "988b2fbde52640ed22cf10851985039ff2995b5455c5758502a56d063c739172",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "delivery_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "apk_sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "290f893164a5751003c190dd6c60e8c3afdadeb15500dd0b86800de87015a892",
+      "merged_manifest_activities": 53,
+      "missing_activities": [],
+      "resource_dump_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769",
+      "device_behavior_verified": false
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "apk_sha256": "988b2fbde52640ed22cf10851985039ff2995b5455c5758502a56d063c739172",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\release\\processReleaseManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "f0dfb8c4dda7b6c5f1f3b86708a897e184659887a2ac180ad41c30815a7fbb89",
+      "merged_manifest_activities": 50,
+      "missing_activities": [],
+      "resource_dump_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2",
+      "device_behavior_verified": false
+    }
+  },
+  "lint": {
+    "same_rule_location_multiset": true,
+    "count": 16,
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "not_run": [
+    "88 inspector host tests: no diagnostic/dependency changes",
+    "Full 47-device-test suite: focused consumer gate used for low-coupling P2 batch",
+    "Release diagnostic-specific isolation script: no diagnostic/dependency/resource/manifest changes",
+    "Physical multi-OS/external URL-app/production release checks"
+  ],
+  "evidence_files": [
+    {
+      "path": ".local/migration/P2-url-utils/apk-debug.json",
+      "bytes": 809,
+      "sha256": "0dbd2e0c3d5b227d1ac5537a654db02aa251e93022f6c222eb699aeb533e1360"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/apk-release.json",
+      "bytes": 531,
+      "sha256": "6764fe9ddefcdc5ac0751effb4baf858d9796f3f37696a4e8c4d8c58ff250918"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/app-host-tests.log",
+      "bytes": 2647,
+      "sha256": "311b3c90cb7f5abbff77d125d613331315fdfea941d748ec2ead707b027e4a83"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/app-debug-androidTest.apk",
+      "bytes": 523361,
+      "sha256": "1bbe546c1b68e7da9a8f0263e865be40a51acd1ced7f0a3e59d8b1a24da21546"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/app-debug.apk",
+      "bytes": 25556666,
+      "sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/app-release.apk",
+      "bytes": 14262505,
+      "sha256": "988b2fbde52640ed22cf10851985039ff2995b5455c5758502a56d063c739172"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/original-app.apk",
+      "bytes": 25548474,
+      "sha256": "add055aa35f69907c038f2d3cbb65d80243682cf7d33aa3263da544035d825fe"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/original-test-01.apk",
+      "bytes": 523348,
+      "sha256": "4f6f926ba6907b81a14fbad1859a86e0d2c4a4799ca9dbb848ec2a724232f569"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/artifacts/original-test-final.apk",
+      "bytes": 523361,
+      "sha256": "1bbe546c1b68e7da9a8f0263e865be40a51acd1ced7f0a3e59d8b1a24da21546"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/build-java.log",
+      "bytes": 19968,
+      "sha256": "72d1281befc1f700215e6f74ebe037b98d117dd8fd437e468e707f5aef9b307f"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/build-original-tests-02.log",
+      "bytes": 4837,
+      "sha256": "ef1892c4a077078a3eeba800433011f545fdd617e4182673980ce2d60171cc8b"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/build-original-tests.log",
+      "bytes": 4837,
+      "sha256": "5479d21c8dc3c96164c9ec58ddf54b2cc7fdb1315cbc5cc6f384b9fa7c4908d3"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/class-coverage.json",
+      "bytes": 897,
+      "sha256": "74f3a1d178a3514e7a35d60b2de6e891d0f5ffb5fd749b0c7ddd6d00d3b9d96a"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/delivery-debug.json",
+      "bytes": 670,
+      "sha256": "ae85a0fabd83be854b8e76831a6aa1f837070a0b4cb1f9d6a518b050c92c4598"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/delivery-debug.resources.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/delivery-release.json",
+      "bytes": 678,
+      "sha256": "019a8bae1ad36298308192f75187088c02a64fd653c9e508bd8d8a9090457fd3"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/delivery-release.resources.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/host-test-summary.json",
+      "bytes": 643,
+      "sha256": "39b7605d55988532c0f6ac36c98cdace1f84474e79dd713c682fd77343cb49d3"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/installed-sha256.json",
+      "bytes": 524,
+      "sha256": "a55bec7cfd2e3c138e517850193ab4d8adff082a1ab036108bbeaae3e335d15a"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/java-observations.json",
+      "bytes": 1492,
+      "sha256": "8676176802f5e77d155059169bc29f7118689245c0f6e1732163aaff16617692"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/java.log",
+      "bytes": 82,
+      "sha256": "c7e49bc14e1586ac49c0d1c8f71c6e24507b1ba2497abc093ad3256e7f81e858"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/javap.txt",
+      "bytes": 436,
+      "sha256": "8d6f4515d5f2cbd8597851dd888333b0aade065847b4637f03240c86fd652db1"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/lint-comparison.json",
+      "bytes": 4721,
+      "sha256": "6077ab0fbb4eee30e12da5835c3de2452ca28f59487ab598bc2f1d625dcffbaa"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/original-01.log",
+      "bytes": 955,
+      "sha256": "50d0223087660f9c5a594678dabe1f193eafa501663e0dc4691aff7c6a92bae2"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/original-02.log",
+      "bytes": 82,
+      "sha256": "2e31d3b5349f27eddb2a1ff74cb56e3505059c4350d1ec9835383a84d22c8c9d"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/original-observations-01.json",
+      "bytes": 1492,
+      "sha256": "8676176802f5e77d155059169bc29f7118689245c0f6e1732163aaff16617692"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/original-observations-02.json",
+      "bytes": 1492,
+      "sha256": "8676176802f5e77d155059169bc29f7118689245c0f6e1732163aaff16617692"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/original-source-identity.json",
+      "bytes": 849,
+      "sha256": "46e14fc442664c1671cf8da8b51c80a5be4b83df10eddb586dcbe3e3e1c0d504"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/router-history.log",
+      "bytes": 231,
+      "sha256": "4949b9545e345b7f93d622a68600f2416c842a6439e787a6a08360cfe63e12ef"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/router-history.png",
+      "bytes": 127017,
+      "sha256": "6f20cf8314a74436263430d5f6184726a383a31ac0504f88dc297f5f82cc8dca"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 810,
+      "sha256": "abc047527d634b27ca6a71e2cb41948513edab23737d62b9095faeb636bc30a6"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "2f7de5547e3f2a8ff3cf4f3b6dd7032b2a455ea1068b2205dfbcea97bb79f8aa"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/P2-url-utils/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Original null and empty-array exceptions intentionally retained",
+    "Empty String reference comparison intentionally retained",
+    "No real network mutations or account use",
+    "Raw evidence remains in ignored .local directory; hashes are an index"
+  ]
+}
