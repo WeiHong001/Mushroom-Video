@@ -1,6 +1,6 @@
 {
   "batch": "P1-comment-filter",
-  "status": "technical-gates-passed-awaiting-merge",
+  "status": "accepted-and-merged",
   "recorded_at": "2026-10-26T17:07:40.325768+08:00",
   "base_commit": "349817160a3ee1c2ac2667b78d3b6cea70cc924a",
   "language": "Java",
@@ -1615,5 +1615,8 @@
     "Full-suite short-video captures included black frames; independent repeated test and visible synthetic frame are retained; media-wide acceptance is not inferred",
     "No independent human reviewer is claimed",
     "Hashes index local evidence; raw logs and APKs are not committed"
-  ]
+  ],
+  "implementation_commit": "a64854f8d2e63a6d64a79864cd27d6367d2773e4",
+  "accepted_dev_merge_commit": "03108ab8243b1448b5c9f6f55c36e06bb624e3ca",
+  "closeout_changes": "Only progress/report/mapping metadata; runtime source and test inputs unchanged after verified implementation commit"
 }
