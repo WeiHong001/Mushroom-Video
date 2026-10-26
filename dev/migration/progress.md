@@ -4,20 +4,17 @@
 
 ## 当前检查点
 
-- 阶段：P0 与 P1 已验收、合入并推送；P2 UrlUtils 技术门禁已通过，待提交合入。
-- P0 交付：`e930a22`；dev 合并 `3498171`。补齐原实现模拟器、完整离线回归与 CommentFilter 六例。
-- P1 交付：实现 `a64854f8d2e63a6d64a79864cd27d6367d2773e4`；dev 合并 `03108ab8243b1448b5c9f6f55c36e06bb624e3ca`，已推送。完成后才将 CommentFilter 标记已验收。
-- 当前分支：`feature/restore-url-utils-b01`，起点 `0342617df948b4480aafa048c7658b1cfe92c070`，开始记录 2026-10-26 17:09:58 +08:00；仅将 UrlUtils 改为 Java 并移除对应一份 smali，尚未合入。
-- 本地证据：`.local/migration/P0-device/`、`.local/migration/P1-comment-filter/`；P0 冻结快照未覆盖。
-- 设备：新建专用 `Mushroom_Research_API34` / `emulator-5580` / API 34 / Android 14 / x86_64，蓝牙关闭以避开系统 HCI 崩溃弹窗。所有 adb 明确 serial，offline 构建及安装摘要保护保持。
-- P1 验证：Java 原测试 6/6，22 组输入和四个 null 诊断、三个消费者的 JSON 与 P0 完全一致；主机原 17 suites / 94 用例重跑通过；Debug/测试/研究 Release、APK/实际资源表/合并清单/签名/Release 隔离通过；16 条原 Lint 规则/位置一致。
-- P1 完整设备回归：43 次调用 / 47 用例通过；45 张截图复核，短视频另做停止应用后的 1/1 复测并见到视频色条。具体截图及断言边界见批次报告。
-- P1 文档关闭提交：`0342617`，已推送且远端已核对；只补齐交付元数据，没有运行源码/测试输入变化。
-- P2 原行为：30 组输入、运行 ABI、真实路由普通/重复/缺失 id 和空 query 分支，最终 3/3 通过；两轮观测完全一致。初测两条空键预期按原 Android 实测修订，记录保留。
-- P2 Java 结果：原/新 3/3，30 组输入/ABI/真实路由观测完全一致；app 主机 6/6、既有路由播放历史 1/1、Debug/测试/研究 Release 和 APK/实际资源/清单/签名通过；16 条 Lint 同规则/位置。无诊断/资源/清单/依赖变化，本批未重跑的完整集不计新通过。
-- 下一条动作：提交 P2 UrlUtils，合入并推送 dev；发生实际合入后再关闭类型映射，然后从最新 dev 拆下一批。
-- 后续优先闭包：PlayDataSaveUtils + SavePlayVod / VodData（3 类），现已具备专用设备；下一批先固定旧 JSON、equals/contains/indexOf、缓存和实际进程重启读取行为，再恢复源码。ClickUtils/DateUtil 继续排队，不静默丢弃。
-- P2 原始证据：`.local/migration/P2-url-utils/`，原 APK 与测试 APK 已留存；观察基线在 `batches/P2-url-utils-original-observations.json`。其余组保持待分析，不批量标记受阻。
+- 阶段：P0、P1 以及 P2 的 UrlUtils 批次已验收、合入推送；P2 继续，不因单批完成停止。
+- P0：`e930a22` / dev 合并 `3498171`；P1：`a64854f` / dev 合并 `03108ab`，关闭记录 `0342617`。
+- P2 UrlUtils：实现 `edffdd3a50f517f23006fce70d3dc1b8472c6a3e` / dev 合并 `8930e9ebb3e533b9137e68d51ad868b5c15ef1a9`，已推送；实际合入后才标记类型完成。
+- 当前分支 `feature/restore-url-utils-b01`，仅关闭本批交付记录，运行源码/测试输入不变。
+- 本地证据：`.local/migration/P0-device/`、`P1-comment-filter/`、`P2-url-utils/`。P0 冻结快照未覆盖。
+- 设备：专用 `Mushroom_Research_API34` / `emulator-5580` / API 34 / Android 14 / x86_64；为避开已记录系统 HCI 崩溃，蓝牙关闭。全部 adb 指定 serial，保持 offline / 安装摘要保护。
+- P1 门禁：原/新六例和 22 组观测一致、94 主机用例、完整 43 次调用 / 47 设备用例及 Debug/测试/研究 Release、APK/资源/清单/签名/Release 隔离通过。
+- P2 UrlUtils 门禁：原/新各 3 例、30 组观测及真实路由参数完全一致；app 主机 6 例、现有路由播放历史 1 例、Debug/测试/研究 Release 和 APK/实际资源/清单/签名通过；16 条原 Lint 同规则/位置。未在该批重跑的完整集没有转记通过。
+- 下一条动作：完成本批文档关闭快进推送，从最新 dev 新建 `feature/restore-play-data-b02`；先固定 PlayDataSaveUtils + SavePlayVod / VodData 的原行为、旧 JSON、equals/contains/indexOf、缓存和实际进程重启读取，再恢复这 3 类。
+- 下一批原始证据预定 `.local/migration/P2-play-data/`。ClickUtils / DateUtil 继续排队；其余组保持待分析，不批量标记受阻。
+- 已知测试边界：既有路由历史用例检查样例 id 的包含关系，P3 状态迁移验收应补初始历史隔离以证明新写入；P0/P1 截图采集边界见各报告。真实服务、相机/投屏/蓝牙外设及生产发布仍未验收。
 
 ## 队列与门禁
 
@@ -25,7 +22,7 @@
 | --- | --- | --- |
 | P0-device 专用模拟器及原行为证据 | 已验收 | 原实现完整离线回归 43/47、CommentFilter 六例和三个真实消费者通过；详见补充报告 |
 | P1 CommentFilter | 已验收 | 实现 `a64854f`，dev 合并 `03108ab`；完整门禁及原/新对照通过 |
-| P2 UrlUtils | 执行中 | 静态闭包已核对；正在准备原实现 split/重复键/null/真实路由的设备基线 |
+| P2 UrlUtils | 已验收 | 实现 `edffdd3` / dev 合并 `8930e9e`；原/新输入与真实路由一致 |
 | P2 基础工具 / 本地模型 | 待分析 | F02/F07、F04；按实际依赖拆批，补时间、Locale、JSON/旧样本及重启证据 |
 | P2/P3 控件 / 网络 / 基础框架 | 待分析 | F08/F03/F01；XML、回调、线程、Binding 反射及生命周期 |
 | P3 适配器 / 路由 / 页面 | 待分析 | F05/F13/F09～F12；导航、状态恢复、离线/在线数据隔离 |
@@ -38,8 +35,8 @@
 
 ## 类型统计
 
-[class-mapping.csv](class-mapping.csv) 从冻结 P0 清单创建：3,158 个原类型（业务目录 1,068，旧集成 2,090）。当前替代验收完成 1：CommentFilter（Java）；剩余 smali 3,157（业务目录 1,067，旧集成 2,090）。生成类型 128 是业务目录的子集，不能重复相加。只有替代经过验证且合入 dev 后才标记类型处理完成。
+[class-mapping.csv](class-mapping.csv) 从冻结 P0 清单创建：3,158 个原类型（业务目录 1,068，旧集成 2,090）。当前替代验收完成 2：CommentFilter、UrlUtils（Java）；剩余 smali 3,156（业务目录 1,066，旧集成 2,090）。生成类型 128 是业务目录的子集，不能重复相加。只有替代经过验证且合入 dev 后才标记类型处理完成。
 
 ## 交付与恢复规则
 
-已交付 P0：`e930a22` / dev 合并 `3498171`；P1：`a64854f` / dev 合并 `03108ab`。已验证批次独立提交、合入并推送 dev；未验收源码不进入 dev。恢复时先核对 Git 分支、提交、未提交文件和本地证据，不重置用户改动或恢复/删除 stash。历史 P0 的“仅 P0”会话边界保留为历史，当前按 V1.1 和最新授权自动推进。
+已交付 P0：`e930a22` / dev 合并 `3498171`；P1：`a64854f` / dev 合并 `03108ab`；P2 UrlUtils：`edffdd3` / dev 合并 `8930e9e`。已验证批次独立提交、合入并推送 dev；未验收源码不进入 dev。恢复时先核对 Git 分支、提交、未提交文件和本地证据，不重置用户改动或恢复/删除 stash。历史 P0 的“仅 P0”会话边界保留为历史，当前按 V1.1 和最新授权自动推进。

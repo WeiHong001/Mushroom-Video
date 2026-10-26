@@ -1,6 +1,6 @@
 # P2-url-utils：原查询字符串解析及路由参数
 
-状态：**技术门禁已通过，待提交合入；类型尚未标记处理完成。**
+状态：**已验收并合入推送 dev。实现 `edffdd3`，dev 合并 `8930e9e`。合入后已关闭类型去向；仅补交付元数据，运行源码/测试输入不变。**
 
 - 分支 `feature/restore-url-utils-b01`，起点/回退目标 `0342617df948b4480aafa048c7658b1cfe92c070`；开始记录 2026-10-26 17:09:58 +08:00。
 - 唯一类型 `com.kotlin.basiclib.utils.UrlUtils`，没有关联内部类。原 public 类、公有无参构造器、public static `getURLparams(String): Map<String,String>`、private static `TruncateUrlPage(String): String` 均须保持。

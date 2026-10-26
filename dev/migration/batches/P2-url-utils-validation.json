@@ -1,6 +1,6 @@
 {
   "batch": "P2-url-utils",
-  "status": "technical-gates-passed-awaiting-merge",
+  "status": "accepted-and-merged",
   "recorded_at": "2026-10-26T17:22:26.966871+08:00",
   "base_commit": "0342617df948b4480aafa048c7658b1cfe92c070",
   "replaced_types": [
@@ -720,5 +720,8 @@
     "Empty String reference comparison intentionally retained",
     "No real network mutations or account use",
     "Raw evidence remains in ignored .local directory; hashes are an index"
-  ]
+  ],
+  "implementation_commit": "edffdd3a50f517f23006fce70d3dc1b8472c6a3e",
+  "accepted_dev_merge_commit": "8930e9ebb3e533b9137e68d51ad868b5c15ef1a9",
+  "closeout_changes": "Only report/mapping/progress metadata after actual merge; runtime/test inputs unchanged"
 }
