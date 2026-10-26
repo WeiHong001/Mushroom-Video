@@ -1,6 +1,6 @@
 # P2-click-utils：共享点击时钟、同步和消费者去重
 
-状态：**技术门禁已通过，待提交合入；此类型尚未标记处理完成。**
+状态：**已验收并合入推送 dev。实现 `76d54b8`，dev 合并 `2b8af3d`；实际合入后关闭此类型，本次只补交付元数据。**
 
 - 分支 `feature/restore-click-utils-b03`，起点 `c33ea849ad68c312f685016f1cb8bfed895f8e9e`；开始记录 2026-10-26 18:00:43 +08:00。
 - 唯一类型 `com.kotlin.basiclib.utils.ClickUtils`。保持单例、private static final SPACE_TIME=1200（原在 clinit 赋值）、private static long lastClickTime、私有构造器、5 个 public final 方法；三个判定 API 保持同步，getter/setter 保持原非同步属性。
