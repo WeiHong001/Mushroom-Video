@@ -1,0 +1,2414 @@
+{
+  "stage": "P0-device",
+  "status": "accepted",
+  "recorded_at": "2026-10-26T16:45:34.618673+08:00",
+  "base_commit": "7e9384c",
+  "implementation_baseline_commit": "2b882ad1ca2cae2fb81812b0973ef32a67d89fb3",
+  "implementation_and_build_changed": false,
+  "research_mode": "offline",
+  "device": {
+    "serial": "emulator-5580",
+    "avd": "Mushroom_Research_API34",
+    "api": 34,
+    "android": "14",
+    "abi": "x86_64",
+    "new_dedicated_avd": true,
+    "bluetooth": "off after HCI system-service crash"
+  },
+  "executed_source_files": [
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/CommentFilterBaselineTest.java",
+      "sha256": "62b4081d29183a649f5b0fbc99fa9e79b4ef7f4eefc4fb4608ce56c57f87a287"
+    },
+    {
+      "path": "dev/migration/verify_delivery.py",
+      "sha256": "f6eda457feca99e917dc08ee60f473b77fecf436f531d96490d0a6c9bbe9a96d"
+    },
+    {
+      "path": "app/src/main/smali/com/mogu/tv/utils/CommentFilter.smali",
+      "sha256": "c12788b4dea71787c69277514054dcb4851e13a5d6e67963e053dd72e7fd165f"
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "1f0c30f97ae951de0cacb78002c41588f9b0a73d18f6a3f1047434bc17fc1d6b"
+    },
+    {
+      "path": "tools/business-abi.gradle",
+      "sha256": "2f6423ca6ac62c1c0ea280fd8456e82f8f958d32e8ea5c31c3d12525fcb9fbef"
+    },
+    {
+      "path": "tools/run_device_validation.py",
+      "sha256": "d13ebc95be3db0ba5c02b9ca2b8e36120f6b6438ca9e8cfb9da9455c46b3e4e9"
+    }
+  ],
+  "installed_apks": [
+    {
+      "package": "com.amogu6.tv.research",
+      "apk": "app/build/outputs/apk/debug/app-debug.apk",
+      "installed_sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+      "local_sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+      "matching": true
+    },
+    {
+      "package": "com.amogu6.tv.research.test",
+      "apk": "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "installed_sha256": "3d8de643013e16629624c73096e7ad10f14cf3bdb6d9d39082ba9d7ce58af63f",
+      "local_sha256": "3d8de643013e16629624c73096e7ad10f14cf3bdb6d9d39082ba9d7ce58af63f",
+      "matching": true
+    }
+  ],
+  "host_suites": [
+    {
+      "module": "app",
+      "name": "com.mogu.research.CryptoContractTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "contentIdDerivationAndKnownCbcVector",
+        "bothImageKeyPathsDecodeTheOriginalBytes",
+        "plainImageFallbackDoesNotReturnConsumedBytes",
+        "playbackIdsAreKeptPerUrl"
+      ]
+    },
+    {
+      "module": "app",
+      "name": "com.mogu.research.DiagnosticsCapturePolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authenticationDiscoveryMediaAndUnknownPathsAreExcluded",
+        "apiReadsMatchCurrentOriginAndKnownQueriesOnly"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.CaptureBoundaryTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "actualCapacityAndHeaderCopiesProtectTokenWithoutChangingRequest",
+        "eventStreamIsNotPeekedAndPreviewIOExceptionClosesAndPropagates",
+        "skippedBodiesAreNeverSerializedByPreview"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerInputDismissalTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "editorTapDragLongPressAndCancellationPreserveNativeSearchFocus",
+        "nativeSearchBackgroundTapRemovesFocusWithoutClearingQueryOrCollapsingSearch"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerInteractionTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "overviewUrlSupportsSelectingAQueryValueWithoutTheOtherParameters",
+        "selectionBackConsumesOneEventBeforeHostActivityFinishes",
+        "oneToolbarBackCollapsesANonemptySearchWithoutAnExtraClearQueryBack",
+        "searchTracksEachOffsetInActualBodyItemAfterHeadersAndCopy",
+        "continuousBodyPreservesNewlinesUnicodeAndFormattingSpans",
+        "bodyAndHeadersSupportExactPartialAndCrossLineNativeCopy",
+        "directlyOpenedNativeDetailToolbarBackAddsListInsteadOfLeavingInspector"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerPresentationTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "unsupportedDartLogsRemainVerbatimIncludingTokenPunctuationAndOuterBraces",
+        "formattedDisplayAndTextShareDecodeBothFieldsButRawCopyFileAndHarKeepWireText",
+        "longActorDescriptionsRemainCompleteAndCanBeHighlightedWithoutRecursiveRegexOverflow",
+        "disabledEndpointKeepsBothTokensAndChangingPolicyDoesNotMutateStoredBody"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.crypto.Base91CodecTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "all byte values and varied tails round trip",
+        "eight mebibytes of token characters is inclusive and never truncated",
+        "source hello and category vectors remain byte exact",
+        "invalid characters empty tokens and noncanonical final bits are rejected"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.crypto.Base91JsonDecoderTest",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "oversized tokens in all wrappers are unchanged without accepting a prefix",
+        "complete nested JSON whitespace literals and escaped surrogates remain exact",
+        "source JavaScript oracle corpus matches token and response decoding",
+        "verified category response decodes exactly",
+        "large complete response keeps its final item",
+        "duplicate root data keys are ambiguous and left untouched",
+        "supported root fields decode independently in either order without rewriting other text",
+        "reprocessing normal decoded response shapes is a no-op",
+        "one call decodes one layer and leaves inner tokens alone",
+        "ordinary JSON invalid input and non-string data remain verbatim",
+        "bad tails and every truncation of the category vector fail",
+        "bad optional profiles never prevent data decoding and bad data never prevents profiles",
+        "strict UTF8 rejects invalid sequences rather than substituting characters",
+        "all three wrappers preserve Unicode escapes and numeric lexemes",
+        "duplicate supported keys affect only that field and nested or unknown strings stay encoded",
+        "complete JSON grammar and object or array roots are required",
+        "only root data is replaced regardless of key order or nesting",
+        "JSON string escapes are resolved before decoding token"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.DesensitizationInspectorTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "hiddenInspectorKeepsBusinessResponsesButBlocksThePanelAndNewRawCollection",
+        "previouslyObtainedCopyShareAndExportSinksRefuseOriginalOutputAfterAToggle",
+        "activeAndRestoredChuckerActivitiesAreClosedBeforeTheyCanShowOrExportOriginalText"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.DualCollectorTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "offPauseAndPrivacySuppressNewListRecordsWhileResponsesStayIntact",
+        "shortVideoListBodyIsRecordedByBothStoresWithoutChangingTheResponse"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorInteractionTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "selectionMenuSelectAllIncludesOffscreenLinesAndBlankLinesWithoutGutterNumbers",
+        "requestAndResponseBodiesKeepPartialAndWholeCopyOperationsIndependent",
+        "bodySwipesScrollLongTextWhilePanelBoundsStayFixedIncludingBothEdges",
+        "listSwipesScrollContentWhilePanelBoundsStayFixedIncludingBothEdges",
+        "queryNamesValuesHeadersAndUrlCanBeCopiedFromTheirVisibleText",
+        "searchCanScrollToDistantMatchAndTheMatchedTextCanStillBeSelected",
+        "copyingOrTappingAwayEndsSelectionSoTheNextToolbarBackNavigatesImmediately",
+        "toolbarAndSystemBackShareTheSameHierarchyAndSelectionConsumesOnlyOneBack",
+        "dismissingClearConfirmationWithBackKeepsTheListAndRecordedRequests",
+        "longPressCopiesValueAndEndHandleExtendsTheSelectionAcrossJsonLines",
+        "modalWindowBackReturnsOnePageAndRestoresListSearchFilterAndScroll"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorLogicTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "malformedTruncatedAndDeepBodiesRemainReadable",
+        "bodyPreviewIsBoundedAndOneShotRequestsAreNotReplayed",
+        "captureRedactsHeadersPreservesBusinessBodiesAndStopsBothCollectorsWhenPaused",
+        "formattingPreservesNumbersDuplicateKeysAndEscapes",
+        "transportFailureIsRecordedAndPropagated",
+        "boundedSessionDoesNotResurrectClearedOrEvictedRequests",
+        "searchFiltersAndSyntaxTokensDescribeActualRecords",
+        "memoryBudgetEvictsOldBodiesAndPauseAllowsExistingCallsToFinish",
+        "responseDecodingIsDisplayOnlyAndNeverDecodesRequestBodies",
+        "optionalActorAndDataShareTheEndpointSwitchWithoutChangingRawText"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorLongTextTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "nearCaptureLimitWithManyNewlinesCanLayoutAndCopyEveryOffscreenLine",
+        "wrappedLinesUseTheirFirstVisualBaselineAndBlankRowsKeepTheirNumbers",
+        "scrollingLongBodyReusesLayoutAndGutterVisitsOnlyVisibleLines"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorSettingsTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "existingClientOnlyCapturesWhileEnabledAndPreservesResponsesAndPausePreference",
+        "disablingDismissesOpenPanelAndDoesNotReopenItWhenEnabledAgain",
+        "privateResponsePolicyBypassesBothCaptureStoresWithoutChangingTheResponse",
+        "defaultOffIgnoresLegacyRecordingAndSettingSurvivesNewOwner"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorUiTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "floatingEntryPassesOutsideTouchesAndSavesItsDraggedPosition",
+        "compactWindowKeepsListActionsAndBodyReachable",
+        "realChuckerAndFloatingCollectorPreserveTheSameHttpResponse",
+        "renderSyntheticRequestAndResponsePreviews",
+        "hidingEntryForSearchKeyboardPreservesAnAlreadyOpenPanel",
+        "panelBackgroundDismissesListAndBodySearchFocusInItsOwnWindow",
+        "floatingEntryFiltersPausesAndClearsWithoutClosingTheApp",
+        "smallWindowAndLargeFontKeepCaptureAndBodyUsable",
+        "responseCanBeDecodedSearchedCopiedAndReturnedToTheList",
+        "disabledEndpointFormatsAndCopiesEncodedFieldsWhileRawViewIsExact"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.privacy.DesensitizationPersistenceTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "androidPreferencesSurviveNewOwnersAndDefaultOnWithoutTouchingBusinessStorage"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.privacy.DesensitizationSettingsTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "failedEnableKeepsTheScreenHiddenEvenWhenTheSavedChoiceWasOff",
+        "pendingReadHidesAndSuccessfulMissingPreferenceDefaultsOn",
+        "failedDisableReturnsToThePersistedSafeChoiceAndReportsFailure",
+        "unreadableStorageNeverRevealsContent",
+        "synchronousObserversRapidChangesAndColdOwnerUseTheLatestSavedChoice",
+        "failedReadCanRetryWithoutRevealingBeforeTheSuccessfulRead"
+      ]
+    }
+  ],
+  "original_comment_filter": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "observations": "dev/migration/P0-comment-filter-observations.json",
+    "observations_sha256": "cd7bff63e0a183001d6f4719bc3213cfe21c70e616d2e6de6e3746ce82db629f"
+  },
+  "full_device_regression": {
+    "serial": "emulator-5580",
+    "mode": "synthetic-offline",
+    "apk_sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+    "cases": [
+      {
+        "name": "recovered-listener-defaults",
+        "passed": true,
+        "tests": 2,
+        "seconds": 3.81
+      },
+      {
+        "name": "media-and-api",
+        "passed": true,
+        "tests": 4,
+        "seconds": 2.26
+      },
+      {
+        "name": "five-tabs",
+        "passed": true,
+        "tests": 1,
+        "seconds": 21.16
+      },
+      {
+        "name": "playback",
+        "passed": true,
+        "tests": 1,
+        "seconds": 22.8
+      },
+      {
+        "name": "drawing-and-gestures",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.18
+      },
+      {
+        "name": "short-swipe",
+        "passed": true,
+        "tests": 1,
+        "seconds": 28.25
+      },
+      {
+        "name": "router-and-history",
+        "passed": true,
+        "tests": 1,
+        "seconds": 20.14
+      },
+      {
+        "name": "RegistActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.58
+      },
+      {
+        "name": "SettingActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.8
+      },
+      {
+        "name": "ShangwuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.37
+      },
+      {
+        "name": "SheQuUserActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.74
+      },
+      {
+        "name": "ForgetPassWordActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.52
+      },
+      {
+        "name": "SqNoticeActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.14
+      },
+      {
+        "name": "TouGaoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.65
+      },
+      {
+        "name": "CommentNewsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.18
+      },
+      {
+        "name": "DetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.32
+      },
+      {
+        "name": "DetailVipVideoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.77
+      },
+      {
+        "name": "ImglookActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.81
+      },
+      {
+        "name": "ShequDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.4
+      },
+      {
+        "name": "ShortDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.78
+      },
+      {
+        "name": "CollectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.16
+      },
+      {
+        "name": "AppLockActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.48
+      },
+      {
+        "name": "PiankuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.44
+      },
+      {
+        "name": "PraviteActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.07
+      },
+      {
+        "name": "UserContractActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.64
+      },
+      {
+        "name": "BiaoQianListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.19
+      },
+      {
+        "name": "AdviceSuggestActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.2
+      },
+      {
+        "name": "ActivityPageActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.4
+      },
+      {
+        "name": "AdCenterAppActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.79
+      },
+      {
+        "name": "FocusUserListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.87
+      },
+      {
+        "name": "MessageCenterActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.74
+      },
+      {
+        "name": "MessageDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.89
+      },
+      {
+        "name": "NvYouActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.85
+      },
+      {
+        "name": "ContactActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.95
+      },
+      {
+        "name": "EditUserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.07
+      },
+      {
+        "name": "UserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.18
+      },
+      {
+        "name": "HistoryActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.78
+      },
+      {
+        "name": "LabelsSelectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.62
+      },
+      {
+        "name": "InviteListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.46
+      },
+      {
+        "name": "QiuPianActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.0
+      },
+      {
+        "name": "RankActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.16
+      },
+      {
+        "name": "SearchActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.15
+      },
+      {
+        "name": "WebViewActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.9
+      }
+    ]
+  },
+  "full_device_invocations": 43,
+  "full_device_tests": 47,
+  "first_run": {
+    "serial": "emulator-5580",
+    "mode": "synthetic-offline",
+    "apk_sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+    "cases": [
+      {
+        "name": "recovered-listener-defaults",
+        "passed": true,
+        "tests": 2,
+        "seconds": 4.85
+      },
+      {
+        "name": "media-and-api",
+        "passed": true,
+        "tests": 4,
+        "seconds": 4.26
+      },
+      {
+        "name": "five-tabs",
+        "passed": true,
+        "tests": 1,
+        "seconds": 27.65
+      },
+      {
+        "name": "playback",
+        "passed": true,
+        "tests": 1,
+        "seconds": 29.94
+      },
+      {
+        "name": "drawing-and-gestures",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.87
+      },
+      {
+        "name": "short-swipe",
+        "passed": false,
+        "tests": 0,
+        "seconds": 15.7
+      },
+      {
+        "name": "router-and-history",
+        "passed": true,
+        "tests": 1,
+        "seconds": 21.0
+      },
+      {
+        "name": "RegistActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.96
+      },
+      {
+        "name": "SettingActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.46
+      },
+      {
+        "name": "ShangwuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.87
+      },
+      {
+        "name": "SheQuUserActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.85
+      },
+      {
+        "name": "ForgetPassWordActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.6
+      },
+      {
+        "name": "SqNoticeActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.17
+      },
+      {
+        "name": "TouGaoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.56
+      },
+      {
+        "name": "CommentNewsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.14
+      },
+      {
+        "name": "DetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.66
+      },
+      {
+        "name": "DetailVipVideoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.32
+      },
+      {
+        "name": "ImglookActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.12
+      },
+      {
+        "name": "ShequDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.69
+      },
+      {
+        "name": "ShortDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 12.94
+      },
+      {
+        "name": "CollectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.47
+      },
+      {
+        "name": "AppLockActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.36
+      },
+      {
+        "name": "PiankuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.32
+      },
+      {
+        "name": "PraviteActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 20.17
+      },
+      {
+        "name": "UserContractActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 14.79
+      },
+      {
+        "name": "BiaoQianListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.02
+      },
+      {
+        "name": "AdviceSuggestActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.14
+      },
+      {
+        "name": "ActivityPageActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.65
+      },
+      {
+        "name": "AdCenterAppActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.43
+      },
+      {
+        "name": "FocusUserListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.81
+      },
+      {
+        "name": "MessageCenterActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.06
+      },
+      {
+        "name": "MessageDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.0
+      },
+      {
+        "name": "NvYouActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.05
+      },
+      {
+        "name": "ContactActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.65
+      },
+      {
+        "name": "EditUserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.57
+      },
+      {
+        "name": "UserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.19
+      },
+      {
+        "name": "HistoryActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.5
+      },
+      {
+        "name": "LabelsSelectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.97
+      },
+      {
+        "name": "InviteListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.36
+      },
+      {
+        "name": "QiuPianActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.36
+      },
+      {
+        "name": "RankActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.37
+      },
+      {
+        "name": "SearchActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.21
+      },
+      {
+        "name": "WebViewActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.38
+      }
+    ]
+  },
+  "webview_followup": {
+    "passed": 1,
+    "screenshot": ".local/migration/P0-device/webview-standalone-instrumentation.png",
+    "limitation": "Full-suite WebView frame showed an earlier player; root cause not established; standalone cold-process instrumentation shows actual about:blank WebView"
+  },
+  "apk_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes18.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "e2b0496e8599e2dbbb56a0b73a77c13e2dd216ef57e17d39a744762d09016746",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "actual_delivery_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "apk_sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "290f893164a5751003c190dd6c60e8c3afdadeb15500dd0b86800de87015a892",
+      "merged_manifest_activities": 53,
+      "missing_activities": [],
+      "resource_dump_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769",
+      "device_behavior_verified": false
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "apk_sha256": "e2b0496e8599e2dbbb56a0b73a77c13e2dd216ef57e17d39a744762d09016746",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\release\\processReleaseManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "f0dfb8c4dda7b6c5f1f3b86708a897e184659887a2ac180ad41c30815a7fbb89",
+      "merged_manifest_activities": 50,
+      "missing_activities": [],
+      "resource_dump_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2",
+      "device_behavior_verified": false
+    }
+  },
+  "release_isolation": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "runtime_graph_clean": true,
+    "merged_manifest_clean": true,
+    "dex_clean": true,
+    "resources_clean": true,
+    "release_facade_present": true,
+    "classes_checked": 19210
+  },
+  "lint": {
+    "same_rule_location_multiset": true,
+    "count": 16,
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "recovered_classes": [
+    {
+      "variant": "debug",
+      "recovered_dex": "classes18.dex",
+      "classes": 3158,
+      "sha256": "80b48ca8a335d3eccd8beb1428bef202c9639b24f5f8c113b25e41c35fb6a3c7",
+      "missing": [],
+      "extra": []
+    },
+    {
+      "variant": "release",
+      "recovered_dex": "classes5.dex",
+      "classes": 3158,
+      "sha256": "80b48ca8a335d3eccd8beb1428bef202c9639b24f5f8c113b25e41c35fb6a3c7",
+      "missing": [],
+      "extra": []
+    }
+  ],
+  "commands": [
+    {
+      "command": ".\\gradlew.bat :app:assembleDebug :app:testDebugUnitTest :app:assembleDebugAndroidTest -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/build-initial.log"
+    },
+    {
+      "command": ".\\gradlew.bat :app:assembleDebugAndroidTest -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/build-final-baseline-tests.log"
+    },
+    {
+      "command": ".\\gradlew.bat :app:assembleDebugAndroidTest :core:network-inspector:testDebugUnitTest :app:assembleRelease -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/build-release-and-tests.log"
+    },
+    {
+      "command": ".\\gradlew.bat :app:testDebugUnitTest --rerun :core:network-inspector:testDebugUnitTest --rerun -PresearchMode=offline --console=plain",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/host-tests.log"
+    },
+    {
+      "command": "adb -s emulator-5580 shell am instrument -w -e class com.mogu.research.CommentFilterBaselineTest com.amogu6.tv.research.test/androidx.test.runner.AndroidJUnitRunner",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/comment-filter-original-03.log"
+    },
+    {
+      "command": "python tools/run_device_validation.py --serial emulator-5580",
+      "exit_code": 1,
+      "log": ".local/migration/P0-device/device-full-01.log"
+    },
+    {
+      "command": "python tools/run_device_validation.py --serial emulator-5580",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/device-full-02.log"
+    },
+    {
+      "command": "adb -s emulator-5580 shell am instrument -w -e class com.mogu.research.BusinessUiTest#pageUnderTest -e route com.mogu.tv.ui.activity.WebViewActivity com.amogu6.tv.research.test/androidx.test.runner.AndroidJUnitRunner",
+      "exit_code": 0,
+      "log": ".local/migration/P0-device/webview-standalone-instrumentation.log"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": ".local/migration/P0-device/apk-debug.json",
+      "bytes": 809,
+      "sha256": "4de11bb640235083e78879306a31768aa92830776d2d108af9d75595917a08cb"
+    },
+    {
+      "path": ".local/migration/P0-device/apk-release.json",
+      "bytes": 531,
+      "sha256": "8910b7dcf049817e3ce61446f50d2df3f75fd0976dc0c5059710454c4f28a6a9"
+    },
+    {
+      "path": ".local/migration/P0-device/artifacts/app-debug-androidTest.apk",
+      "bytes": 519687,
+      "sha256": "3d8de643013e16629624c73096e7ad10f14cf3bdb6d9d39082ba9d7ce58af63f"
+    },
+    {
+      "path": ".local/migration/P0-device/artifacts/app-debug.apk",
+      "bytes": 25548474,
+      "sha256": "3a745152f7bc63dad9d998a366cc02c496b9ebb4fe4f94ea9994aea946326ab4"
+    },
+    {
+      "path": ".local/migration/P0-device/artifacts/app-release.apk",
+      "bytes": 14262505,
+      "sha256": "e2b0496e8599e2dbbb56a0b73a77c13e2dd216ef57e17d39a744762d09016746"
+    },
+    {
+      "path": ".local/migration/P0-device/artifacts/original-test-01.apk",
+      "bytes": 519643,
+      "sha256": "37a09fff5b042722268723df32659e06c6a1a33e1ffea85c9a702b50ee58f5f0"
+    },
+    {
+      "path": ".local/migration/P0-device/build-baseline-tests.log",
+      "bytes": 4842,
+      "sha256": "05b73aba41904d1646a2ebfbee46921fb8505b2438f51836276e64175cb53d67"
+    },
+    {
+      "path": ".local/migration/P0-device/build-final-baseline-tests.log",
+      "bytes": 4842,
+      "sha256": "46f662d6f8dc15551f7811826e60c9cadaea26333818b8af89d56a7935c8056b"
+    },
+    {
+      "path": ".local/migration/P0-device/build-initial.log",
+      "bytes": 6566,
+      "sha256": "3845e3d2aa6ecf93878631c2143e44b7c0c35a0a016dac047df2b00f8cdd9e2e"
+    },
+    {
+      "path": ".local/migration/P0-device/build-release-and-tests.log",
+      "bytes": 20358,
+      "sha256": "ecc7ff16fc41fd0e4b06b90bba903dcdd141ef5fd002575e6c7253b712ba2dca"
+    },
+    {
+      "path": ".local/migration/P0-device/cold-launch-start.txt",
+      "bytes": 219,
+      "sha256": "a38a56a3dd6067847423df465b1f77f480dc7e2279de74f68aa43eec180e0a24"
+    },
+    {
+      "path": ".local/migration/P0-device/cold-launch-window.txt",
+      "bytes": 52059,
+      "sha256": "2fa976e460f1078134e80cd3a0f6c5d385b237bb031db922f357bce12751584d"
+    },
+    {
+      "path": ".local/migration/P0-device/cold-launch.png",
+      "bytes": 221303,
+      "sha256": "b7a88530e1e42ed3b9a5f061c99bb40a2faa0dae5a8018b44c6db07f55c5276c"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-callers.json",
+      "bytes": 1286,
+      "sha256": "6f84abc375ff7b8000d5ad808f4f424c8b9c1d7f2a2791ca43da30da83da1401"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-observations-02.json",
+      "bytes": 1177,
+      "sha256": "005459c8b1e2aac2baca6feafa308b0105585040cd356f08b6a18f8590150e8f"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-observations-03.json",
+      "bytes": 1203,
+      "sha256": "cd7bff63e0a183001d6f4719bc3213cfe21c70e616d2e6de6e3746ce82db629f"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-original-01.log",
+      "bytes": 1028,
+      "sha256": "4c1c83bfede1289e0336b43dc9ea87befbf1d7ba55a8dc6c4ca27037e46f4536"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-original-02.log",
+      "bytes": 1016,
+      "sha256": "31fc4ba652ff49e26fb5884c21422edc31ea4e05f07cc42b2d144f2758c31cc6"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-original-03.log",
+      "bytes": 89,
+      "sha256": "bc5cc1d02dd837e1cee0d2f9a014a85fdbdf355373b374dc9e9a48c780522882"
+    },
+    {
+      "path": ".local/migration/P0-device/comment-filter-references.txt",
+      "bytes": 4819,
+      "sha256": "dde89f31622c2ccba7d50a62fe811fbb5c455262a668149e24a42ffaa4a17192"
+    },
+    {
+      "path": ".local/migration/P0-device/delivery-debug.json",
+      "bytes": 670,
+      "sha256": "70f068ebde675a9f42d237f4f0509f403ab25bd3068086cb6f36b8804278d256"
+    },
+    {
+      "path": ".local/migration/P0-device/delivery-debug.resources.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P0-device/delivery-release.json",
+      "bytes": 678,
+      "sha256": "dd8ccf566fb662ccec2070ba14ea100d2bab6d7459e17cd3e22df61a1b7004b3"
+    },
+    {
+      "path": ".local/migration/P0-device/delivery-release.resources.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P0-device/device-full-01.json",
+      "bytes": 5171,
+      "sha256": "ad62b8aed65a89583268069369f174e5189548594f954b3444ab97e88f875347"
+    },
+    {
+      "path": ".local/migration/P0-device/device-full-01.log",
+      "bytes": 1357,
+      "sha256": "53600c1bc1da55239a99cb53b33a4423756c49dcc07a089967327d323b48e757"
+    },
+    {
+      "path": ".local/migration/P0-device/device-full-02.json",
+      "bytes": 5152,
+      "sha256": "6ef860419a7f54dcec44537581dce65620f168244ae0b450fc0ac6459337a8dd"
+    },
+    {
+      "path": ".local/migration/P0-device/device-full-02.log",
+      "bytes": 1326,
+      "sha256": "f6ab7919940dda68c8e517f28fe77e758b94878d96011a25cb20ff844512198d"
+    },
+    {
+      "path": ".local/migration/P0-device/device-timezone.txt",
+      "bytes": 5,
+      "sha256": "b580e0caef5b80ee677731db1e8b341cfec7e5b67abc3f13fcfb85d8a94926af"
+    },
+    {
+      "path": ".local/migration/P0-device/emulator-error.log",
+      "bytes": 62,
+      "sha256": "d3b2f52872c1662733821a5f2a69601ac00fc63dc4a0849d35599c163cf4d5e8"
+    },
+    {
+      "path": ".local/migration/P0-device/emulator-out.log",
+      "bytes": 11727,
+      "sha256": "6520e63470eba89e2ee36950037351712638ff00f23984679d5df01e14e9f464"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-contact.png",
+      "bytes": 893110,
+      "sha256": "3fdd9a1a381e84c896a63e560ee1d824742d67c08643355a0c298eccb785f8e9"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ActivityPageActivity.txt",
+      "bytes": 241,
+      "sha256": "33e808916f4cdabad9bd6f1a0d93594402a5864a92116e8020207922ea8a8e5d"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/AdCenterAppActivity.txt",
+      "bytes": 241,
+      "sha256": "cc439ab05503b6b29fcf72863ead0dc99c5dd8750bf7d88b99914499b0671d11"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/AdviceSuggestActivity.txt",
+      "bytes": 241,
+      "sha256": "c47bfbfba88e1f76a980318e5beafd76a4fee9a1d74417b1667f1e8cccd212b9"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/AppLockActivity.txt",
+      "bytes": 241,
+      "sha256": "d3256bcf23c54c1e843d846c05fc66be932f12934813d29c6a2be72da64a61e5"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/BiaoQianListActivity.txt",
+      "bytes": 241,
+      "sha256": "32e76e82fcead6f7bea35cdfc07a3571f4d3d3fba9b44ba7b982b52e280922fe"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/CollectActivity.txt",
+      "bytes": 241,
+      "sha256": "1ac9392943368dd04264902e46735cdbf27f2d05a90aa72c5617a077fc03bd5d"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/CommentNewsActivity.txt",
+      "bytes": 241,
+      "sha256": "c302be4180d6d5b20042c15f77a1e0a90a5185b9f871c172c113886939ad9108"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ContactActivity.txt",
+      "bytes": 241,
+      "sha256": "b69de3d56670ec1ed897951bc3e940303537be10b22dbe4086a8384d53a6e127"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/DetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "a69e7e9abc927623dbce8067b1d788792467c27c55e4d1216f981c4f63f7fea7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/DetailVipVideoActivity.txt",
+      "bytes": 241,
+      "sha256": "59bb4a113f22b410ac9c705a923929d6313be3c95386bbecdf870407af6832b7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/drawing-and-gestures.txt",
+      "bytes": 80,
+      "sha256": "f82b9d5d60d3765e658e7e3afcc0f377040cf82c3e747971de2e3e1171c296c9"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/EditUserInfoActivity.txt",
+      "bytes": 241,
+      "sha256": "3daa6cfb6c02d8385e91cbb8c3f18eed06fc0657a36078775d440294056aaa65"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/five-tabs.txt",
+      "bytes": 242,
+      "sha256": "dbb218c953a13a71a6e7781d7293ec363f418e6dfe65e11f0540aa06326c74f3"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/FocusUserListActivity.txt",
+      "bytes": 241,
+      "sha256": "2abd7dabcc6b288efa1d2a64d8315acd7cb0faf8b19b495c8ac85bc265570eee"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ForgetPassWordActivity.txt",
+      "bytes": 241,
+      "sha256": "048d055ae3a8fb37b3c730489cdbf19557e1505067661a8b9d52f7afe8ec3509"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/HistoryActivity.txt",
+      "bytes": 241,
+      "sha256": "1677706c5c7f71460bb0b223d45bd5a01b4401e348338f240ce22cb3a3eec972"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ImglookActivity.txt",
+      "bytes": 241,
+      "sha256": "f16f62392958d942863b0366a60bb241d83cf9f47bb2a5052e31c91dbe910fa0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/InviteListActivity.txt",
+      "bytes": 241,
+      "sha256": "1b488513fbada3cb2de62d332b587ea4e022e40da714c0a0cc74d2ef21651187"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/LabelsSelectActivity.txt",
+      "bytes": 241,
+      "sha256": "a559aa7cf09e739b82f99591f89909e126632e824af03fa913bdda80fc7b8f89"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/media-and-api.txt",
+      "bytes": 88,
+      "sha256": "cac3cee75d450f18c81e92b47baa34f4fa04c17e36b2c7f0d7530df81bc3263e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/MessageCenterActivity.txt",
+      "bytes": 241,
+      "sha256": "247136ff89b57840bfd89de6f3759459bb2b4a50c189bbd9f9596335ad2f3a1c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/MessageDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "e377cbb064f5a67511d0f494eeccef5ae38cb1f27b7d04483fe0e7e12b22e0b7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/NvYouActivity.txt",
+      "bytes": 241,
+      "sha256": "cdaf3cfec3c3d5a7967db84190e0134d30d5d2316d89538a7d25b5b2eb734e43"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/PiankuActivity.txt",
+      "bytes": 241,
+      "sha256": "384bc0dd47b5ddc9a36993ba068bb44ee07e02a60733b3e24ca1f3971a50fc8b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/playback.txt",
+      "bytes": 241,
+      "sha256": "7d8c2cd56a06a1be094a5affd3ce3f297cdefe197c60d99bcebf58c4926c634f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/PraviteActivity.txt",
+      "bytes": 242,
+      "sha256": "2eb5a3d3ee63b904264ef0efbd53863bef48d87e40f134dc894ea93b94ca3150"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/QiuPianActivity.txt",
+      "bytes": 241,
+      "sha256": "05a5869c0bc2c227637d8b68302bd8384a764c123e36713f727426339b3e2eb5"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/RankActivity.txt",
+      "bytes": 241,
+      "sha256": "1d40042a29556e4c68d7b5703e947530df90d0377d5768ea20c260ec35cae3d9"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/recovered-listener-defaults.txt",
+      "bytes": 96,
+      "sha256": "2f9ea17c377240c86e30dee55d0cb54bae88127c9426f27a4e74b1c5cb5657eb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/RegistActivity.txt",
+      "bytes": 241,
+      "sha256": "fa960105b7890e20deb98c1a11003fdf667ae81b08950d77b68cb2b59a56b1e4"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/router-and-history.txt",
+      "bytes": 242,
+      "sha256": "95bcfd934abcdb748477f692b4ec72adb197fd2e232a29a857bcbce80b0c2e9d"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/SearchActivity.txt",
+      "bytes": 241,
+      "sha256": "45f239a0dc3cd74ef52b7bac6af34b8717cbb5759a62cf0cc8f306973c9cde05"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/SettingActivity.txt",
+      "bytes": 241,
+      "sha256": "d4d170ac5574ac751d583d2d032b695fc989b83fec31d200738ed940357f5237"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ShangwuActivity.txt",
+      "bytes": 240,
+      "sha256": "56673d7707d0e1224c00dcf058ca80e66f3b3964cbac2eb2c0ad75dbe3aeae66"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ShequDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "e77cebfd1109d29825effc30c30be82b366121235b7a32280e48e31afa56f9ac"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/SheQuUserActivity.txt",
+      "bytes": 241,
+      "sha256": "8a0ba1fd870c4bd3be46a042c766179b489c69c520b9670797eb87c2803400e2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/short-swipe.txt",
+      "bytes": 2820,
+      "sha256": "31dd4fdcc2aca6ab4398bd17c06997aef8231311690cf44d6e553024b2e733a2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/ShortDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "627000947d05737517b25693d76a95aa875c1312fd181bb4fcc2bfbd46176f0a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/SqNoticeActivity.txt",
+      "bytes": 241,
+      "sha256": "523eb7de9a770cb8c766b8671298279e0949a1616a530c9afad3da7c23b48971"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/TouGaoActivity.txt",
+      "bytes": 241,
+      "sha256": "8fb1ee3244ee84f88d3f2fd770fa0c539c30c408e4660f9c1a1ab818a230d30f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/UserContractActivity.txt",
+      "bytes": 241,
+      "sha256": "1fd883d72e9eb462a0d5f46113e84ce6a6bb0ee0373c7585df84d99cd63d964f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/UserInfoActivity.txt",
+      "bytes": 241,
+      "sha256": "be4517560e632b792360665769335cb8f77de0c8df687821bd4f870d73e99406"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-logs/WebViewActivity.txt",
+      "bytes": 241,
+      "sha256": "f80cc025361b4fc3c7150eec827c2692fb8deeb1e74e4fb1da9c4920910e3e8e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/comment-filter-observations.json",
+      "bytes": 1046,
+      "sha256": "39cce6bc79670ec405dd51a64b5aff41b87c74c5f5793b6bb3997d1068c1ed6f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/flow-router-details.png",
+      "bytes": 100739,
+      "sha256": "719e7be37860482e6238e805cfab312af165aba82a3db1ae36f0960e5effc397"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ActivityPageActivity.png",
+      "bytes": 31319,
+      "sha256": "74191b16ab29485a2850ac5d736a3564bb087a8f666bc84e50f1c5ef09da86b6"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-AdCenterAppActivity.png",
+      "bytes": 28809,
+      "sha256": "8e452d2500c6e8d5cf9820657b80901d655e1c36a2375dafeed65ee09932ff13"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-AdviceSuggestActivity.png",
+      "bytes": 88843,
+      "sha256": "098c875bd7abc304faf45d949900bdcad2afa398c6838ef389bf9507be351b17"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-AppLockActivity.png",
+      "bytes": 48985,
+      "sha256": "15f8969cb4a51b526b1ca289211c4bfdf7b7728f62c7c6835f464e15599f0334"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-BiaoQianListActivity.png",
+      "bytes": 218852,
+      "sha256": "14a34ad0e7dacdd865c1955028e0f2e1a620a5fd05a5df66d030cb079069683b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-CollectActivity.png",
+      "bytes": 32741,
+      "sha256": "c6e166c88494f26a1962154b12f9c7d6e5f368964cce6bfea6a71017147e4578"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-CommentNewsActivity.png",
+      "bytes": 967415,
+      "sha256": "03d0a1ca1832dd67a581e634b682e2321ea1050c69c193c795d056f4c2516675"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ContactActivity.png",
+      "bytes": 99607,
+      "sha256": "af150149ec72abdef3b6595695434411d7f5bee2355d7e5d358a077f9e73e3d2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-DetailsActivity.png",
+      "bytes": 176364,
+      "sha256": "5a59a3eae04c11781d58947d9cec33c4f150e0565d58446129f06caf1a65e37b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-DetailVipVideoActivity.png",
+      "bytes": 211727,
+      "sha256": "f64bba7dd5cd00c88e32a6d95870ce4907ae92f576e493cfd69ffb8cec36a9ee"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-EditUserInfoActivity.png",
+      "bytes": 65922,
+      "sha256": "1058e684bf446bdbd16d90bb99f207caac5f2f8ff0331d2d03ab26529ff2ca6c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-FocusUserListActivity.png",
+      "bytes": 31264,
+      "sha256": "84ec8ee38137594812709f5dbf7b64cc9d5eb6e66ce78123e69fb9131b4b4fc0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ForgetPassWordActivity.png",
+      "bytes": 96163,
+      "sha256": "291cdeb91b68657cf74ee8c6ff8ca6b69e31a89e56e7c3dcc12d48ee23fa1f40"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-HistoryActivity.png",
+      "bytes": 97395,
+      "sha256": "325c4b1c24a3910bbbd3b553ae08455ff117bb8ccd19225cb3f39f033a978827"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ImglookActivity.png",
+      "bytes": 144209,
+      "sha256": "ac0c634c655bc863bbf24ebb1a661192772b85f8a55f89ea0981c23019f5cf71"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-InviteListActivity.png",
+      "bytes": 36880,
+      "sha256": "70a33f2f213e06afc5835e99fab454d696eca8c504808b3302bc1f9c75723df2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-LabelsSelectActivity.png",
+      "bytes": 45526,
+      "sha256": "70e392445a1fe05a25f695b6f68362c13802c7768ebd1cf435442120f7fb6d2e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-MessageCenterActivity.png",
+      "bytes": 50798,
+      "sha256": "e87a0c9a4ed15566d0fcdf3a0e44c904fe519299ebc396f6c2c066818c4e836d"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-MessageDetailsActivity.png",
+      "bytes": 73479,
+      "sha256": "eba84a062b58ad719d1bbb7c43f55ba2e5c7f6e26afec46f9936ba8e121f7ab0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-NvYouActivity.png",
+      "bytes": 63467,
+      "sha256": "806fbd5e0416c88ebf614e77e70b7dc5e8cd5c517d900742aca6c7889c0aaf5a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-PiankuActivity.png",
+      "bytes": 176396,
+      "sha256": "54f3649dd6a83fc6bc6fdbb79b9131f8f3bfe4ac2fb23f81a1265d09b24914d2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-PraviteActivity.png",
+      "bytes": 551152,
+      "sha256": "9120592b122febcd061fcd3d4a349dc4687b292d295afa4cb5cb95920e8142a5"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-QiuPianActivity.png",
+      "bytes": 60507,
+      "sha256": "ee2c2e0919983b51c610a1d2693eb0247b5993796699e0143a6adca3f4336cd4"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-RankActivity.png",
+      "bytes": 194758,
+      "sha256": "2b415a031db110e70f2601aba72e35d7739e1cfbced56d8e23a746a9e25ecdb1"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-RegistActivity.png",
+      "bytes": 81773,
+      "sha256": "3bce8b1f7cc98f78b02866cfc88df6dbf82c1ab43806db4bae28d653dca8a682"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-SearchActivity.png",
+      "bytes": 88770,
+      "sha256": "fcbba602a9e2e52ecc62c29bd28e5e5d0d3ade2673db3ddd8ab0a4772683f4cd"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-SettingActivity.png",
+      "bytes": 112184,
+      "sha256": "3fd5b3d218b1d11a85bfc5fafff138fe1d0c1f7f88a59168f22539504a9c2ca4"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ShangwuActivity.png",
+      "bytes": 363079,
+      "sha256": "d101db0c2119b43073f5ca6792c3b7e5b6644ed45eaa4f7b7063976bc60ca349"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ShequDetailsActivity.png",
+      "bytes": 250136,
+      "sha256": "48beac6fb811b0314993450a5826e0e1c6f4ed6933f83cd4abfda702604b00ac"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-SheQuUserActivity.png",
+      "bytes": 188180,
+      "sha256": "a7024495492e4076924c35b73bd666062084d8200b64edc9d5181e5186f7efa4"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-ShortDetailsActivity.png",
+      "bytes": 72050,
+      "sha256": "eae1e4796f8841f58cd8c9a31e9191f2799f1a7d77ae9ab63030021b56099494"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-SqNoticeActivity.png",
+      "bytes": 60114,
+      "sha256": "578188ba9869c093c4d330386c533d9a9d9f870a8d8cf4d9cb50044cfd5f70b8"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-TouGaoActivity.png",
+      "bytes": 193164,
+      "sha256": "2775cc497fd3c4429f380ebe005d4e26d4c4b740ed398d6b680b54958498d123"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-UserContractActivity.png",
+      "bytes": 561335,
+      "sha256": "2647daca74e35eb9a51d0d8688af951f17f2886c2a2a5cd076ca2e7665a696ee"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-UserInfoActivity.png",
+      "bytes": 307579,
+      "sha256": "9c3377437ffa64b44fa924a83c07633b983bb622b53904019dee10772af33dbe"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/page-WebViewActivity.png",
+      "bytes": 25467,
+      "sha256": "f4e9ea32c8d846a7fdec1ce06a89a98b722fe10163c7f7eb12f6abb180c9d74c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/playback-1001.png",
+      "bytes": 196726,
+      "sha256": "f4b4c242144bb56da7540ef2d69c965ac9e41794a0ab9cda024cf73e44527dd6"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/playback-1002.png",
+      "bytes": 198898,
+      "sha256": "54aa6d85847f94e1d140f3a84a467925adfad11c887b4103c8409bdf8599b732"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/tab-0-HomeFragment.png",
+      "bytes": 155037,
+      "sha256": "99847ed9bbf78df228ce394dd7a40347980a95d12ba9f9546467e8b76dc31919"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/tab-1-ShortIndexFragment.png",
+      "bytes": 103011,
+      "sha256": "ff4e5919b4d8f5ed72147f848033b609f9f38ebf487316ff562f36ef42b773a4"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/tab-2-JpHomeFragment.png",
+      "bytes": 188365,
+      "sha256": "cc8ccbc669cae435cc813f91d04c14be40a41d414659a98fddfb470e7f3296bc"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/tab-3-ShequFragment.png",
+      "bytes": 172859,
+      "sha256": "da1b261344814c4cb4e998708ee558bd9383825660ab6255901da59263b4bca1"
+    },
+    {
+      "path": ".local/migration/P0-device/full-01-screenshots/validation/tab-4-MineFragment.png",
+      "bytes": 144989,
+      "sha256": "c77301a6bd2c9529078756852f450c8d975791eaa41fa5608dd237161fa75ec7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-contact.png",
+      "bytes": 1008438,
+      "sha256": "8cb71349cba780bdefb9ca81c021f47a5021b6c9d6a8bc4e679fab3d10116f87"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ActivityPageActivity.txt",
+      "bytes": 239,
+      "sha256": "72ce8737e2ed53db9b18ad272a6d84b20e5a7b5272bf43e8628bdbd5cdebda09"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/AdCenterAppActivity.txt",
+      "bytes": 241,
+      "sha256": "923c9131cd5fdf528316a526b6acdbc5baf82ad1742e01c6d4bbd51fc79ea40b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/AdviceSuggestActivity.txt",
+      "bytes": 241,
+      "sha256": "4ff94170b7ec5d73707f03e2242d12bce78c78448213ffd8eda9ad8d0644a1ab"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/AppLockActivity.txt",
+      "bytes": 241,
+      "sha256": "30d9bf65b1722faf933060c85646630c06bba08ef278ab0ccc152dc9359154fb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/BiaoQianListActivity.txt",
+      "bytes": 241,
+      "sha256": "1e591c69a441bf176e8d0e5a3f6cd7a9172c9e916a09ba844850d3f306250d87"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/CollectActivity.txt",
+      "bytes": 241,
+      "sha256": "570a94aa7550a8bf9e56274bd6e80f94af33a4d37d2f686714a55508c632d35c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/CommentNewsActivity.txt",
+      "bytes": 241,
+      "sha256": "f8eac0ea0bf7c17116cb128ca39135afd8047b7c6ab3b6c8e6b3ea3f5951ce07"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ContactActivity.txt",
+      "bytes": 241,
+      "sha256": "b6f74e53597317bdf18812800f2c044ad1f9f3049a65b516044bb7ff8de508f8"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/DetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "9c9350cce6c708c1df7318d185f21cf0153bdd71363a6fd7fc331085e8dc61fe"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/DetailVipVideoActivity.txt",
+      "bytes": 241,
+      "sha256": "b6090f24878972e7dd3fd39203df4a06b07226803eaf61fdef9791e6ef0f4e03"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/drawing-and-gestures.txt",
+      "bytes": 80,
+      "sha256": "7df56e24fb1e5eef6340e91dd386b9caee0af3fe4eec87e8ff22a5ef022de0a3"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/EditUserInfoActivity.txt",
+      "bytes": 241,
+      "sha256": "7ddab030ad0ed2f6e7c756a4f9b60d5c71aedfefb228c029057cd6c1ea12e860"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/five-tabs.txt",
+      "bytes": 242,
+      "sha256": "5b47ab12997a74ff7f65d358b0bca772dd882c9b31f2046fbc6fc358cae25020"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/FocusUserListActivity.txt",
+      "bytes": 241,
+      "sha256": "2394138a58c9d1f6e795f292c1ebff186a1bb4f115acae2da062efbfb6b2009e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ForgetPassWordActivity.txt",
+      "bytes": 241,
+      "sha256": "749983799eeaa01ce809a70c05062f2222dba15bebf6c52e9529812c5a7a5503"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/HistoryActivity.txt",
+      "bytes": 241,
+      "sha256": "e9b1574e4e9b3b588761d33b6ddb6591188196c6aa3b353248c48a389cd9358a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ImglookActivity.txt",
+      "bytes": 241,
+      "sha256": "506e60a1ef461fd6bb7321ed3329dc0d9ce24c2858f1219443a6f454601e0a83"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/InviteListActivity.txt",
+      "bytes": 241,
+      "sha256": "d43a92de8e052e51c0fdb4392d7fd4808e19a860036d4b99bdf88138b24a7e3b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/LabelsSelectActivity.txt",
+      "bytes": 241,
+      "sha256": "eb9c938156525a14e8802f6e0bcf4973ef7bea45c0f932d0710ef7535ed166c5"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/media-and-api.txt",
+      "bytes": 88,
+      "sha256": "4553cd9b67b2d324879945cadd45846f9dd477ed0a7fac39da18d2d44118f8e0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/MessageCenterActivity.txt",
+      "bytes": 241,
+      "sha256": "749983799eeaa01ce809a70c05062f2222dba15bebf6c52e9529812c5a7a5503"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/MessageDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "5cc3e886a1305745dba62d31c7a20e73dbcbea3ca91542b8e23e3eeb4b2552b7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/NvYouActivity.txt",
+      "bytes": 241,
+      "sha256": "2022d8eacd18b6a7c13b46a4db2d625a3ad1165bbfb62789a93ad673d7842aa3"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/PiankuActivity.txt",
+      "bytes": 241,
+      "sha256": "4b284b4f15f8f034375750e2263d1c6d0d5d0192b3f2086c4a0c0bdffce5ca82"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/playback.txt",
+      "bytes": 242,
+      "sha256": "3341f6157f116c5aee9daa67bf1200ce4b83ddd9188409b008fca3ad1f932e3f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/PraviteActivity.txt",
+      "bytes": 241,
+      "sha256": "30dbcb8d446053d143688a792ab5bf4c9f11754614c47d2ab39dea7c3329cb8e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/QiuPianActivity.txt",
+      "bytes": 241,
+      "sha256": "74d86533e3feacf9738d1f547165f7cc0929b84071f4cb7034c5765ba587649b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/RankActivity.txt",
+      "bytes": 241,
+      "sha256": "ebbfa931849e13f7440d86f9c72fb0f24e3be809cf0b4d401053360f09593282"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/recovered-listener-defaults.txt",
+      "bytes": 96,
+      "sha256": "2f9ea17c377240c86e30dee55d0cb54bae88127c9426f27a4e74b1c5cb5657eb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/RegistActivity.txt",
+      "bytes": 240,
+      "sha256": "c7fb2bbf0ec3a34e984434f44580241f5b4d7755ade951b76fd0a950268beb1e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/router-and-history.txt",
+      "bytes": 242,
+      "sha256": "61c6ff6c2a6b11a4e227927528815cf26f5edd580be490424b1cffaf22d87377"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/SearchActivity.txt",
+      "bytes": 241,
+      "sha256": "9f4aaedf57be1143bc9fd36f0685154e1b6d88f2325da04e5810e1272584911e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/SettingActivity.txt",
+      "bytes": 241,
+      "sha256": "81e15a33e8a7afbe6d6647fa7ebd840f4bdbf45c3e5d55efd6bb86b70c2264ac"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ShangwuActivity.txt",
+      "bytes": 240,
+      "sha256": "e9e69b3fac209c046be9d9399f732b62f45ba60d6e6f378c168befc6e85c35eb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ShequDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "d7d14b4cd4be2579d62ac6f49cb930bc0e102ce004e86ca6e30153878bad0fe2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/SheQuUserActivity.txt",
+      "bytes": 241,
+      "sha256": "1e591c69a441bf176e8d0e5a3f6cd7a9172c9e916a09ba844850d3f306250d87"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/short-swipe.txt",
+      "bytes": 242,
+      "sha256": "bd107026406bb3adb85af975cd94ed083b5f739aed91022c9aaa60fba038040a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/ShortDetailsActivity.txt",
+      "bytes": 240,
+      "sha256": "562f1d3caf5a5a5f5c7c37613277ca9ffc6bb44719716ec7dc5e3b5ac99e3ee7"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/SqNoticeActivity.txt",
+      "bytes": 241,
+      "sha256": "2879924d36e7ce1cd2ed5255dc6fc6af7386898869cb7d30d95e23d07a96ffe3"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/TouGaoActivity.txt",
+      "bytes": 241,
+      "sha256": "01c7ceb6860471307d288f056b2e41c29a0434296aa9bc446347b147d795434e"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/UserContractActivity.txt",
+      "bytes": 241,
+      "sha256": "dea1ee065f3510a6b70c0f638f53543e5e1f0f3417e396c7e8360178a4701bbd"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/UserInfoActivity.txt",
+      "bytes": 240,
+      "sha256": "934e6b4e56a5fc1c61635e988a95ca75355eae3f460a2b44b7f56c05c94a856a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-logs/WebViewActivity.txt",
+      "bytes": 241,
+      "sha256": "0561ab6d3dd965fe5a997dc046ca283b6da824a042c68c5a0c7045d9140ae529"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/comment-filter-observations.json",
+      "bytes": 1203,
+      "sha256": "cd7bff63e0a183001d6f4719bc3213cfe21c70e616d2e6de6e3746ce82db629f"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/flow-router-details.png",
+      "bytes": 127372,
+      "sha256": "a9df72b1f284f35a33da3c712f923d7b96cfe50310173dbc1098314f46392762"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ActivityPageActivity.png",
+      "bytes": 30603,
+      "sha256": "66a564f0c1b239f6130c8884a3d51566f85a5699f469e0ed9f0d711f2541c949"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-AdCenterAppActivity.png",
+      "bytes": 28210,
+      "sha256": "8602b8952b7742c039bf5bfc839cb7fa717d302677d536f9409d8420039fb7c8"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-AdviceSuggestActivity.png",
+      "bytes": 88243,
+      "sha256": "4576e8f91b156a32c65875acfab62c153065561d6a044f72de1f5c075b29b28c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-AppLockActivity.png",
+      "bytes": 49533,
+      "sha256": "24ff478dbd666db7ed761cec1534992a91bef271b967915711c1594d6acdb4ba"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-BiaoQianListActivity.png",
+      "bytes": 234633,
+      "sha256": "6bf897c5f6c3d11477f704f478e5b271788ab45cb13170cf06938f8fe3ff077b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-CollectActivity.png",
+      "bytes": 33233,
+      "sha256": "c38a130b9340c0311dbcd5711e99b4c14fdec18343ac2341f34ede95f8079688"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-CommentNewsActivity.png",
+      "bytes": 967580,
+      "sha256": "d9226268322953a91417af6af765138da87520395800c426cc576383b998d749"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ContactActivity.png",
+      "bytes": 99869,
+      "sha256": "335dc07b14d5d459319c20505d8aad6018ba73f810f5a0b8f50898f35a20677b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-DetailsActivity.png",
+      "bytes": 176804,
+      "sha256": "1147bedeae41372e8fb607e6179d75b61158e48bb32a860ad55219c73b6690a5"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-DetailVipVideoActivity.png",
+      "bytes": 211809,
+      "sha256": "838f06a1e60a6999aa68802f87c5e94a8cf31b04f873d22c7c93a04f8be6a541"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-EditUserInfoActivity.png",
+      "bytes": 66172,
+      "sha256": "558d90417ef7b05d08ad97178f906b6a5ec4538ddab8d5e2490607c7df87e69a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-FocusUserListActivity.png",
+      "bytes": 30673,
+      "sha256": "76ce0b42973a66e38ff1c5f3e028abbb6e02938fe818aa87ca97297e0db9c56b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ForgetPassWordActivity.png",
+      "bytes": 113245,
+      "sha256": "9991192efc332c10d65b8680b26410c465e3a7a8844df71a5d121f569c1d3965"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-HistoryActivity.png",
+      "bytes": 97886,
+      "sha256": "66d09efbc30a94a2c50f2194174378773611ee2727adc8c5bdd466c4e1a23ba0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ImglookActivity.png",
+      "bytes": 144209,
+      "sha256": "ac0c634c655bc863bbf24ebb1a661192772b85f8a55f89ea0981c23019f5cf71"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-InviteListActivity.png",
+      "bytes": 35494,
+      "sha256": "4c3a44f62e5533f91c708bd9a91746d7e31a25f45f58ab1586717fd1a51af517"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-LabelsSelectActivity.png",
+      "bytes": 45942,
+      "sha256": "56fe93dd6efcc8e1ca64add4fb5c6c83f1fd26b37e81ffedd4c1a35f411633eb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-MessageCenterActivity.png",
+      "bytes": 50199,
+      "sha256": "f102ea3495a01df47e6fb5e47ee66a3da74a426f9a62e80fd7ff7684b1360e20"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-MessageDetailsActivity.png",
+      "bytes": 73707,
+      "sha256": "3fc4b5b61c96c4c8d375211dc7c1f79b5dc51f5f1b2a32195094bb3a9d7a711c"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-NvYouActivity.png",
+      "bytes": 63707,
+      "sha256": "390c3f58087655420f15c32e6aec027acfee41ee088521136461765ace1a474a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-PiankuActivity.png",
+      "bytes": 191073,
+      "sha256": "f0e221de1d14c28c05166cff977831a6b3b1d0c7dd843353603645840ceedefd"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-PraviteActivity.png",
+      "bytes": 550598,
+      "sha256": "5397ee7bfe7d64762cabf59ebcab79fd11e84bc4fc475440bf8dc55cfda4cddc"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-QiuPianActivity.png",
+      "bytes": 60545,
+      "sha256": "07f674caf789f97ff05f055a240f52bef8a6e2641586a935e44f6d0ae3f359af"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-RankActivity.png",
+      "bytes": 180261,
+      "sha256": "c2758361099e7f270bc029608814c89679890ffcd035d8d12dfaece85cc0ffde"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-RegistActivity.png",
+      "bytes": 89287,
+      "sha256": "36882eb78886fe77544f2dc08e302ff3074d048869e9a7df5fa6b81cedae667b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-SearchActivity.png",
+      "bytes": 154753,
+      "sha256": "1a8f58c81d4cf96fa9047298210bd7a5b0cbe7ac333a9b5f0f35c752e2a4e9dc"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-SettingActivity.png",
+      "bytes": 119162,
+      "sha256": "7d1ab9a265a4bf79a10ec0589cd96f39e85d4cd2aff248e040b68af23d1b7362"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ShangwuActivity.png",
+      "bytes": 585683,
+      "sha256": "87297f289ca66ccf055ba3d30d22516fd05f62c3d8124535e9917e011ad7280a"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ShequDetailsActivity.png",
+      "bytes": 250597,
+      "sha256": "10143cbc2e98220c4ae16158c1900246f480a612d7014317f68c21f75b2d7846"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-SheQuUserActivity.png",
+      "bytes": 261831,
+      "sha256": "323d4e0771a4ee83dd5aac9b58f2dac516f159f74bdb245250a84f57e80f38f2"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-ShortDetailsActivity.png",
+      "bytes": 184941,
+      "sha256": "52077ac8090fafd19738be53e081ff2018896d17aed4814463d72258c71a0740"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-SqNoticeActivity.png",
+      "bytes": 41598,
+      "sha256": "3a234f3cbb965678e217cc29c141b6b1acb10daec7cc945ff00358640b298bff"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-TouGaoActivity.png",
+      "bytes": 193721,
+      "sha256": "c9a5384ff1146a5adf25a20b5d4533b219d771d67fe2c4986cd89ec76bbfeb97"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-UserContractActivity.png",
+      "bytes": 560700,
+      "sha256": "9e4159aff071174b480e0ab10962eea4d0163026f21f1de79d70a7940c6254cf"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-UserInfoActivity.png",
+      "bytes": 307973,
+      "sha256": "f1ceb63e3d4b513176122ca3736be61f6e4f10f563e15298e1a1bd489bcd8ce1"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/page-WebViewActivity.png",
+      "bytes": 25089,
+      "sha256": "741d54b5c0139d59716991f19796b10cd1d4c09b5d79265f8539d22497558ccb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/playback-1001.png",
+      "bytes": 260312,
+      "sha256": "5ff40c2c09f2bf887a7dc6d161e2fca6e3f87099b8ecef91f4dbf8721c95a9fb"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/playback-1002.png",
+      "bytes": 260641,
+      "sha256": "a8c72161b2c352c50d8c02d2ec99df7a2c7af8deaede96b94c1ee22ad241cbd0"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/short-swipe.png",
+      "bytes": 236109,
+      "sha256": "6815b51e84caf9713b8338c0fba7a721d3869904bb397ecfeb6086165453203b"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/tab-0-HomeFragment.png",
+      "bytes": 183982,
+      "sha256": "bfc38c99d77ceafb36bd9816ffe5c9b4d1580d6c844e4f35343c8874d2c0a6b9"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/tab-1-ShortIndexFragment.png",
+      "bytes": 240755,
+      "sha256": "6be26e53c6287bb5289ebe233b0261103b7a8728baa82dcb6198e518e85825de"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/tab-2-JpHomeFragment.png",
+      "bytes": 244766,
+      "sha256": "bae4064f39657e571379832d1d092cbe49540fbeb09c2f768720523b47962bab"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/tab-3-ShequFragment.png",
+      "bytes": 216534,
+      "sha256": "b62f51c36f082cb65a42b3d22307f10ba394c922fed8e266e3c9f31dad043cf6"
+    },
+    {
+      "path": ".local/migration/P0-device/full-02-screenshots/validation/tab-4-MineFragment.png",
+      "bytes": 210864,
+      "sha256": "617a56af0aeb7bd19778e4a28ff350529ac27f1f663bf26fa9774fa292ce5829"
+    },
+    {
+      "path": ".local/migration/P0-device/gradle-version.txt",
+      "bytes": 534,
+      "sha256": "26d1aad52614723b30be4d1784658a7545cf2b8041aeb5526df758849e98710f"
+    },
+    {
+      "path": ".local/migration/P0-device/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/P0-device/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/P0-device/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/P0-device/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/P0-device/host-test-summary.json",
+      "bytes": 10064,
+      "sha256": "505fd9942ae19de579559905a08f92bd21c4c748f9c4d5a42cb1d756a2867260"
+    },
+    {
+      "path": ".local/migration/P0-device/host-tests.log",
+      "bytes": 5746,
+      "sha256": "b649fc0a146fd4016c844c7081c3476c4c9abce516fcf3a5a5bc1916c054117c"
+    },
+    {
+      "path": ".local/migration/P0-device/installed-final-sha256.json",
+      "bytes": 662,
+      "sha256": "1087df76b6e062c8ba6cec63b6edd22d0ad48ece32c7f1b08fa94d12864622e4"
+    },
+    {
+      "path": ".local/migration/P0-device/installed-test-original-01.txt",
+      "bytes": 166,
+      "sha256": "2dc1ed8b66bd6f131b554ee40cd185b38e75d9f8a3419291c99fa95e37b4462a"
+    },
+    {
+      "path": ".local/migration/P0-device/lint-comparison.json",
+      "bytes": 4721,
+      "sha256": "6077ab0fbb4eee30e12da5835c3de2452ca28f59487ab598bc2f1d625dcffbaa"
+    },
+    {
+      "path": ".local/migration/P0-device/p0-screen-after-disable.png",
+      "bytes": 1227938,
+      "sha256": "fa360ca95b02014077a14037cd8f2f93097ae5d854f83205a2b9598bcd493f36"
+    },
+    {
+      "path": ".local/migration/P0-device/p0-screen.png",
+      "bytes": 49376,
+      "sha256": "a3705e0c37c04431ab9f9417321aa963c11afead5a73cc6baeb43553422e7d16"
+    },
+    {
+      "path": ".local/migration/P0-device/recovered-class-coverage.json",
+      "bytes": 440,
+      "sha256": "97c6e94870a53d74b0bd8f985f04d045ea12380335b5afa15846ff2b4b40f8d1"
+    },
+    {
+      "path": ".local/migration/P0-device/release-dependencies.txt",
+      "bytes": 22718,
+      "sha256": "859466934a7c62cf35831b8e5b3a76597f82e688fa91cb923d654d6c7081c6e1"
+    },
+    {
+      "path": ".local/migration/P0-device/release-isolation.json",
+      "bytes": 249,
+      "sha256": "9bd94da51d21f3379f37b29d5fb5f18c1a8cb2a4029e204b5284989b152957b5"
+    },
+    {
+      "path": ".local/migration/P0-device/resources-debug.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P0-device/resources-release.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P0-device/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/P0-device/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/P0-device/system-crashes-01.txt",
+      "bytes": 29974,
+      "sha256": "e51401ac38e485933750e2897137b80389860e41e3a1046d507c71a7fc97fe23"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 812,
+      "sha256": "bdd6397b051283ae2389c86af389d836b5999e9cec803fa5a85fa7bd0dd48032"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "9e9740c386f31d5b9846c6aa41679352ba92f0daa20b0883111ffccac7731032"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.CaptureBoundaryTest.xml",
+      "bytes": 757,
+      "sha256": "f5561a2a728f6cfb8733a322ae76c360706ebd12abb954d59ca92c546d3e2d9a"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.ChuckerInputDismissalTest.xml",
+      "bytes": 660,
+      "sha256": "9dcf8a38d6dd36893c8f8256d2de7165e0671447616e2faf5c99f2fcd17e82bb"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.ChuckerInteractionTest.xml",
+      "bytes": 1387,
+      "sha256": "6a83909f59c8fe4501cde1c2a082fb4a1a77baaf8d537497f37907e5b7f45b36"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.ChuckerPresentationTest.xml",
+      "bytes": 1000,
+      "sha256": "c356538767a24a0bba6e08ec503f51b107c60e4cc397b882e2cbb96daeb6cf34"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.crypto.Base91CodecTest.xml",
+      "bytes": 928,
+      "sha256": "08db7d438374ab5c20ee608718eafeb8646c1dd2986727ee8f18be14bded5483"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.crypto.Base91JsonDecoderTest.xml",
+      "bytes": 3230,
+      "sha256": "eb4f2f93663b78f36f76f383241369b1690b7745469a30eb9e3d2bec204ac327"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.DesensitizationInspectorTest.xml",
+      "bytes": 855,
+      "sha256": "3a1fad93351d6db7aa74e72fe6aa062de3904a66c5f8730e0984f9b403925473"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.DualCollectorTest.xml",
+      "bytes": 630,
+      "sha256": "074b8e4e38cd6e3f2118e041734a149ee23d076f0a76f366255a97f0285b3865"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.InspectorInteractionTest.xml",
+      "bytes": 2093,
+      "sha256": "9f600dbd3d0f56ea0f0fbaef9afe6ebe2b4f8bd754db7b9c4d3c58b125e823f9"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.InspectorLogicTest.xml",
+      "bytes": 1738,
+      "sha256": "0b923654089a5b492ef810a3d97ea76ffcecea8eaf50605a9cb459d15ab2c5ce"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.InspectorLongTextTest.xml",
+      "bytes": 795,
+      "sha256": "4422bf3821b329e0ff9fab9fee66609e49968e308cb4b553fa6bc565e9874db0"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.InspectorSettingsTest.xml",
+      "bytes": 958,
+      "sha256": "78d6e7cbdd3c7534b887d1629a1b4f1f4a5c83f51b38e03b8bcfe9ed07070a6d"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.InspectorUiTest.xml",
+      "bytes": 1693,
+      "sha256": "a526f8632c1d98ba02580fa915204fa1d767999c1600276792b93f89806b7504"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.privacy.DesensitizationPersistenceTest.xml",
+      "bytes": 532,
+      "sha256": "fb04cbc5af9e4a249babde133fd5e7f71612232c4bedaab1d1b2f1ab9a8c19fe"
+    },
+    {
+      "path": ".local/migration/P0-device/test-results/inspector/TEST-com.mogu.inspector.privacy.DesensitizationSettingsTest.xml",
+      "bytes": 1302,
+      "sha256": "41e8da62917b868c3c7a1c8d4d736691daff3e726533dc885073bdcff7ae357b"
+    },
+    {
+      "path": ".local/migration/P0-device/webview-standalone-instrumentation.log",
+      "bytes": 230,
+      "sha256": "1e56f78e3595177fdf7bac85cf020f14269bda04dcc0a2cdcf06c9b26ef174d2"
+    },
+    {
+      "path": ".local/migration/P0-device/webview-standalone-instrumentation.png",
+      "bytes": 25186,
+      "sha256": "e3cc96cf6141895a2982c4339a7cac75e1340e5402c2b6ee63f3b6940d890ed2"
+    },
+    {
+      "path": ".local/migration/P0-device/webview-standalone-start.txt",
+      "bytes": 102,
+      "sha256": "6cf12b5d086ea675562a89e466e3cb462ce6de755f73cf23be4b98217af72764"
+    },
+    {
+      "path": ".local/migration/P0-device/webview-standalone-window.txt",
+      "bytes": 51128,
+      "sha256": "b81cc2a74ddb05d8576a7c64a75ea2d72367b9273d7abd5065eefb9237f913c6"
+    },
+    {
+      "path": ".local/migration/P0-device/webview-standalone.png",
+      "bytes": 1227951,
+      "sha256": "d7ca374919e2438655325ddb2d1bfe66626f3a9e900851dca9ae541222cd718e"
+    },
+    {
+      "path": ".local/migration/P0-device/window-after-bt-disable.txt",
+      "bytes": 52165,
+      "sha256": "0b1794e31c48a89e11a831b0b0c7ed2d5640e48de26b78332baac0fe1005ee95"
+    },
+    {
+      "path": ".local/migration/P0-device/window-after-close.txt",
+      "bytes": 54097,
+      "sha256": "6cd8232e5d5495ff2f5497c7f8e04271deb4f9930a232baee736bdfdb4380bfa"
+    },
+    {
+      "path": ".local/migration/P0-device/window-state.txt",
+      "bytes": 51923,
+      "sha256": "eda03594da6e30b239091e523ce22071d14fd9098c09c98ab7b430528e74e6d3"
+    },
+    {
+      "path": ".local/migration/P0-device/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/P0-device/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "No production writes or real account use",
+    "No real casting/camera/Bluetooth peripherals or multiple physical OS versions",
+    "Research signing only, R8 disabled",
+    "Page entry checks do not cover every button or real external web content",
+    "Raw .local evidence is local only; committed hashes are an index, not the logs themselves"
+  ]
+}
