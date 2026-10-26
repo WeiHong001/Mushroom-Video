@@ -1,6 +1,6 @@
 {
   "batch": "P2-date-utils",
-  "status": "technical-gates-passed-awaiting-merge",
+  "status": "accepted-and-merged",
   "recorded_at": "2026-10-26T19:39:11.933747+08:00",
   "base_commit": "adce137075e2eab80b2b500af6e994e8d718b77e",
   "replaced_types": [
@@ -1847,5 +1847,8 @@
     "Research signing; R8/production release not accepted",
     "No independent human review claimed",
     "Raw local evidence not committed; hashes are indexes"
-  ]
+  ],
+  "implementation_commit": "d3c4dd228b3f52816ccd39d236d179c6e2d49424",
+  "accepted_dev_merge_commit": "22771de27c0a6e91c169d15fe84a2c39e6533c31",
+  "closeout_changes": "Only delivery metadata after actual merge/push; runtime and test source inputs unchanged"
 }

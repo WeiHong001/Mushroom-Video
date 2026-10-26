@@ -1,6 +1,6 @@
 # P2-date-utils：日期格式、解析、线程局部及旧显示分支
 
-状态：**技术门禁已通过，待提交合入；这 5 个类型尚未标记处理完成。**
+状态：**已验收并合入推送 dev。实现 `d3c4dd2`，dev 合并 `22771de`；实际合入后关闭 5 个类型，此次仅补交付元数据。**
 
 - 分支 `feature/restore-date-utils-b04`，起点/回退目标 `adce137075e2eab80b2b500af6e994e8d718b77e`，开始记录 2026-10-26 18:47:17 +08:00。
 - 闭包 5 类型：`com.kotlin.basiclib.utils.DateUtil` 和 `$1`～`$4`。外层 33 个普通公开静态方法，另有构造器/clinit；内部各有构造器、protected SimpleDateFormat initialValue 及 protected bridge Object initialValue。反编译参考的 public 修饰符不作为依据。
