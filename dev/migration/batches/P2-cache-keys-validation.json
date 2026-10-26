@@ -1,0 +1,1709 @@
+{
+  "batch": "P2-cache-keys",
+  "status": "technical-gates-passed-awaiting-merge",
+  "recorded_at": "2026-10-26T20:04:33.227602+08:00",
+  "base_commit": "8555c85c8fbcbcdae8a979d65184d875dcb7a63a",
+  "replaced_types": [
+    "com.mogu.tv.common.cache.CacheKey"
+  ],
+  "source_files": [
+    {
+      "path": "app/src/main/java/com/mogu/tv/common/cache/CacheKey.java",
+      "sha256": "0f328ed2e27640e78a87166d915c5a4c02fd71579c7646251fc1d6fc5a569ea0"
+    },
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/CacheKeyBaselineTest.java",
+      "sha256": "d536c4db47af10ca27912fd7c05d50807ae393a16494e730b44a9b64edd6cefa"
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "1f0c30f97ae951de0cacb78002c41588f9b0a73d18f6a3f1047434bc17fc1d6b"
+    }
+  ],
+  "original_source_identity": {
+    "base_commit": "8555c85c8fbcbcdae8a979d65184d875dcb7a63a",
+    "source_files": [
+      {
+        "path": "app/src/main/smali/com/mogu/tv/common/cache/CacheKey.smali",
+        "sha256": "7c386af5d8e39b174f14a0e3d8f0f96ac124340e58bb2b654abb939827b0c71b"
+      },
+      {
+        "path": "app/src/androidTest/java/com/mogu/research/CacheKeyBaselineTest.java",
+        "sha256": "d536c4db47af10ca27912fd7c05d50807ae393a16494e730b44a9b64edd6cefa"
+      }
+    ],
+    "original_app_sha256": "3d99c50bb5d207475dd793cf6b6060b95a52ec0c1b04d80861e202e1eca8ce0c",
+    "original_test_sha256": "86bd9579486c8c70c0cfac861616c5d5dea1b8c716ce283e07abcea6ff2548fc"
+  },
+  "test_source_unchanged": true,
+  "original_key_test_passed": 1,
+  "java_key_test_passed": 1,
+  "all_key_abi_metadata_observations_equal": true,
+  "key_observations": {
+    "keyNames": {
+      "getCACHECOMMENTKEY": "replycachekey_news",
+      "getNightMode": "nightmode",
+      "getUSER_TOKEN": "user_token",
+      "getSEARCH_LIST_KEY": "search_list_key",
+      "getSAVE_PLAYDATA": "save_playdata",
+      "getLOCK": "suopingstr",
+      "getSHORTVIDEOPAGE": "shortvideopage",
+      "getFIRSTLOADVERSION_1": "firstloadversion_1",
+      "getLOADSHARE": "loadshare"
+    },
+    "metadata": {
+      "k": 1,
+      "xi": 48,
+      "mv": [
+        1,
+        7,
+        1
+      ],
+      "d1": [
+        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0013\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u0014\u0010\u0003\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006R\u0014\u0010\u0007\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\u0006R\u0014\u0010\t\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u0006R\u0014\u0010\u000b\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u0006R\u0014\u0010\r\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\u0006R\u0014\u0010\u000f\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0006R\u0014\u0010\u0011\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0006R\u0014\u0010\u0013\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0006R\u0014\u0010\u0015\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0006¨\u0006\u0017"
+      ],
+      "d2": [
+        "Lcom/mogu/tv/common/cache/CacheKey;",
+        "",
+        "()V",
+        "CACHECOMMENTKEY",
+        "",
+        "getCACHECOMMENTKEY",
+        "()Ljava/lang/String;",
+        "FIRSTLOADVERSION_1",
+        "getFIRSTLOADVERSION_1",
+        "LOADSHARE",
+        "getLOADSHARE",
+        "LOCK",
+        "getLOCK",
+        "NightMode",
+        "getNightMode",
+        "SAVE_PLAYDATA",
+        "getSAVE_PLAYDATA",
+        "SEARCH_LIST_KEY",
+        "getSEARCH_LIST_KEY",
+        "SHORTVIDEOPAGE",
+        "getSHORTVIDEOPAGE",
+        "USER_TOKEN",
+        "getUSER_TOKEN",
+        "app_mogushareRelease"
+      ]
+    },
+    "classFieldsMethodsConstructorAbi": true,
+    "allNineGetterFieldIdentities": true
+  },
+  "related_storage_contracts_passed": 6,
+  "related_storage_observations_equal_frozen_original": true,
+  "build_failure": {
+    "log": ".local/migration/P2-cache-keys/build-java.log",
+    "reason": "Old post-merged recovered classes19.dex collided with a new AGP normal DEX shard during incremental packaging",
+    "resolution": "Normal :app:clean then rebuild identical source; no validation disabled",
+    "rebuild_log": ".local/migration/P2-cache-keys/build-java-clean.log",
+    "rebuild_seconds_reported": 48
+  },
+  "host_suites": [
+    {
+      "module": "app",
+      "name": "com.mogu.research.CryptoContractTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "contentIdDerivationAndKnownCbcVector",
+        "bothImageKeyPathsDecodeTheOriginalBytes",
+        "plainImageFallbackDoesNotReturnConsumedBytes",
+        "playbackIdsAreKeptPerUrl"
+      ]
+    },
+    {
+      "module": "app",
+      "name": "com.mogu.research.DiagnosticsCapturePolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authenticationDiscoveryMediaAndUnknownPathsAreExcluded",
+        "apiReadsMatchCurrentOriginAndKnownQueriesOnly"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.CaptureBoundaryTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "actualCapacityAndHeaderCopiesProtectTokenWithoutChangingRequest",
+        "eventStreamIsNotPeekedAndPreviewIOExceptionClosesAndPropagates",
+        "skippedBodiesAreNeverSerializedByPreview"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerInputDismissalTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "editorTapDragLongPressAndCancellationPreserveNativeSearchFocus",
+        "nativeSearchBackgroundTapRemovesFocusWithoutClearingQueryOrCollapsingSearch"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerInteractionTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "overviewUrlSupportsSelectingAQueryValueWithoutTheOtherParameters",
+        "selectionBackConsumesOneEventBeforeHostActivityFinishes",
+        "oneToolbarBackCollapsesANonemptySearchWithoutAnExtraClearQueryBack",
+        "searchTracksEachOffsetInActualBodyItemAfterHeadersAndCopy",
+        "continuousBodyPreservesNewlinesUnicodeAndFormattingSpans",
+        "bodyAndHeadersSupportExactPartialAndCrossLineNativeCopy",
+        "directlyOpenedNativeDetailToolbarBackAddsListInsteadOfLeavingInspector"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.ChuckerPresentationTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "unsupportedDartLogsRemainVerbatimIncludingTokenPunctuationAndOuterBraces",
+        "formattedDisplayAndTextShareDecodeBothFieldsButRawCopyFileAndHarKeepWireText",
+        "longActorDescriptionsRemainCompleteAndCanBeHighlightedWithoutRecursiveRegexOverflow",
+        "disabledEndpointKeepsBothTokensAndChangingPolicyDoesNotMutateStoredBody"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.crypto.Base91CodecTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "all byte values and varied tails round trip",
+        "eight mebibytes of token characters is inclusive and never truncated",
+        "source hello and category vectors remain byte exact",
+        "invalid characters empty tokens and noncanonical final bits are rejected"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.crypto.Base91JsonDecoderTest",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "oversized tokens in all wrappers are unchanged without accepting a prefix",
+        "complete nested JSON whitespace literals and escaped surrogates remain exact",
+        "source JavaScript oracle corpus matches token and response decoding",
+        "verified category response decodes exactly",
+        "large complete response keeps its final item",
+        "duplicate root data keys are ambiguous and left untouched",
+        "supported root fields decode independently in either order without rewriting other text",
+        "reprocessing normal decoded response shapes is a no-op",
+        "one call decodes one layer and leaves inner tokens alone",
+        "ordinary JSON invalid input and non-string data remain verbatim",
+        "bad tails and every truncation of the category vector fail",
+        "bad optional profiles never prevent data decoding and bad data never prevents profiles",
+        "strict UTF8 rejects invalid sequences rather than substituting characters",
+        "all three wrappers preserve Unicode escapes and numeric lexemes",
+        "duplicate supported keys affect only that field and nested or unknown strings stay encoded",
+        "complete JSON grammar and object or array roots are required",
+        "only root data is replaced regardless of key order or nesting",
+        "JSON string escapes are resolved before decoding token"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.DesensitizationInspectorTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "hiddenInspectorKeepsBusinessResponsesButBlocksThePanelAndNewRawCollection",
+        "previouslyObtainedCopyShareAndExportSinksRefuseOriginalOutputAfterAToggle",
+        "activeAndRestoredChuckerActivitiesAreClosedBeforeTheyCanShowOrExportOriginalText"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.DualCollectorTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "offPauseAndPrivacySuppressNewListRecordsWhileResponsesStayIntact",
+        "shortVideoListBodyIsRecordedByBothStoresWithoutChangingTheResponse"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorInteractionTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "selectionMenuSelectAllIncludesOffscreenLinesAndBlankLinesWithoutGutterNumbers",
+        "requestAndResponseBodiesKeepPartialAndWholeCopyOperationsIndependent",
+        "bodySwipesScrollLongTextWhilePanelBoundsStayFixedIncludingBothEdges",
+        "listSwipesScrollContentWhilePanelBoundsStayFixedIncludingBothEdges",
+        "queryNamesValuesHeadersAndUrlCanBeCopiedFromTheirVisibleText",
+        "searchCanScrollToDistantMatchAndTheMatchedTextCanStillBeSelected",
+        "copyingOrTappingAwayEndsSelectionSoTheNextToolbarBackNavigatesImmediately",
+        "toolbarAndSystemBackShareTheSameHierarchyAndSelectionConsumesOnlyOneBack",
+        "dismissingClearConfirmationWithBackKeepsTheListAndRecordedRequests",
+        "longPressCopiesValueAndEndHandleExtendsTheSelectionAcrossJsonLines",
+        "modalWindowBackReturnsOnePageAndRestoresListSearchFilterAndScroll"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorLogicTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "malformedTruncatedAndDeepBodiesRemainReadable",
+        "bodyPreviewIsBoundedAndOneShotRequestsAreNotReplayed",
+        "captureRedactsHeadersPreservesBusinessBodiesAndStopsBothCollectorsWhenPaused",
+        "formattingPreservesNumbersDuplicateKeysAndEscapes",
+        "transportFailureIsRecordedAndPropagated",
+        "boundedSessionDoesNotResurrectClearedOrEvictedRequests",
+        "searchFiltersAndSyntaxTokensDescribeActualRecords",
+        "memoryBudgetEvictsOldBodiesAndPauseAllowsExistingCallsToFinish",
+        "responseDecodingIsDisplayOnlyAndNeverDecodesRequestBodies",
+        "optionalActorAndDataShareTheEndpointSwitchWithoutChangingRawText"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorLongTextTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "nearCaptureLimitWithManyNewlinesCanLayoutAndCopyEveryOffscreenLine",
+        "wrappedLinesUseTheirFirstVisualBaselineAndBlankRowsKeepTheirNumbers",
+        "scrollingLongBodyReusesLayoutAndGutterVisitsOnlyVisibleLines"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorSettingsTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "existingClientOnlyCapturesWhileEnabledAndPreservesResponsesAndPausePreference",
+        "disablingDismissesOpenPanelAndDoesNotReopenItWhenEnabledAgain",
+        "privateResponsePolicyBypassesBothCaptureStoresWithoutChangingTheResponse",
+        "defaultOffIgnoresLegacyRecordingAndSettingSurvivesNewOwner"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.InspectorUiTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "floatingEntryPassesOutsideTouchesAndSavesItsDraggedPosition",
+        "compactWindowKeepsListActionsAndBodyReachable",
+        "realChuckerAndFloatingCollectorPreserveTheSameHttpResponse",
+        "renderSyntheticRequestAndResponsePreviews",
+        "hidingEntryForSearchKeyboardPreservesAnAlreadyOpenPanel",
+        "panelBackgroundDismissesListAndBodySearchFocusInItsOwnWindow",
+        "floatingEntryFiltersPausesAndClearsWithoutClosingTheApp",
+        "smallWindowAndLargeFontKeepCaptureAndBodyUsable",
+        "responseCanBeDecodedSearchedCopiedAndReturnedToTheList",
+        "disabledEndpointFormatsAndCopiesEncodedFieldsWhileRawViewIsExact"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.privacy.DesensitizationPersistenceTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "androidPreferencesSurviveNewOwnersAndDefaultOnWithoutTouchingBusinessStorage"
+      ]
+    },
+    {
+      "module": "inspector",
+      "name": "com.mogu.inspector.privacy.DesensitizationSettingsTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "failedEnableKeepsTheScreenHiddenEvenWhenTheSavedChoiceWasOff",
+        "pendingReadHidesAndSuccessfulMissingPreferenceDefaultsOn",
+        "failedDisableReturnsToThePersistedSafeChoiceAndReportsFailure",
+        "unreadableStorageNeverRevealsContent",
+        "synchronousObserversRapidChangesAndColdOwnerUseTheLatestSavedChoice",
+        "failedReadCanRetryWithoutRevealingBeforeTheSuccessfulRead"
+      ]
+    }
+  ],
+  "full_device_regression": {
+    "serial": "emulator-5580",
+    "mode": "synthetic-offline",
+    "apk_sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff",
+    "cases": [
+      {
+        "name": "recovered-listener-defaults",
+        "passed": true,
+        "tests": 2,
+        "seconds": 4.45
+      },
+      {
+        "name": "media-and-api",
+        "passed": true,
+        "tests": 4,
+        "seconds": 3.0
+      },
+      {
+        "name": "five-tabs",
+        "passed": true,
+        "tests": 1,
+        "seconds": 34.83
+      },
+      {
+        "name": "playback",
+        "passed": true,
+        "tests": 1,
+        "seconds": 35.99
+      },
+      {
+        "name": "drawing-and-gestures",
+        "passed": true,
+        "tests": 1,
+        "seconds": 5.94
+      },
+      {
+        "name": "short-swipe",
+        "passed": true,
+        "tests": 1,
+        "seconds": 20.89
+      },
+      {
+        "name": "router-and-history",
+        "passed": true,
+        "tests": 1,
+        "seconds": 16.5
+      },
+      {
+        "name": "RegistActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.7
+      },
+      {
+        "name": "SettingActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 16.82
+      },
+      {
+        "name": "ShangwuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 20.4
+      },
+      {
+        "name": "SheQuUserActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 18.02
+      },
+      {
+        "name": "ForgetPassWordActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.2
+      },
+      {
+        "name": "SqNoticeActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.07
+      },
+      {
+        "name": "TouGaoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.69
+      },
+      {
+        "name": "CommentNewsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.98
+      },
+      {
+        "name": "DetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.2
+      },
+      {
+        "name": "DetailVipVideoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.81
+      },
+      {
+        "name": "ImglookActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 17.61
+      },
+      {
+        "name": "ShequDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 15.2
+      },
+      {
+        "name": "ShortDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 15.23
+      },
+      {
+        "name": "CollectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.63
+      },
+      {
+        "name": "AppLockActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.05
+      },
+      {
+        "name": "PiankuActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 12.25
+      },
+      {
+        "name": "PraviteActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.82
+      },
+      {
+        "name": "UserContractActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.78
+      },
+      {
+        "name": "BiaoQianListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.01
+      },
+      {
+        "name": "AdviceSuggestActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.35
+      },
+      {
+        "name": "ActivityPageActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.42
+      },
+      {
+        "name": "AdCenterAppActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.27
+      },
+      {
+        "name": "FocusUserListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 7.87
+      },
+      {
+        "name": "MessageCenterActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 6.72
+      },
+      {
+        "name": "MessageDetailsActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.38
+      },
+      {
+        "name": "NvYouActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 14.62
+      },
+      {
+        "name": "ContactActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 12.32
+      },
+      {
+        "name": "EditUserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.2
+      },
+      {
+        "name": "UserInfoActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.65
+      },
+      {
+        "name": "HistoryActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 11.07
+      },
+      {
+        "name": "LabelsSelectActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 8.71
+      },
+      {
+        "name": "InviteListActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.86
+      },
+      {
+        "name": "QiuPianActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.33
+      },
+      {
+        "name": "RankActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 12.19
+      },
+      {
+        "name": "SearchActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 10.44
+      },
+      {
+        "name": "WebViewActivity",
+        "passed": true,
+        "tests": 1,
+        "seconds": 9.87
+      }
+    ]
+  },
+  "class_coverage": [
+    {
+      "variant": "debug",
+      "recovered_dex": "classes20.dex",
+      "recovered_dex_sha256": "182e67a1488826841a53b0e65be7167d371f85d56b37c455efc39b2f83652974",
+      "recovered_types": 3146,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.ClickUtils": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$1": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$2": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$3": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$4": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes13.dex"
+        ],
+        "com.mogu.tv.common.cache.CacheKey": [
+          "classes16.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes8.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes8.dex"
+        ]
+      }
+    },
+    {
+      "variant": "release",
+      "recovered_dex": "classes5.dex",
+      "recovered_dex_sha256": "182e67a1488826841a53b0e65be7167d371f85d56b37c455efc39b2f83652974",
+      "recovered_types": 3146,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.ClickUtils": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$1": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$2": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$3": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.DateUtil$4": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.common.cache.CacheKey": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes3.dex"
+        ]
+      }
+    }
+  ],
+  "installed_apks": [
+    {
+      "package": "com.amogu6.tv.research",
+      "local_sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff",
+      "installed_sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff",
+      "matching": true
+    },
+    {
+      "package": "com.amogu6.tv.research.test",
+      "local_sha256": "e9f68e012ae3c1097a00ad804c1a3ef7fef72519e74210feac7c7ce2c76211a5",
+      "installed_sha256": "e9f68e012ae3c1097a00ad804c1a3ef7fef72519e74210feac7c7ce2c76211a5",
+      "matching": true
+    }
+  ],
+  "apk_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes18.dex",
+        "classes19.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes20.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "bbc2b05d0e6c366ab50904e49943e4a98ed49811e7a203f37996927c9ad83d86",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "delivery_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "apk_sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "290f893164a5751003c190dd6c60e8c3afdadeb15500dd0b86800de87015a892",
+      "merged_manifest_activities": 53,
+      "missing_activities": [],
+      "resource_dump_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769",
+      "device_behavior_verified": false
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "apk_sha256": "bbc2b05d0e6c366ab50904e49943e4a98ed49811e7a203f37996927c9ad83d86",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\release\\processReleaseManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "f0dfb8c4dda7b6c5f1f3b86708a897e184659887a2ac180ad41c30815a7fbb89",
+      "merged_manifest_activities": 50,
+      "missing_activities": [],
+      "resource_dump_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2",
+      "device_behavior_verified": false
+    }
+  },
+  "release_isolation": {
+    "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+    "runtime_graph_clean": true,
+    "merged_manifest_clean": true,
+    "dex_clean": true,
+    "resources_clean": true,
+    "release_facade_present": true,
+    "classes_checked": 19210
+  },
+  "lint": {
+    "same_rule_location_multiset": true,
+    "count": 16,
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "user_requested_pause_after_this_batch": true,
+  "evidence_files": [
+    {
+      "path": ".local/migration/P2-cache-keys/all-host-tests.log",
+      "bytes": 6051,
+      "sha256": "9e731e39f0b6c2949e13b06b569a84798f21be632c909e956eedbe6b74501392"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/apk-debug.json",
+      "bytes": 853,
+      "sha256": "a183d3730a9503cb7936436751baf507553ca91ce31a1c9452ba2be356ca3e06"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/apk-release.json",
+      "bytes": 531,
+      "sha256": "793955b03160f86fefa95493861a75b1a48e3f7edb548e5f855782ea9ea2bd71"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/artifacts/app-debug-androidTest.apk",
+      "bytes": 528042,
+      "sha256": "e9f68e012ae3c1097a00ad804c1a3ef7fef72519e74210feac7c7ce2c76211a5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/artifacts/app-debug.apk",
+      "bytes": 25560880,
+      "sha256": "e19665cfe02b0573de3b1bd658a036c5cadab88a5a0fdae013b429abc96f33ff"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/artifacts/app-release.apk",
+      "bytes": 14258409,
+      "sha256": "bbc2b05d0e6c366ab50904e49943e4a98ed49811e7a203f37996927c9ad83d86"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/artifacts/original-app.apk",
+      "bytes": 25556725,
+      "sha256": "3d99c50bb5d207475dd793cf6b6060b95a52ec0c1b04d80861e202e1eca8ce0c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/artifacts/original-test.apk",
+      "bytes": 555083,
+      "sha256": "86bd9579486c8c70c0cfac861616c5d5dea1b8c716ce283e07abcea6ff2548fc"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/build-java-clean.log",
+      "bytes": 19801,
+      "sha256": "f368c0ea54508b367a35b32e8f91248bec650f0aa980148c571febba06d1eb40"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/build-java.log",
+      "bytes": 6169,
+      "sha256": "ed4ff7c9641386776888c92933af71306eeda04f3c3166ddba67cd1d4b2e1f55"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/build-original-tests.log",
+      "bytes": 4494,
+      "sha256": "ef3d7109f82dcbd5e545636c5545221bce1deac0fbaa720dde3fb8d927747482"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/class-coverage.json",
+      "bytes": 2540,
+      "sha256": "976c6989ead8a772b611929c0e1b9a14dc3705c625209f70733929ebafd45f42"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/contact.png",
+      "bytes": 995037,
+      "sha256": "6653a612b82dfd3309471b8c307673bec654847ef998cb474afe796d09c63347"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/delivery-debug.json",
+      "bytes": 670,
+      "sha256": "67607d9491aa323aa257e859b9d8f2764adbd463401d2e4b449983296c0745ad"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/delivery-debug.resources.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/delivery-release.json",
+      "bytes": 678,
+      "sha256": "fa45e89933ee9058a5fcc0f2f73486a3cb6a2e07d3e92d3b7da406483a530252"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/delivery-release.resources.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/device-full.json",
+      "bytes": 5170,
+      "sha256": "6411785227e5750877cf4acfcea442fc32986504e5b7282570c3a49bc953c381"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/device-full.log",
+      "bytes": 1344,
+      "sha256": "bc054c11a9419336b7c7924a8e4a993684329cc9f6c2bb840accc9a8a49095c7"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ActivityPageActivity.txt",
+      "bytes": 240,
+      "sha256": "838bcfe90cff805c8bbbff473ec0e76585c9eb80e31be3e64d67c4e9c8fd6554"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/AdCenterAppActivity.txt",
+      "bytes": 240,
+      "sha256": "14c9b7c436bffccec3c10dec51b18c62f06e97fb70519b187e2bc1acb795ec36"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/AdviceSuggestActivity.txt",
+      "bytes": 241,
+      "sha256": "d28942a61ad5a8f57303236a8d2c9358194a7a4437bac41f7d1866ebbdee80d4"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/AppLockActivity.txt",
+      "bytes": 241,
+      "sha256": "8adc62f55b2d32fe504e96cfbf02aedb05123319bbb58a34a1379eb0036b0c11"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/BiaoQianListActivity.txt",
+      "bytes": 241,
+      "sha256": "b10eebe0a49add03a88296623bc8b834c67c56d3aa897cef6f204f0fdd0ec096"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/CollectActivity.txt",
+      "bytes": 241,
+      "sha256": "275ba05c21487df4c0dbc3dc4821104bb9e84704c79ab0d1b45bd513c24d998b"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/CommentNewsActivity.txt",
+      "bytes": 241,
+      "sha256": "d776de93057bf2682ce40978003bbc6022a652801fea5f93b73f7592ecd55aff"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ContactActivity.txt",
+      "bytes": 241,
+      "sha256": "664529535917e7c70f1b8d9dceb8556a8313d1e4ce1cf518b3745a5f974b23ac"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/DetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "348bb2f4da3cc364f6ae110d0f4f20a77b52df4036c0aff13b8654b79f58be46"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/DetailVipVideoActivity.txt",
+      "bytes": 241,
+      "sha256": "ecd125043624910d66e5e1dc6a425a77cfda51a9fcd62c29b922186ceb9fc9a5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/drawing-and-gestures.txt",
+      "bytes": 80,
+      "sha256": "4455ba279079768743287dee0054c2b04c6025d4bdb569b55244b956eefbe999"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/EditUserInfoActivity.txt",
+      "bytes": 241,
+      "sha256": "b10eebe0a49add03a88296623bc8b834c67c56d3aa897cef6f204f0fdd0ec096"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/five-tabs.txt",
+      "bytes": 242,
+      "sha256": "62bdbd76ac1f169ffe18af207bd4c0c58d9f2e550894f91f42f503bf3acf9fe2"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/FocusUserListActivity.txt",
+      "bytes": 241,
+      "sha256": "abdbede7441e3a9b17732c0a0951591e4d23efdc1ebfd3f0335d1834f8c157c6"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ForgetPassWordActivity.txt",
+      "bytes": 241,
+      "sha256": "8a0faf9ab63e8a4d6d7844cbdb02e987c4add4a8f65a46f83809ce7ba1d0139b"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/HistoryActivity.txt",
+      "bytes": 241,
+      "sha256": "c1d01a9633261e776953cdb3386f1d3dde2a4a8b54e13a10b8faaaff1c29f0c1"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ImglookActivity.txt",
+      "bytes": 241,
+      "sha256": "7eeaf9dd1c73e3de9c031dfb1de80bef1117f842a24a074d7c6b1031a45233b7"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/InviteListActivity.txt",
+      "bytes": 241,
+      "sha256": "2e32d1ea6c910e2c8f32d51e74b6b66910dcd8b7d2cea6dcb52fa5f94b2791f6"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/LabelsSelectActivity.txt",
+      "bytes": 241,
+      "sha256": "bbac919050e72bc63d9e18101e38ae04c902f4d1a5c91f01a038a285054b8a3b"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/media-and-api.txt",
+      "bytes": 88,
+      "sha256": "18b6724b7390a2d18aff5e93addb9c6cd56c5a77a6259183c1bb9ab104b2be4a"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/MessageCenterActivity.txt",
+      "bytes": 241,
+      "sha256": "1da6585b627948a4cfa1c263e46af7bdd4ffd37063d6674fa545fa2e39c31afb"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/MessageDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "eeb48f8ceae77bdaaa4ddac2dc2d9f43661c620cb60342eaf071f34f5053f080"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/NvYouActivity.txt",
+      "bytes": 241,
+      "sha256": "a66b01f0263ef81c2d007da973524b41f0fdfc5d2557105929d562be5ea913e4"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/PiankuActivity.txt",
+      "bytes": 241,
+      "sha256": "d8353cdeaf47400e2d9d8528ff466caad297926ca574f4f0e1038e9981613c06"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/playback.txt",
+      "bytes": 242,
+      "sha256": "9f71ee0e35f12d38a25b804115d62e78f7589ae46a99eefa0dada6e598f87555"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/PraviteActivity.txt",
+      "bytes": 240,
+      "sha256": "8a8f26df92f396f8d8e08e32062c0352516d2735f6d76ccb0b21257de1f92846"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/QiuPianActivity.txt",
+      "bytes": 241,
+      "sha256": "24ff650490b9b427d98347faad6852cb5637ac42ba20307a18fe564fd50fb6c5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/RankActivity.txt",
+      "bytes": 241,
+      "sha256": "cd5d48f2e328290fd9e765ea973c89200429a7bed575576c366f75dbb9dd6847"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/recovered-listener-defaults.txt",
+      "bytes": 96,
+      "sha256": "4f4f1c57299d462d4e4fd7ff1d8a74823cea3f4e4c279e96edab59ee4cffca7a"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/RegistActivity.txt",
+      "bytes": 241,
+      "sha256": "9d4dfea6d7cfdd5655291c9d128a362d6e8b879cc9ead5433837d7799a29c695"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/router-and-history.txt",
+      "bytes": 242,
+      "sha256": "e6b05c7a9aadd80e6bbfe93a1b6edc37600bc9a62b8d603efce0199af7b602d5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/SearchActivity.txt",
+      "bytes": 241,
+      "sha256": "6956f52c645df40a16d88f0f6b79343ee3919aa34013a0ae7c9dd097c8559166"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/SettingActivity.txt",
+      "bytes": 242,
+      "sha256": "94d52020454b21fcff3330818288d4bf753ee30b382e28f70a231e0bdd3974a7"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ShangwuActivity.txt",
+      "bytes": 242,
+      "sha256": "a7837fc865dad8812111409705c3af68c64bca1f2bd759b94f9963c0f39da94c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ShequDetailsActivity.txt",
+      "bytes": 240,
+      "sha256": "17f09848f99d8ba84697b0091abe38b568c0556186a7ff845307301b4fb0ffb9"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/SheQuUserActivity.txt",
+      "bytes": 242,
+      "sha256": "9d621261ec3b6aff7668cc0baeb5496434c0f181026840290144b2b8b94b4fe6"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/short-swipe.txt",
+      "bytes": 240,
+      "sha256": "a2c77304589d56f68cd7e8716843cf0602654eb10e4681cf01e0bab1d45933b1"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/ShortDetailsActivity.txt",
+      "bytes": 241,
+      "sha256": "948908df50ebc9899a2336959b3478a4c872cb6b474219454aeed7b838a9ba22"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/SqNoticeActivity.txt",
+      "bytes": 241,
+      "sha256": "f6dd573c3d1dc931039a8c56f5edfd91c7d9409dd31ff8e21685d0e60129237e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/TouGaoActivity.txt",
+      "bytes": 241,
+      "sha256": "e17d365d08647c6a913f29326f96aaa509a21f2874fd53f6b36bdfde5f5b48b7"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/UserContractActivity.txt",
+      "bytes": 241,
+      "sha256": "b4499c1c7088f02d77ef12024e6681a2faa1d7d87a200f4e905ffea59a4b36f9"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/UserInfoActivity.txt",
+      "bytes": 241,
+      "sha256": "253b326024bf677bca53bd9aa9a61594fdd6cd1db686c718dbdaf8e155f71b4e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-logs/WebViewActivity.txt",
+      "bytes": 241,
+      "sha256": "4488e59367d423b59e60fb4af24480e33d85c94657760662f2618f06488ae0ba"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/cache-key-observations.json",
+      "bytes": 1845,
+      "sha256": "4f91abf5e47296dfa2b3a9a1caadcd44b23afc207a69ecbb1b7be0840ca788dd"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/click-utils-observations.json",
+      "bytes": 1324,
+      "sha256": "946961373686d3c7b3ccef73f1c4aaa9e5bb3d65b37203ae2fbc27276315e1be"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/comment-filter-observations.json",
+      "bytes": 1203,
+      "sha256": "cd7bff63e0a183001d6f4719bc3213cfe21c70e616d2e6de6e3746ce82db629f"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/date-utils-observations.json",
+      "bytes": 106641,
+      "sha256": "651c83300b9dbe452fbacbb9cebbeb6832f327ce2e1b224683ef134c7781ec6e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/flow-router-details.png",
+      "bytes": 126330,
+      "sha256": "7b6ff57027eb7ce8ce85de07043b8cd41ab52686b4e63601fafc1bd8a1a78e60"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ActivityPageActivity.png",
+      "bytes": 30572,
+      "sha256": "08f40c6249907f6178eea33868b31281418c4cae9673116b142f77a4818810c4"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-AdCenterAppActivity.png",
+      "bytes": 28229,
+      "sha256": "a4037bdfbf1eef06c751065116d87fb2dfa48cc337239e3947f03a2626373531"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-AdviceSuggestActivity.png",
+      "bytes": 88235,
+      "sha256": "93557324f5b58e4f78d33202cee47ae407cb462710d097c19b786bdc3ae54a93"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-AppLockActivity.png",
+      "bytes": 49160,
+      "sha256": "aa38254407336ef2b6679dd8c3633ec1b5b075a5a0275d1a16a6d7377fc3502b"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-BiaoQianListActivity.png",
+      "bytes": 218190,
+      "sha256": "3f0630f686df0dc8e5f1ee133a008207939592ebbe05c79fc1925d0293126fbe"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-CollectActivity.png",
+      "bytes": 32915,
+      "sha256": "6b743da60e5bd84b324ee31b3200149880fa015adf08152df43c2b96aba16e2f"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-CommentNewsActivity.png",
+      "bytes": 966722,
+      "sha256": "da73b15eb5a83d8c52866f856306a81e4f6ce815f243575038e8ed46f418a333"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ContactActivity.png",
+      "bytes": 98906,
+      "sha256": "837909e224bf528c9c2d9f88ff89950cb6f6f7a739e4a9ef038f0311e577aff9"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-DetailsActivity.png",
+      "bytes": 175893,
+      "sha256": "5901048c3c96b16a8e42536396f09732990da8d228170900da761f6ee976fc81"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-DetailVipVideoActivity.png",
+      "bytes": 211282,
+      "sha256": "091f31554064e7d251386ac7a06ea4f330c03f3156cace5f7373d87317086161"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-EditUserInfoActivity.png",
+      "bytes": 65242,
+      "sha256": "84673030e67917d8ba47dfa14203d9bad7c405b29940d93da78040a496f7fdf6"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-FocusUserListActivity.png",
+      "bytes": 30656,
+      "sha256": "3f12e784f83a5a60ee007ffbbbb1e593844e21936ae4426a70392caffe66fc8d"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ForgetPassWordActivity.png",
+      "bytes": 112492,
+      "sha256": "eeedd77a5cd83c81fb6933e517d589e1b6731bb7effe70741b2d7fa168ca703e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-HistoryActivity.png",
+      "bytes": 97119,
+      "sha256": "0c773069f9a37ea8181a1f009c4307a75bd71b0ea2a0e8cfa93c6323b9f5644c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ImglookActivity.png",
+      "bytes": 144209,
+      "sha256": "ac0c634c655bc863bbf24ebb1a661192772b85f8a55f89ea0981c23019f5cf71"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-InviteListActivity.png",
+      "bytes": 35544,
+      "sha256": "ea7ac12fc076b1be94d92c6c1e0c9370cff99104de3f769da8d026c39190568f"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-LabelsSelectActivity.png",
+      "bytes": 45270,
+      "sha256": "c0ebd4abff4e423c7c5abd6ba2046a9fa172168555283236850bc6dfd5730589"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-MessageCenterActivity.png",
+      "bytes": 50193,
+      "sha256": "1815eec74413eb63efeb2707555cf17287781a7e679ada48541aaca66f09f7b5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-MessageDetailsActivity.png",
+      "bytes": 72847,
+      "sha256": "2f1979bdbf4b32828ed4b77d616289067c0014124ae56e535921d7e9721bd059"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-NvYouActivity.png",
+      "bytes": 62881,
+      "sha256": "54846b491c9d04119e16642e3ced569bbb9705976eb906b2818699e61b17b70b"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-PiankuActivity.png",
+      "bytes": 192796,
+      "sha256": "79e00c8703b6612ea6374c179922d8cf26b77749d5bc3734fa50428d9de11ecb"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-PraviteActivity.png",
+      "bytes": 550632,
+      "sha256": "3c17440dc51241d11677cd137740cb7a2db12f4137b5722ea7c361ff4c3af7d0"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-QiuPianActivity.png",
+      "bytes": 60165,
+      "sha256": "f171422094ae12dc3a73b18d099dc4331ff1b03ddfed9dec7650822049f27b1a"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-RankActivity.png",
+      "bytes": 179906,
+      "sha256": "02d79c743ffcde34d7f669a53847cd069208f6878af180055c2b3c86201577d9"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-RegistActivity.png",
+      "bytes": 87871,
+      "sha256": "0a98c2c8f2912c7e55b1a25b40bfdd0eb86a884ac16d861a479e813876adf97d"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-SearchActivity.png",
+      "bytes": 154358,
+      "sha256": "09b709172440f301ffa2928da7264e011fb6e28a9079d2edc8cefa9395276711"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-SettingActivity.png",
+      "bytes": 118237,
+      "sha256": "24b9d55fd3e544365522987e2d0e740c6c8245b1ba08328454ca6f6990a8e444"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ShangwuActivity.png",
+      "bytes": 584859,
+      "sha256": "7a7a8908c6f2f274e3ee62e2fbce8ef927ef10458333e6bfe3021c9dd4657f12"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ShequDetailsActivity.png",
+      "bytes": 249843,
+      "sha256": "e7ed178fdfd8889f9da51b3bc6f3e296966cec4a1b554f0056c677afe63e4bc6"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-SheQuUserActivity.png",
+      "bytes": 261079,
+      "sha256": "0340b109a2aacb847050b9f4d9471f6868ea0bd448422fe46dcfd120abc8a6ee"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-ShortDetailsActivity.png",
+      "bytes": 60206,
+      "sha256": "3a4197f3e3763b4010a52c7516adc52f671ad83e8b7433b836321755b511d415"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-SqNoticeActivity.png",
+      "bytes": 40831,
+      "sha256": "5d140dd98eb5bb5f77be909d0aa82cbd73d21e53de5a7870c9cfa22abff15591"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-TouGaoActivity.png",
+      "bytes": 192693,
+      "sha256": "817bd88dfb72cf573edc3992a961183c199620deac5186268209f2b442f02044"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-UserContractActivity.png",
+      "bytes": 560585,
+      "sha256": "d39fc099b811951a7585fc9ffb744a96cc29be88315737fa1f52891b842d6949"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-UserInfoActivity.png",
+      "bytes": 296989,
+      "sha256": "0f09daa524fe3323f304e70d7cb187196c7cce959786ff5c53d1e39604c4851f"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/page-WebViewActivity.png",
+      "bytes": 24791,
+      "sha256": "58aacce7a1c76846b0744eb095569274b7fa13eb6a20e28e3c7a982197754355"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/play-data-contracts.json",
+      "bytes": 1695,
+      "sha256": "710c6f8d93cfffe6786b0c97d71599848216e4e37b2e87d28ba1e401391a753c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/play-data-restart-read.json",
+      "bytes": 92,
+      "sha256": "e20ea6d5b5b5aab373fdf9c998a4decb751d574c596e3b85b61d779fbc2b66ad"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/play-data-restart-seed.json",
+      "bytes": 29,
+      "sha256": "169a4eedea612fb40dadacb80f7ec282be760e74a6537f1c0ed3b075a4473f68"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/play-data-upgrade-read.json",
+      "bytes": 92,
+      "sha256": "e20ea6d5b5b5aab373fdf9c998a4decb751d574c596e3b85b61d779fbc2b66ad"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/play-data-upgrade-seed.json",
+      "bytes": 29,
+      "sha256": "169a4eedea612fb40dadacb80f7ec282be760e74a6537f1c0ed3b075a4473f68"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/playback-1001.png",
+      "bytes": 259953,
+      "sha256": "a2f1beff3a41e36126a1ea59cdf695cb7133bfa4ea147a71d4568ba8b96d2a57"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/playback-1002.png",
+      "bytes": 259016,
+      "sha256": "6bacca45ec7e04923c824392030ab1fd54a8d5cdb72072bb2303e749eef31640"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/short-swipe.png",
+      "bytes": 232254,
+      "sha256": "5cdbe7c6a3320183f4f9d16a5430da4899bff62bab23f7b7d6e31ce16df9c1bd"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/tab-0-HomeFragment.png",
+      "bytes": 184878,
+      "sha256": "b58a37d3824eae63dc1a058ea03da16d8814a31cd718b93d6ed507604c239337"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/tab-1-ShortIndexFragment.png",
+      "bytes": 106158,
+      "sha256": "0544da9c2ee243dcc2cc3cb8a4f8de11c0f3369384a8423fbbe87b8af39a8a6e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/tab-2-JpHomeFragment.png",
+      "bytes": 244373,
+      "sha256": "dad32f3b8b99b030f952e2ab9747a051bb50c781d33e95c70a368896f7ffb9f5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/tab-3-ShequFragment.png",
+      "bytes": 213267,
+      "sha256": "028f527d2302486507ce5fdd46ee6555a39c53314d24ec59a00df1524944ab59"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/tab-4-MineFragment.png",
+      "bytes": 216599,
+      "sha256": "f6641b35ae20acb3d47dac88290ac5ab8b42d1bf6ff1b9417627cdd1007f5344"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/full-screenshots/validation/url-utils-observations.json",
+      "bytes": 1492,
+      "sha256": "8676176802f5e77d155059169bc29f7118689245c0f6e1732163aaff16617692"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/host-test-summary.json",
+      "bytes": 10064,
+      "sha256": "505fd9942ae19de579559905a08f92bd21c4c748f9c4d5a42cb1d756a2867260"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/installed-sha256.json",
+      "bytes": 524,
+      "sha256": "6fe0b664f5f9c1b9c09f8c1f30826ae4a004eb157ca324c7d10cfdcba1948340"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/java-and-storage.log",
+      "bytes": 126,
+      "sha256": "a149c279a606fe0925f89cde41bec5d03cb01642a594ad0a7a66ac90a1f8f51d"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/java-observations.json",
+      "bytes": 1845,
+      "sha256": "4f91abf5e47296dfa2b3a9a1caadcd44b23afc207a69ecbb1b7be0840ca788dd"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/lint-comparison.json",
+      "bytes": 4721,
+      "sha256": "6077ab0fbb4eee30e12da5835c3de2452ca28f59487ab598bc2f1d625dcffbaa"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/original-observations.json",
+      "bytes": 1845,
+      "sha256": "4f91abf5e47296dfa2b3a9a1caadcd44b23afc207a69ecbb1b7be0840ca788dd"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/original-source-identity.json",
+      "bytes": 644,
+      "sha256": "6d8293721ddebee1db10eeb0b73bcb7b8aa5f439b4c112fe28f6c6966e169138"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/original.log",
+      "bytes": 78,
+      "sha256": "158698154d7ef8faa9eca6ec07079f31488fd882a6cf3157b66455bc20b64785"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/release-dependencies.txt",
+      "bytes": 22719,
+      "sha256": "e8ab463c1db72d27f0389e28f7a0a4145450ace0b2dfc6b413bdbab46dbb4f84"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/release-isolation.json",
+      "bytes": 249,
+      "sha256": "9bd94da51d21f3379f37b29d5fb5f18c1a8cb2a4029e204b5284989b152957b5"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/storage-observations.json",
+      "bytes": 1695,
+      "sha256": "710c6f8d93cfffe6786b0c97d71599848216e4e37b2e87d28ba1e401391a753c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 809,
+      "sha256": "3f10121fb231ef0797afe3f9ed0e2222a280e6afa93b2d06a86332d593e36ad9"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "34b1dba834fbba99764e97b02c7b62e3e2d4e3f8fb631ec261a8f282f91d1950"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.CaptureBoundaryTest.xml",
+      "bytes": 755,
+      "sha256": "cb3bb4a88679041393c59daae712a1742aaf45b6ffe61dd3c41c31b0f8529808"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.ChuckerInputDismissalTest.xml",
+      "bytes": 660,
+      "sha256": "0262b29d1687a2f5063ba2fdeec794e2c0aa6d95b93ef353cc8644481fafa01d"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.ChuckerInteractionTest.xml",
+      "bytes": 1386,
+      "sha256": "71d47aeb3473cc25d3086873a409b86de08a04d5575a5258a9dcf341e4519583"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.ChuckerPresentationTest.xml",
+      "bytes": 1001,
+      "sha256": "1b741c9cb0827fbfa0dd3ade62f7d375bead27be976e7066dd215106035164fe"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.crypto.Base91CodecTest.xml",
+      "bytes": 927,
+      "sha256": "5bc06cdf44190cfd9f7b8b7ebf26053fb855f8df293dd6e55ad2fd9d5d337963"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.crypto.Base91JsonDecoderTest.xml",
+      "bytes": 3225,
+      "sha256": "e4bd43ea205289ce38825861f0462623fe8532c5a4cd50587419716ff97cde60"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.DesensitizationInspectorTest.xml",
+      "bytes": 853,
+      "sha256": "fe697b55afb244193083164c09f27b339906983bd91c2b6e9206e4de7d90b627"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.DualCollectorTest.xml",
+      "bytes": 629,
+      "sha256": "6d634f4ae9db8a70bb88053605ff4a91b3ed268b4ebe834928d87bac747d3d55"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.InspectorInteractionTest.xml",
+      "bytes": 2091,
+      "sha256": "52d938789a7732aceabe92a8e939133aa9b459a34027064c9f4d1eb641ebc735"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.InspectorLogicTest.xml",
+      "bytes": 1738,
+      "sha256": "9fc9e6feaf4152a9f5aac5f97157c9aa368bdbefae4773242f49b74a3ef5609c"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.InspectorLongTextTest.xml",
+      "bytes": 794,
+      "sha256": "5b1143175c2162da463982c035895439e6a695e8e52cd308c3f71adf7fc9ddee"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.InspectorSettingsTest.xml",
+      "bytes": 956,
+      "sha256": "19debbbeca3d327613d0a3573a66dc05afd0bbc44693561ab82027bfdae1230a"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.InspectorUiTest.xml",
+      "bytes": 1698,
+      "sha256": "1c6e24564d3a659cce8c4c718c699c8a4407d2f283f305aafdef32838fc79435"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.privacy.DesensitizationPersistenceTest.xml",
+      "bytes": 532,
+      "sha256": "809f63377fad18f4ecaf7c54f3ba23a50570133f4a1944f53ceffee66a14f506"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/test-results/inspector/TEST-com.mogu.inspector.privacy.DesensitizationSettingsTest.xml",
+      "bytes": 1302,
+      "sha256": "a51d4f0a390e5829ec3315df2042a11bd1e88ddd7e6bb4fc868542b25a2407fb"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/P2-cache-keys/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Only key names captured, not account/preference values",
+    "Mixed build remains; incremental DEX name collision may require normal clean rebuild",
+    "Original 16 lint findings remain",
+    "Real accounts/peripherals/production release not accepted",
+    "No independent human review claimed",
+    "Raw evidence is local only"
+  ]
+}

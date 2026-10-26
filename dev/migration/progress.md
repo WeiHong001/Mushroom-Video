@@ -9,13 +9,15 @@
 - P2 UrlUtils：`edffdd3` / dev `8930e9e`，关闭 `1f23723`；播放进度：`b6020c6` / dev `f472efc`，关闭 `09b596f` / 进度 `c33ea84`。
 - P2 ClickUtils：`76d54b8` / dev `2b8af3d`，关闭 `adce137`。
 - P2 DateUtil：实现 `d3c4dd228b3f52816ccd39d236d179c6e2d49424` / dev `22771de27c0a6e91c169d15fe84a2c39e6533c31`，已推送；实际合入后才关闭 5 个类型。
-- 当前分支 `feature/restore-date-utils-b04`，仅关闭交付元数据，运行源码与测试输入不变。
+- 当前分支 `feature/restore-cache-keys-b05`，起点 `8555c85c8fbcbcdae8a979d65184d875dcb7a63a`，开始记录 2026-10-26 19:43:09 +08:00；原 CacheKey 键名/ABI/Metadata 1/1 通过并冻结，已恢复 Java，尚未验收合入。
 - 累计 11 个原类型由 6 份 Java 源码承接，剩余生产 smali 3,147（业务目录 1,057，旧集成 2,090）。生成代码与混合构建保留，未达到全量完成。
 - 设备：专用 `Mushroom_Research_API34` / `emulator-5580` / Android 14 / API 34 / x86_64；蓝牙关闭避开已记录系统 HCI 崩溃。全部 adb 明确 serial，保持 offline 和安装摘要保护。
 - 原始证据按批次位于 `.local/migration/P0-device/`、`P1-comment-filter/`、`P2-url-utils/`、`P2-play-data/`、`P2-click-utils/`、`P2-date-utils/`；P0 冻结 CSV/JSON 未覆盖。
 - DateUtil：原/新 8 例、1,372 固定条目和 33 API / 4 匿名类 ABI / 时钟线程 / 12 消费者观测一致；本批 94 主机、完整 43 调用 / 47 设备、全部构建及实际 APK/资源/清单/签名/Release 隔离通过，45 截图已复核。
 - 日期动态场景的控制 UTC 日 2026-10-26；跨日恢复时不能把旧结果改名作新基线，应在留存原 APK 重取相关动态场景。默认 Locale/时区与受控偏好均已恢复。
-- 下一条动作：关闭元数据提交快进推送 dev，从最新 dev 新建 `feature/restore-cache-keys-b05`；先固定 CacheKey 的原 9 个键名、字段/方法/Metadata 及本地状态消费者，避免存储键变化，再恢复其一类。
+- CacheKey 原例 1/1，9 个键名、getter/字段身份及 Metadata 已冻结。首轮增量 packageDebug 失败：旧恢复 DEX 与新普通分片占用 classes19.dex，失败日志及原 APK 保留；当前用 :app:clean 后正常重建生成输出，验证未完成，不计通过或外部受阻。
+- CacheKey 干净重建已成功，原/新键名/ABI/Metadata 完全一致，相关播放状态六例通过；本批 94 主机和 Release 隔离通过，完整设备回归仍在运行且尚无失败。源码类未验收合入，不能标为完成。
+- 下一条动作：等待 `.local/migration/P2-cache-keys/device-full.log` 全量结果，复核截图并完成证据索引；全部通过才提交合入，随后接续事件载荷模型。
 - 边界：真实账号、外设及生产发布未验收；旧页面不是每个按钮覆盖；历史包含断言不证明新写入次数。当前无全局外部阻塞，其他待分析组不能批量记受阻。
 
 ## 队列与门禁
@@ -28,6 +30,7 @@
 | P2 播放进度 3 类 | 已验收 | `b6020c6` / dev `f472efc`，旧 JSON、缓存、实际重启及覆盖升级读取通过 |
 | P2 ClickUtils | 已验收 | `76d54b8` / dev `2b8af3d`；原/新七例及 4 个消费者一致 |
 | P2 DateUtil 5 类 | 已验收 | `d3c4dd2` / dev `22771de`；原/新八例、全部主机和完整设备门禁通过 |
+| P2 CacheKey | 执行中 | 原 9 个键名/ABI/Metadata 与本地状态消费者；报告 `batches/P2-cache-keys.md` |
 | P2 其他工具 / 模型 | 待分析 | F02/F07/F04 其余类型，按实际闭包拆批，固定旧格式和默认值 |
 | P2/P3 控件 / 网络 / 框架 | 待分析 | F08/F03/F01，XML、线程、回调、Binding 泛型反射及生命周期 |
 | P3 适配器 / 路由 / 页面 | 待分析 | F05/F13/F09～F12，导航、恢复、历史/收藏及数据隔离 |
