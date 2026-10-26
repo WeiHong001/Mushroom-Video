@@ -2381,7 +2381,7 @@ com.mogu.tv.common.arouter.ArouterUrls$AppArouterUrl,app/src/main/smali/com/mogu
 com.mogu.tv.common.arouter.ArouterUrls$MainRouterUrl,app/src/main/smali/com/mogu/tv/common/arouter/ArouterUrls$MainRouterUrl.smali,business-implementation,F13-other-business,,待分析,,,
 com.mogu.tv.common.arouter.ArouterUrls,app/src/main/smali/com/mogu/tv/common/arouter/ArouterUrls.smali,business-implementation,F13-other-business,,待分析,,,
 com.mogu.tv.common.arouter.ArouterUtils,app/src/main/smali/com/mogu/tv/common/arouter/ArouterUtils.smali,business-implementation,F13-other-business,,待分析,,,
-com.mogu.tv.common.cache.CacheKey,app/src/main/smali/com/mogu/tv/common/cache/CacheKey.smali,business-implementation,F13-other-business,P2-cache-keys,执行中,app/src/main/java/com/mogu/tv/common/cache/CacheKey.java,batches/P2-cache-keys.md,
+com.mogu.tv.common.cache.CacheKey,app/src/main/smali/com/mogu/tv/common/cache/CacheKey.smali,business-implementation,F13-other-business,P2-cache-keys,已验收,app/src/main/java/com/mogu/tv/common/cache/CacheKey.java,batches/P2-cache-keys-validation.json,ab15dcaedcc9e6ef98c31c003c1c82a84ffb4e43
 com.mogu.tv.databinding.ActApplockBinding,app/src/main/smali/com/mogu/tv/databinding/ActApplockBinding.smali,binding-generated,G01-generated,,待分析,,,
 com.mogu.tv.databinding.ActContactBinding,app/src/main/smali/com/mogu/tv/databinding/ActContactBinding.smali,binding-generated,G01-generated,,待分析,,,
 com.mogu.tv.databinding.ActContractBinding,app/src/main/smali/com/mogu/tv/databinding/ActContractBinding.smali,binding-generated,G01-generated,,待分析,,,

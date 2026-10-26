@@ -1,6 +1,6 @@
 # P2-cache-keys：本地存储键单例契约
 
-状态：**技术门禁已通过，待提交合入；此类型尚未标记处理完成。**
+状态：**已验收并合入推送 dev。实现 `cb2fa7d`，dev 合并 `ab15dca`；实际合入后关闭类型，按用户要求暂停，当前仅补检查点。**
 
 - 分支 `feature/restore-cache-keys-b05`，起点/回退目标 `8555c85c8fbcbcdae8a979d65184d875dcb7a63a`，开始记录 2026-10-26 19:43:09 +08:00。
 - 唯一类型 `com.mogu.tv.common.cache.CacheKey`。保留 public final 单例、私有构造器、9 个私有 static final String、9 个 public final 实例 getter 和原 Kotlin Metadata；保留 clinit 的先 INSTANCE 后各键顺序。

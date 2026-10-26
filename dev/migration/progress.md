@@ -2,23 +2,23 @@
 
 执行依据：V1.1 计划（`7e9384c`）第十三节及 2026-10-26 用户连续执行授权。时区 Asia/Shanghai；阶段或批次完成后不请求“继续”。
 
-## 当前检查点
+## 当前检查点（按用户要求暂停）
 
-- 阶段：P0/P1 已验收；P2 的 UrlUtils、播放进度、ClickUtils、DateUtil 闭包均已验收推送，继续 P2。
+- 状态：**暂停待续**。用户要求“做完这个可以先暂停一下，然后记录一下计划书，等下次再继续”；当前 CacheKey 批次已完成，登记时间 2026-10-26 20:06 +08:00。此为用户主动暂停，非全量完成、非全局外部受阻；用户通知继续后按原连续执行授权恢复。
+- 停止点：P0/P1 已验收；P2 已验收 UrlUtils、播放进度、ClickUtils、DateUtil、CacheKey。P2 其余及 P3～P5 尚未完成，不开始下一批。
 - P0：`e930a22` / dev `3498171`；P1：`a64854f` / dev `03108ab`，关闭 `0342617`。
 - P2 UrlUtils：`edffdd3` / dev `8930e9e`，关闭 `1f23723`；播放进度：`b6020c6` / dev `f472efc`，关闭 `09b596f` / 进度 `c33ea84`。
-- P2 ClickUtils：`76d54b8` / dev `2b8af3d`，关闭 `adce137`。
-- P2 DateUtil：实现 `d3c4dd228b3f52816ccd39d236d179c6e2d49424` / dev `22771de27c0a6e91c169d15fe84a2c39e6533c31`，已推送；实际合入后才关闭 5 个类型。
-- 当前分支 `feature/restore-cache-keys-b05`，起点 `8555c85c8fbcbcdae8a979d65184d875dcb7a63a`，开始记录 2026-10-26 19:43:09 +08:00；原 CacheKey 键名/ABI/Metadata 1/1 通过并冻结，已恢复 Java，尚未验收合入。
-- 累计 11 个原类型由 6 份 Java 源码承接，剩余生产 smali 3,147（业务目录 1,057，旧集成 2,090）。生成代码与混合构建保留，未达到全量完成。
-- 设备：专用 `Mushroom_Research_API34` / `emulator-5580` / Android 14 / API 34 / x86_64；蓝牙关闭避开已记录系统 HCI 崩溃。全部 adb 明确 serial，保持 offline 和安装摘要保护。
-- 原始证据按批次位于 `.local/migration/P0-device/`、`P1-comment-filter/`、`P2-url-utils/`、`P2-play-data/`、`P2-click-utils/`、`P2-date-utils/`；P0 冻结 CSV/JSON 未覆盖。
-- DateUtil：原/新 8 例、1,372 固定条目和 33 API / 4 匿名类 ABI / 时钟线程 / 12 消费者观测一致；本批 94 主机、完整 43 调用 / 47 设备、全部构建及实际 APK/资源/清单/签名/Release 隔离通过，45 截图已复核。
-- 日期动态场景的控制 UTC 日 2026-10-26；跨日恢复时不能把旧结果改名作新基线，应在留存原 APK 重取相关动态场景。默认 Locale/时区与受控偏好均已恢复。
-- CacheKey 原例 1/1，9 个键名、getter/字段身份及 Metadata 已冻结。首轮增量 packageDebug 失败：旧恢复 DEX 与新普通分片占用 classes19.dex，失败日志及原 APK 保留；当前用 :app:clean 后正常重建生成输出，验证未完成，不计通过或外部受阻。
-- CacheKey 干净重建已成功，原/新键名/ABI/Metadata 完全一致，相关播放状态六例通过；本批 94 主机和 Release 隔离通过，完整设备回归仍在运行且尚无失败。源码类未验收合入，不能标为完成。
-- 下一条动作：等待 `.local/migration/P2-cache-keys/device-full.log` 全量结果，复核截图并完成证据索引；全部通过才提交合入，随后接续事件载荷模型。
-- 边界：真实账号、外设及生产发布未验收；旧页面不是每个按钮覆盖；历史包含断言不证明新写入次数。当前无全局外部阻塞，其他待分析组不能批量记受阻。
+- P2 ClickUtils：`76d54b8` / dev `2b8af3d`，关闭 `adce137`；DateUtil：`d3c4dd2` / dev `22771de`，关闭 `8555c85`。
+- P2 CacheKey：实现 `cb2fa7d65e9b89ac332f3a9640be5a0dc8d54a2c` / dev 合并 `ab15dcaedcc9e6ef98c31c003c1c82a84ffb4e43`，已推送；此关闭记录仅补元数据与计划书，不改运行源码/测试输入。
+- 累计 **12 个原类型由 7 份 Java 源码承接**；剩余生产 smali **3,146**（业务目录 **1,056**、旧集成 **2,090**）。生成代码 128 仍包含在业务目录中，混合构建、ABI JAR、恢复 DEX 合入仍保留。
+- 最后一批实测：原/新键名/ABI/Metadata 完全一致，存储消费者 6 例通过；本批 94 主机、完整 43 调用 / 47 设备、Debug/测试/研究 Release、实际资源/清单/签名/Release 隔离通过，45 张截图已复核。
+- 构建限制：CacheKey 首轮增量打包遇到旧恢复 classes19.dex 与新普通分片重名；保留失败日志，经正常 :app:clean 后 48s 重建及全量复验通过。相同症状可正常清理生成输出重建，不能跳校验；此问题尚未作为独立构建机制修复。
+- 原 16 条 Release Lint 同规则/位置，未关闭检查。真实账号、服务写入、相机/投屏/蓝牙外设、多系统实体设备及生产签名/R8/发布未验收。
+- 原始证据按批次保存在 `.local/migration/P0-device/`、`P1-comment-filter/`、`P2-url-utils/`、`P2-play-data/`、`P2-click-utils/`、`P2-date-utils/`、`P2-cache-keys/`；Git 交付摘要与哈希索引，P0 冻结快照未改。
+- 专用 AVD `Mushroom_Research_API34` / API34 / x86_64，原 serial `emulator-5580`；已正常停止以释放资源，磁盘数据保留，未 wipe。下次重新发现 SDK/AVD 并启动，核对 qemu/启动完成、offline 和实际安装 APK 摘要；不得默认操作实体机。AVD 路径 `.local/migration/Mushroom_Research_API34.avd`。
+- 下次入口：先读计划书 **13.11** 与本文件，核对 dev/远端/工作区/原 stash，再从最新 dev 新建 `feature/restore-event-payloads-b06`。先审查 10 个事件载荷的原构造/getter/setter/null/Metadata/EventBus 与真实订阅者，再做原 APK 基线，不能直接把草稿当通过。
+- 下一批仅有 `.local/migration/P2-event-payloads/EventPayloadBaselineTest.java` 的忽略目录草稿和静态引用调研，**未加入 app、未编译运行、未创建事件分支、未迁移事件类型**。ClearPositionEvent 的真实 getter 是 isClear，不能使用反编译别名 getIsClear。四个无字段事件本来就是信号类，不以空实现替代业务。
+- DateUtil 动态场景控制 UTC 日为 2026-10-26；跨日恢复时不可重命名旧结果，需在留存原 APK 重取相关动态场景。变化的源码/环境/依赖重跑受影响检查；输入未变的证据可复用。
 
 ## 队列与门禁
 
@@ -30,7 +30,8 @@
 | P2 播放进度 3 类 | 已验收 | `b6020c6` / dev `f472efc`，旧 JSON、缓存、实际重启及覆盖升级读取通过 |
 | P2 ClickUtils | 已验收 | `76d54b8` / dev `2b8af3d`；原/新七例及 4 个消费者一致 |
 | P2 DateUtil 5 类 | 已验收 | `d3c4dd2` / dev `22771de`；原/新八例、全部主机和完整设备门禁通过 |
-| P2 CacheKey | 执行中 | 原 9 个键名/ABI/Metadata 与本地状态消费者；报告 `batches/P2-cache-keys.md` |
+| P2 CacheKey | 已验收 | `cb2fa7d` / dev `ab15dca`；键名/存储消费者及完整门禁通过 |
+| P2 事件载荷 10 类 | 待分析（下次） | 仅草稿；先原行为和订阅者验证，不自动实施 |
 | P2 其他工具 / 模型 | 待分析 | F02/F07/F04 其余类型，按实际闭包拆批，固定旧格式和默认值 |
 | P2/P3 控件 / 网络 / 框架 | 待分析 | F08/F03/F01，XML、线程、回调、Binding 泛型反射及生命周期 |
 | P3 适配器 / 路由 / 页面 | 待分析 | F05/F13/F09～F12，导航、恢复、历史/收藏及数据隔离 |
@@ -43,6 +44,6 @@
 
 ## 类型统计与恢复规则
 
-[class-mapping.csv](class-mapping.csv) 覆盖原 3,158 类型：业务目录 1,068、旧集成 2,090；其中生成代码 128 已包含在业务目录内。当前已验收 11、剩余 smali 3,147；只有替代已验证且实际合入后才关闭类型。
+[class-mapping.csv](class-mapping.csv) 覆盖原 3,158 类型：业务目录 1,068、旧集成 2,090；其中生成代码 128 已包含在业务目录内。当前已验收 12、剩余 smali 3,146；只有替代已验证且实际合入后才关闭类型。
 
-已验收批次独立提交、合入推送 dev；未验收源码不进入 dev。恢复先核对当前分支/提交/未提交文件和本地证据，不重置用户改动、不恢复或删除原 stash。上下文或资源中断记为待续，不冒称全部完成或全部外部受阻。当前无已确认的全局外部阻塞，继续推进。
+已验收批次独立提交、合入推送 dev；未验收源码不进入 dev。恢复先核对当前分支/提交/未提交文件和本地证据，不重置用户改动、不恢复或删除原 stash。上下文或资源中断记为待续，不冒称全部完成或全部外部受阻。当前按用户要求暂停；收到继续通知再推进，不把主动暂停标为外部受阻。

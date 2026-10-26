@@ -1,6 +1,6 @@
 {
   "batch": "P2-cache-keys",
-  "status": "technical-gates-passed-awaiting-merge",
+  "status": "accepted-and-merged",
   "recorded_at": "2026-10-26T20:04:33.227602+08:00",
   "base_commit": "8555c85c8fbcbcdae8a979d65184d875dcb7a63a",
   "replaced_types": [
@@ -1705,5 +1705,8 @@
     "Real accounts/peripherals/production release not accepted",
     "No independent human review claimed",
     "Raw evidence is local only"
-  ]
+  ],
+  "implementation_commit": "cb2fa7d65e9b89ac332f3a9640be5a0dc8d54a2c",
+  "accepted_dev_merge_commit": "ab15dcaedcc9e6ef98c31c003c1c82a84ffb4e43",
+  "closeout_changes": "Metadata/checkpoint only; user requested pause after this accepted batch; runtime/test inputs unchanged"
 }
