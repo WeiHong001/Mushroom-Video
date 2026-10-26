@@ -1,0 +1,123 @@
+{
+  "contracts": {
+    "binaryContract": true,
+    "defaultVod": {
+      "id": "",
+      "name": "",
+      "progress": 0
+    },
+    "idOnlyEqualityFirstIndex": true,
+    "nullableSettersAndGsonNullOmission": true,
+    "freshStorageAfterSave": {
+      "id": "legacy",
+      "name": "fresh",
+      "progress": 9999
+    },
+    "readCacheRemainsStale": true,
+    "legacyJson": [
+      {
+        "fixture": "",
+        "result": null
+      },
+      {
+        "fixture": "null",
+        "result": null
+      },
+      {
+        "fixture": "{}",
+        "result": null
+      },
+      {
+        "fixture": "{\"datas\":null}",
+        "result": null
+      },
+      {
+        "fixture": "{\"datas\":[]}",
+        "result": null
+      },
+      {
+        "fixture": "{\"datas\":[{\"id\":\"legacy\",\"name\":\"旧样本\",\"progress\":1234}],\"future\":true}",
+        "result": {
+          "id": "legacy",
+          "name": "旧样本",
+          "progress": 1234
+        }
+      },
+      {
+        "fixture": "{\"datas\":[{\"id\":\"legacy\"}]}",
+        "result": {
+          "id": "legacy",
+          "name": "",
+          "progress": 0
+        }
+      },
+      {
+        "fixture": "{\"datas\":[{\"id\":\"legacy\",\"name\":null,\"progress\":null}]}",
+        "result": {
+          "id": "legacy",
+          "name": null,
+          "progress": null
+        }
+      },
+      {
+        "fixture": "{\"datas\":[{\"id\":null,\"progress\":12}]}",
+        "result": null
+      },
+      {
+        "fixture": "{\"datas\":[null,{\"id\":\"legacy\",\"progress\":1234}]}",
+        "exception": "java.lang.NullPointerException"
+      },
+      {
+        "fixture": "{",
+        "exception": "com.google.gson.JsonSyntaxException"
+      },
+      {
+        "fixture": "[]",
+        "exception": "com.google.gson.JsonSyntaxException"
+      },
+      {
+        "fixture": "{\"datas\":[{\"id\":\" legacy \",\"progress\":1234}]}",
+        "result": null
+      }
+    ],
+    "nullIdZeroProgress": "java.lang.NullPointerException",
+    "nullLookupId": "java.lang.NullPointerException",
+    "malformedSave": "com.google.gson.JsonSyntaxException",
+    "malformedGet": "com.google.gson.JsonSyntaxException",
+    "zeroProgressDoesNotParseOrChangeCache": true,
+    "updateFirstDuplicate": {
+      "datas": [
+        {
+          "id": "dup",
+          "name": "保留名",
+          "progress": 300
+        },
+        {
+          "id": "dup",
+          "name": "second",
+          "progress": 2
+        }
+      ]
+    },
+    "negativeAfterEmptyState": {
+      "datas": [
+        {
+          "id": "negative",
+          "name": "",
+          "progress": -10
+        }
+      ]
+    }
+  },
+  "restart_seed": {
+    "restartSeedPersisted": true
+  },
+  "restart_read": {
+    "restartRead": {
+      "id": "migration-restart",
+      "name": "",
+      "progress": 8765
+    },
+    "differentProcess": true
+  }
+}

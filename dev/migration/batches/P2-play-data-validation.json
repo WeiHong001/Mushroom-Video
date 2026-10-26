@@ -1,0 +1,795 @@
+{
+  "batch": "P2-play-data",
+  "status": "technical-gates-passed-awaiting-merge",
+  "recorded_at": "2026-10-26T17:54:21.442252+08:00",
+  "base_commit": "1f237233a2aafd55699e6ded451fddcd37d5e1e3",
+  "replaced_types": [
+    "com.mogu.tv.utils.PlayDataSaveUtils",
+    "com.mogu.tv.model.SavePlayVod",
+    "com.mogu.tv.model.SavePlayVod$VodData"
+  ],
+  "source_files": [
+    {
+      "path": "app/src/main/java/com/mogu/tv/model/SavePlayVod.java",
+      "sha256": "0eab8bfc267b756f568cacaac458319e1e337f18f710b8af903bce1decfa5a64"
+    },
+    {
+      "path": "app/src/main/java/com/mogu/tv/utils/PlayDataSaveUtils.java",
+      "sha256": "5e4d99eab501701527d03f8ef48e7bc14a8f6c1758251131ebbc5f080f44a13d"
+    },
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/PlayDataBaselineTest.java",
+      "sha256": "707004c52583ce39a7d99f04ce9ad4be00d3c5054b11e6a5032b870bf56fc177"
+    },
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/PlayDataTestSupport.java",
+      "sha256": "36c066920a346280e140826887991f7da36e570633fb13e45be78daa80014c66"
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "1f0c30f97ae951de0cacb78002c41588f9b0a73d18f6a3f1047434bc17fc1d6b"
+    }
+  ],
+  "original_source_identity": {
+    "base_commit": "1f237233a2aafd55699e6ded451fddcd37d5e1e3",
+    "source_files": [
+      {
+        "path": "app/src/main/smali/com/mogu/tv/utils/PlayDataSaveUtils.smali",
+        "sha256": "02d56ee0d3eb8d160ce7ff397cea634f6d3c4b4bca42781c37b6d9cc5dbd818d"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/model/SavePlayVod.smali",
+        "sha256": "58808605d91fd9316038710e15de8cdce759251d890573b77138f763915af1fe"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/model/SavePlayVod$VodData.smali",
+        "sha256": "90ed0d0c644bbaeb055e4ce7c58a357ebaaba14eae83e14f44ff31070484c2af"
+      },
+      {
+        "path": "app/src/androidTest/java/com/mogu/research/PlayDataBaselineTest.java",
+        "sha256": "707004c52583ce39a7d99f04ce9ad4be00d3c5054b11e6a5032b870bf56fc177"
+      },
+      {
+        "path": "app/src/androidTest/java/com/mogu/research/PlayDataTestSupport.java",
+        "sha256": "36c066920a346280e140826887991f7da36e570633fb13e45be78daa80014c66"
+      },
+      {
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/SpUtil.smali",
+        "sha256": "785155d87cc06a9b5c887c0b7403263bc8f7145e194c7796fe9daa37bc72c008"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/common/cache/CacheKey.smali",
+        "sha256": "7c386af5d8e39b174f14a0e3d8f0f96ac124340e58bb2b654abb939827b0c71b"
+      }
+    ],
+    "app_apk_sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de",
+    "test_apk_sha256": "b2e2688a985c67e55e79386ad528851489cf14a92836dc529e6ae0261df7f5d9",
+    "contracts_passed": 6,
+    "restart_seed_passed": 1,
+    "restart_read_passed": 1,
+    "real_force_stop_between_restart_tests": true
+  },
+  "test_and_storage_dependency_sources_unchanged": true,
+  "original_observations": "dev/migration/batches/P2-play-data-original-observations.json",
+  "original_and_java_all_observations_equal": true,
+  "java_observations": {
+    "contracts": {
+      "binaryContract": true,
+      "defaultVod": {
+        "id": "",
+        "name": "",
+        "progress": 0
+      },
+      "idOnlyEqualityFirstIndex": true,
+      "nullableSettersAndGsonNullOmission": true,
+      "freshStorageAfterSave": {
+        "id": "legacy",
+        "name": "fresh",
+        "progress": 9999
+      },
+      "readCacheRemainsStale": true,
+      "legacyJson": [
+        {
+          "fixture": "",
+          "result": null
+        },
+        {
+          "fixture": "null",
+          "result": null
+        },
+        {
+          "fixture": "{}",
+          "result": null
+        },
+        {
+          "fixture": "{\"datas\":null}",
+          "result": null
+        },
+        {
+          "fixture": "{\"datas\":[]}",
+          "result": null
+        },
+        {
+          "fixture": "{\"datas\":[{\"id\":\"legacy\",\"name\":\"旧样本\",\"progress\":1234}],\"future\":true}",
+          "result": {
+            "id": "legacy",
+            "name": "旧样本",
+            "progress": 1234
+          }
+        },
+        {
+          "fixture": "{\"datas\":[{\"id\":\"legacy\"}]}",
+          "result": {
+            "id": "legacy",
+            "name": "",
+            "progress": 0
+          }
+        },
+        {
+          "fixture": "{\"datas\":[{\"id\":\"legacy\",\"name\":null,\"progress\":null}]}",
+          "result": {
+            "id": "legacy",
+            "name": null,
+            "progress": null
+          }
+        },
+        {
+          "fixture": "{\"datas\":[{\"id\":null,\"progress\":12}]}",
+          "result": null
+        },
+        {
+          "fixture": "{\"datas\":[null,{\"id\":\"legacy\",\"progress\":1234}]}",
+          "exception": "java.lang.NullPointerException"
+        },
+        {
+          "fixture": "{",
+          "exception": "com.google.gson.JsonSyntaxException"
+        },
+        {
+          "fixture": "[]",
+          "exception": "com.google.gson.JsonSyntaxException"
+        },
+        {
+          "fixture": "{\"datas\":[{\"id\":\" legacy \",\"progress\":1234}]}",
+          "result": null
+        }
+      ],
+      "nullIdZeroProgress": "java.lang.NullPointerException",
+      "nullLookupId": "java.lang.NullPointerException",
+      "malformedSave": "com.google.gson.JsonSyntaxException",
+      "malformedGet": "com.google.gson.JsonSyntaxException",
+      "zeroProgressDoesNotParseOrChangeCache": true,
+      "updateFirstDuplicate": {
+        "datas": [
+          {
+            "id": "dup",
+            "name": "保留名",
+            "progress": 300
+          },
+          {
+            "id": "dup",
+            "name": "second",
+            "progress": 2
+          }
+        ]
+      },
+      "negativeAfterEmptyState": {
+        "datas": [
+          {
+            "id": "negative",
+            "name": "",
+            "progress": -10
+          }
+        ]
+      }
+    },
+    "restart_seed": {
+      "restartSeedPersisted": true
+    },
+    "restart_read": {
+      "restartRead": {
+        "id": "migration-restart",
+        "name": "",
+        "progress": 8765
+      },
+      "differentProcess": true
+    }
+  },
+  "original_contract_tests": 6,
+  "original_restart_seed_tests": 1,
+  "original_restart_read_tests": 1,
+  "java_contract_tests": 6,
+  "java_restart_seed_tests": 1,
+  "java_restart_read_tests": 1,
+  "upgrade": {
+    "old_smali_seed_tests": 1,
+    "java_read_tests": 1,
+    "real_force_stop": true,
+    "install_replace_preserving_data": true,
+    "read_observations": {
+      "restartRead": {
+        "id": "migration-restart",
+        "name": "",
+        "progress": 8765
+      },
+      "differentProcess": true
+    },
+    "original_key_restored_by_test_cleanup": true
+  },
+  "host_suites": [
+    {
+      "name": "com.mogu.research.CryptoContractTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "contentIdDerivationAndKnownCbcVector",
+        "bothImageKeyPathsDecodeTheOriginalBytes",
+        "plainImageFallbackDoesNotReturnConsumedBytes",
+        "playbackIdsAreKeptPerUrl"
+      ]
+    },
+    {
+      "name": "com.mogu.research.DiagnosticsCapturePolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authenticationDiscoveryMediaAndUnknownPathsAreExcluded",
+        "apiReadsMatchCurrentOriginAndKnownQueriesOnly"
+      ]
+    }
+  ],
+  "metadata": [
+    {
+      "type": "com.mogu.tv.utils.PlayDataSaveUtils",
+      "d1_d2_equal_original": true,
+      "k": 1,
+      "mv": [
+        1,
+        7,
+        1
+      ],
+      "xi": 48
+    },
+    {
+      "type": "com.mogu.tv.model.SavePlayVod",
+      "d1_d2_equal_original": true,
+      "k": 1,
+      "mv": [
+        1,
+        7,
+        1
+      ],
+      "xi": 48
+    },
+    {
+      "type": "com.mogu.tv.model.SavePlayVod$VodData",
+      "d1_d2_equal_original": true,
+      "k": 1,
+      "mv": [
+        1,
+        7,
+        1
+      ],
+      "xi": 48
+    }
+  ],
+  "class_coverage": [
+    {
+      "variant": "debug",
+      "recovered_dex": "classes19.dex",
+      "recovered_dex_sha256": "1df4c39dcf0853b808ddbfbf1678b346e19073bb6b9326bbd006b99d89e55dc9",
+      "recovered_types": 3153,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes13.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes8.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes8.dex"
+        ]
+      }
+    },
+    {
+      "variant": "release",
+      "recovered_dex": "classes5.dex",
+      "recovered_dex_sha256": "1df4c39dcf0853b808ddbfbf1678b346e19073bb6b9326bbd006b99d89e55dc9",
+      "recovered_types": 3153,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes3.dex"
+        ]
+      }
+    }
+  ],
+  "installed_apks": [
+    {
+      "package": "com.amogu6.tv.research",
+      "local_sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744",
+      "installed_sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744",
+      "matching": true
+    },
+    {
+      "package": "com.amogu6.tv.research.test",
+      "local_sha256": "b2e2688a985c67e55e79386ad528851489cf14a92836dc529e6ae0261df7f5d9",
+      "installed_sha256": "b2e2688a985c67e55e79386ad528851489cf14a92836dc529e6ae0261df7f5d9",
+      "matching": true
+    }
+  ],
+  "apk_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes18.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes19.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "0bc38a7a070b0f034240ec8ab671fe9e3da1413575e347c3eeafe34a018295e9",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "delivery_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "apk_sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "290f893164a5751003c190dd6c60e8c3afdadeb15500dd0b86800de87015a892",
+      "merged_manifest_activities": 53,
+      "missing_activities": [],
+      "resource_dump_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769",
+      "device_behavior_verified": false
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "apk_sha256": "0bc38a7a070b0f034240ec8ab671fe9e3da1413575e347c3eeafe34a018295e9",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\release\\processReleaseManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "f0dfb8c4dda7b6c5f1f3b86708a897e184659887a2ac180ad41c30815a7fbb89",
+      "merged_manifest_activities": 50,
+      "missing_activities": [],
+      "resource_dump_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2",
+      "device_behavior_verified": false
+    }
+  },
+  "lint": {
+    "same_rule_location_multiset": true,
+    "count": 16,
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "not_run": [
+    "88 diagnostic host tests and full 47-device-test suite: no diagnostic/dependency/generation/resource/manifest or UI consumer changes",
+    "Release diagnostic-specific isolation script: no related changes",
+    "Real personal legacy state, multi-OS physical/peripheral tests, production release"
+  ],
+  "evidence_files": [
+    {
+      "path": ".local/migration/P2-play-data/apk-debug.json",
+      "bytes": 831,
+      "sha256": "841b74fed751d20a155f627f91d7688a9fd3ba4d0a058d932264ae2c6a2ad20c"
+    },
+    {
+      "path": ".local/migration/P2-play-data/apk-release.json",
+      "bytes": 531,
+      "sha256": "d49b23645a0e84c9f36c0e34b328a2587c1132ef3c5de9c770cd2b7060b3a354"
+    },
+    {
+      "path": ".local/migration/P2-play-data/app-host-tests.log",
+      "bytes": 2647,
+      "sha256": "bd1af361ab28c300101ab110003265c91d29206020a5fdd5601f2482f9c39ec3"
+    },
+    {
+      "path": ".local/migration/P2-play-data/artifacts/app-debug-androidTest.apk",
+      "bytes": 530551,
+      "sha256": "b2e2688a985c67e55e79386ad528851489cf14a92836dc529e6ae0261df7f5d9"
+    },
+    {
+      "path": ".local/migration/P2-play-data/artifacts/app-debug.apk",
+      "bytes": 25548533,
+      "sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744"
+    },
+    {
+      "path": ".local/migration/P2-play-data/artifacts/app-release.apk",
+      "bytes": 14262505,
+      "sha256": "0bc38a7a070b0f034240ec8ab671fe9e3da1413575e347c3eeafe34a018295e9"
+    },
+    {
+      "path": ".local/migration/P2-play-data/artifacts/original-app.apk",
+      "bytes": 25556666,
+      "sha256": "defdfee2ecb8f2447f9f7dffffa19df8cc4e1ba44cf172061b897b234f5661de"
+    },
+    {
+      "path": ".local/migration/P2-play-data/artifacts/original-test.apk",
+      "bytes": 530551,
+      "sha256": "b2e2688a985c67e55e79386ad528851489cf14a92836dc529e6ae0261df7f5d9"
+    },
+    {
+      "path": ".local/migration/P2-play-data/build-java.log",
+      "bytes": 19968,
+      "sha256": "445db6b9f89f8935e0a196e90f8104c156ed1d2f20770bc6c2482bf0947e4b85"
+    },
+    {
+      "path": ".local/migration/P2-play-data/build-original-tests.log",
+      "bytes": 4887,
+      "sha256": "039f03033f9ad21fdee18218ac6950846f2f73c8437ffcc9f39bcca78e92fc57"
+    },
+    {
+      "path": ".local/migration/P2-play-data/class-coverage.json",
+      "bytes": 1381,
+      "sha256": "a41420d74cae545b3478779ef7f8816de5e152f14758542c182903c50d0588a7"
+    },
+    {
+      "path": ".local/migration/P2-play-data/delivery-debug.json",
+      "bytes": 670,
+      "sha256": "cd2085ef65eba56a9c323ee3ec66d3a9da5b2876a426fe2ad43726637988498a"
+    },
+    {
+      "path": ".local/migration/P2-play-data/delivery-debug.resources.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P2-play-data/delivery-release.json",
+      "bytes": 678,
+      "sha256": "71747138677cfcda78c02d68a5516689f07b65baa1af4cd679ab680fa4156f99"
+    },
+    {
+      "path": ".local/migration/P2-play-data/delivery-release.resources.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P2-play-data/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/P2-play-data/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/P2-play-data/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/P2-play-data/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/P2-play-data/host-test-summary.json",
+      "bytes": 643,
+      "sha256": "39b7605d55988532c0f6ac36c98cdace1f84474e79dd713c682fd77343cb49d3"
+    },
+    {
+      "path": ".local/migration/P2-play-data/installed-sha256.json",
+      "bytes": 524,
+      "sha256": "c58e49cb1ec3c27bafbef52e8ee113863c72795794d45c68584dd238c7f8421f"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-contracts.json",
+      "bytes": 1695,
+      "sha256": "710c6f8d93cfffe6786b0c97d71599848216e4e37b2e87d28ba1e401391a753c"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-contracts.log",
+      "bytes": 84,
+      "sha256": "0e60a7c12a78d9c7ffc9fda6fca80e8e75fce87c2d4e8702f1acdad471e424c0"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-restart-read.json",
+      "bytes": 92,
+      "sha256": "e20ea6d5b5b5aab373fdf9c998a4decb751d574c596e3b85b61d779fbc2b66ad"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-restart-read.log",
+      "bytes": 90,
+      "sha256": "7c59919139104ed2b6ed9abd7dd5dc2f83ec46fdf6407e36e750634cdacec00e"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-restart-seed.json",
+      "bytes": 29,
+      "sha256": "169a4eedea612fb40dadacb80f7ec282be760e74a6537f1c0ed3b075a4473f68"
+    },
+    {
+      "path": ".local/migration/P2-play-data/java-restart-seed.log",
+      "bytes": 90,
+      "sha256": "d36bff7f7723390044b5e67d7861a625e6ff9a214cd3b66cae7adab82a650aeb"
+    },
+    {
+      "path": ".local/migration/P2-play-data/javap.txt",
+      "bytes": 2222,
+      "sha256": "779cd2e30f9816a1e5db29758d45d0bffef70efe87f3c86b16f90259a85b5fcc"
+    },
+    {
+      "path": ".local/migration/P2-play-data/lint-comparison.json",
+      "bytes": 4721,
+      "sha256": "6077ab0fbb4eee30e12da5835c3de2452ca28f59487ab598bc2f1d625dcffbaa"
+    },
+    {
+      "path": ".local/migration/P2-play-data/metadata-review.json",
+      "bytes": 526,
+      "sha256": "c2df83b95df17d9e0757e5d6d4f1c10e9715a2f7270a6834e1a3e67fc0bf716f"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-contracts-01.json",
+      "bytes": 1695,
+      "sha256": "710c6f8d93cfffe6786b0c97d71599848216e4e37b2e87d28ba1e401391a753c"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-contracts-01.log",
+      "bytes": 84,
+      "sha256": "313914f20b83199225526cbca48acf0590a0f4ae46f53022826235d1bb3a3f8e"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-read-02.json",
+      "bytes": 92,
+      "sha256": "e20ea6d5b5b5aab373fdf9c998a4decb751d574c596e3b85b61d779fbc2b66ad"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-read-02.log",
+      "bytes": 90,
+      "sha256": "ea81de36c8422d397097e74a1b76539afddce1144c981dfc21984f3e549152eb"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-seed-02.json",
+      "bytes": 29,
+      "sha256": "169a4eedea612fb40dadacb80f7ec282be760e74a6537f1c0ed3b075a4473f68"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-seed-02.log",
+      "bytes": 90,
+      "sha256": "941cb9e7e02e6e7f99830d1c9800a815a9d82c4656218d7599897d6947810520"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-seed.json",
+      "bytes": 1695,
+      "sha256": "710c6f8d93cfffe6786b0c97d71599848216e4e37b2e87d28ba1e401391a753c"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-restart-seed.log",
+      "bytes": 84,
+      "sha256": "e3362c7894b90f5cf632ad1a84f9e5a43f5234b3a39172900e81a17fb43cccaf"
+    },
+    {
+      "path": ".local/migration/P2-play-data/original-source-identity.json",
+      "bytes": 1658,
+      "sha256": "095cb91581dff651262d1cf50d03ece388ff68364ce3811ef254dc3c70283224"
+    },
+    {
+      "path": ".local/migration/P2-play-data/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/P2-play-data/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/P2-play-data/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 810,
+      "sha256": "dfe356b65eb492084096caf19d428920203770d779cae1f6ae28f5d0923d2142"
+    },
+    {
+      "path": ".local/migration/P2-play-data/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "4e2769eb7ec3d5d9ea084d95aa56a4b5df6da29e8807da85002753dde647f323"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-install-java.log",
+      "bytes": 70,
+      "sha256": "9b4637ad170e260f1a404a43687262f557a6bf4bc164ccba948517436abf7b7c"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-install-original.log",
+      "bytes": 38,
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-read.json",
+      "bytes": 92,
+      "sha256": "e20ea6d5b5b5aab373fdf9c998a4decb751d574c596e3b85b61d779fbc2b66ad"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-read.log",
+      "bytes": 90,
+      "sha256": "5092add8e24d3617fa6bc095172fc1b0b181a35922e0209a90b611c362a096a0"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-seed.json",
+      "bytes": 29,
+      "sha256": "169a4eedea612fb40dadacb80f7ec282be760e74a6537f1c0ed3b075a4473f68"
+    },
+    {
+      "path": ".local/migration/P2-play-data/upgrade-seed.log",
+      "bytes": 90,
+      "sha256": "0b494764df72f2f522e66adf21daf320f6d31222ee68df6fcf8349448eabac50"
+    },
+    {
+      "path": ".local/migration/P2-play-data/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/P2-play-data/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "No direct production member callers found; no invented UI coverage claim",
+    "Original nullable/negative/zero/malformed-state and id-only equality behavior retained",
+    "Only the controlled offline preference key is mutated and restored; no app-data clear",
+    "No independent human reviewer is claimed",
+    "Raw logs/APKs remain local; hashes are an index"
+  ]
+}

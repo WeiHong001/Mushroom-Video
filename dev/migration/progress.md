@@ -4,16 +4,18 @@
 
 ## 当前检查点
 
-- 阶段：P0、P1 以及 P2 的 UrlUtils 批次已验收、合入推送；P2 继续，不因单批完成停止。
+- 阶段：P0、P1 及 P2 UrlUtils 已验收推送；P2-play-data 技术门禁通过，待提交合入。
 - P0：`e930a22` / dev 合并 `3498171`；P1：`a64854f` / dev 合并 `03108ab`，关闭记录 `0342617`。
 - P2 UrlUtils：实现 `edffdd3a50f517f23006fce70d3dc1b8472c6a3e` / dev 合并 `8930e9ebb3e533b9137e68d51ad868b5c15ef1a9`，已推送；实际合入后才标记类型完成。
-- 当前分支 `feature/restore-url-utils-b01`，仅关闭本批交付记录，运行源码/测试输入不变。
+- 当前分支 `feature/restore-play-data-b02`，起点 `1f237233a2aafd55699e6ded451fddcd37d5e1e3`，开始记录 2026-10-26 17:26:42 +08:00。新增两份 instrumentation 测试源；原六例及真实重启两例通过后，3 类已改为两份 Java 源码，尚未合入。
 - 本地证据：`.local/migration/P0-device/`、`P1-comment-filter/`、`P2-url-utils/`。P0 冻结快照未覆盖。
 - 设备：专用 `Mushroom_Research_API34` / `emulator-5580` / API 34 / Android 14 / x86_64；为避开已记录系统 HCI 崩溃，蓝牙关闭。全部 adb 指定 serial，保持 offline / 安装摘要保护。
 - P1 门禁：原/新六例和 22 组观测一致、94 主机用例、完整 43 次调用 / 47 设备用例及 Debug/测试/研究 Release、APK/资源/清单/签名/Release 隔离通过。
 - P2 UrlUtils 门禁：原/新各 3 例、30 组观测及真实路由参数完全一致；app 主机 6 例、现有路由播放历史 1 例、Debug/测试/研究 Release 和 APK/实际资源/清单/签名通过；16 条原 Lint 同规则/位置。未在该批重跑的完整集没有转记通过。
-- 下一条动作：完成本批文档关闭快进推送，从最新 dev 新建 `feature/restore-play-data-b02`；先固定 PlayDataSaveUtils + SavePlayVod / VodData 的原行为、旧 JSON、equals/contains/indexOf、缓存和实际进程重启读取，再恢复这 3 类。
-- 下一批原始证据预定 `.local/migration/P2-play-data/`。ClickUtils / DateUtil 继续排队；其余组保持待分析，不批量标记受阻。
+- 原基线：PlayDataBaselineTest 6/6；正确转义的 `$RestartSeed`、实际 force-stop、`$RestartRead` 各 1/1，确认新 PID 及磁盘记录；误调用父类的首轮不计重启通过。观测已冻结在 `batches/P2-play-data-original-observations.json`。
+- 本批结果：Java 六例及真实重启写/读各一例与原观测一致；另完成原 smali 写入→覆盖安装 Java→新进程读取的兼容验证，恢复原键。app 主机 6/6、Debug/测试/研究 Release、APK/实际资源/清单/签名通过，16 条 Lint 同规则/位置。
+- 下一条动作：提交并合入推送这 3 类的源码及证据，实际合入后更新类型完成状态；随后从最新 dev 继续 ClickUtils / DateUtil 等已排队闭包，不在本批停止。
+- 本批原始证据 `.local/migration/P2-play-data/`，报告 `batches/P2-play-data.md`；当前源码/测试改动尚未验收。ClickUtils / DateUtil 继续排队；其余组保持待分析，不批量标记受阻。
 - 已知测试边界：既有路由历史用例检查样例 id 的包含关系，P3 状态迁移验收应补初始历史隔离以证明新写入；P0/P1 截图采集边界见各报告。真实服务、相机/投屏/蓝牙外设及生产发布仍未验收。
 
 ## 队列与门禁
