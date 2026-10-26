@@ -4,22 +4,23 @@
 
 ## 当前检查点
 
-- 阶段：P0 设备补充已验收，准备交付并自动进入 P1；尚未开始业务源码替换。
-- 批次：P0-device，分支 `feature/migration-p0-device-baseline`，起点 `7e9384c`。
-- 原实现/构建：与冻结基线 `2b882ad` 相同；只新增 instrumentation 基线测试。
-- 本地证据：`.local/migration/P0-device/`；P0 历史快照不覆盖。
+- 阶段：P0 设备补充已验收并推送；P1 CommentFilter 试点执行中。
+- 批次：P1-comment-filter，分支 `feature/restore-comment-filter`，起点 `3498171`，开始 2026-10-26 16:46:48 +08:00。
+- P0 交付：`e930a22`；合并并推送 `349817160a3ee1c2ac2667b78d3b6cea70cc924a`，远端已核对一致。
+- 本地证据：`.local/migration/P0-device/` 和 `.local/migration/P1-comment-filter/`；P0 历史快照不覆盖。
 - 专用 AVD：本机原 AVD 清单为空；新建 `Mushroom_Research_API34`，API 34 / Android 14 / x86_64，序列号 `emulator-5580`。未操作实体机、原有 AVD 或 stash。
 - 已运行：离线 Debug/测试/研究 Release 构建；94 个主机用例实际重跑通过；APK/实际资源表/合并清单/签名及 Release 隔离通过；CommentFilter 原实现最终 **6/6 通过**，22 组默认输入和三个消费者结果已冻结。两个初测预期差异按原 Android 观测修订，未改业务。
 - 完整离线回归首轮：42/43 次调用通过，短视频手势因系统 Bluetooth 崩溃弹窗抢焦点失败；已修复专用模拟器状态，失败证据保留。
 - 第二轮完整离线回归：**43/43 次调用、47/47 个设备用例通过**；45 张截图已复核。WebView 错帧另以停止应用后的独立 instrumentation 1/1 和正确截图补证；根因尚未确定，不推广为全部网页行为验证。保留合成数据的 Loading→Main 冷启动另已取证。
-- 下一步：提交 P0 补充材料，合入并推送 dev；随后新建 `feature/restore-comment-filter`。详情见 [P0-device-baseline.md](P0-device-baseline.md)。
+- 下一步：仅替换 CommentFilter；执行相同原行为矩阵和三个消费者，全部主机/Debug/测试/研究 Release/完整离线设备门禁；验证通过才交付，随后自动推进 UrlUtils。
+- P1 当前结果：Java 原测试 6/6 通过且观测 JSON 与 P0 完全一致；本批重跑主机 94/94，通过 Debug/测试/研究 Release、APK/资源表/清单/签名及 Release 隔离；原 16 条 Lint 无新增规则/位置。完整设备回归 **43 次调用 / 47 用例全部通过**，45 张截图已复核，短视频另做 1/1 补测及正确视频帧取证。技术门禁通过，待提交合入，尚未标记类型完成。
 
 ## 队列与门禁
 
 | 队列 | 当前状态 | 前置 / 验收要求 |
 | --- | --- | --- |
 | P0-device 专用模拟器及原行为证据 | 已验收 | 原实现完整离线回归 43/47、CommentFilter 六例和三个真实消费者通过；详见补充报告 |
-| P1 CommentFilter | 待执行 | P0 关闭；原/新同矩阵、三个消费者、完整主机/设备与 Release 门禁 |
+| P1 CommentFilter | 执行中 | P0 已关闭；原/新同矩阵、三个消费者、完整主机/设备与 Release 门禁 |
 | P2 UrlUtils | 待分析 | P1 通过后优先核对 split/重复键/null/路由消费闭包及原行为 |
 | P2 基础工具 / 本地模型 | 待分析 | F02/F07、F04；按实际依赖拆批，补时间、Locale、JSON/旧样本及重启证据 |
 | P2/P3 控件 / 网络 / 基础框架 | 待分析 | F08/F03/F01；XML、回调、线程、Binding 反射及生命周期 |
@@ -37,4 +38,4 @@
 
 ## 交付与恢复规则
 
-尚无本次新增交付提交。已验证批次独立提交、合入并推送 dev；未验收源码不进入 dev。恢复时先核对 Git 分支、提交、未提交文件和本地证据，不重置用户改动或恢复/删除 stash。历史 P0 的“仅 P0”会话边界保留为历史，当前按 V1.1 和最新授权自动推进。
+已交付 P0：`e930a22` / dev 合并 `3498171`。已验证批次独立提交、合入并推送 dev；未验收源码不进入 dev。恢复时先核对 Git 分支、提交、未提交文件和本地证据，不重置用户改动或恢复/删除 stash。历史 P0 的“仅 P0”会话边界保留为历史，当前按 V1.1 和最新授权自动推进。
