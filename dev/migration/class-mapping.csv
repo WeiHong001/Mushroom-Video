@@ -2181,7 +2181,7 @@ com.kotlin.basiclib.utils.SpUtil$name$2,app/src/main/smali/com/kotlin/basiclib/u
 com.kotlin.basiclib.utils.SpUtil$prefs$2,app/src/main/smali/com/kotlin/basiclib/utils/SpUtil$prefs$2.smali,business-implementation,F02-basic-utils,,待分析,,,
 com.kotlin.basiclib.utils.SpUtil,app/src/main/smali/com/kotlin/basiclib/utils/SpUtil.smali,business-implementation,F02-basic-utils,,待分析,,,
 com.kotlin.basiclib.utils.ToastUtil,app/src/main/smali/com/kotlin/basiclib/utils/ToastUtil.smali,business-implementation,F02-basic-utils,,待分析,,,
-com.kotlin.basiclib.utils.UrlUtils,app/src/main/smali/com/kotlin/basiclib/utils/UrlUtils.smali,business-implementation,F02-basic-utils,,待分析,,,
+com.kotlin.basiclib.utils.UrlUtils,app/src/main/smali/com/kotlin/basiclib/utils/UrlUtils.smali,business-implementation,F02-basic-utils,P2-url-utils,执行中,app/src/main/java/com/kotlin/basiclib/utils/UrlUtils.java,batches/P2-url-utils.md,
 com.kotlin.basiclib.widget.GridItemDecorationColumns,app/src/main/smali/com/kotlin/basiclib/widget/GridItemDecorationColumns.smali,business-implementation,F01-basic-framework,,待分析,,,
 com.kotlin.basiclib.widget.OnItemFinishListner,app/src/main/smali/com/kotlin/basiclib/widget/OnItemFinishListner.smali,business-implementation,F01-basic-framework,,待分析,,,
 com.kotlin.basiclib.widget.ProgressWebView$1,app/src/main/smali/com/kotlin/basiclib/widget/ProgressWebView$1.smali,business-implementation,F01-basic-framework,,待分析,,,
