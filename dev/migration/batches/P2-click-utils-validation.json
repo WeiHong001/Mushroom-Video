@@ -1,0 +1,638 @@
+{
+  "batch": "P2-click-utils",
+  "status": "technical-gates-passed-awaiting-merge",
+  "recorded_at": "2026-10-26T18:37:40.142924+08:00",
+  "base_commit": "c33ea849ad68c312f685016f1cb8bfed895f8e9e",
+  "replaced_types": [
+    "com.kotlin.basiclib.utils.ClickUtils"
+  ],
+  "source_files": [
+    {
+      "path": "app/src/main/java/com/kotlin/basiclib/utils/ClickUtils.java",
+      "sha256": "2cca2104ed9c8075b126a97a57e4bdccaed79984ae234699d3d1a77fa7e3c02e"
+    },
+    {
+      "path": "app/src/androidTest/java/com/mogu/research/ClickUtilsBaselineTest.java",
+      "sha256": "f52057ddd0fe44b0ecbaeec09ef4f4eed3b260561c6566bad3a80a3b34308bd7"
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "1f0c30f97ae951de0cacb78002c41588f9b0a73d18f6a3f1047434bc17fc1d6b"
+    }
+  ],
+  "original_source_identity": {
+    "base_commit": "c33ea849ad68c312f685016f1cb8bfed895f8e9e",
+    "source_files": [
+      {
+        "path": "app/src/main/smali/com/kotlin/basiclib/utils/ClickUtils.smali",
+        "sha256": "163e0ee01a667c00ca0377dee17e60d54fc526446664b8038f6176d5bb18bf3c"
+      },
+      {
+        "path": "app/src/androidTest/java/com/mogu/research/ClickUtilsBaselineTest.java",
+        "sha256": "f52057ddd0fe44b0ecbaeec09ef4f4eed3b260561c6566bad3a80a3b34308bd7"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/common/arouter/ArouterUtils.smali",
+        "sha256": "5c3c8963827fa6ac91c783daee5ace23910230a2e388dee71eecd761e6c797b5"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/ui/activity/QiuPianActivity$initData$1.smali",
+        "sha256": "a5dcfd239ec28637969b4cafb377163e9b68f7ed173166ca733b8e8fc7cb2e00"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/ui/frag/ListMainFragment.smali",
+        "sha256": "bd0c8b1a124d7c6429b4acaac1ec5ef7d16abe1593dbe4ef2773140d08dfbaf9"
+      },
+      {
+        "path": "app/src/main/smali/com/mogu/tv/ui/frag/ListIndexTabFragment.smali",
+        "sha256": "0d23eedc2ad0a52324251c6d22feb0311d3089dac3b736eb684ea9151cb4f98f"
+      }
+    ],
+    "app_apk_sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744",
+    "test_apk_sha256": "43ef03b9392336c40b1b0446d8d600c3283a512762ade637cf1b3d3bd4042977",
+    "passed_tests": 7,
+    "clock_inputs": "Same generation rules and before/after bounds; absolute system millisecond values are not claimed identical",
+    "final_original_log": ".local/migration/P2-click-utils/original-03.log",
+    "exact_upper_boundary_added_and_verified_on_original_apk": true
+  },
+  "final_test_and_four_consumer_sources_unchanged_after_original_baseline": true,
+  "original_and_java_all_observations_equal": true,
+  "original_tests": 7,
+  "java_tests": 7,
+  "java_observations": {
+    "threeInstanceMonitorsAndUnprotectedAccessors": true,
+    "noLooperToastException": "java.lang.NullPointerException",
+    "noLooperToastMessage": "Can't toast on a thread that has not called Looper.prepare()",
+    "noLooperExceptionFromPlatformToast": true,
+    "toastExceptionRetainsStateAndReleasesMonitor": true,
+    "mainToastText": "还需等待9秒，才能继续发言",
+    "runtimeMethodModifiers": {
+      "isDoubleClick0": 49,
+      "isDoubleClick1": 49,
+      "matchTimeDouble1": 49
+    },
+    "binaryContract": true,
+    "defaultFirstResetsWithinCall": true,
+    "defaultExpiredResetsWithinCall": true,
+    "defaultRollbackResetsWithinCall": true,
+    "defaultLongMinOverflowResetsWithinCall": true,
+    "defaultLongMaxResetsWithinCall": true,
+    "customFirstResetsWithinCall": true,
+    "customZeroWindowResetsWithinCall": true,
+    "customNegativeWindowResetsWithinCall": true,
+    "customMinWindowResetsWithinCall": true,
+    "customRollbackResetsWithinCall": true,
+    "toastZeroWindowResetsWithinCall": true,
+    "toastNegativeWindowResetsWithinCall": true,
+    "toastRollbackResetsWithinCall": true,
+    "positiveWindowsRetainSharedTimestamp": true,
+    "adRejectedAndAllowedRequest": true,
+    "captchaRejectedAndAllowedRefresh": true,
+    "ListMainFragment": {
+      "before": 1,
+      "after": 2,
+      "rejectedPreservesPage": true
+    },
+    "ListIndexTabFragment": {
+      "before": 1,
+      "after": 2,
+      "rejectedPreservesPage": true
+    },
+    "zeroElapsedAllThreeReturnsFalse": true,
+    "upperBoundaryAllThreeReturnsFalseAndResets": true
+  },
+  "clock_inputs": "Same state/time-generation rules and within-call bounds; real absolute millisecond values are not claimed identical",
+  "consumers": "Original callback bodies with original Activity/Fragment/live offline data; not a claim of all touch wrappers",
+  "host_suites": [
+    {
+      "name": "com.mogu.research.CryptoContractTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "contentIdDerivationAndKnownCbcVector",
+        "bothImageKeyPathsDecodeTheOriginalBytes",
+        "plainImageFallbackDoesNotReturnConsumedBytes",
+        "playbackIdsAreKeptPerUrl"
+      ]
+    },
+    {
+      "name": "com.mogu.research.DiagnosticsCapturePolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authenticationDiscoveryMediaAndUnknownPathsAreExcluded",
+        "apiReadsMatchCurrentOriginAndKnownQueriesOnly"
+      ]
+    }
+  ],
+  "metadata": {
+    "d1_d2_equal_original": true,
+    "k": 1,
+    "mv": [
+      1,
+      7,
+      1
+    ],
+    "xi": 48,
+    "space_time_assigned_after_instance_in_static_initializer": true,
+    "source_debug_smap": "Java compilation replaces old Kotlin source line mapping; no business reflection consumer found"
+  },
+  "class_coverage": [
+    {
+      "variant": "debug",
+      "recovered_dex": "classes19.dex",
+      "recovered_dex_sha256": "451b21c49f4fb49d325db3780b016336c5268db7e05f9d6c6a903dde614b6a78",
+      "recovered_types": 3152,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.ClickUtils": [
+          "classes13.dex"
+        ],
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes13.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes7.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes8.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes8.dex"
+        ]
+      }
+    },
+    {
+      "variant": "release",
+      "recovered_dex": "classes5.dex",
+      "recovered_dex_sha256": "451b21c49f4fb49d325db3780b016336c5268db7e05f9d6c6a903dde614b6a78",
+      "recovered_types": 3152,
+      "all_original_types_present_once": 3158,
+      "source_type_locations": {
+        "com.kotlin.basiclib.utils.ClickUtils": [
+          "classes3.dex"
+        ],
+        "com.kotlin.basiclib.utils.UrlUtils": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.model.SavePlayVod$VodData": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.CommentFilter": [
+          "classes3.dex"
+        ],
+        "com.mogu.tv.utils.PlayDataSaveUtils": [
+          "classes3.dex"
+        ]
+      }
+    }
+  ],
+  "installed_apks": [
+    {
+      "package": "com.amogu6.tv.research",
+      "local_sha256": "a186ba50147abbe7e3ba76c63c30d018f211f54341e4401900f4e5f340c3128a",
+      "installed_sha256": "a186ba50147abbe7e3ba76c63c30d018f211f54341e4401900f4e5f340c3128a",
+      "matching": true
+    },
+    {
+      "package": "com.amogu6.tv.research.test",
+      "local_sha256": "43ef03b9392336c40b1b0446d8d600c3283a512762ade637cf1b3d3bd4042977",
+      "installed_sha256": "43ef03b9392336c40b1b0446d8d600c3283a512762ade637cf1b3d3bd4042977",
+      "matching": true
+    }
+  ],
+  "apk_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "sha256": "a186ba50147abbe7e3ba76c63c30d018f211f54341e4401900f4e5f340c3128a",
+      "dex_files": [
+        "classes.dex",
+        "classes10.dex",
+        "classes11.dex",
+        "classes12.dex",
+        "classes13.dex",
+        "classes14.dex",
+        "classes15.dex",
+        "classes16.dex",
+        "classes17.dex",
+        "classes18.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex",
+        "classes7.dex",
+        "classes8.dex",
+        "classes9.dex",
+        "classes19.dex"
+      ],
+      "classes": 32320,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "sha256": "7c3021c261eff7b0b57dd51609db2725315809020058e3bd8d40a01adb6c5f4c",
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex"
+      ],
+      "classes": 19210,
+      "manifest_activities_present": 50,
+      "original_company_activities_present": 38,
+      "duplicate_classes": 0,
+      "missing_desugared_companions": 0,
+      "compile_only_stubs_packaged": false,
+      "original_resource_ids_verified": 7141
+    }
+  },
+  "delivery_checks": {
+    "debug": {
+      "apk": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+      "apk_sha256": "a186ba50147abbe7e3ba76c63c30d018f211f54341e4401900f4e5f340c3128a",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "290f893164a5751003c190dd6c60e8c3afdadeb15500dd0b86800de87015a892",
+      "merged_manifest_activities": 53,
+      "missing_activities": [],
+      "resource_dump_sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769",
+      "device_behavior_verified": false
+    },
+    "release": {
+      "apk": "app\\build\\outputs\\apk\\release\\app-release.apk",
+      "apk_sha256": "7c3021c261eff7b0b57dd51609db2725315809020058e3bd8d40a01adb6c5f4c",
+      "fixed_actual_resource_ids": 7141,
+      "missing_or_changed_ids": [],
+      "resources_arsc_stored": true,
+      "merged_manifest": "app\\build\\intermediates\\merged_manifests\\release\\processReleaseManifest\\AndroidManifest.xml",
+      "merged_manifest_sha256": "f0dfb8c4dda7b6c5f1f3b86708a897e184659887a2ac180ad41c30815a7fbb89",
+      "merged_manifest_activities": 50,
+      "missing_activities": [],
+      "resource_dump_sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2",
+      "device_behavior_verified": false
+    }
+  },
+  "lint": {
+    "same_rule_location_multiset": true,
+    "count": 16,
+    "findings": [
+      {
+        "file": "app/src/main/res/values-hdpi/styles.xml",
+        "line": 3,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 9,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 59,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 102,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v24/styles.xml",
+        "line": 151,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 752,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values-v21/styles.xml",
+        "line": 801,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1130,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents is the implied parent of Base.V14.Theme.MaterialComponents.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1238,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1341,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light is the implied parent of Base.V14.Theme.MaterialComponents.Light.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 1494,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.V14.Theme.MaterialComponents.Light.Dialog is the implied parent of Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/values/styles.xml",
+        "line": 2121,
+        "id": "ResourceCycle",
+        "message": "Potential cycle: Base.Widget.AppCompat.DrawerArrowToggle is the implied parent of Base.Widget.AppCompat.DrawerArrowToggle.Common and this defines the opposite"
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_textinput_timepicker\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-v22/material_timepicker_dialog.xml",
+        "line": 5,
+        "id": "UnknownId",
+        "message": "The id \"material_timepicker_view\" is not defined anywhere."
+      },
+      {
+        "file": "app/src/main/res/layout-land/material_clock_period_toggle_land.xml",
+        "line": 2,
+        "id": "MissingDefaultResource",
+        "message": "The layout \"material_clock_period_toggle_land\" in layout-land has no declaration in the base layout folder; this can lead to crashes when the resource is queried in a configuration that does not match this qualifier"
+      },
+      {
+        "file": "app/src/main/res/layout/ucrop_activity_photobox.xml",
+        "line": 7,
+        "id": "NotSibling",
+        "message": "@id/wrapper_controls is not a sibling in the same RelativeLayout"
+      }
+    ]
+  },
+  "not_run": [
+    "88 diagnostic host tests, full 47-device-test suite, dedicated Release diagnostic isolation: no related subsystem changes",
+    "Other OS Toast implementation, physical/peripheral/real account/production release checks"
+  ],
+  "evidence_files": [
+    {
+      "path": ".local/migration/P2-click-utils/apk-debug.json",
+      "bytes": 831,
+      "sha256": "846e764f9d7ee79b06433a768ee3a783ead9f189038670245e85c240e64ea107"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/apk-release.json",
+      "bytes": 531,
+      "sha256": "4e304a710c5c971b48a1c3aaf2e4a34dfaca8adb781c6e4fb518fd2fa421a503"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/app-host-tests.log",
+      "bytes": 2647,
+      "sha256": "c31efc3b5d3f73733eb1360d31b64118b07d2055c39f310f1792b272d6f89e37"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/app-debug-androidTest.apk",
+      "bytes": 540700,
+      "sha256": "43ef03b9392336c40b1b0446d8d600c3283a512762ade637cf1b3d3bd4042977"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/app-debug.apk",
+      "bytes": 25548533,
+      "sha256": "a186ba50147abbe7e3ba76c63c30d018f211f54341e4401900f4e5f340c3128a"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/app-release.apk",
+      "bytes": 14262505,
+      "sha256": "7c3021c261eff7b0b57dd51609db2725315809020058e3bd8d40a01adb6c5f4c"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/original-app.apk",
+      "bytes": 25548533,
+      "sha256": "2637822d1750520a4a17db6c429afc257ed52ab13c6e7c15e083f643a69a5744"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/original-test-01.apk",
+      "bytes": 540164,
+      "sha256": "adb78bc8e863dba9c63d0ca6ad5e57139bf9fa4db7ba6eeb84fb82a4ec91a0cd"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/original-test-02.apk",
+      "bytes": 540415,
+      "sha256": "f478928ad9202d2aa8b32fd91ef60d14195981def2c563ca46b2ef81a61465e7"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/artifacts/original-test-final.apk",
+      "bytes": 540700,
+      "sha256": "43ef03b9392336c40b1b0446d8d600c3283a512762ade637cf1b3d3bd4042977"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/build-java.log",
+      "bytes": 19968,
+      "sha256": "5edf78cda727d68253aeae9edc8da374f13a385610f0f308ec7b4b185a99130c"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/build-original-tests-02.log",
+      "bytes": 4839,
+      "sha256": "748accdab1857ca71f52606d7d3fef62de50094cfeaa883bb24e234b702afc31"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/build-original-tests-03.log",
+      "bytes": 4839,
+      "sha256": "53fdbe0c3e7e99f67464ad4366e25af54344b4bd205dbefda5c2378772b488d7"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/build-original-tests-04.log",
+      "bytes": 4839,
+      "sha256": "53dd9a51d78215b6cb37a4d21b46193025020e8346764d5dc58d7b322fed1c83"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/build-original-tests.log",
+      "bytes": 4950,
+      "sha256": "f7dc58e8e3167b9459dc6825ac7a5f23256d36b8ea192a19f8a3df5b40d2f8b9"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/class-coverage.json",
+      "bytes": 1548,
+      "sha256": "c64851bd31179881ec7bbe8c1ff4dfdf47a77c9e723f12ce002e8bf199a04564"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/ClickUtilsBaselineTest-original-01.java",
+      "bytes": 17572,
+      "sha256": "9d35673563ae5b7d03472eee67fad41ae9f937aa883e94fda637005c1c8fdb22"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/ClickUtilsBaselineTest-original-02.java",
+      "bytes": 18078,
+      "sha256": "6455c33c6d5c52efe48f4ccf892f7b622fae38869d1c6a87b2fa6f3c7130b970"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/delivery-debug.json",
+      "bytes": 670,
+      "sha256": "4753ef3f5f08d385d54e0f996f740c3c625d411739f2ba151ac7c16fd9ec9c6a"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/delivery-debug.resources.txt",
+      "bytes": 2186600,
+      "sha256": "e894df01b169996343c08fe26695e2e4d3053281a43a1786dff11d348eabd769"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/delivery-release.json",
+      "bytes": 678,
+      "sha256": "5988ea5eb6f5d3fc73a06e53e1ce37a31e76ddda5f84c18da58845dee812d9df"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/delivery-release.resources.txt",
+      "bytes": 1541494,
+      "sha256": "5eac4c93b5f5bb2358d06a150836a0a81158240e319b35819d8db0436d11a7f2"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/historical/apk-verification.json",
+      "bytes": 809,
+      "sha256": "33fdf3bf22565970afbff0be872b92233c8b74de52f46e31b0e6e6b6c9b0249e"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/historical/device-validation.json",
+      "bytes": 5034,
+      "sha256": "1f8cba767983a0c04fd4fefab1f32905907a483e01e47bb993a3cd4cd3094b33"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/historical/lint-findings.json",
+      "bytes": 5776,
+      "sha256": "8cad6caf6b5caaf0f9998530632e6273bb335349e82f1b1baa14728cba32e75a"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/historical/network-inspector-validation.json",
+      "bytes": 2703,
+      "sha256": "cecf3c33cf8baead777c020ad25f79d21c1acbc95a3f6886f65dd1fdd958c8be"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/host-test-summary.json",
+      "bytes": 643,
+      "sha256": "39b7605d55988532c0f6ac36c98cdace1f84474e79dd713c682fd77343cb49d3"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/installed-sha256.json",
+      "bytes": 524,
+      "sha256": "d65ab9e3884c0a42677c1ad68788e62c68dd2f67d2ef2393603a28c2690f2860"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/java-observations.json",
+      "bytes": 1324,
+      "sha256": "946961373686d3c7b3ccef73f1c4aaa9e5bb3d65b37203ae2fbc27276315e1be"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/java.log",
+      "bytes": 88,
+      "sha256": "895faacf3e4919fd2f1bb8d37149763284823d183acda4a6eef83f8510403b9e"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/javap.txt",
+      "bytes": 820,
+      "sha256": "d425ff6846ec02a7951fa48d3673193c58b2b598dae987d05f1396cfac2a4f02"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/lint-comparison.json",
+      "bytes": 4721,
+      "sha256": "6077ab0fbb4eee30e12da5835c3de2452ca28f59487ab598bc2f1d625dcffbaa"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/metadata-review.json",
+      "bytes": 294,
+      "sha256": "fd544f677d471cbd820cc2d93fee00b7c78c7c4bbcf6891d4797d26b5547d869"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-01.log",
+      "bytes": 1227,
+      "sha256": "b2be2d75efb199339d46a6fdca81d2fe8eb0c790bee0aef76acb401f44497f67"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-02.log",
+      "bytes": 88,
+      "sha256": "4ffa3f79534f34daf0a1cef655562ba1960b095360a5800b6bb725c3f14d1dc9"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-03.log",
+      "bytes": 88,
+      "sha256": "86f6334bbd0c085fb565829f0ab838adf797707b225ae38c41653aa12e9e4824"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-observations-01.json",
+      "bytes": 1036,
+      "sha256": "19729fc66ab8fc4edecfd919e7f3eff60ae77edada53daba8ae30db8e3710b5b"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-observations-02.json",
+      "bytes": 1274,
+      "sha256": "6f6643f6aa9d52c2a2695205711f1704f5b87b6e4581469a3ee143d18b9ecf0e"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-observations-03.json",
+      "bytes": 1324,
+      "sha256": "946961373686d3c7b3ccef73f1c4aaa9e5bb3d65b37203ae2fbc27276315e1be"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/original-source-identity.json",
+      "bytes": 1672,
+      "sha256": "84b780d4ee34ccea5177f5e4c38ff8a8eeb13cc77b60568794ad03f1f932c439"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/signature-debug.log",
+      "bytes": 350,
+      "sha256": "abffd6e5138d1a98d38fee6078c789fde4407b2431324bd964f03bcf65ac73e4"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/signature-release.log",
+      "bytes": 12402,
+      "sha256": "7b11b65e9effba95dd65d2b657139ad57b25740ba8d000fc62c0a7bd8a93a6bc"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/test-results/app/TEST-com.mogu.research.CryptoContractTest.xml",
+      "bytes": 810,
+      "sha256": "0dfded423ba27a1dc1939c678abeb75d93356fdca940a425f2b6b9d753fa0165"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/test-results/app/TEST-com.mogu.research.DiagnosticsCapturePolicyTest.xml",
+      "bytes": 628,
+      "sha256": "4cfc15121c8d283a220980afde12ed01624459a0bef4f9a4df6855bb2c4b6853"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/zipalign-debug.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/migration/P2-click-utils/zipalign-release.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Original zero/backward/overflow and platform Toast exception behavior retained",
+    "Original Kotlin source SMAP/line info replaced by Java compiler debug info",
+    "No independent human review claimed",
+    "Raw evidence local only; committed hashes index it"
+  ]
+}
